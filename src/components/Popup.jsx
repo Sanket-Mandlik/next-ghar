@@ -9,22 +9,44 @@ const Popup = ({ onClose }) => {
     location: "",
   });
 
-  
+  const [responseMessage, setResponseMessage] = useState("");
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you! We will get in touch with you soon.");
-    setFormData({ name: "", number: "", location: "" });
-    onClose(); // Close the popup after submission
+  
+    try {
+      const response = await fetch("http://localhost:3000/api/contactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json(); // Parse the response as JSON
+  
+      if (response.ok) {
+        setResponseMessage(data.message || "Thank you! Form submitted successfully! We will get in touch with you soon.");
+        setFormData({ name: "", number: "", location: "" });
+        //onClose(); // Close the popup after submission
+      } else {
+        setResponseMessage(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResponseMessage("An error occurred. Please try again later.");
+    }
   };
 
   return (
     <AnimatePresence>
-            <motion.div
+      <motion.div
         className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -38,7 +60,7 @@ const Popup = ({ onClose }) => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {/* Popup content */}
-  
+
           {/* Close Button */}
           <button
             className="absolute top-4 right-4 text-dark-brown text-2xl font-bold hover:text-medium-brown transition-all z-10"
@@ -52,11 +74,11 @@ const Popup = ({ onClose }) => {
             <div className="w-full md:w-1/2 text-white p-4 mb-2 rounded-3xl md:rounded-3xl relative">
               {/* Top Section - Heading and Description */}
               <div className="mb-8">
-                             <h2 className="text-5xl md:text-6xl md:px-6 pt-3 md:pt-8 text-start font-medium mb-4">
+                <h2 className="text-5xl md:text-6xl md:px-6 pt-3 md:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
                   <span className="text-medium-brown">Us</span>
                 </h2>
-                              <p className="hidden md:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
+                <p className="hidden md:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
                   Reach out to us for any queries or to book a free consultation.
                 </p>
               </div>
@@ -71,7 +93,7 @@ const Popup = ({ onClose }) => {
                 }}
               >
                 {/* Address */}
-                               <div className="hidden md:flex items-start gap-4 mb-6">
+                <div className="hidden md:flex items-start gap-4 mb-6">
                   <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-lg leading-relaxed bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent">
@@ -142,95 +164,101 @@ const Popup = ({ onClose }) => {
               </div>
             </div>
 
-{/* Right Section - Form */}
-            <div             className="w-full md:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none relative flex flex-col justify-between">
-                                               <h2 className="text-2xl text-start pb-6 md:pb-0 md:text-3xl mt-3 md:mt-8 font-semibold text-dark-brown  md:text-left">
-                            Know the cost of making interiors for your <span className="text-medium-brown">house</span>
-                          </h2>
-                                                    <p className="hidden md:block text-md pb-6 md:pb-12 mt-1 md:mt-2 font-medium text-black text-center md:text-left">
-                            Get a free consultation & estimate <span className="text-gray-400">for your project</span>
-                          </p>
-                          
-                          <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
-                            {/* Name and Contact Number */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                              <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                                placeholder="Enter Your Name"
-                                required
-                              />
-                              <input
-                                type="text"
-                                id="number"
-                                name="number"
-                                value={formData.number}
-                                onChange={handleChange}
-                                className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                                placeholder="Enter Your Contact No."
-                                required
-                              />
-                            </div>
-                          
-                            {/* Property Type and Area */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                              <select
-                                id="propertyType"
-                                name="propertyType"
-                                onChange={handleChange}
-                                className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                                required
-                              >
-                                <option value="" disabled selected>
-                                  Property Type
-                                </option>
-                                <option value="commercial">Commercial</option>
-                                <option value="residential">Residential</option>
-                              </select>
-                              <select
-                                id="area"
-                                name="area"
-                                onChange={handleChange}
-                                className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                                required
-                              >
-                                <option value="" disabled selected>
-                                  Select Area (Sq.Ft.)
-                                </option>
-                                <option value="500">Up to 500</option>
-                                <option value="1000">500 - 1000</option>
-                                <option value="1000+">1000+</option>
-                              </select>
-                            </div>
-                          
-                            {/* Type of Interior */}
-                            <select
-                              id="interiorType"
-                              name="interiorType"
-                              onChange={handleChange}
-                              className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                              required
-                            >
-                              <option value="" disabled selected>
-                                Select Interior Type
-                              </option>
-                              <option value="premium">Classic - Upto ₹10 Lakhs</option>
-        <option value="luxury">Premium - Between ₹10L-30L</option>
-        <option value="luxury">Luxury - ₹30 Lakhs + </option>
-                            </select>
-                          
-                            {/* Submit Button */}
-                            <button
-                              type="submit"
-                              className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
-                            >
-                              Submit
-                            </button>
-                          </form>
+            {/* Right Section - Form */}
+            <div className="w-full md:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none relative flex flex-col justify-between">
+              <h2 className="text-2xl text-start pb-6 md:pb-0 md:text-3xl mt-3 md:mt-8 font-semibold text-dark-brown  md:text-left">
+                Know the cost of making interiors for your <span className="text-medium-brown">house</span>
+              </h2>
+              <p className="hidden md:block text-md pb-6 md:pb-12 mt-1 md:mt-2 font-medium text-black text-center md:text-left">
+                Get a free consultation & estimate <span className="text-gray-400">for your project</span>
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
+                {/* Name and Contact Number */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="number"
+                    name="number"
+                    value={formData.number}
+                    onChange={handleChange}
+                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    placeholder="Enter Your Contact No."
+                    required
+                  />
+                </div>
+
+                {/* Property Type and Area */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                  <select
+                    id="propertyType"
+                    name="propertyType"
+                    onChange={handleChange}
+                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Property Type
+                    </option>
+                    <option value="commercial">Commercial</option>
+                    <option value="residential">Residential</option>
+                  </select>
+                  <select
+                    id="area"
+                    name="area"
+                    onChange={handleChange}
+                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Select Area (Sq.Ft.)
+                    </option>
+                    <option value="500">Up to 500</option>
+                    <option value="1000">500 - 1000</option>
+                    <option value="1000+">1000+</option>
+                  </select>
+                </div>
+
+                {/* Type of Interior */}
+                <select
+                  id="interiorType"
+                  name="interiorType"
+                  onChange={handleChange}
+                  className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Select Interior Type
+                  </option>
+                  <option value="premium">Budget - Upto ₹10 Lakhs</option>
+                  <option value="luxury">Premium - Between ₹10L-30L</option>
+                  <option value="luxury">Luxury - ₹30 Lakhs + </option>
+                </select>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+                >
+                  Submit
+                </button>
+              </form>
+
+              {responseMessage && (
+                <p className="mt-4 text-center text-lg font-medium text-dark-brown">
+                  {responseMessage}
+                </p>
+              )}
             </div>
           </div>
         </motion.div>
