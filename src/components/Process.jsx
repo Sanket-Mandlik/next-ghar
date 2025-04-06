@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Process = () => {
   const [activeProcess, setActiveProcess] = useState(0);
@@ -8,7 +9,7 @@ const Process = () => {
   const processes = [
     {
       number: 1,
-      name: "Consultation",
+      name: "Vision",
       description:
         "Our process begins with a detailed consultation where we take the time to understand your vision, preferences, and requirements. This step ensures that we align our expertise with your expectations to create a personalized plan tailored to your needs.",
     },
@@ -41,7 +42,6 @@ const Process = () => {
   useEffect(() => {
     let start = 0;
     const end = 120;
-
     let incrementTime = Math.abs(Math.floor(2000 / (end - start)));
     let timer = setInterval(() => {
       start += 1;
@@ -54,7 +54,7 @@ const Process = () => {
 
   return (
     <div
-      className="w-full rounded-3xl flex flex-col md:flex-row p-4 gap-4 items-center justify-center"
+      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 py-4 px-6 flex flex-col md:flex-row gap-20 items-center justify-center relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
         backgroundSize: "cover",
@@ -62,21 +62,24 @@ const Process = () => {
       }}
     >
       {/* Left Section */}
-      <div className="md:w-1/3 h-full flex flex-col items-center justify-between p-6 relative">
-        <p className="absolute top-4 left-4 text-sm text-light-gray">
+      <div className="md:w-1/3 h-full flex flex-col items-center justify-between p-6 relative overflow-hidden">
+        {/* Gradient overlay left */}
+       
+
+        <p className="absolute top-4 left-4 text-sm text-gold/80 z-10">
           Building dreams, one step at a time.
         </p>
 
-        <h1 className="text-4xl md:text-5xl py-30 font-medium text-soft-white text-center">
-        Designed Perfect' n
+        <h1 className="text-5xl md:text-6xl py-35 font-normal pl-3 bg-gradient-to-r from-white to-warm-beige text-transparent bg-clip-text z-10">
+          Process - Perfected
         </h1>
 
-        <div className="absolute bottom-4 left-4">
+        <div className="absolute bottom-4 left-4 z-10">
           <p className="text-3xl font-bold text-soft-white">{counter}+</p>
           <p className="text-sm text-light-gray">Projects Completed</p>
         </div>
 
-        <div className="absolute bottom-4 right-4 flex space-x-4">
+        <div className="absolute bottom-4 right-4 flex space-x-4 z-10">
           <a
             href="https://www.instagram.com"
             target="_blank"
@@ -95,41 +98,64 @@ const Process = () => {
       </div>
 
       {/* Right Section */}
-      {/* Right Section */}
-<div className="md:w-2/3 flex flex-col justify-between bg-warm-white rounded-l-3xl p-4 h-full min-h-[400px]">
-  {/* Heading */}
-  <h2 className="text-4xl font-medium text-gold/50 mb-35 text-center md:text-left">
-    Our 5-Step Process
-  </h2>
+    {/* Right Section */}
+<div className="md:w-2/3 hidden md:flex flex-col justify-center bg-warm-white rounded-l-3xl relative overflow-hidden">
+  <div className="grid grid-cols-2 gap-12 relative z-10 p-10">
 
-  {/* Steps */}
-  <div className="relative w-full mx-auto -pb-20">
-    {/* Dashed line through center of circles */}
+    {processes.slice(0, 4).map((process, index) => {
+      const shortDescriptions = [
+        "We understand your vision and preferences.",
+        "We craft a personalized, stylish design.",
+        "We bring the design to life with quality.",
+        "We deliver and review everything carefully.",
+      ];
 
-    <div className="flex justify-between items-center w-full z-10">
-      {processes.map((process, index) => (
-        <div
+      return (
+        <motion.div
           key={index}
-          className={`flex flex-col items-center cursor-pointer transition-all ${
-            activeProcess === index ? "scale-110" : "scale-100"
-          }`}
-          onMouseEnter={() => setActiveProcess(index)}
-          style={{ transform: "translateY(-50%)" }} // vertically align
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.3, duration: 0.6, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+          className="flex flex-col items-start relative space-y-2"
         >
-          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/80 text-gold font-bold text-xl shadow-md">
+          {/* Number Circle */}
+          <div className="w-10 h-10 border-2 border-warm-beige text-soft-white flex items-center justify-center rounded-full font-bold text-lg">
             {process.number}
           </div>
-          <p className="mt-2 text-soft-white font-medium text-center text-sm">
-            {process.name}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
 
-  {/* Description Sticking to Bottom */}
-  <div className="mt-auto pt-2 text-md text-medium-brown ">
-    {processes[activeProcess]?.description}
+          {/* Step Name */}
+          <h3 className="text-lg font-normal bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
+            {process.name}
+          </h3>
+
+          {/* Short Description */}
+          <p className="text-sm text-medium-brown font-normal">
+            {shortDescriptions[index]}
+          </p>
+
+          {/* Arrow to next step */}
+          {index < 3 && (
+            <div className="absolute right-[-20px] top-[20px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-gold"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M13 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+          )}
+        </motion.div>
+      );
+    })}
   </div>
 </div>
 

@@ -67,36 +67,33 @@ const ChooseUs = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
             variants={containerVariants}
           >
-            {/* Unmatched Expertise */}
-            <motion.div
-              className="bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 p-6 rounded-xl shadow-md flex flex-col items-center text-center gap-3 pt-10 relative overflow-hidden md:h-[39vh]"
-              variants={containerVariants}
-            >
-              <motion.h3
-                className="text-2xl font-semibold 2xl:pt-12 text-dark-brown"
-                variants={textVariants}
-              >
-                Unmatched Expertise
-              </motion.h3>
-              <motion.p
-                className="text-medium-brown mb-20"
-                variants={textVariants}
-              >
-                Our team of skilled designers brings years of experience to
-                craft interiors that blend elegance with functionality.
-              </motion.p>
-              <motion.div
-                className="absolute bottom-3 right-4 w-20 h-20 2xl:w-30 2xl:h-30 overflow-hidden"
-                variants={textVariants}
-                {...spinAnimation}
-              >
-                <img
-                  src="/assets/art.png"
-                  alt="Expertise Icon"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </motion.div>
+           {/* Unmatched Expertise */}
+<motion.div
+  className="p-6 rounded-xl shadow-md flex flex-col items-center text-center gap-3 pt-10 relative overflow-hidden md:h-[39vh]"
+  style={{
+    backgroundImage: "url('/assets/mesh-476.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+  variants={containerVariants}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
+
+  {/* Foreground Content */}
+  <div className="relative z-20">
+    <motion.h3
+      className="text-2xl font-semibold 2xl:pt-12 pb-10 text-dark-brown"
+      variants={textVariants}
+    >
+      Unmatched Expertise
+    </motion.h3>
+    <motion.p className="text-medium-brown mb-20" variants={textVariants}>
+      Our team of skilled designers brings years of experience to craft
+      interiors that blend elegance with functionality.
+    </motion.p>
+  </div>
+</motion.div>
 
             {/* Premium Quality */}
             <motion.div
@@ -110,7 +107,7 @@ const ChooseUs = () => {
                 Premium Quality
               </motion.h3>
               <motion.p
-                className="text-medium-brown 2xl:pb-12"
+                className="text-medium-brown pt-8 2xl:pb-12"
                 variants={textVariants}
               >
                 We use top-tier materials and meticulous craftsmanship to create
@@ -148,17 +145,17 @@ const ChooseUs = () => {
 
         {/* Right Side */}
         <motion.div
-          className="col-span-3 relative lg:h-[82vh] overflow-hidden rounded-xl shadow-md"
+          className="col-span-3 relative lg:h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-md"
           variants={containerVariants}
         >
           <motion.img
-            src="/assets/mesh-954.png"
+            src="/assets/mesh-969.png"
             alt="Elegant Home Interior"
             className="w-full h-full object-cover"
             variants={containerVariants}
           />
           <motion.div
-            className="absolute inset-0 bg-black/40 flex flex-col items-center justify-end p-6 pb-12 2xl:pb-20 gap-3"
+            className="absolute inset-0 flex flex-col items-center justify-end p-6 pb-12 2xl:pb-20 gap-3"
             variants={containerVariants}
           >
             <motion.h3

@@ -1,14 +1,18 @@
-"use client"; // Only needed in App Router; remove for Pages Router
-
 import React from "react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
 import WhyUs1 from "../components/WhyUs1";
 import WhyUs2 from "../components/WhyUs2";
-import ChooseUs from "../components/ChooseUs";
+
+// Dynamically import ChooseUs with SSR disabled
+const ChooseUs = dynamic(() => import("../components/ChooseUs"), {
+  ssr: false,
+});
 
 const WhyUs = () => {
   return (
-    <div className="bg-soft-white mt-30 mx-auto min-h-screen">
+    <div className="bg-soft-white px-4 md:px-0 mt-30 mx-auto min-h-screen">
       {/* Title Section */}
       <motion.h1
         className="text-4xl md:text-6xl font-medium text-center leading-tight"
@@ -20,8 +24,8 @@ const WhyUs = () => {
         <span className="text-dark-brown">?</span>
 
         <p className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-            Reach out to us for any queries or to book a free consultation.
-          </p>
+          Reach out to us for any queries or to book a free consultation.
+        </p>
       </motion.h1>
 
       {/* Imported Components */}

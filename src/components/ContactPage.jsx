@@ -171,7 +171,7 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <motion.div
           ref={contactFormRef}
-          className="bg-soft-white px-4 md:px-6 py-8 my-30 rounded-3xl shadow-warm-beige/50 shadow-lg"
+          className="bg-soft-white px-4 md:px-6 py-8 mt-30 mb-10 rounded-3xl shadow-warm-beige/50 shadow-lg"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",

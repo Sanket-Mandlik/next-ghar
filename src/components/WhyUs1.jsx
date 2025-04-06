@@ -21,7 +21,7 @@ const WhyUs1 = () => {
 
   return (
 <div
-  className="md:w-4/5 mx-auto mt-30 bg-cover bg-center shadow-xl bg-no-repeat gap-6 flex flex-col md:flex-row items-center justify-center rounded-3xl "
+  className="md:w-4/5 mx-auto mt-30 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col md:flex-row items-center justify-center rounded-2xl "
   style={{
     backgroundImage: "url('/assets/mesh-994.png')", // Replace with your image path
   }}
@@ -40,9 +40,10 @@ const WhyUs1 = () => {
         </p>
 
         {/* "About Us" Text in Center */}
-        <h2 className="text-5xl sm:text-6xl py-35 font-normal  text-center mb-3 text-soft-white">
-          Amazing Designer
-        </h2>
+        <h2 className="text-5xl sm:text-6xl py-35 font-normal text-center mb-3 bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
+  Amazing Designs
+</h2>
+
 
         {/* Animated Counter */}
         <div className="absolute bottom-3 left-10 text-left">
@@ -85,41 +86,46 @@ const WhyUs1 = () => {
       >
         {/* Multicolor Heading */}
         <h2 className="text-4xl md:text-4xl font-normal mb-15">
-          <span className="text-soft-white">Customize</span>{" "}
-          <span className="text-warm-beige">With Options</span>
-        </h2>
+  <span className="bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
+    Customize
+  </span>{" "}
+  <span className="bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
+    With Options
+  </span>
+</h2>
+
 
         {/* Description */}
         
 
         {/* Tilted Overlapping Images */}
-        <div className="flex items-center justify-start space-x-[-135px]">
+        <div className="flex items-center justify-start space-x-[-130px] md:space-x-[-135px]">
           <img
             src="/assets/project1.jpeg"
             alt="Project 1"
-            className="w-32 h-32 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
+            className="w-50 h-30 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
           />
           <img
             src="/assets/project2.jpeg"
             alt="Project 2"
-            className="w-32 h-32 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
+            className="w-50 h-30 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
           />
           <img
             src="/assets/project3.jpeg"
             alt="Project 3"
-            className="w-32 h-32 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
+            className="w-50 h-30 md:w-80 md:h-60 rounded-xl shadow-xl object-cover transform rotate-6"
           />
         </div>
 
 
 
 
-        <p
-         className="text-md text-white font-normal mt-15">
-            At Make My Ghar, we bring your dream home to life with precision,
-            creativity, and unmatched craftsmanship. Let us transform your space
-            into a masterpiece.
-        </p>
+        <p className="text-md font-normal mt-15 bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
+  At Make My Ghar, we bring your dream home to life with precision,
+  creativity, and unmatched craftsmanship. Let us transform your space
+  into a masterpiece.
+</p>
+
       </motion.div>
     </div>
   );

@@ -8,7 +8,7 @@ const AboutUs = () => {
 
   useEffect(() => {
     let start = 0;
-    const end = 500;
+    const end = 120;
     const duration = 2500; // 2.5 seconds
     const startTime = performance.now();
 
@@ -49,7 +49,7 @@ const AboutUs = () => {
           </p>
 
           {/* "About Us" Text in Center */}
-          <h2 className="text-5xl sm:text-6xl py-20 font-normal text-golden text-center mb-3">
+          <h2 className="text-5xl sm:text-6xl py-25 font-normal text-golden text-center mb-3">
             About Us
           </h2>
 

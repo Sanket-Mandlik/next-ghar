@@ -158,7 +158,7 @@ const Services = () => {
 
               {/* CTA Button for Last Card */}
               {service.cta && (
-                <button className="mt-4 px-6 py-2 bg-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all">
+                <button className="mt-4 px-6 py-2 bg-gradient-to-b from-soft-white   to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all">
                   Get Started
                 </button>
               )}
