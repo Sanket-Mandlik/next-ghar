@@ -21,7 +21,7 @@ const Popup = ({ onClose }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:3000/api/contactForm", {
+      const response = await fetch("/api/contactForm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,14 +32,12 @@ const Popup = ({ onClose }) => {
       const data = await response.json(); // Parse the response as JSON
   
       if (response.ok) {
-        setResponseMessage(data.message || "Thank you! Form submitted successfully! We will get in touch with you soon.");
+        setResponseMessage(data.message); // Use the message from the backend
         setFormData({ name: "", number: "", location: "" });
-        //onClose(); // Close the popup after submission
       } else {
-        setResponseMessage(data.message || "Something went wrong. Please try again.");
+        setResponseMessage(data.message);
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
       setResponseMessage("An error occurred. Please try again later.");
     }
   };

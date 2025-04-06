@@ -20,7 +20,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/api/contactForm", {
+      const response = await fetch("/api/contactForm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const ContactForm = () => {
           interiorType: "",
         });
       } else {
-        setResponseMessage(data.error || "Something went wrong.");
+        setResponseMessage(data.message || "Something went wrong.");
       }
     } catch (error) {
       setResponseMessage("Failed to submit the form. Please try again.");
