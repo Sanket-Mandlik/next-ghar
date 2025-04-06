@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     number: "",
@@ -9,21 +9,42 @@ const ContactForm = ({ onSubmit }) => {
     interiorType: "",
   });
 
+  const [responseMessage, setResponseMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(formData);
-    setFormData({
-      name: "",
-      number: "",
-      propertyType: "",
-      area: "",
-      interiorType: "",
-    });
+
+    try {
+      const response = await fetch("http://localhost:3000/api/contactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setResponseMessage(data.message);
+        setFormData({
+          name: "",
+          number: "",
+          propertyType: "",
+          area: "",
+          interiorType: "",
+        });
+      } else {
+        setResponseMessage(data.error || "Something went wrong.");
+      }
+    } catch (error) {
+      setResponseMessage("Failed to submit the form. Please try again.");
+    }
   };
 
   return (
@@ -107,8 +128,11 @@ const ContactForm = ({ onSubmit }) => {
         type="submit"
         className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
       >
-       Get Free Consultaion 
+        Get Free Consultation
       </button>
+
+      {/* Response Message */}
+      {responseMessage && <p className="text-center mt-4">{responseMessage}</p>}
     </form>
   );
 };

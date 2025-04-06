@@ -4,9 +4,29 @@ import { useRef } from "react"; // Import useRef for section references
 import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
-  const handleFormSubmit = (formData) => {
-    alert("Thank you! We will get in touch with you soon.");
-    console.log("Form Data:", formData);
+  const handleFormSubmit = async (formData) => {
+    try {
+      const response = await fetch("http://localhost:3000/api/contactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Thank you! We will get in touch with you soon.");
+        console.log("Form submitted successfully:", data);
+      } else {
+        alert(data.error || "Something went wrong.");
+        console.error("Error submitting form:", data);
+      }
+    } catch (error) {
+      alert("Failed to submit the form. Please try again.");
+      console.error("Error:", error);
+    }
   };
 
   // Refs for sections
