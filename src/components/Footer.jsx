@@ -2,7 +2,7 @@ import { FaWhatsapp, FaPhone, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="lg:w-4/5 md:mx-auto px-4 mx-0 md:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 rounded-t-2xl">
+    <footer className="lg:w-4/5 md:mx-auto px-4 mx-0 md:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 md:rounded-t-2xl shadow-2xl shadow-warm-beige ">
       <div className="px-4 md:px-15  py-5 md:py-10 mx-auto grid grid-cols-1 md:grid-cols-8 gap-10">
         
         {/* Logo & About */}

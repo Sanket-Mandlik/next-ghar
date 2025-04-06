@@ -36,7 +36,6 @@ body.overflow-hidden {
 body {
   font-family: 'Montserrat', sans-serif;
   text-rendering: optimizeLegibility;
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -44,11 +43,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
   background-color: #FCFCFC; /* Soft White */
-  
 }
 
 .overflow-hidden {

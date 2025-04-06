@@ -1,31 +1,35 @@
-import '../../globals.css'; // Corrected path to global styles
+import '../../globals.css'; // Global styles
 import { useEffect, useState } from 'react';
-import { MyContextProvider } from '../context/MyContext'; // Adjust the path as needed
-import Navbar from '../components/Navbar'; // Import Navbar
-import Footer from '../components/Footer'; // Import Footer
-import Popup from '../components/Popup'; // Import Popup
+import { MyContextProvider } from '../context/MyContext'; // Context provider
+import Navbar from '../components/Navbar'; // Navbar
+import Footer from '../components/Footer'; // Footer
+import Popup from '../components/Popup'; // Popup component
 
 function MyApp({ Component, pageProps }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   useEffect(() => {
-    // Show the popup 7 seconds after the app mounts
+    // Show the popup after 3 seconds
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
     }, 3000);
 
-    // Cleanup the timer when the component unmounts
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <MyContextProvider>
-      <Navbar /> {/* Navbar at the top */}
-      <div className=" mx-auto"> {/* Consistent container for all pages */}
-        <Component {...pageProps} />
+      <div className="w-full min-h-screen flex flex-col">
+        <Navbar />
+
+        <main className="flex-grow w-full">
+          <Component {...pageProps} />
+        </main>
+
+        <Footer />
+
+        {isPopupVisible && <Popup onClose={() => setIsPopupVisible(false)} />}
       </div>
-      <Footer /> {/* Footer at the bottom */}
-      {isPopupVisible && <Popup onClose={() => setIsPopupVisible(false)} />} {/* Popup */}
     </MyContextProvider>
   );
 }

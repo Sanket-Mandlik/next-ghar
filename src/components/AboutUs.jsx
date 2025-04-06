@@ -27,7 +27,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="w-11/12 md:w-4/5 mx-auto mt-20">
+    <div className="w-full md:p-0 p-3 md:w-4/5 mx-auto mt-20">
       <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
         
         {/* Left Section - Dark Background */}

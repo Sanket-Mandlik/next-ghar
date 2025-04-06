@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
 // Your background images
-const images = ["/assets/project5.jpeg", "/assets/project3.jpeg"];
+const images = ["/assets/project1.jpeg","/assets/project6.jpeg", "/assets/project3.jpeg"];
 
 // Variants for the outer container
 const containerVariants = {
@@ -31,6 +31,13 @@ const childVariants = {
   }
 };
 
+// Variants for the background image transition
+const imageVariants = {
+  initial: { opacity: 0, x: 50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeOut" } },
+  exit: { opacity: 0, x: -50, transition: { duration: 1.5, ease: "easeIn" } },
+};
+
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -44,43 +51,46 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full md:px-10 flex mx-auto justify-center -mt-14 mb-10 relative"
+      className="w-full md:px-2 flex mx-auto justify-center -mt-14 mb-10 relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <section className="relative w-full h-[65vh] md:h-[90vh] md:rounded-3xl overflow-hidden">
-        {/* Animated Background with Gradient Overlay baked in */}
+      <section className="relative w-full h-[85vh] md:h-[93vh] md:rounded-3xl overflow-hidden">
+        {/* Animated Background with Enhanced Transition */}
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={currentImage}
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 3 }}
+            variants={imageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
             className="absolute inset-0"
             style={{
-              backgroundImage: `linear-gradient(to top, rgba(15,10,10,0.4), rgba(15,10,10,0.3), rgba(15,10,10,0.2)), url(${images[currentImage]})`,
+              backgroundImage: `url(${images[currentImage]})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           />
         </AnimatePresence>
 
-        {/* Static Gradient Overlay for additional contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        {/* Blur Effect at the Bottom */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+          <div className="absolute bottom-0 md:inset-x-0 h-[33%] backdrop-blur-xs"></div>
+        </div>
 
         {/* Content Container - Adjusted for Mobile */}
         <motion.div
-          className="relative z-10 flex flex-col md:flex-row items-start md:items-end justify-end h-full px-4 md:px-20 py-15 md:py-15 gap-x-10 md:gap-x-20"
+          className="relative z-10 flex flex-col md:flex-row items-start md:items-end justify-end h-full px-4 md:px-20 py-15 md:py-10 gap-x-10 md:gap-x-20"
           variants={childVariants}
         >
           {/* Left Section: Title */}
           <motion.div className="w-full md:w-3/5 flex-shrink-0" variants={childVariants}>
-            <h1 className="text-4xl md:text-6xl font-heading font-normal font-montserrat leading-tight text-soft-white">
+            <h1 className="text-4xl md:text-6xl font-medium font-heading leading-tight text-soft-white">
               From Apartment To <br />
-              <span className="text-warm-beige font-semibold">Apna Ghar</span> In{" "}
-              <span className="text-light-gray font-semibold">45 Days</span>
+              <span className="text-soft-white font-medium">Ghar</span> In{" "}
+              <span className="text-soft-white font-medium">45 Days</span>
             </h1>
           </motion.div>
 
