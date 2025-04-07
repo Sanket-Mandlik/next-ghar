@@ -44,8 +44,8 @@ export default async function handler(req, res) {
 
       // Respond with success
       return res.status(200).json({ message: 'Form submitted successfully!' });
-    } catch (error) {
-      return res.status(500).json({ error: 'Failed to submit form. Please try again later.' });
+    } catch {
+      return res.status(500).json({ message: 'Failed to submit form. Please try again later.' });
     }
   } else {
     // Handle unsupported HTTP methods
