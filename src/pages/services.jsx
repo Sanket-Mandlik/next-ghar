@@ -3,6 +3,7 @@ import Process from "../components/Process";
 import { motion } from "framer-motion";
 
 import ServicesPage from "../components/ServicesPage";
+import SliderText from "../components/SliderText";
 
 
 const Services = () => {
@@ -57,9 +58,11 @@ const Services = () => {
     <ServicesPage />
 </div>
        
+
+<SliderText />
     
       {/* Call-to-Action Section */} 
-<div className="bg-gradient-to-br mt-20  from-gold to-medium-brown via-warm-beige text-soft-white py-30 rounded-3xl shadow-xl shadow-warm-beige/50 text-center space-y-6"
+<div className="bg-gradient-to-br mt-20  from-gold to-medium-brown via-warm-beige text-soft-white py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-center space-y-6"
       
        style={{
          backgroundImage: "url('/assets/mesh-994.png')",
@@ -77,6 +80,9 @@ const Services = () => {
           Get Started Now
         </button>
       </div>
+
+
+    
       </div>
 
   );

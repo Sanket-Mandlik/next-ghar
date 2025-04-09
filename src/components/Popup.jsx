@@ -7,19 +7,22 @@ const Popup = ({ onClose }) => {
     name: "",
     number: "",
     location: "",
+    startDate: "", // New field
   });
 
   const [responseMessage, setResponseMessage] = useState("");
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const [isDateFocused, setIsDateFocused] = useState(false);
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch("/api/contactForm", {
         method: "POST",
@@ -28,12 +31,12 @@ const Popup = ({ onClose }) => {
         },
         body: JSON.stringify(formData),
       });
-  
-      const data = await response.json(); // Parse the response as JSON
-  
+
+      const data = await response.json();
+
       if (response.ok) {
-        setResponseMessage(data.message); // Use the message from the backend
-        setFormData({ name: "", number: "", location: "" });
+        setResponseMessage(data.message);
+        setFormData({ name: "", number: "", location: "", startDate: "" });
       } else {
         setResponseMessage(data.message);
       }
@@ -57,9 +60,6 @@ const Popup = ({ onClose }) => {
           exit={{ scale: 0.8, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          {/* Popup content */}
-
-          {/* Close Button */}
           <button
             className="absolute top-4 right-4 text-dark-brown text-2xl font-bold hover:text-medium-brown transition-all z-10"
             onClick={onClose}
@@ -69,28 +69,25 @@ const Popup = ({ onClose }) => {
 
           <div className="flex flex-col md:flex-row">
             {/* Left Section */}
-            <div className="w-full md:w-1/2 text-white p-4 mb-2 rounded-3xl md:rounded-3xl relative">
-              {/* Top Section - Heading and Description */}
+            <div className="w-full md:w-1/2 text-white p-4 mb-2 rounded-2xl md:rounded-2xl relative">
               <div className="mb-8">
                 <h2 className="text-5xl md:text-6xl md:px-6 pt-3 md:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
                   <span className="text-medium-brown">Us</span>
                 </h2>
                 <p className="hidden md:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
-                  Reach out to us for any queries or to book a free consultation.
+                  Reach out to us for any queries or book a free consultation.
                 </p>
               </div>
 
-              {/* Bottom Section - Address, Contact Details, and Social Icons */}
               <div
-                className="px-8 py-10  shadow-lg shadow-warm-beige/50 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70"
+                className="px-8 py-10 shadow-lg shadow-warm-beige/50 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70"
                 style={{
-                  backgroundImage: "url('/assets/mesh-626.png')", // Add background image here
+                  backgroundImage: "url('/assets/mesh-626.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               >
-                {/* Address */}
                 <div className="hidden md:flex items-start gap-4 mb-6">
                   <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
                   <div>
@@ -108,7 +105,6 @@ const Popup = ({ onClose }) => {
                   </div>
                 </div>
 
-                {/* Phone */}
                 <div className="flex items-center gap-4 mb-4 md:mb-8">
                   <FaPhoneAlt className="text-xl flex-shrink-0" />
                   <a
@@ -119,7 +115,6 @@ const Popup = ({ onClose }) => {
                   </a>
                 </div>
 
-                {/* WhatsApp */}
                 <div className="flex items-center gap-4 mb-10">
                   <FaWhatsapp className="text-2xl flex-shrink-0" />
                   <a
@@ -132,30 +127,14 @@ const Popup = ({ onClose }) => {
                   </a>
                 </div>
 
-                {/* Social Icons */}
                 <div className="flex items-center justify-end gap-5">
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-md text-white hover:text-soft-white transition-colors"
-                  >
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaInstagram className="text-xl" />
                   </a>
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-md text-white hover:text-soft-white transition-colors"
-                  >
+                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaLinkedin className="text-xl" />
                   </a>
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-md text-white hover:text-soft-white transition-colors"
-                  >
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaFacebook className="text-xl" />
                   </a>
                 </div>
@@ -164,7 +143,7 @@ const Popup = ({ onClose }) => {
 
             {/* Right Section - Form */}
             <div className="w-full md:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none relative flex flex-col justify-between">
-              <h2 className="text-2xl text-start pb-6 md:pb-0 md:text-3xl mt-3 md:mt-8 font-semibold text-dark-brown  md:text-left">
+              <h2 className="text-2xl text-start pb-6 md:pb-0 md:text-3xl mt-3 md:mt-8 font-semibold text-dark-brown md:text-left">
                 Know the cost of making interiors for your <span className="text-medium-brown">house</span>
               </h2>
               <p className="hidden md:block text-md pb-6 md:pb-12 mt-1 md:mt-2 font-medium text-black text-center md:text-left">
@@ -172,8 +151,7 @@ const Popup = ({ onClose }) => {
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
-                {/* Name and Contact Number */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <input
                     type="text"
                     id="name"
@@ -196,21 +174,33 @@ const Popup = ({ onClose }) => {
                   />
                 </div>
 
-                {/* Property Type and Area */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                  <select
-                    id="propertyType"
-                    name="propertyType"
-                    onChange={handleChange}
-                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Property Type
-                    </option>
-                    <option value="commercial">Commercial</option>
-                    <option value="residential">Residential</option>
-                  </select>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+                <div className="relative w-full">
+  {/* Fake Placeholder */}
+  {!formData.startDate && !isDateFocused && (
+    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
+      Select start date
+    </span>
+  )}
+
+  <input
+    type="date"
+    id="startDate"
+    name="startDate"
+    value={formData.startDate}
+    onChange={handleChange}
+    onFocus={() => setIsDateFocused(true)}
+    onBlur={() => setIsDateFocused(false)}
+    className={`w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
+      formData.startDate || isDateFocused ? "text-black" : "text-transparent"
+    }`}
+    required
+  />
+</div>
+
+
+
                   <select
                     id="area"
                     name="area"
@@ -219,15 +209,16 @@ const Popup = ({ onClose }) => {
                     required
                   >
                     <option value="" disabled selected>
-                      Select Area (Sq.Ft.)
+                      Select Property Type 
                     </option>
-                    <option value="500">Up to 500</option>
-                    <option value="1000">500 - 1000</option>
-                    <option value="1000+">1000+</option>
+                    <option value="500">2 Bhk</option>
+                    <option value="1000">3 Bhk</option>
+                    <option value="1000+">4 Bhk+</option>
+                    <option value="1000+">Villa</option>
+                    <option value="1000+">Commercial</option>
                   </select>
                 </div>
 
-                {/* Type of Interior */}
                 <select
                   id="interiorType"
                   name="interiorType"
@@ -236,14 +227,13 @@ const Popup = ({ onClose }) => {
                   required
                 >
                   <option value="" disabled selected>
-                    Select Interior Type
+                    Select Interior Budget
                   </option>
-                  <option value="premium">Budget - Upto ₹10 Lakhs</option>
-                  <option value="luxury">Premium - Between ₹10L-30L</option>
-                  <option value="luxury">Luxury - ₹30 Lakhs + </option>
+                  <option value="budget">Between ₹10 L - 15 Lakhs</option>
+                  <option value="premium">Between ₹15 L - 18 Lakhs</option>
+                  <option value="luxury">Above ₹18 Lakhs</option>
                 </select>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"

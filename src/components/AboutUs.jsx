@@ -38,24 +38,24 @@ const AboutUs = () => {
           viewport={{ once: true }}
           className="md:col-span-4 p-8 rounded-xl shadow-md text-soft-white relative flex flex-col justify-center items-center"
           style={{
-            backgroundImage: "url('/assets/mesh-954.png')",
+            backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           {/* Small Text at Top Left */}
-          <p className="absolute top-4 left-4 text-sm text-light-gray">
+          <p className="absolute top-4 left-4 text-sm text-medium-brown">
             Building dreams, one home at a time.
           </p>
 
           {/* "About Us" Text in Center */}
-          <h2 className="text-5xl sm:text-6xl py-25 font-normal text-golden text-center mb-3">
+          <h2 className="text-5xl sm:text-6xl py-25 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3">
             About Us
           </h2>
 
           {/* Animated Counter */}
           <div className="absolute bottom-3 left-4 text-left">
-            <p className="text-3xl sm:text-4xl font-extrabold text-golden">
+            <p className="text-3xl md:text-4xl font-semibold text-soft-white">
               {count}+
             </p>
             <p className="text-md sm:text-lg text-light-gray">
@@ -88,7 +88,7 @@ const AboutUs = () => {
           }}
         >
           {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl font-medium text-dark-brown">
+          <h2 className="text-3xl md:text-4xl font-medium text-dark-brown">
             Who Are We?
           </h2>
 
@@ -106,13 +106,13 @@ const AboutUs = () => {
           </motion.div>
 
           {/* Info Text */}
-          <p className="mt-6 text-sm sm:text-md text-dark-brown">
+          <p className="mt-6  font-medium sm:text-md text-dark-brown">
             At Make My Ghar, we design interiors that are both stylish and functional, tailored to match our clients’ needs.  
             From modern apartments to luxury villas, we handle space planning, furniture selection, and material sourcing, ensuring seamless execution.
           </p>
 
-          <p className="mt-2 text-sm sm:text-md text-dark-brown">
-            With 500+ completed projects, we bring expertise in customized designs, smart layouts, and high-quality finishes to create spaces that are elegant, efficient, and built to last.
+          <p className="mt-2 font-medium sm:text-md text-dark-brown">
+            With 120+ completed projects, we bring expertise in customized designs, smart layouts, and high-quality finishes to create spaces that are elegant, efficient, and built to last.
           </p>
         </motion.div>
       </div>

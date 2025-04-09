@@ -1,61 +1,97 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-// Define the services with titles as JSX to highlight specific words
 const services = [
   {
     id: 1,
     title: (
       <>
-       Bespoke <span className="text-dark-brown"> Interior Designing</span>
+        Complete <span className="text-dark-brown">Makeover</span>
       </>
     ),
-    description: "Transform your space with modern aesthetics.",
+    description: "Tailored interiors reflecting individual lifestyles and tastes for a truly unique home.",
+    image: "project1.jpeg",
+    features: [
+      "Custom carpentry",
+      "Semi-modular kitchens",
+      "Bedrooms & Kid's rooms",
+      "End-to-end design process",
+      "Spacious Planning"
+    ],
   },
   {
     id: 2,
     title: (
       <>
-        Tailored <span className="text-dark-brown">Modular Kitchens</span>
+        Spacious <span className="text-dark-brown">Planning</span>
       </>
     ),
-    description: "Custom-built kitchens tailored to your needs.",
+    description: "Intelligent use of available space, blending utility with comfort and style seamlessly.",
+    image: "project3.jpeg",
+    features: [
+      "Wall Paneling",
+      "Wall Painting",
+      "Electrical setup",
+      "False Ceiling & Mouldings",
+      "Safety doors"
+    ],
   },
   {
     id: 3,
     title: (
       <>
-        Furniture & <span className="text-dark-brown">Home Decor</span>
+        Modular <span className="text-dark-brown">Kitchen</span>
       </>
     ),
-    description: "Handpicked furniture that defines elegance.",
+    description: "A kitchen that complements your lifestyle, functionally and aesthetically.",
+    image: "project2.jpeg",
+    features: [
+      "Modular Kitchen",
+      "Semi-Modular Kitchen",
+      "Space Planning"
+    ],
   },
   {
     id: 4,
     title: (
       <>
-       Smart Home <span className="text-dark-brown">Automation</span>
+        Commercial <span className="text-dark-brown">Interiors</span>
       </>
     ),
-    description: "Smart solutions for effortless living.",
+    description: "Functional and attractive commercial interiors that reflect your brand’s personality.",
+    image: "project4.jpeg",
+    features: [
+      "Office Interior",
+      "Shop Makeover",
+      "Community Spaces"
+    ],
   },
   {
     id: 5,
     title: (
       <>
-        Personalized <span className="text-dark-brown">Space Planning</span>
+        Loose <span className="text-dark-brown">Furniture</span>
       </>
     ),
-    description: "Give your home a stunning makeover.",
+    description: "Spaces that create warm welcomes and shared experiences over meals.",
+    image: "project5.jpeg",
+    features: [
+      "Sofa Sets & Armchairs",
+      "Beds & Kids Furniture",
+      "Center Tables",
+      "Dining Tables",
+      "Accent Furniture"
+    ],
   },
   {
     id: 6,
     title: (
       <>
-        Start Your Project With Us <span className="text-dark-brown">Us</span>
+        Start Your Project With <span className="text-gold">Make My Ghar</span>
       </>
     ),
     description: "Contact us today to begin work on your dream home!",
+    image: "mesh-994.png",
     cta: true,
   },
 ];
@@ -65,7 +101,6 @@ const Services = () => {
 
   return (
     <div className="relative md:w-4/5 md:mx-auto mx-3 px-1 flex flex-col items-start mt-30">
-      {/* Section Heading */}
       <motion.h2
         className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
         initial={{ opacity: 0, y: 30 }}
@@ -83,87 +118,72 @@ const Services = () => {
         We Offer
       </motion.h2>
 
-      {/* Horizontal layout for larger screens */}
-      <div className="hidden lg:flex relative w-full flex-row items-center">
+      <div className="flex md:w-4/5 mx-auto relative w-full flex-col items-center mt-10">
         {services.map((service, index) => (
           <motion.div
-            key={service.id}
-            initial={{ x: 0 }}
-            animate={{
-              x: hovered !== null && index > hovered && index < 5 ? 320 : 0,
-            }}
-            transition={{ type: "spring", stiffness: 50 }}
-            className={`relative h-[480px] w-[420px] p-6 rounded-xl shadow-lg cursor-pointer flex items-center ${
-              index === 5
-                ? "bg-dark-brown text-pure-white ml-10"
-                : "bg-soft-white text-medium-brown"
-            }`}
-            style={{
-              marginLeft: index !== 0 && index < 5 ? "-335px" : "0", // Overlapping effect
-            }}
-            onMouseEnter={() => (index < 5 ? setHovered(index) : null)}
-            onMouseLeave={() => (index < 5 ? setHovered(null) : null)}
-          >
-            {/* Number Badge */}
-            <div className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-dark-brown text-pure-white text-lg font-bold rounded-full">
-              {service.id}
-            </div>
-
-            {/* Service Content */}
-            <div className="ml-15">
-              <h3 className="text-4xl font-medium">{service.title}</h3>
-              <p className="text-sm mt-1">{service.description}</p>
-
-              {/* CTA Button for Last Card */}
-              {service.cta && (
-                <button className="mt-4 px-6 py-2 bg-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all">
-                  Get Started
-                </button>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Vertical layout for mobile */}
-      <div className="flex lg:hidden relative w-full  flex-col items-center mt-10">
-        {services.map((service, index) => (
-          <motion.div
-            key={service.id}
-            initial={{ y: 0 }}
-            animate={{
-              y: hovered !== null && index > hovered && index < 5 ? 200 : 0,
-            }}
-            transition={{ type: "spring", stiffness: 50 }}
-            className={`relative h-[450px] w-[94vw] p-6 rounded-xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex pt-25 items-start ${
-              index === 5
-                ? "bg-dark-brown text-pure-white"
-                : "bg-soft-white text-medium-brown"
-            }`}
-            style={{
-              marginTop: index !== 0 && index < 5 ? "-290px" : "0", // Overlapping effect
-            }}
-            onMouseEnter={() => (index < 5 ? setHovered(index) : null)}
-            onMouseLeave={() => (index < 5 ? setHovered(null) : null)}
-          >
-            {/* Number Badge */}
+          key={service.id}
+          initial={{ y: 0 }}
+          animate={{
+            y: hovered !== null && index > hovered && index < 5 ? 200 : 0,
+          }}
+          transition={{ type: "spring", stiffness: 50 }}
+          className={`relative h-auto md:h-[520px] w-[94vw] md:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
+            index === 5
+              ? "flex-col items-center justify-center text-center bg-cover bg-center text-pure-white"
+              : "flex-col md:flex-row gap-4 pt-25 items-start text-medium-brown bg-soft-white"
+          }`}
+          style={{
+            marginTop: index !== 0 && index < 5 ? "-290px" : "0",
+            backgroundImage: index === 5 ? "url('/assets/mesh-994.png')" : "none",
+          }}
+          onMouseEnter={() => (index < 5 ? setHovered(index) : null)}
+          onMouseLeave={() => (index < 5 ? setHovered(null) : null)}
+        >
+          {index !== 5 && (
             <div className="absolute top-[20px] left-[40px] -translate-x-1/2 w-10 h-10 flex items-center justify-center bg-dark-brown text-pure-white text-lg font-bold rounded-full">
               {service.id}
             </div>
+          )}
+        
+        <div className={`flex-1 flex flex-col ${index === 5 ? "justify-between items-center text-center h-full" : "justify-between"}`}>
+  {index === 5 && (
+    <div className="mt-auto ">
+      <h3 className="text-5xl font-medium">{service.title}</h3>
+      <p className="text-lg font-medium mt-6 mb-15">{service.description}</p>
+    </div>
+  )}
+  {index !== 5 && (
+    <div>
+      <h3 className="text-4xl font-medium">{service.title}</h3>
+      <p className="text-lg font-medium mt-3 mb-15">{service.description}</p>
+      {service.features && (
+        <ul className="list-disc pl-5 text-dark-brown text-lg font-medium space-y-1">
+          {service.features.map((feature, i) => (
+            <li key={i}>{feature}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )}
 
-            {/* Service Content */}
-            <div className="text-start">
-              <h3 className="text-4xl font-medium">{service.title}</h3>
-              <p className="text-sm mt-1">{service.description}</p>
+  {service.cta && (
+    <button className=" mb-auto px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all w-fit">
+      Get Started
+    </button>
+  )}
+</div>
 
-              {/* CTA Button for Last Card */}
-              {service.cta && (
-                <button className="mt-4 px-6 py-2 bg-gradient-to-b from-soft-white   to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all">
-                  Get Started
-                </button>
-              )}
-            </div>
-          </motion.div>
+        
+          {/* Image */}
+          {service.image && index !== 5 && (
+            <img
+              src={`/assets/${service.image}`}
+              alt={`Service ${service.id}`}
+              className="mt-4 md:-mt-20 md:ml-6 w-full md:w-1/2 h-80 md:h-full object-cover rounded-2xl"
+            />
+          )}
+        </motion.div>
+        
         ))}
       </div>
     </div>

@@ -1,129 +1,131 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+const services = [
+  {
+    title: "Complete Makeover",
+    description:
+      "Tailored interiors reflecting individual lifestyles and tastes for a truly unique home.",
+    points: [
+      "Custom carpentry",
+      "Semi-modular kitchens",
+      "Bedrooms & Kid's",
+      "End-to-end design process",
+    ],
+    image: "/assets/project7.jpeg",
   },
-};
+  {
+    title: "Spacious Planning",
+    description:
+      "Intelligent use of available space, blending utility with comfort and style seamlessly.",
+    points: [
+      "Wall Paneling",
+      "Wall Painting",
+      "Electrical setup",
+      "False Ceiling & Mouldings",
+      "Safety doors",
+    ],
+    image: "/assets/project3.jpeg",
+  },
+  {
+    title: "Modular Kitchen",
+    description:
+      "A kitchen that complements your lifestyle, functionally and aesthetically.",
+    points: ["Modular Kitchen", "Semi-Modular Kitchen", "Space Planning"],
+    image: "/assets/project2.jpeg",
+  },
+  {
+    title: "Commercial",
+    description:
+      "Functional and attractive commercial interiors that reflect your brand’s personality.",
+    points: ["Office Interior", "Shop Makeover", "Community Spaces"],
+    image: "/assets/project5.jpeg",
+  },
+  {
+    title: "Loose Furniture",
+    description:
+      "Spaces that create warm welcomes and shared experiences over meals.",
+    points: [
+      "Sofa Sets & Armchairs",
+      "Beds & Kids Furniture",
+      "Center Tables",
+      "Dining Tables",
+      "Accent Furniture",
+    ],
+    image: "/assets/project1.jpeg",
+  },
+];
+
+const meshBackgrounds = [
+  "/assets/mesh-207.png",
+  "/assets/mesh-198.png",
+  "/assets/mesh-207.png",
+  "/assets/mesh-292.png",
+  "/assets/mesh-207.png",
+];
 
 const ServicesPage = () => {
   return (
-    <div className="w-full  flex flex-col md:flex-row gap-4 min-h-[90vh]">
-      {/* Left Section – 100% on mobile, 30% on desktop */}
-      <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="w-full md:w-[30%] relative rounded-2xl overflow-hidden group"
-      >
-        <div
-          className="h-[40vh] md:h-full w-full shadow-lg bg-cover bg-center relative"
-          style={{ backgroundImage: "url('/assets/project7.jpeg')" }}
-        >
-          <div className="absolute inset-0 bg-black/50 group-hover:backdrop-blur-sm transition duration-300 rounded-2xl" />
-          <div className="absolute bottom-10 md:bottom-4 left-4 text-left md:text-soft-white z-10 pr-4 p-4">
-            <h2 className="text-4xl md:text-5xl font-normal mb-4 text-soft-white">Complete Makeover</h2>
-            <p className="text-base text-soft-white">
-              Tailored interiors reflecting individual lifestyles and tastes for a truly unique home.
-            </p>
-          </div>
-          <div className="absolute bottom-4 right-4 z-10 flex gap-2 opacity-0 group-hover:opacity-100 transition duration-300">
-            <button className="border border-soft-white text-soft-white text-sm px-4 py-1 rounded-full hover:bg-soft-white hover:text-black transition">
-              View
-            </button>
-          </div>
-        </div>
-      </motion.div>
+    <div className="space-y-8 bg-soft-white">
+      {services.map((service, index) => {
+        const meshBg = meshBackgrounds[index % meshBackgrounds.length];
 
-      {/* Right Section */}
-      <div className="w-full md:w-[70%] flex flex-col gap-4">
-        {/* Top Section */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="w-full h-[40vh] md:h-[44vh] relative rounded-2xl overflow-hidden group"
-        >
+        return (
           <div
-            className="h-full w-full bg-cover shadow-lg bg-center relative"
-            style={{ backgroundImage: "url('/assets/project3.jpeg')" }}
+            key={index}
+            className="flex flex-col md:flex-row gap-3 w-full md:h-[65vh]"
           >
-            <div className="absolute inset-0 bg-black/50 group-hover:backdrop-blur-sm transition duration-300 rounded-2xl" />
-            <div className="absolute bottom-15 md:inset-0 md:flex md:flex-col md:items-center md:justify-center text-left md:text-center text-soft-white px-6">
-              <h2 className="text-4xl md:text-4xl font-normal mb-4">Spacious Planning</h2>
-              <p className="text-base max-w-md">
-                Intelligent use of available space, blending utility with comfort and style seamlessly.
-              </p>
+            {/* Image Section */}
+            <div className="w-full md:w-2/3 relative overflow-hidden rounded-2xl">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-[45vh] md:h-[65vh] object-cover rounded-2xl"
+              />
+
+              {/* Overlay */}
+              <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-l from-black/60 to-transparent" />
+              <div className="block md:hidden absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
+
+              {/* Text Content */}
+              <div className="absolute inset-0 z-20 flex flex-col justify-center text-soft-white px-6 md:px-0 items-end md:pr-20">
+                {/* Desktop Text */}
+                <div className="hidden md:flex flex-col space-y-3 max-w-xl text-right">
+                  <h3 className="text-5xl font-medium">{service.title}</h3>
+                  <div className="w-24 h-[2px] bg-soft-white ml-auto" />
+                  <p className="text-lg">{service.description}</p>
+                </div>
+
+                {/* Mobile Text */}
+                <div className="flex md:hidden flex-col absolute bottom-8 left-8 text-left space-y-2 max-w-xs">
+                  <h3 className="text-4xl font-medium">{service.title}</h3>
+                  <p className="text-base">{service.description}</p>
+                </div>
+              </div>
             </div>
-            <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
-              <button className="border border-soft-white text-soft-white text-sm px-4 py-1 rounded-full hover:bg-soft-white hover:text-black transition">
-                View
-              </button>
+
+            {/* Right Section with Mesh Background */}
+            <div
+              className="w-full md:w-1/3 p-10 md:p-15 text-soft-white flex flex-col justify-center space-y-4 rounded-2xl bg-cover bg-center"
+              style={{ backgroundImage: `url(${meshBg})` }}
+            >
+              <div className="w-full space-y-4 text-left">
+                <h4 className="text-2xl font-semibold text-soft-white">
+                  What's included:
+                </h4>
+                <ul className="space-y-3 text-base">
+                  {service.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-1 text-soft-white" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row gap-4 h-[90vh] md:h-[44vh]">
-          {/* Left */}
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="w-full md:w-[60%] relative rounded-2xl overflow-hidden group"
-          >
-            <div
-              className="h-[40vh] md:h-full w-full bg-cover bg-center relative"
-              style={{ backgroundImage: "url('/assets/project2.jpeg')" }}
-            >
-              <div className="absolute inset-0 bg-black/50 group-hover:backdrop-blur-sm transition duration-300 rounded-2xl" />
-              <div className="absolute bottom-15 md:inset-0 md:flex md:flex-col md:items-center md:justify-center text-left md:text-center text-soft-white px-6">
-                <h2 className="text-4xl md:text-4xl font-normal mb-4">Innovative Kitchen</h2>
-                <p className="text-base max-w-md">
-                  Functional layouts infused with elegance, designed for culinary creativity and ease.
-                </p>
-              </div>
-              <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
-                <button className="border border-soft-white text-soft-white text-sm px-4 py-1 rounded-full hover:bg-soft-white hover:text-black transition">
-                  View
-                </button>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right */}
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="w-full md:w-[40%] relative rounded-2xl overflow-hidden group"
-          >
-            <div
-              className="h-[40vh] md:h-full w-full bg-cover bg-center relative"
-              style={{ backgroundImage: "url('/assets/project5.jpeg')" }}
-            >
-              <div className="absolute inset-0 bg-black/50 group-hover:backdrop-blur-sm transition duration-300 rounded-2xl" />
-              <div className="absolute bottom-15 md:inset-0 md:flex md:flex-col md:items-center md:justify-center text-left md:text-center text-soft-white px-6">
-                <h2 className="text-4xl md:text-4xl font-normal mb-4">Commercial</h2>
-                <p className="text-base max-w-md">Vibrant textures and standout elements.</p>
-              </div>
-              <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
-                <button className="border border-soft-white text-soft-white text-sm px-4 py-1 rounded-full hover:bg-soft-white hover:text-black transition">
-                  View
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

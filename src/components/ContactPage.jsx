@@ -56,7 +56,7 @@ const ContactPage = () => {
         {/* Contact Details Section */}
         <motion.div
           ref={contactDetailsRef}
-          className="text-white p-6 mb-20 rounded-3xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
+          className="text-white p-6 mb-20 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
@@ -153,7 +153,7 @@ const ContactPage = () => {
               animate={isContactDetailsInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <div className="rounded-3xl overflow-hidden shadow-lg">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d144.9537353153167!3d-37.81627974202144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b3c5c8d7e!2s123%20Summer%20Street%2C%20Design%20Avenue%2C%20Mumbai-400231%2C%20India!5e0!3m2!1sen!2sus!4v1614311234567!5m2!1sen!2sus"
                   width="100%"
@@ -171,7 +171,7 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <motion.div
           ref={contactFormRef}
-          className="bg-soft-white px-4 md:px-6 py-8 mt-30 mb-10 rounded-3xl shadow-warm-beige/50 shadow-lg"
+          className="bg-soft-white px-4 md:px-6 py-8 mt-30 mb-10 rounded-2xl shadow-warm-beige/50 shadow-lg"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",
@@ -241,7 +241,7 @@ const ContactPage = () => {
 
             {/* Right Section - Contact Form */}
             <motion.div
-              className="md:w-2/3 bg-white px-6 py-8 rounded-3xl"
+              className="md:w-2/3 bg-white px-6 py-8 rounded-2xl"
               initial={{ x: 100, opacity: 0 }}
               animate={isContactFormInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}

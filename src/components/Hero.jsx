@@ -56,7 +56,7 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
     >
-      <section className="relative w-full h-[85vh] md:h-[93vh] md:rounded-3xl overflow-hidden">
+      <section className="relative w-full h-[85vh] md:h-[93vh] md:rounded-2xl overflow-hidden">
         {/* Animated Background with Enhanced Transition */}
         <AnimatePresence exitBeforeEnter>
           <motion.div
@@ -96,11 +96,11 @@ const Hero = () => {
 
           {/* Right Section: Description and Button */}
           <motion.div className="w-full md:w-2/5 flex flex-col items-start justify-end text-left mt-4 md:mt-0" variants={childVariants}>
-            <p className="text-md md:text-xl font-light md:pb-0 pb-8 text-light-gray">
+            <p className="text-md md:text-xl font-medium md:pb-0 pb-8 text-light-gray">
               Make My Ghar transforms your space into a modern home using top-tier materials.
             </p>
             <div className="mt-4 md:mt-6">
-              <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md md:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all">
+              <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md md:text-lg font-semibold text-dark-brown px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all">
                 Start Your Journey
                 <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
               </button>

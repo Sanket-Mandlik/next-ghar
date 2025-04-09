@@ -16,6 +16,11 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+
+  const [isDateFocused, setIsDateFocused] = useState(false);
+
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -75,20 +80,29 @@ const ContactForm = () => {
 
       {/* Property Type and Area */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-        <select
-          id="propertyType"
-          name="propertyType"
-          value={formData.propertyType}
-          onChange={handleChange}
-          className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-          required
-        >
-          <option value="" disabled>
-            Property Type
-          </option>
-          <option value="commercial">Commercial</option>
-          <option value="residential">Residential</option>
-        </select>
+      <div className="relative w-full">
+  {/* Fake Placeholder */}
+  {!formData.startDate && !isDateFocused && (
+    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
+      Select start date
+    </span>
+  )}
+
+  <input
+    type="date"
+    id="startDate"
+    name="startDate"
+    value={formData.startDate}
+    onChange={handleChange}
+    onFocus={() => setIsDateFocused(true)}
+    onBlur={() => setIsDateFocused(false)}
+    className={`w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
+      formData.startDate || isDateFocused ? "text-black" : "text-transparent"
+    }`}
+    required
+  />
+</div>
+
         <select
           id="area"
           name="area"
@@ -98,13 +112,16 @@ const ContactForm = () => {
           required
         >
           <option value="" disabled>
-            Select Area (Sq.Ft.)
+            Select Property Type
           </option>
-          <option value="500">Up to 500</option>
-          <option value="1000">500 - 1000</option>
-          <option value="1000+">1000+</option>
+          <option value="2 bhk">2 Bhk</option>
+          <option value="3 bhk">3 Bhk</option>
+          <option value="4 bhk+">4 Bhk+</option>
+          <option value="Villa">Villa</option>
+          <option value="Commercial">Commercial</option>
         </select>
       </div>
+       
 
       {/* Type of Interior */}
       <select
@@ -116,17 +133,17 @@ const ContactForm = () => {
         required
       >
         <option value="" disabled>
-          Select Interior Type
+          Select Interior Budget
         </option>
-        <option value="premium">Classic - Upto ₹10 Lakhs</option>
-        <option value="luxury">Premium - Between ₹10L-30L</option>
-        <option value="luxury">Luxury - ₹30 Lakhs + </option>
+        <option value="premium"> Between ₹10 L - 15 Lakhs</option>
+        <option value="luxury">Between ₹15 L - 18 Lakhs</option>
+        <option value="luxury">Above ₹18 Lakhs  </option>
       </select>
 
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+        className="md:w-1/3  px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
       >
         Get Free Consultation
       </button>

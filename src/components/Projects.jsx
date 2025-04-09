@@ -125,7 +125,7 @@ const Projects = () => {
 
         {/* CTA Container */}
         <motion.div
-          className="lg:w-1/4 lg:h-[40vh] md:p-6 bg-soft-white text-dark-brown rounded-xl space-y-2 mt-4 flex flex-col justify-center"
+          className="lg:w-1/4 lg:h-[40vh] md:p-6 bg-warm-white text-dark-brown rounded-xl space-y-2 mt-4 flex flex-col justify-center"
           variants={containerVariants}
         >
           <motion.h2 className="text-2xl font-semibold" variants={textVariants}>
@@ -135,7 +135,7 @@ const Projects = () => {
             Let's bring your vision to life with expert craftsmanship.
           </motion.p>
           <motion.button
-            className="mt-4 px-6 py-2 bg-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
+            className="mt-4 px-6 py-2 bg-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
             variants={textVariants}
           >
             Get Started

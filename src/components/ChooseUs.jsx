@@ -38,7 +38,7 @@ const spinAnimation = {
 const ChooseUs = () => {
   return (
     <motion.div
-      className="lg:w-4/5 lg:mx-auto mx-3 mt-30"
+      className="lg:w-4/5 lg:mx-auto  mt-30"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -83,7 +83,7 @@ const ChooseUs = () => {
   {/* Foreground Content */}
   <div className="relative z-20">
     <motion.h3
-      className="text-2xl font-semibold 2xl:pt-12 pb-10 text-dark-brown"
+      className="text-2xl font-semibold 2xl:pt-12 pb-8 text-dark-brown"
       variants={textVariants}
     >
       Unmatched Expertise
@@ -95,52 +95,66 @@ const ChooseUs = () => {
   </div>
 </motion.div>
 
-            {/* Premium Quality */}
-            <motion.div
-              className="bg-[url('/assets/mesh-488.png')] bg-cover bg-center p-6 rounded-xl shadow-md flex flex-col items-center text-center justify-end gap-3 pb-10 relative overflow-hidden md:h-[39vh]"
-              variants={containerVariants}
-            >
-              <motion.h3
-                className="mt-20 2xl:mt-10 text-2xl font-semibold text-dark-brown"
-                variants={textVariants}
-              >
-                Premium Quality
-              </motion.h3>
-              <motion.p
-                className="text-medium-brown pt-8 2xl:pb-12"
-                variants={textVariants}
-              >
-                We use top-tier materials and meticulous craftsmanship to create
-                stunning interiors tailored to your needs.
-              </motion.p>
-            </motion.div>
+<motion.div
+  className="p-6 rounded-xl shadow-md flex flex-col items-end text-center gap-3 pt-10 relative md:h-[39vh]"
+  style={{
+    backgroundImage: "url('/assets/mesh-488.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+  variants={containerVariants}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
+
+  {/* Foreground Content */}
+  <div className="relative z-20">
+    <motion.h3
+      className="text-2xl mt-15 font-semibold pb-6 text-dark-brown"
+      variants={textVariants}
+    >
+      Premium Quality
+    </motion.h3>
+    <motion.p
+      className="text-medium-brown"
+      variants={textVariants}
+    >
+      We use top-tier materials and meticulous craftsmanship to create
+      stunning interiors tailored to your needs.
+    </motion.p>
+  </div>
+</motion.div>
+
+
+
           </motion.div>
 
           {/* Bottom Row */}
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-md md:h-[41vh] flex flex-col justify-end text-center text-soft-white gap-3 overflow-hidden relative"
-            style={{
-              backgroundImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
-              backgroundSize: "cover",
-              backgroundPosition: "bottom center",
-            }}
-            variants={containerVariants}
-          >
-            <motion.h3
-              className="text-4xl mt-30 font-medium"
-              variants={textVariants}
-            >
-              Tailored to You
-            </motion.h3>
-            <motion.p
-              className="text-light-gray pb-4 2xl:pb-12 mx-auto w-4/5"
-              variants={textVariants}
-            >
-              Every home is unique, and so is our approach. We design spaces
-              that reflect your style, needs, and personality.
-            </motion.p>
-          </motion.div>
+  className="bg-white p-6 rounded-xl shadow-md md:h-[41vh] flex flex-col justify-end text-left text-soft-white gap-3 overflow-hidden relative"
+  style={{
+    backgroundImage:
+      "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "bottom left",
+  }}
+  variants={containerVariants}
+>
+  <motion.h3
+    className="text-4xl mt-30 font-medium"
+    variants={textVariants}
+  >
+    Tailored to Your Vision
+  </motion.h3>
+  <motion.p
+    className="text-light-gray pb-6 md:pr-40 2xl:pb-12"
+    variants={textVariants}
+  >
+    Every home is unique, and so is our approach. We design spaces
+    that reflect your style, needs, and personality.
+  </motion.p>
+</motion.div>
+
         </motion.div>
 
         {/* Right Side */}
@@ -151,7 +165,7 @@ const ChooseUs = () => {
           <motion.img
             src="/assets/mesh-969.png"
             alt="Elegant Home Interior"
-            className="w-full h-full object-cover"
+            className="w-full h-120 md:h-full object-cover"
             variants={containerVariants}
           />
           <motion.div
@@ -159,7 +173,7 @@ const ChooseUs = () => {
             variants={containerVariants}
           >
             <motion.h3
-              className="text-4xl text-warm-beige font-medium"
+              className="text-4xl text-warm-beige mt-40 font-medium"
               variants={textVariants}
             >
               Elevating Lives, Transforming Spaces

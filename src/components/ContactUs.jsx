@@ -9,7 +9,7 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="md:w-4/5 md:mx-auto mx-3 mt-20 relative rounded-xl shadow-md overflow-hidden bg-cover bg-center"
+      className="md:w-4/5 md:mx-auto mx-3 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.png')" }}
     >
       {/* Overlay */}
