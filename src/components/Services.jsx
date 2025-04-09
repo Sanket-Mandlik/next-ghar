@@ -167,8 +167,8 @@ const Services = () => {
   )}
 
   {service.cta && (
-    <button className=" mb-auto px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all w-fit">
-      Get Started
+    <button className=" mb-auto px-8 py-3 -mt-6 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all w-fit">
+      Get Started Now
     </button>
   )}
 </div>

@@ -100,7 +100,7 @@ const Hero = () => {
               Make My Ghar transforms your space into a modern home using top-tier materials.
             </p>
             <div className="mt-4 md:mt-6">
-              <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md md:text-lg font-semibold text-dark-brown px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all">
+              <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md md:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all">
                 Start Your Journey
                 <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
               </button>

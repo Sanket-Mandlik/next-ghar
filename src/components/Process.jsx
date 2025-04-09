@@ -79,7 +79,7 @@ const Process = () => {
       {
         number: 2,
         name: "Discussion",
-        description: `- Next 5% payment\nDesign concepts & floor plan discussion (PPT)\nMaterial preferences for walls/furniture`,
+        description: `Next 5% payment\nDesign concepts & floor plan discussion (PPT)\nMaterial preferences for walls/furniture`,
       },
       {
         number: 3,

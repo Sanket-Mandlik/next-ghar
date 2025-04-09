@@ -40,22 +40,22 @@ const AboutUs = () => {
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "right center",
           }}
         >
           {/* Small Text at Top Left */}
-          <p className="absolute top-4 left-4 text-sm text-medium-brown">
+          <p className="absolute top-6 left-6 text-sm text-medium-brown">
             Building dreams, one home at a time.
           </p>
 
           {/* "About Us" Text in Center */}
-          <h2 className="text-5xl sm:text-6xl py-25 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3">
+          <h2 className="text-5xl sm:text-6xl py-30 pr-2 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3">
             About Us
           </h2>
 
           {/* Animated Counter */}
-          <div className="absolute bottom-3 left-4 text-left">
-            <p className="text-3xl md:text-4xl font-semibold text-soft-white">
+          <div className="absolute bottom-6 left-6 text-left">
+            <p className="text-3xl md:text-4xl font-medium text-warm-beige">
               {count}+
             </p>
             <p className="text-md sm:text-lg text-light-gray">
@@ -64,7 +64,7 @@ const AboutUs = () => {
           </div>
 
           {/* Social Media Links */}
-          <div className="absolute bottom-4 right-4 flex space-x-4">
+          <div className="absolute bottom-6 right-6 flex space-x-4">
             <a href="https://www.instagram.com/mgdesign127" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
             </a>
@@ -88,7 +88,7 @@ const AboutUs = () => {
           }}
         >
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-medium text-dark-brown">
+          <h2 className="text-3xl md:text-4xl pb-2 font-medium text-dark-brown">
             Who Are We?
           </h2>
 
@@ -100,7 +100,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-br from-medium-brown to-dark-brown rounded-full text-soft-white text-center py-1.5 px-4 mt-4 w-max"
           >
-            <p className="text-sm sm:text-md font-normal">
+            <p className="text-md  sm:text-md font-normal">
               Established in 2014
             </p>
           </motion.div>
