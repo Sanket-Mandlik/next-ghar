@@ -1,10 +1,20 @@
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const fadeInUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay } },
 });
+
+const StarRating = () => (
+  <div className="flex gap-1 mt-4">
+    {Array(5)
+      .fill(0)
+      .map((_, i) => (
+        <FaStar key={i} className="text-yellow-400" />
+      ))}
+  </div>
+);
 
 const Testimonials = () => {
   return (
@@ -28,11 +38,12 @@ const Testimonials = () => {
         >
           <FaQuoteLeft className="text-warm-beige text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.4)} className="text-lg italic py-4">
-            "Make My Ghar made our dream home a reality! The design and execution were flawless."
+            "I had a great experience with Make My Ghar. I needed a quotation for a 3BHK in Baner — Shriyaa helped us finalize the design, source materials, and complete the project on time. Very smooth process."
           </motion.p>
           <motion.p variants={fadeInUp(0.6)} className="mt-4 font-semibold text-warm-beige">
             — Ankit Verma
           </motion.p>
+          <StarRating />
         </motion.div>
 
         {/* Testimonial 2 */}
@@ -42,11 +53,12 @@ const Testimonials = () => {
         >
           <FaQuoteLeft className="text-dark-brown text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.6)} className="text-lg italic py-4">
-            "Make My Ghar completely transformed our apartment! The quality exceeded our expectations."
+            "We contacted Make My Ghar for a kids' room and modular kitchen revamp in Wakad. They really listened to our needs and came up with a smart, functional plan. Very happy with the result!"
           </motion.p>
           <motion.p variants={fadeInUp(0.8)} className="mt-4 font-semibold text-dark-brown">
             — Rohan Mehta
           </motion.p>
+          <StarRating />
         </motion.div>
 
         {/* Testimonial 3 */}
@@ -56,11 +68,12 @@ const Testimonials = () => {
         >
           <FaQuoteLeft className="text-beige text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.8)} className="text-lg italic py-4">
-            "A seamless experience from start to finish. Their team truly understands luxury and comfort."
+            "From the first call to final handover, it was a seamless experience. We got our new 2BHK in Kothrud done beautifully—modern and cozy. They respected our timeline and budget."
           </motion.p>
           <motion.p variants={fadeInUp(1)} className="mt-4 font-semibold text-beige">
             — Priya Sharma
           </motion.p>
+          <StarRating />
         </motion.div>
       </div>
     </motion.div>
