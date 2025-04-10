@@ -16,12 +16,12 @@ const Home = () => {
       <Hero />
       <AboutUs />
       <Services />
-      <div className="md:px-0 px-3">
+      <div className="md:px-0 px-4">
   <ChooseUs />
 </div>
 
       <Projects />
-      <div className="md:w-4/5 mx-auto">
+      <div className="md:w-4/5 px-4 md:mx-auto">
       <Testimonials />
 </div>
     

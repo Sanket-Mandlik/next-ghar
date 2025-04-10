@@ -27,7 +27,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="w-full md:p-0 p-3 md:w-4/5 mx-auto mt-20">
+    <div className="w-full md:p-0 p-4 md:w-4/5 mx-auto mt-20">
       <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
         
         {/* Left Section - Dark Background */}
@@ -108,7 +108,7 @@ const AboutUs = () => {
           {/* Info Text */}
           <p className="mt-6  font-medium sm:text-md text-dark-brown">
           At Make My Ghar, our team of expert interior designers and architects specializes in creating stylish, functional, and sustainable interiors. From modern apartments to luxury villas, we offer smart space planning, premium material sourcing, and seamless execution.
-With 120+ completed projects, we deliver timeless designs that balance aesthetics with practicality — built to last and designed to inspire.
+
           </p>
 
           <p className="mt-2 font-medium sm:text-md text-dark-brown">

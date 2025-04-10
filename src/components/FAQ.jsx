@@ -37,7 +37,7 @@ const FAQ = () => {
 
   return (
     <section
-      className="md:mx-auto mx-3 md:w-4/5 rounded-2xl p-2 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold shadow-lg mt-30 bg-cover bg-center"
+      className="md:mx-auto mx-4 md:w-4/5 rounded-2xl p-2 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold shadow-lg mt-30 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-189.png')" }}
     >
       <div className="bg-soft-white rounded-2xl px-6 md:px-10 py-10 md:py-16">

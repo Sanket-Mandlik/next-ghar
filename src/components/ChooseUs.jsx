@@ -35,10 +35,10 @@ const ChooseUs = () => {
     >
       {/* Heading */}
       <motion.h2
-        className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
+        className="text-4xl md:text-5xl font-montserrat text-medium-brown font-medium mb-6"
         variants={textVariants}
       >
-        <span className="text-dark-brown text-4xl md:text-5xl">Why Choose</span> Make My Ghar?
+        <span className="text-dark-brown text-5xl">Why Choose</span> Make My Ghar?
       </motion.h2>
 
       {/* Content Section */}

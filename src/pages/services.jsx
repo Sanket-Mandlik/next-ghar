@@ -10,7 +10,7 @@ import ServiceHero from "../components/ServiceHero";
 
 const Services = () => {
   return (
-    <div className="w-full px-3 md:px-0  md:w-4/5 mx-auto mt-30 space-y-12">
+    <div className="w-full px-4 md:px-0  md:w-4/5 mx-auto mt-30 space-y-12">
       {/* Heading and Subheading */}
       {/* Heading and Subheading */}
 <motion.div

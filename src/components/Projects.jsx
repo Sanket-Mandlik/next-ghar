@@ -78,7 +78,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="flex flex-col lg:w-4/5 mx-3 max-w-screen-lg lg:mx-auto gap-4 mt-30 overflow-hidden"
+      className="flex flex-col lg:w-4/5 mx-4 max-w-screen-lg lg:mx-auto gap-4 mt-30 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

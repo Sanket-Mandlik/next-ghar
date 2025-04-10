@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
+
 
 const services = [
   {
@@ -100,7 +102,7 @@ const Services = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="relative md:w-4/5 md:mx-auto mx-3 px-1 flex flex-col items-start mt-30">
+    <div className="relative md:w-4/5 md:mx-auto mx-4 px-1 flex flex-col items-start mt-30">
       <motion.h2
         className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
         initial={{ opacity: 0, y: 30 }}
@@ -155,13 +157,17 @@ const Services = () => {
   {index !== 5 && (
     <div>
       <h3 className="text-4xl font-medium">{service.title}</h3>
-      <p className="text-lg font-medium mt-3 mb-15">{service.description}</p>
+      <p className="text-lg font-medium mt-3 md:mb-15">{service.description}</p>
       {service.features && (
-        <ul className="list-disc pl-5 text-dark-brown text-lg font-medium space-y-1">
-          {service.features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
+       <div className="space-y-3 mt-4">
+       {service.features.map((feature, i) => (
+         <div key={i} className="flex items-start gap-3">
+           <CheckCircle className="text-gold w-5 h-5 mt-1" />
+           <span className="text-dark-brown text-lg font-medium">{feature}</span>
+         </div>
+       ))}
+     </div>
+     
       )}
     </div>
   )}

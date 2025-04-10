@@ -9,7 +9,7 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="md:w-4/5 md:mx-auto mx-3 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
+      className="md:w-4/5 md:mx-auto mx-4 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.png')" }}
     >
       {/* Overlay */}
@@ -25,7 +25,7 @@ const ContactUs = () => {
         >
           {/* Left Section - Heading */}
           <motion.div
-            className="md:w-1/2 py-20 lg:py-0 text-center md:text-left"
+            className="md:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-center md:text-left"
             variants={fadeInUp(0.2)}
           >
             <h2 className="text-4xl md:text-5xl font-medium text-white mb-4">Contact Us</h2>
@@ -44,7 +44,7 @@ const ContactUs = () => {
 
           {/* Right Section - Contact Info */}
           <motion.div
-            className="md:w-1/2 py-15 lg:py-0 p-8 lg:p-0 space-y-6"
+            className="md:w-1/2 py-10 lg:py-0 p-8 lg:p-0 space-y-6"
             variants={fadeInUp(0.4)}
           >
             {/* Address */}
