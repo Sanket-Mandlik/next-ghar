@@ -17,25 +17,13 @@ const Process = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+    <div
       className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 md:p-10 p-6 flex flex-col gap-8 relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
@@ -44,12 +32,7 @@ const Process = () => {
       }}
     >
       {/* Top Bar */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        className="w-full flex justify-between items-start z-10"
-      >
+      <div className="w-full flex justify-between items-start z-10">
         <div className="flex flex-col items-start space-y-1">
           <p className="text-md text-gold/80">
             How long is the process for doing home interiors?
@@ -69,15 +52,10 @@ const Process = () => {
             </a>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Steps */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-        className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 z-10 py-4 md:px-4"
-      >
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 z-10 py-4 md:px-4">
         {[
           {
             number: 1,
@@ -113,10 +91,12 @@ const Process = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
             className="flex flex-col items-start relative space-y-3"
           >
-            {/* Number Circle with subtle pulse */}
+            {/* Number Circle */}
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="w-10 h-10 border-2 border-warm-beige text-soft-white flex items-center justify-center rounded-full font-bold text-lg"
@@ -132,17 +112,11 @@ const Process = () => {
               {process.description}
             </p>
 
-            {/* Animated Arrow */}
+            {/* Arrow to Next Step */}
             {index < array.length - 1 && (
               <motion.div
-                animate={{
-                  y: [0, -3, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ y: [0, -3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute right-[10px] top-[10px]"
               >
                 <svg
@@ -153,18 +127,14 @@ const Process = () => {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 12h14M13 5l7 7-7 7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </motion.div>
             )}
           </motion.div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

@@ -72,14 +72,7 @@ const ServicesPage = () => {
         const number = index + 1;
 
         return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row gap-3 w-full md:h-[65vh]"
-          >
+          <div key={index} className="flex flex-col md:flex-row gap-3 w-full md:h-[65vh]">
             {/* Image Section */}
             <motion.div
               className="w-full md:w-2/3 relative overflow-hidden rounded-2xl"
@@ -157,7 +150,7 @@ const ServicesPage = () => {
                 </ul>
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         );
       })}
     </div>
