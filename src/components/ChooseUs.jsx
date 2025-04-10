@@ -78,8 +78,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                  Our team of skilled designers brings years of experience to
-                  craft interiors that blend elegance with functionality.
+                   Our top skilled designers bring years of experience to craft interiors that perfectly blend elegance with functionality, ensuring every space reflects superior design and thoughtful detail.
                 </motion.p>
               </div>
             </motion.div>
@@ -106,8 +105,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                  We use top-tier materials and meticulous craftsmanship to
-                  create stunning interiors tailored to your needs.
+                  WWe use top-tier materials and meticulous craftsmanship to deliver the best home interiors, tailored to your lifestyle and designed to elevate your everyday living experience.
                 </motion.p>
               </div>
             </motion.div>
@@ -167,8 +165,8 @@ const ChooseUs = () => {
               className="text-md text-soft-white mt-2 font-normal"
               variants={textVariants}
             >
-              From apartments to luxury villas, we turn your vision into reality
-              with innovative and timeless designs.
+              From apartments to luxury villas, we specialize in creating luxury home interiors that turn your vision into reality with innovative and timeless designs.
+
             </motion.p>
           </motion.div>
         </motion.div>
