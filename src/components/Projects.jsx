@@ -125,22 +125,23 @@ const Projects = () => {
 
         {/* CTA Container */}
         <motion.div
-          className="lg:w-1/4 lg:h-[40vh] md:p-6 bg-warm-white text-dark-brown rounded-xl space-y-2 mt-4 flex flex-col justify-center"
-          variants={containerVariants}
-        >
-          <motion.h2 className="text-2xl font-semibold" variants={textVariants}>
-            Start Your Project
-          </motion.h2>
-          <motion.p className="text-sm mt-2" variants={textVariants}>
-            Let's bring your vision to life with expert craftsmanship.
-          </motion.p>
-          <motion.button
-            className="mt-4 px-6 py-2 bg-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
-            variants={textVariants}
-          >
-            Get Started
-          </motion.button>
-        </motion.div>
+  className="lg:w-1/4 h-[40vh] p-6 bg-warm-white text-dark-brown border-3 border-dashed border-gold rounded-2xl space-y-2  flex flex-col justify-center"
+  variants={containerVariants}
+>
+  <motion.h2 className="text-3xl font-semibold" variants={textVariants}>
+    Start Your Project
+  </motion.h2>
+  <motion.p className="text-lg mt-2" variants={textVariants}>
+   Let's start decorating your home with Make My Ghar.
+  </motion.p>
+  <motion.button
+    className="mt-4 px-6 py-2.5 text-xl bg-gradient-to-b from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
+    variants={textVariants}
+  >
+    Get Started
+  </motion.button>
+</motion.div>
+
       </div>
     </motion.div>
   );

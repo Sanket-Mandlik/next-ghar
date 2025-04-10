@@ -12,10 +12,10 @@ const ChooseUs = dynamic(() => import("../components/ChooseUs"), {
 
 const WhyUs = () => {
   return (
-    <div className="bg-soft-white px-4 md:px-0 mt-30 mx-auto min-h-screen">
+    <div className="bg-soft-white px-4 lg:px-0 mt-30 mx-auto min-h-screen">
       {/* Title Section */}
       <motion.h1
-        className="text-4xl md:text-6xl font-medium text-center leading-tight"
+        className="text-4xl lg:text-6xl font-medium text-center leading-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

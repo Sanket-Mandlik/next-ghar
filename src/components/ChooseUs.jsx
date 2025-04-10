@@ -35,7 +35,7 @@ const ChooseUs = () => {
     >
       {/* Heading */}
       <motion.h2
-        className="text-4xl md:text-5xl font-montserrat text-medium-brown font-medium mb-6"
+        className="text-4xl lg:text-5xl font-montserrat text-medium-brown font-medium mb-6"
         variants={textVariants}
       >
         <span className="text-dark-brown text-5xl">Why Choose</span> Make My Ghar?
@@ -43,7 +43,7 @@ const ChooseUs = () => {
 
       {/* Content Section */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-10 md:gap-4"
+        className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4"
         variants={containerVariants}
       >
         {/* Left Side */}
@@ -53,12 +53,12 @@ const ChooseUs = () => {
         >
           {/* Top Row */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full"
             variants={containerVariants}
           >
             {/* Card 1 - Unmatched Expertise */}
             <motion.div
-              className="relative h-[82vh] md:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              className="relative h-[82vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
               style={{
                 backgroundImage: "url('/assets/mesh-476.png')",
                 backgroundSize: "cover",
@@ -69,13 +69,13 @@ const ChooseUs = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
-                  className="text-4xl md:text-2xl font-medium text-dark-brown"
+                  className="text-4xl lg:text-2xl font-medium text-dark-brown"
                   variants={textVariants}
                 >
                   Unmatched Expertise
                 </motion.h3>
                 <motion.p
-                  className="text-md text-medium-brown mt-2"
+                  className="text-md lg:text-sm text-medium-brown mt-2"
                   variants={textVariants}
                 >
                    Best interiors in Pune blend style and practicality to create elegant, functional spaces tailored to your lifestyle.
@@ -85,7 +85,7 @@ const ChooseUs = () => {
 
             {/* Card 2 - Premium Quality */}
             <motion.div
-              className="relative h-[82vh] md:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              className="relative h-[82vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
               style={{
                 backgroundImage: "url('/assets/mesh-488.png')",
                 backgroundSize: "cover",
@@ -96,13 +96,13 @@ const ChooseUs = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
-                  className="text-4xl md:text-2xl font-medium text-dark-brown"
+                  className="text-4xl lg:text-2xl font-medium text-dark-brown"
                   variants={textVariants}
                 >
                   Premium Quality
                 </motion.h3>
                 <motion.p
-                  className="text-md text-medium-brown mt-2"
+                  className="text-md lg:text-sm text-medium-brown mt-2"
                   variants={textVariants}
                 >
                   We use premium quality materials and expert craftsmanship to create beautiful, customised home interiors that perfectly match your lifestyle and needs in Pune.                </motion.p>
@@ -112,7 +112,7 @@ const ChooseUs = () => {
 
           {/* Card 3 - Tailored to Your Vision */}
           <motion.div
-            className="relative h-[82vh] md:h-[41vh] rounded-xl shadow-md overflow-hidden"
+            className="relative h-[82vh] lg:h-[41vh] rounded-xl shadow-md overflow-hidden"
             style={{
               backgroundImage:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
@@ -129,7 +129,7 @@ const ChooseUs = () => {
                 Tailored to Your Vision
               </motion.h3>
               <motion.p
-                className="text-md text-light-gray mt-2 md:pr-40"
+                className="text-md text-light-gray mt-2 lg:pr-40"
                 variants={textVariants}
               >
                 Every home is unique, and so is our approach. We design spaces
@@ -164,7 +164,7 @@ const ChooseUs = () => {
               className="text-md text-soft-white mt-2 font-normal"
               variants={textVariants}
             >
-              From apartments of Hinjewadi to luxury villas of Shivaji Nagar, we specialize in creating luxury home interiors that turn your vision into reality with innovative and timeless designs.
+              From apartments of Hinjewadi to luxury villas of Shivaji Nagar, we specialize in creating luxury home interiors.
 
             </motion.p>
           </motion.div>

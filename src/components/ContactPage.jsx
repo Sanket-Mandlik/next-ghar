@@ -35,8 +35,8 @@ const ContactPage = () => {
   const isContactFormInView = useInView(contactFormRef, { once: true });
 
   return (
-    <div className="bg-soft-white md:w-4/5 mx-auto min-h-screen">
-      <div className="mx-auto px-4 md:px-0 pt-30">
+    <div className="bg-soft-white lg:w-4/5 mx-auto min-h-screen">
+      <div className="mx-auto px-4 lg:px-0 pt-30">
         {/* Contact Us Heading */}
         <motion.div
           className="text-center mb-30"
@@ -44,19 +44,19 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-6xl font-medium">
+          <h1 className="text-5xl lg:text-6xl font-medium">
             <span className="text-dark-brown">Contact</span>{" "}
             <span className="text-medium-brown">Us</span>
+          </h1>
+          <h2 className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+            Reach out to Make My Ghar for any interior design queries.
           </h2>
-          <p className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-            Reach out to us for any queries or to book a free consultation.
-          </p>
         </motion.div>
 
         {/* Contact Details Section */}
         <motion.div
           ref={contactDetailsRef}
-          className="text-white p-6 mb-20 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
+          className="text-white p-4 mb-20 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
@@ -66,15 +66,15 @@ const ContactPage = () => {
           animate={isContactDetailsInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col-reverse lg:flex-row gap-10">
             {/* Left Section - Contact Details */}
             <motion.div
-              className="md:w-1/2 flex flex-col p-4 md:px-6 justify-center gap-2"
+              className="lg:w-1/2 flex flex-col p-4 lg:px-6 justify-center gap-2"
               initial={{ x: -100, opacity: 0 }}
               animate={isContactDetailsInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-4xl mt-6 md:text-5xl font-medium mb-10">Get in Touch</h3>
+              <h3 className="text-4xl mt-6 lg:text-5xl font-medium mb-10">Get in Touch</h3>
               {/* Address */}
               <div className="flex items-start gap-4 mb-6">
                 <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
@@ -105,7 +105,7 @@ const ContactPage = () => {
               </div>
 
               {/* WhatsApp */}
-              <div className="flex items-center gap-4 mb-6 md:mb-0">
+              <div className="flex items-center gap-4 mb-6 lg:mb-0">
                 <FaWhatsapp className="text-2xl flex-shrink-0" />
                 <a
                   href="https://wa.me/919876543210"
@@ -118,14 +118,14 @@ const ContactPage = () => {
               </div>
 
               {/* Social Icons */}
-              <div className="flex items-center mt-6 mb-6 md:mb-0 justify-center md:justify-end gap-5">
-                <a
+              <div className="flex items-center gap-6 border-2 border-gold rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
+              <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-md text-white hover:text-soft-white transition-colors"
                 >
-                  <FaInstagram className="text-2xl" />
+                  <FaInstagram className="text-2xl " />
                 </a>
                 <a
                   href="https://www.linkedin.com"
@@ -148,7 +148,7 @@ const ContactPage = () => {
 
             {/* Right Section - Map */}
             <motion.div
-              className="md:w-1/2"
+              className="lg:w-1/2"
               initial={{ x: 100, opacity: 0 }}
               animate={isContactDetailsInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
@@ -171,7 +171,7 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <motion.div
           ref={contactFormRef}
-          className="bg-soft-white px-4 md:px-6 py-8 mt-30 mb-10 rounded-2xl shadow-warm-beige/50 shadow-lg"
+          className="bg-soft-white px-4 lg:px-6 py-8 mt-30 mb-10 rounded-2xl shadow-warm-beige/50 shadow-lg"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",
@@ -181,15 +181,15 @@ const ContactPage = () => {
           animate={isContactFormInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
             {/* Left Section - Offers Text */}
             <motion.div
-              className="md:w-1/3 text-white px-4 py-6"
+              className="lg:w-1/3 text-white px-4 py-6"
               initial={{ x: -100, opacity: 0 }}
               animate={isContactFormInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-4xl md:text-4xl text-dark-brown mt-2 font-medium mb-8">Special Offers</h3>
+              <h3 className="text-4xl lg:text-4xl text-dark-brown mt-2 font-medium mb-8">Special Offers</h3>
               <div className="flex flex-col gap-6">
                 <p className="text-md mb-8 font-normal text-gold leading-relaxed">
                   Get exclusive discounts and offers on our interior design services. Transform your house into a dream home today!
@@ -241,16 +241,16 @@ const ContactPage = () => {
 
             {/* Right Section - Contact Form */}
             <motion.div
-              className="md:w-2/3 bg-white px-6 py-8 rounded-2xl"
+              className="lg:w-2/3 bg-white px-6 py-8 rounded-2xl"
               initial={{ x: 100, opacity: 0 }}
               animate={isContactFormInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl md:text-3xl font-semibold text-dark-brown mb-6">
+              <h3 className="text-2xl lg:text-3xl font-semibold text-dark-brown mb-6">
                 Know the cost of making interiors for your{" "}
                 <span className="text-medium-brown">house</span>
               </h3>
-              <p className="hidden md:block text-md font-medium text-black mb-6">
+              <p className="hidden lg:block text-md font-medium text-black mb-6">
                 Get a free consultation & estimate{" "}
                 <span className="text-gray-400">for your project</span>
               </p>

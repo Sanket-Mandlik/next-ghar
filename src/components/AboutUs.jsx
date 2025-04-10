@@ -27,8 +27,8 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="w-full md:p-0 p-4 md:w-4/5 mx-auto mt-20">
-      <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
+    <div className="w-full lg:p-0 p-4 lg:w-4/5 mx-auto mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
 
         {/* Left Section - Dark Background */}
         <motion.div
@@ -36,7 +36,7 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="md:col-span-4 p-8 rounded-xl shadow-md text-soft-white relative flex flex-col justify-center items-center"
+          className="lg:col-span-4 p-8 rounded-xl shadow-md text-soft-white relative flex flex-col justify-center items-center"
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
@@ -55,7 +55,7 @@ const AboutUs = () => {
 
           {/* Animated Counter */}
           <div className="absolute bottom-6 left-6 text-left">
-            <p className="text-3xl md:text-4xl font-medium text-warm-beige">
+            <p className="text-3xl lg:text-4xl font-medium text-warm-beige">
               {count}+
             </p>
             <p className="text-md sm:text-lg text-light-gray">
@@ -80,7 +80,7 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
-          className="md:col-span-6 px-8 py-12 rounded-xl shadow-md text-dark-brown"
+          className="lg:col-span-6 px-8 py-12 rounded-xl shadow-md text-dark-brown"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",
@@ -88,7 +88,7 @@ const AboutUs = () => {
           }}
         >
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl pb-2 font-medium text-dark-brown">
+          <h2 className="text-3xl lg:text-4xl pb-2 font-medium text-dark-brown">
             Who Are We?
           </h2>
 
@@ -107,10 +107,9 @@ const AboutUs = () => {
 
           {/* Info Text */}
           <p className="mt-6  font-medium sm:text-md text-dark-brown">
-            At Make My Ghar, our team of expert interior designers and architects in Pune specialize in crafting stylish, functional, and sustainable home interiors. Whether it’s a modern 2BHK apartment in Baner or a luxury villa in nearby suburbs, we offer smart space planning, premium material selection, and hassle-free execution.
+            At Make My Ghar, our team of expert interior designers and architects in Pune specialize in crafting stylish, functional, and sustainable home interiors. Whether it’s a modern 2BHK apartment in Pune or a luxury villa in nearby suburbs, we offer smart space planning, premium material selection, and hassle-free execution.
 
-            With 120+ successfully delivered projects, we bring deep expertise in customized interior designs, efficient layouts, and top-quality finishes — creating elegant, durable, and truly livable spaces tailored to your lifestyle.
-
+            
           </p>
 
           <p className="mt-2 font-medium sm:text-md text-dark-brown">

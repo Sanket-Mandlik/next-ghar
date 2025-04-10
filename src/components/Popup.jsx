@@ -1,44 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa";
 
 const Popup = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     number: "",
     location: "",
-    startDate: "", // New field
+    startDate: "",
   });
 
+  const [isDateFocused, setIsDateFocused] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [rotation, setRotation] = useState(0);
+
+  const handleScroll = () => {
+    setRotation((prev) => prev + 5);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const [isDateFocused, setIsDateFocused] = useState(false);
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/contactForm", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await response.json();
-
+      setResponseMessage(data.message);
       if (response.ok) {
-        setResponseMessage(data.message);
         setFormData({ name: "", number: "", location: "", startDate: "" });
-      } else {
-        setResponseMessage(data.message);
       }
     } catch (error) {
       setResponseMessage("An error occurred. Please try again later.");
@@ -47,35 +56,51 @@ const Popup = ({ onClose }) => {
 
   return (
     <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+      <div key="popup">
         <motion.div
-          className="relative bg-soft-white rounded-3xl p-2 shadow-lg w-9/10 md:w-9/10 lg:w-4/5 xl:w-2/3 overflow-y-auto max-h-screen"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.8, opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="fixed inset-0 z-50 flex justify-start"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <button
-            className="absolute top-4 right-4 text-dark-brown text-2xl font-bold hover:text-medium-brown transition-all z-10"
-            onClick={onClose}
+          {/* Backdrop Blur Layer */}
+          <motion.div
+            className="absolute inset-0 backdrop-blur-md justify-center bg-black/40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          />
+  
+          {/* Sliding Panel */}
+          <motion.div
+            className="relative z-10 w-full lg:w-3/4 h-full lg:p-10 lg:gap-10 flex flex-col lg:flex-row bg-soft-white justify-center items-center shadow-xl overflow-y-auto"
+            style={{ left: 0 }}
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
           >
-            &times;
-          </button>
+            {/* Close button and content here */}
+            <motion.button
+    className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center rounded-full border-4 border-gold text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
+    onClick={onClose}
+    whileHover={{ rotate: 90 }}
+    transition={{ type: 'spring', stiffness: 300 }}
+  >
+    &times;
+  </motion.button>
 
-          <div className="flex flex-col md:flex-row">
+            {/* Your existing left and right sections */}
             {/* Left Section */}
-            <div className="w-full md:w-1/2 text-white p-4 mb-2 rounded-2xl md:rounded-2xl relative">
-              <div className="mb-8">
-                <h2 className="text-5xl md:text-6xl md:px-6 pt-3 md:pt-8 text-start font-medium mb-4">
+            <div className="w-full lg:w-1/2 flex-row items-center p-4 justify-center text-white  relative">
+            <div className="mb-8">
+                <h2 className="text-5xl lg:text-6xl lg:px-6 pt-3 lg:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
                   <span className="text-medium-brown">Us</span>
                 </h2>
-                <p className="hidden md:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
+                <p className="hidden lg:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
                   Reach out to us for any queries or book a free consultation.
                 </p>
               </div>
@@ -88,7 +113,7 @@ const Popup = ({ onClose }) => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="hidden md:flex items-start gap-4 mb-6">
+                <div className="hidden lg:flex items-start gap-4 mb-6">
                   <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-lg leading-relaxed bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent">
@@ -105,7 +130,7 @@ const Popup = ({ onClose }) => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 mb-4 md:mb-8">
+                <div className="flex items-center gap-4 mb-4 lg:mb-8">
                   <FaPhoneAlt className="text-xl flex-shrink-0" />
                   <a
                     href="tel:+919876543210"
@@ -115,7 +140,7 @@ const Popup = ({ onClose }) => {
                   </a>
                 </div>
 
-                <div className="flex items-center gap-4 mb-10">
+                <div className="flex items-center gap-4 lg:mb-10">
                   <FaWhatsapp className="text-2xl flex-shrink-0" />
                   <a
                     href="https://wa.me/919876543210"
@@ -127,7 +152,7 @@ const Popup = ({ onClose }) => {
                   </a>
                 </div>
 
-                <div className="flex items-center justify-end gap-5">
+                <div className="hidden lg:flex items-center justify-end gap-5">
                   <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaInstagram className="text-xl" />
                   </a>
@@ -142,23 +167,23 @@ const Popup = ({ onClose }) => {
             </div>
 
             {/* Right Section - Form */}
-            <div className="w-full md:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none relative flex flex-col justify-between">
-              <h2 className="text-2xl text-start pb-6 md:pb-0 md:text-3xl mt-3 md:mt-8 font-semibold text-dark-brown md:text-left">
+            <div className="w-full lg:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none relative flex flex-col justify-center  ">
+              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-8 font-semibold text-dark-brown lg:text-left">
                 Know the cost of making interiors for your <span className="text-medium-brown">house</span>
               </h2>
-              <p className="hidden md:block text-md pb-6 md:pb-12 mt-1 md:mt-2 font-medium text-black text-center md:text-left">
+              <p className="hidden lg:block text-md pb-6 lg:pb-12 mt-1 lg:mt-2 font-medium text-black text-start lg:text-left">
                 Get a free consultation & estimate <span className="text-gray-400">for your project</span>
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                     placeholder="Enter Your Name"
                     required
                   />
@@ -168,13 +193,13 @@ const Popup = ({ onClose }) => {
                     name="number"
                     value={formData.number}
                     onChange={handleChange}
-                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                     placeholder="Enter Your Contact No."
                     required
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
                 <div className="relative w-full">
   {/* Fake Placeholder */}
@@ -192,7 +217,7 @@ const Popup = ({ onClose }) => {
     onChange={handleChange}
     onFocus={() => setIsDateFocused(true)}
     onBlur={() => setIsDateFocused(false)}
-    className={`w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
+    className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
       formData.startDate || isDateFocused ? "text-black" : "text-transparent"
     }`}
     required
@@ -205,7 +230,7 @@ const Popup = ({ onClose }) => {
                     id="area"
                     name="area"
                     onChange={handleChange}
-                    className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                    className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                     required
                   >
                     <option value="" disabled selected>
@@ -223,7 +248,7 @@ const Popup = ({ onClose }) => {
                   id="interiorType"
                   name="interiorType"
                   onChange={handleChange}
-                  className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+                  className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                   required
                 >
                   <option value="" disabled selected>
@@ -236,23 +261,23 @@ const Popup = ({ onClose }) => {
 
                 <button
                   type="submit"
-                  className="w-1/2 px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+                  className="w-1/2 px-4 lg:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 lg:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
                 >
                   Submit
                 </button>
-              </form>
+                </form>
 
-              {responseMessage && (
-                <p className="mt-4 text-center text-lg font-medium text-dark-brown">
-                  {responseMessage}
-                </p>
-              )}
-            </div>
+                {responseMessage && (
+                  <p className="mt-4 text-center text-lg font-medium text-dark-brown">
+                    {responseMessage}
+                  </p>
+                )}
+              </div> {/* End of Right Section - Form */}
+            </motion.div> {/* End of Sliding Panel */}
+          </motion.div> {/* End of Main Flex Container */}
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-};
+      </AnimatePresence>
+    );
+  };
 
 export default Popup;

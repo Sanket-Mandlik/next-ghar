@@ -24,7 +24,7 @@ const Process = () => {
 
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 md:p-10 p-6 flex flex-col gap-8 relative"
+      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 lg:p-10 p-8 flex flex-col gap-8 relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
         backgroundSize: "cover",
@@ -35,27 +35,27 @@ const Process = () => {
       <div className="w-full flex justify-between items-start z-10">
         <div className="flex flex-col items-start space-y-1">
           <p className="text-md text-gold/80">
-            How long is the process for doing home interiors?
+           What is the process for doing home interior?
           </p>
-          <h1 className="text-4xl md:text-6xl py-3 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
+          <h1 className="text-6xl mt-8 lg:mt-0 lg:text-6xl py-3 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
             Process - Perfected
           </h1>
         </div>
 
-        <div className="flex flex-col items-end space-y-3">
+        <div className="flex flex-col items-end space-y-6 mt-8  ">
           <div className="flex space-x-4">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-soft-white text-xl" />
+              <FaInstagram className="text-soft-white text-2xl" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-soft-white text-xl" />
+              <FaLinkedin className="text-soft-white text-2xl" />
             </a>
           </div>
         </div>
       </div>
 
       {/* Steps */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 z-10 py-4 md:px-4">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-10 z-10 py-4 lg:px-4">
         {[
           {
             number: 1,
@@ -104,11 +104,11 @@ const Process = () => {
               {process.number}
             </motion.div>
 
-            <h3 className="text-xl font-normal bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
+            <h3 className="text-2xl lg:text-xl font-medium bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
               Step {process.number}: {process.name}
             </h3>
 
-            <p className="text-md text-warm-beige font-normal whitespace-pre-line">
+            <p className="text-md lg:text-sm text-warm-beige font-normal whitespace-pre-line">
               {process.description}
             </p>
 

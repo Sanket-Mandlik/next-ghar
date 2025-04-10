@@ -10,38 +10,39 @@ import {
 } from "react-icons/gi";
 import { LuSofa } from "react-icons/lu";
 
-const services = [
-  {
-    icon: <GiKitchenKnives className="text-warm-beige text-2xl" />,
-    title: "Modular Kitchen",
-    description: "Handle-less shutters, quartz tops, smart corner storage",
-  },
-  {
-    icon: <GiBunkBeds className="text-warm-beige text-2xl" />,
-    title: "Kids Bedrooms",
-    description: "Designer bunk beds, themed walls, creative study tables",
-  },
-  {
-    icon: <LuSofa className="text-warm-beige text-2xl" />,
-    title: "Upholstery Sourcing",
-    description: "Velvet sofas, boucle chairs, sustainable fabrics",
-  },
-  {
-    icon: <GiCeilingLight className="text-warm-beige text-2xl" />,
-    title: "False Ceilings",
-    description: "Cove lighting, wooden rafters, floating panels",
-  },
-  {
-    icon: <GiTable className="text-warm-beige text-2xl" />,
-    title: "Dining Areas",
-    description: "Wall-mounted benches, marble-top tables, pendant lighting",
-  },
-  {
-    icon: <GiDoor className="text-warm-beige text-2xl" />,
-    title: "Entrance Foyers",
-    description: "Slim shoe units, mirror panels, brass hooks",
-  },
-];
+const services = 
+  [
+    {
+      icon: <GiKitchenKnives className="text-warm-beige text-2xl" />,
+      title: "Modular Kitchen",
+      description: "Sensor faucets, quartz countertops, handle‑less shutters",
+    },
+    {
+      icon: <GiBunkBeds className="text-warm-beige text-2xl" />,
+      title: "Kids Bedrooms",
+      description: "Convertible bunks, chalkboard walls, study nooks",
+    },
+    {
+      icon: <LuSofa className="text-warm-beige text-2xl" />,
+      title: "Upholstery Sourcing",
+      description: "Bouclé fabrics, velvet sofas, eco‑blend textiles",
+    },
+    {
+      icon: <GiCeilingLight className="text-warm-beige text-2xl" />,
+      title: "False Ceilings",
+      description: "Cove lighting, wood‑veneer slats, floating panels",
+    },
+    {
+      icon: <GiTable className="text-warm-beige text-2xl" />,
+      title: "Dining Areas",
+      description: "Wall‑bench seating, marble‑top tables, pendant clusters",
+    },
+    {
+      icon: <GiDoor className="text-warm-beige text-2xl" />,
+      title: "Entrance Foyers",
+      description: "Floating shoe units, mirror panels, brass hooks",
+    },
+  ];
 
 const ServiceHero = () => {
   const [counter, setCounter] = useState(0);
@@ -60,7 +61,7 @@ const ServiceHero = () => {
 
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 py-4 px-6 flex flex-col md:flex-row gap-8 items-center justify-center relative"
+      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 py-4 px-6 flex flex-col lg:flex-row gap-8 items-center justify-center relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
         backgroundSize: "cover",
@@ -68,19 +69,19 @@ const ServiceHero = () => {
       }}
     >
       {/* Left Section */}
-      <div className="md:w-3/10 h-full flex flex-col items-center justify-between py-6 px-2 relative overflow-hidden">
+      <div className="lg:w-3/10 h-full flex flex-col items-center justify-between py-6 px-2 relative overflow-hidden">
         <p className="absolute top-4 left-4 text-sm text-gold/80 z-10">
-          Building dreams, one step at a time.
+          What are the latest interior design trends in Pune?
         </p>
 
         {/* Animated Headline */}
         <motion.h1
-          className="text-5xl md:text-6xl pt-32 pb-36 font-normal pl-3 bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text z-10"
+          className="text-5xl lg:text-5xl pt-32 pb-36 font-normal pl-3 bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text z-10"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Interior - New Trend
+          Interior - New Trends
         </motion.h1>
 
         {/* Animated Counter */}
@@ -114,8 +115,8 @@ const ServiceHero = () => {
       </div>
 
       {/* Right Section - Trending Services */}
-      <div className="md:w-7/10 flex flex-col justify-center bg-warm-white rounded-l-3xl relative overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-15 relative z-10 p-4 py-6 md:px-8 md:pt-8">
+      <div className="lg:w-7/10 flex flex-col justify-center bg-warm-white rounded-l-3xl relative overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-15 relative z-10 p-4 py-6 lg:px-8 lg:pt-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -135,7 +136,7 @@ const ServiceHero = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-normal bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
+              <h3 className="text-2xl lg:text-xl font-normal bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
                 {service.title}
               </h3>
 

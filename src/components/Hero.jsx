@@ -51,12 +51,12 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full md:px-2 flex mx-auto justify-center -mt-14 mb-10 relative"
+      className="w-full lg:px-2 flex mx-auto justify-center -mt-14 mb-10 relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <section className="relative w-full h-[85vh] md:h-[93vh] md:rounded-2xl overflow-hidden">
+      <section className="relative w-full h-[102vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
         {/* Animated Background with Enhanced Transition */}
         <AnimatePresence exitBeforeEnter>
           <motion.div
@@ -65,7 +65,7 @@ const Hero = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute inset-0"
+            className="absolute bg-gradient-to-t inset-0"
             style={{
               backgroundImage: `url(${images[currentImage]})`,
               backgroundSize: "cover",
@@ -75,38 +75,35 @@ const Hero = () => {
         </AnimatePresence>
 
         {/* Blur Effect at the Bottom */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-          <div className="absolute bottom-0 md:inset-x-0 h-[33%] backdrop-blur-xs"></div>
-        </div>
+        <div className="absolute bottom-0 w-full  bg-gradient-to-t from-black/60 to-black/10 backdrop-blur-sm pt-10 pb-10 px-6 lg:px-20">
+  <motion.div
+    className="relative z-10 flex flex-col lg:flex-row items-start  lg:items-end justify-end w-full gap-x-10 lg:gap-x-20"
+    variants={childVariants}
+  >
+    {/* Left Section: Title */}
+    <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
+      <h1 className="text-5xl lg:text-6xl font-medium font-heading leading-tight text-soft-white">
+        Make My Ghar{" "}
+        <span className="text-soft-white  font-medium"> Pune, </span>
+        <span className="text-white  font-medium">Interior In 45 Days </span>
+      </h1>
+    </motion.div>
 
-        {/* Content Container - Adjusted for Mobile */}
-        <motion.div
-          className="relative z-10 flex flex-col md:flex-row items-start md:items-end justify-end h-full px-4 md:px-20 py-15 md:py-10 gap-x-10 md:gap-x-20"
-          variants={childVariants}
-        >
-          {/* Left Section: Title */}
-          <motion.div className="w-full md:w-3/5 flex-shrink-0" variants={childVariants}>
-            <h1 className="text-4xl md:text-6xl font-medium font-heading leading-tight text-soft-white">
-              From Apartment To <br />
-              <span className="text-soft-white font-medium">Ghar</span> In{" "}
-              <span className="text-soft-white font-medium">45 Days</span>
-            </h1>
-          </motion.div>
+    {/* Right Section: Description and Button */}
+    <motion.div className="w-full lg:w-2/5 flex flex-col items-start justify-end text-left mt-4 lg:mt-0" variants={childVariants}>
+      <p className="text-md lg:text-xl font-medium text-light-gray">
+        Make My Ghar transforms your space into a modern home using top-tier materials.
+      </p>
+      <div className="mt-4 lg:mt-6">
+        <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group">
+          Start Your Journey
+          <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
+        </button>
+      </div>
+    </motion.div>
+  </motion.div>
+</div>
 
-          {/* Right Section: Description and Button */}
-          <motion.div className="w-full md:w-2/5 flex flex-col items-start justify-end text-left mt-4 md:mt-0" variants={childVariants}>
-            <p className="text-md md:text-xl font-medium md:pb-0 pb-8 text-light-gray">
-              Make My Ghar transforms your space into a modern home using top-tier materials.
-            </p>
-            <div className="mt-4 md:mt-6">
-              <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md md:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all">
-                Start Your Journey
-                <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
-              </button>
-            </div>
-          </motion.div>
-        </motion.div>
       </section>
     </motion.div>
   );

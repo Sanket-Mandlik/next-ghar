@@ -54,7 +54,7 @@ const WhyUs1 = () => {
 
   return (
     <div
-      className="md:w-4/5 mx-auto mt-30 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col md:flex-row items-center justify-center rounded-2xl"
+      className="lg:w-4/5 mx-auto mt-30 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
       }}
@@ -65,7 +65,7 @@ const WhyUs1 = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="md:w-1/3 h-full p-6 rounded-xl text-soft-white relative flex flex-col justify-center items-center"
+        className="lg:w-1/3 h-full p-6 rounded-xl text-soft-white relative flex flex-col justify-center items-center"
       >
         <p className="absolute top-4 left-10 text-sm text-medium-brown">
           Building dreams, one home at a time.
@@ -107,9 +107,9 @@ const WhyUs1 = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="md:w-2/3 p-8 rounded-2xl flex flex-col items-start justify-start"
+        className="lg:w-2/3 p-8 rounded-2xl flex flex-col items-start justify-start"
       >
-        <h2 className="text-4xl md:text-4xl font-normal mb-6">
+        <h2 className="text-4xl lg:text-4xl font-normal mb-6">
           <span className="bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
             Customize
           </span>{" "}

@@ -1,7 +1,7 @@
 
 const HeroLabel = () => {
     return (
-      <div className="flex flex-col bg-[#F5F1EB] md:flex-row w-4/5 mx-auto rounded-lg shadow-lg overflow-hidden">
+      <div className="flex flex-col bg-[#F5F1EB] lg:flex-row w-4/5 mx-auto rounded-lg shadow-lg overflow-hidden">
         {/* Left Section (Gradient Background) */}
         <div className="flex-1 bg-gradient-to-r from-[#8B5E3C] w-4/5 to-[#D2A679] text-white p-6 flex flex-col justify-center items-center text-center">
           <div>

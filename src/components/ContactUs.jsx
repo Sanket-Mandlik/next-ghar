@@ -9,31 +9,31 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="md:w-4/5 md:mx-auto mx-4 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
+      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* Main Container */}
-      <div className="relative z-10 md:p-8 md:px-20 md:py-30">
+      <div className="relative z-10 lg:p-8 lg:px-20 lg:py-30">
         <motion.div
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-12"
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Left Section - Heading */}
           <motion.div
-            className="md:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-center md:text-left"
+            className="lg:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-center lg:text-left"
             variants={fadeInUp(0.2)}
           >
-            <h2 className="text-4xl md:text-5xl font-medium text-white mb-4">Contact Us</h2>
-            <p className="text-2xl md:text-4xl font-montserrat font-medium bg-gradient-to-r from-gold via-warm-beige to-warm-beige bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-4">Contact Us</h2>
+            <p className="text-2xl lg:text-4xl font-montserrat font-medium bg-gradient-to-r from-gold via-warm-beige to-warm-beige bg-clip-text text-transparent">
               Book A Free Consultation
             </p>
             <motion.button
-              className="mt-4 px-6 py-2 bg-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
+              className="mt-6 px-6 py-2.5  bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Contact Us Now"
@@ -44,7 +44,7 @@ const ContactUs = () => {
 
           {/* Right Section - Contact Info */}
           <motion.div
-            className="md:w-1/2 py-10 lg:py-0 p-8 lg:p-0 space-y-6"
+            className="lg:w-1/2 py-10 lg:py-0 p-8 lg:p-0 space-y-6"
             variants={fadeInUp(0.4)}
           >
             {/* Address */}

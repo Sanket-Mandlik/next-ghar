@@ -53,16 +53,16 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
+    <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-10">
       {/* Name and Contact Number */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
         <input
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
           placeholder="Enter Your Name"
           required
         />
@@ -72,14 +72,14 @@ const ContactForm = () => {
           name="number"
           value={formData.number}
           onChange={handleChange}
-          className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
           placeholder="Enter Your Contact No."
           required
         />
       </div>
 
       {/* Property Type and Area */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
       <div className="relative w-full">
   {/* Fake Placeholder */}
   {!formData.startDate && !isDateFocused && (
@@ -96,7 +96,7 @@ const ContactForm = () => {
     onChange={handleChange}
     onFocus={() => setIsDateFocused(true)}
     onBlur={() => setIsDateFocused(false)}
-    className={`w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
+    className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
       formData.startDate || isDateFocused ? "text-black" : "text-transparent"
     }`}
     required
@@ -108,7 +108,7 @@ const ContactForm = () => {
           name="area"
           value={formData.area}
           onChange={handleChange}
-          className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
           required
         >
           <option value="" disabled>
@@ -129,7 +129,7 @@ const ContactForm = () => {
         name="interiorType"
         value={formData.interiorType}
         onChange={handleChange}
-        className="w-full p-2 md:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
+        className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
         required
       >
         <option value="" disabled>
@@ -143,7 +143,7 @@ const ContactForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="md:w-1/3  px-4 md:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 md:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+        className="lg:w-1/3  px-4 lg:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 lg:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
       >
         Get Free Consultation
       </button>

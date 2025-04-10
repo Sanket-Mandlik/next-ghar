@@ -15,7 +15,6 @@ const services = [
     image: "project1.jpeg",
     features: [
       "Custom carpentry",
-      "Semi-modular kitchens",
       "Bedrooms & Kid's rooms",
       "End-to-end design process",
       "Spacious Planning"
@@ -75,7 +74,7 @@ const services = [
         Loose <span className="text-dark-brown">Furniture</span>
       </>
     ),
-    description: "Create inviting spaces at your apartment in Baner that bring families together on meals and spark warm conversations.",
+    description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
     image: "project5.jpeg",
     features: [
       "Sofa Sets & Armchairs",
@@ -102,7 +101,7 @@ const Services = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="relative md:w-4/5 md:mx-auto mx-4 px-1 flex flex-col items-start mt-30">
+    <div className="relative lg:w-4/5 lg:mx-auto mx-4 px-1 flex flex-col items-start mt-30">
       <motion.h2
         className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
         initial={{ opacity: 0, y: 30 }}
@@ -120,7 +119,7 @@ const Services = () => {
         We Offer
       </motion.h2>
 
-      <div className="flex md:w-4/5 mx-auto relative w-full flex-col items-center mt-10">
+      <div className="flex lg:w-4/5 mx-auto relative w-full flex-col items-center mt-10">
         {services.map((service, index) => (
           <motion.div
           key={service.id}
@@ -129,10 +128,10 @@ const Services = () => {
             y: hovered !== null && index > hovered && index < 5 ? 200 : 0,
           }}
           transition={{ type: "spring", stiffness: 50 }}
-          className={`relative h-auto md:h-[520px] w-[94vw] md:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
+          className={`relative h-auto lg:h-[520px] w-[94vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
             index === 5
               ? "flex-col items-center justify-center text-center bg-cover bg-center text-pure-white"
-              : "flex-col md:flex-row gap-4 pt-25 items-start text-medium-brown bg-soft-white"
+              : "flex-col lg:flex-row gap-4 pt-25 items-start text-medium-brown bg-soft-white"
           }`}
           style={{
             marginTop: index !== 0 && index < 5 ? "-290px" : "0",
@@ -150,14 +149,14 @@ const Services = () => {
         <div className={`flex-1 flex flex-col ${index === 5 ? "justify-between items-center text-center h-full" : "justify-between"}`}>
   {index === 5 && (
     <div className="mt-auto ">
-      <h3 className="text-3xl p-4 md:text-5xl font-medium">{service.title}</h3>
-      <p className="text-lg p-4 font-medium md:mt-6 mb-15">{service.description}</p>
+      <h3 className="text-3xl p-4 lg:text-5xl font-medium">{service.title}</h3>
+      <p className="text-lg p-4 font-medium lg:mt-6 mb-15">{service.description}</p>
     </div>
   )}
   {index !== 5 && (
     <div>
       <h3 className="text-4xl font-medium">{service.title}</h3>
-      <p className="text-lg font-medium mt-3 md:mb-15">{service.description}</p>
+      <p className="text-lg font-medium mt-3 lg:mb-15">{service.description}</p>
       {service.features && (
        <div className="space-y-3 mt-4">
        {service.features.map((feature, i) => (
@@ -185,7 +184,7 @@ const Services = () => {
             <img
               src={`/assets/${service.image}`}
               alt={`Service ${service.id}`}
-              className="mt-4 md:-mt-20 md:ml-6 w-full md:w-1/2 h-80 md:h-full object-cover rounded-2xl"
+              className="mt-4 lg:-mt-20 lg:ml-6 w-full lg:w-1/2 h-80 lg:h-full object-cover rounded-2xl"
             />
           )}
         </motion.div>

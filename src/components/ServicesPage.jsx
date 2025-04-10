@@ -72,10 +72,10 @@ const ServicesPage = () => {
         const number = index + 1;
 
         return (
-          <div key={index} className="flex flex-col md:flex-row gap-3 w-full md:h-[65vh]">
+          <div key={index} className="flex flex-col lg:flex-row gap-3 w-full lg:h-[65vh]">
             {/* Image Section */}
             <motion.div
-              className="w-full md:w-2/3 relative overflow-hidden rounded-2xl"
+              className="w-full lg:w-2/3 relative overflow-hidden rounded-2xl"
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
             >
@@ -85,35 +85,35 @@ const ServicesPage = () => {
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="w-full h-[45vh] md:h-[65vh] object-cover rounded-2xl"
+                className="w-full h-[45vh] lg:h-[65vh] object-cover rounded-2xl"
               />
 
               {/* Overlay */}
-              <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-l from-black/60 to-transparent" />
-              <div className="block md:hidden absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="hidden lg:block absolute inset-0 z-10 bg-gradient-to-l from-black/60 to-transparent" />
+              <div className="block lg:hidden absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
 
               {/* Text Content */}
-              <div className="absolute inset-0 z-20 flex flex-col justify-center text-soft-white px-6 md:px-0 items-end md:pr-20">
+              <div className="absolute inset-0 z-20 flex flex-col justify-center text-soft-white px-6 lg:px-0 items-end lg:pr-20">
                 <div className="absolute top-8 left-8 z-30">
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
-                    className="w-12 h-12 md:w-16 md:h-16 border-2 border-soft-white rounded-full flex items-center justify-center font-normal bg-transparent backdrop-blur-sm text-3xl md:text-5xl"
+                    className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-soft-white rounded-full flex items-center justify-center font-normal bg-transparent backdrop-blur-sm text-3xl lg:text-5xl"
                   >
                     {number}
                   </motion.div>
                 </div>
 
                 {/* Desktop Text */}
-                <div className="hidden md:flex flex-col space-y-3 max-w-xl text-right">
+                <div className="hidden lg:flex flex-col space-y-3 max-w-xl text-right">
                   <h3 className="text-5xl font-medium">{service.title}</h3>
                   <div className="w-24 h-[2px] bg-soft-white ml-auto" />
                   <p className="text-lg">{service.description}</p>
                 </div>
 
                 {/* Mobile Text */}
-                <div className="flex md:hidden flex-col absolute bottom-8 left-8 text-left space-y-2 max-w-xs">
+                <div className="flex lg:hidden flex-col absolute bottom-8 left-8 text-left space-y-2 max-w-xs">
                   <h3 className="text-2xl font-medium">{service.title}</h3>
                   <p className="text-md">{service.description}</p>
                 </div>
@@ -122,7 +122,7 @@ const ServicesPage = () => {
 
             {/* Right Section with Mesh Background */}
             <motion.div
-              className="w-full md:w-1/3 p-10 md:p-15 text-soft-white flex flex-col justify-center space-y-4 rounded-2xl bg-cover bg-center"
+              className="w-full lg:w-1/3 p-10 lg:p-15 text-soft-white flex flex-col justify-center space-y-4 rounded-2xl bg-cover bg-center"
               style={{ backgroundImage: `url(${meshBg})` }}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}

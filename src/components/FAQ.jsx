@@ -37,15 +37,15 @@ const FAQ = () => {
 
   return (
     <section
-      className="md:mx-auto mx-4 md:w-4/5 rounded-2xl p-2 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold shadow-lg mt-30 bg-cover bg-center"
-      style={{ backgroundImage: "url('/assets/mesh-189.png')" }}
+    className="lg:mx-auto mx-4 lg:w-4/5 rounded-2xl p-0 lg:p-1 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-30 bg-none  bg-cover bg-center"
     >
-      <div className="bg-soft-white rounded-2xl px-6 md:px-10 py-10 md:py-16">
-        <h2 className="text-4xl md:text-5xl font-medium text-dark-brown mb-12 md:mb-20">
+    
+      <div className="bg-soft-white rounded-2xl px-6 lg:px-10 py-10 lg:py-16">
+        <h2 className="text-4xl lg:text-5xl font-medium text-dark-brown mb-12 lg:mb-20">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}

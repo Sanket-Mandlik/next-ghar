@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-[10px] md:mb-8 z-50 bg-soft-white shadow-lg shadow-warm-beige/50 rounded-2xl border-t-3 border-gold mx-auto md:w-[90%] w-[95%] py-2 px-6 flex justify-between items-center">
+    <nav className="sticky top-[10px] lg:mb-8 z-50 bg-soft-white shadow-lg shadow-warm-beige/50 rounded-2xl border-t-3 border-gold mx-auto lg:w-[90%] w-[95%] py-2 px-6 flex justify-between items-center">
       {/* Logo - Clickable */}
       <Link href="/" passHref legacyBehavior>
         <a className="text-xl font-heading font-semibold text-transparent bg-gradient-to-r via-dark-brown from-dark-brown to-dark-brown bg-clip-text">
@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex space-x-10">
+      <ul className="hidden lg:flex space-x-10">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -48,14 +48,14 @@ const Navbar = () => {
       {/* CTA Button - Desktop only */}
       <Link
         href="/contactus"
-        className="hidden md:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-md font-semibold hover:bg-dark-brown transition shadow-lg"
+        className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-md font-semibold hover:bg-dark-brown transition shadow-lg"
       >
         Get Started Now
       </Link>
 
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden text-dark-brown text-2xl focus:outline-none"
+        className="lg:hidden text-dark-brown text-2xl focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes /> : <FaBars />}

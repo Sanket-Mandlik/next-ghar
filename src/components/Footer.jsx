@@ -2,22 +2,22 @@ import { FaWhatsapp, FaPhone, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="lg:w-4/5 md:mx-auto px-4 mx-0 md:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 md:rounded-t-2xl shadow-2xl shadow-warm-beige ">
-      <div className="px-4 md:px-15  py-5 md:py-10 mx-auto grid grid-cols-1 md:grid-cols-8 gap-10">
+    <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-2xl shadow-2xl shadow-warm-beige ">
+      <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-10">
         
         {/* Logo & About */}
-        <div className="md:col-span-3 text-center md:text-left">
-          <h2 className="text-4xl md:text-5xl mt-15 font-medium">Make My Ghar</h2>
+        <div className="lg:col-span-3 text-center lg:text-left">
+          <h2 className="text-4xl lg:text-5xl mt-15 font-medium">Make My Ghar</h2>
           <p className="mt-2 text-md">Transforming spaces with elegance and precision.</p>
         </div>
 
         {/* Grouped Sections */}
-        <div className="md:col-span-5 flex flex-col md:flex-row justify-between gap-10 md:gap-20 text-center md:text-left">
+        <div className="lg:col-span-5 flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 text-center lg:text-left">
           
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 md:space-y-3 text-sm">
+            <ul className="space-y-2 lg:space-y-3 text-sm">
               <li><a href="#" className="hover:text-warm-beige transition">About Us</a></li>
               <li><a href="#" className="hover:text-warm-beige transition">Our Services</a></li>
               <li><a href="#" className="hover:text-warm-beige transition">Projects</a></li>
@@ -32,7 +32,7 @@ const Footer = () => {
             <p className="text-sm mt-1 pt-2 mb-4">Email: contact@makemyghar.com</p>
 
             {/* Call Button & Social Icons in One Row */}
-            <div className="mt-4 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-6">
+            <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
               <a 
                 href="tel:+919876543210" 
                 className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-center text-sm opacity-80 mt-5 pt-5 w-full md:w-2/5 mx-auto border-t border-soft-white">
+      <div className="text-center text-sm opacity-80 mt-5 pt-5 w-full lg:w-2/5 mx-auto border-t border-soft-white">
         © {new Date().getFullYear()} Make My Ghar. All Rights Reserved.
       </div>
     </footer>

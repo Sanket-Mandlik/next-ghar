@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     // Show the popup after 10 seconds
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
