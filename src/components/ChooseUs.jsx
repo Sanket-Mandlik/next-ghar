@@ -69,7 +69,7 @@ const ChooseUs = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
-                  className="text-4xl md:text-3xl font-medium text-dark-brown"
+                  className="text-4xl md:text-2xl font-medium text-dark-brown"
                   variants={textVariants}
                 >
                   Unmatched Expertise
@@ -78,7 +78,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                   Our top skilled designers bring years of experience to craft interiors that perfectly blend elegance with functionality, ensuring every space reflects superior design and thoughtful detail.
+                   Our top skilled designers bring years of experience to craft interiors that perfectly blend elegance with functionality.
                 </motion.p>
               </div>
             </motion.div>
@@ -96,7 +96,7 @@ const ChooseUs = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
-                  className="text-4xl md:text-3xl font-medium text-dark-brown"
+                  className="text-4xl md:text-2xl font-medium text-dark-brown"
                   variants={textVariants}
                 >
                   Premium Quality
@@ -105,8 +105,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                  WWe use top-tier materials and meticulous craftsmanship to deliver the best home interiors, tailored to your lifestyle and designed to elevate your everyday living experience.
-                </motion.p>
+                  WWe use top-tier materials and meticulous craftsmanship to deliver the best home interiors, tailored to your lifestyle.                </motion.p>
               </div>
             </motion.div>
           </motion.div>
