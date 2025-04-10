@@ -78,7 +78,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                   Our top skilled designers bring years of experience to craft interiors that perfectly blend elegance with functionality.
+                   Best interiors in Pune blend style and practicality to create elegant, functional spaces tailored to your lifestyle.
                 </motion.p>
               </div>
             </motion.div>
@@ -105,7 +105,7 @@ const ChooseUs = () => {
                   className="text-md text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                  WWe use top-tier materials and meticulous craftsmanship to deliver the best home interiors, tailored to your lifestyle.                </motion.p>
+                  We use premium quality materials and expert craftsmanship to create beautiful, customised home interiors that perfectly match your lifestyle and needs in Pune.                </motion.p>
               </div>
             </motion.div>
           </motion.div>
@@ -164,7 +164,7 @@ const ChooseUs = () => {
               className="text-md text-soft-white mt-2 font-normal"
               variants={textVariants}
             >
-              From apartments to luxury villas, we specialize in creating luxury home interiors that turn your vision into reality with innovative and timeless designs.
+              From apartments of Hinjewadi to luxury villas of Shivaji Nagar, we specialize in creating luxury home interiors that turn your vision into reality with innovative and timeless designs.
 
             </motion.p>
           </motion.div>

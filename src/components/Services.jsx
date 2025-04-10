@@ -11,7 +11,7 @@ const services = [
         Complete <span className="text-dark-brown">Makeover</span>
       </>
     ),
-    description: "Tailored interiors reflecting individual lifestyles and tastes for a truly unique home.",
+    description: "Interiors thoughtfully crafted to reflect your lifestyle and traditions for a home that truly feels like yours in Pune.",
     image: "project1.jpeg",
     features: [
       "Custom carpentry",
@@ -28,7 +28,7 @@ const services = [
         Spacious <span className="text-dark-brown">Planning</span>
       </>
     ),
-    description: "Intelligent use of available space, blending utility with comfort and style seamlessly.",
+    description: "Smart space utilization that blends comfort, utility, and elegant style.",
     image: "project3.jpeg",
     features: [
       "Wall Paneling",
@@ -45,12 +45,12 @@ const services = [
         Modular <span className="text-dark-brown">Kitchen</span>
       </>
     ),
-    description: "A kitchen that complements your lifestyle, functionally and aesthetically.",
+    description: "A modular kitchen that complements your lifestyle, functionally and aesthetically.",
     image: "project2.jpeg",
     features: [
       "Modular Kitchen",
       "Semi-Modular Kitchen",
-      "Space Planning"
+      "Island Kitchen"
     ],
   },
   {
@@ -60,7 +60,7 @@ const services = [
         Commercial <span className="text-dark-brown">Interiors</span>
       </>
     ),
-    description: "Functional and attractive commercial interiors that reflect your brand’s personality.",
+    description: "Productive and attractive commercial interiors that reflect your brand’s personality.",
     image: "project4.jpeg",
     features: [
       "Office Interior",
@@ -75,7 +75,7 @@ const services = [
         Loose <span className="text-dark-brown">Furniture</span>
       </>
     ),
-    description: "Spaces that create warm welcomes and shared experiences over meals.",
+    description: "Create inviting spaces at your apartment in Baner that bring families together on meals and spark warm conversations.",
     image: "project5.jpeg",
     features: [
       "Sofa Sets & Armchairs",
