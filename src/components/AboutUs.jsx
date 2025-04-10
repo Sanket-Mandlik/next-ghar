@@ -107,8 +107,8 @@ const AboutUs = () => {
 
           {/* Info Text */}
           <p className="mt-6  font-medium sm:text-md text-dark-brown">
-            At Make My Ghar, we design interiors that are both stylish and functional, tailored to match our clients’ needs.  
-            From modern apartments to luxury villas, we handle space planning, furniture selection, and material sourcing, ensuring seamless execution.
+          At Make My Ghar, our team of expert interior designers and architects specializes in creating stylish, functional, and sustainable interiors. From modern apartments to luxury villas, we offer smart space planning, premium material sourcing, and seamless execution.
+With 120+ completed projects, we deliver timeless designs that balance aesthetics with practicality — built to last and designed to inspire.
           </p>
 
           <p className="mt-2 font-medium sm:text-md text-dark-brown">

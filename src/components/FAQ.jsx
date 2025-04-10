@@ -4,34 +4,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How much does 3 bhk interior design cost in Pune?",
-    answer:
-      "The cost for 3 BHK interior design in Pune typically ranges from ₹15 lakh to ₹25 lakh depending on design style, materials, and furniture. Premium interiors with modular kitchen, wardrobes, and false ceiling may cost upwards of ₹18–25 lakh.",
+    "question": "How much does 3 bhk interior design cost in Pune?",
+    "answer": "The cost of 3 BHK interior design in Pune generally ranges from ₹15 lakh to ₹25 lakh. This depends on the design theme, materials used, and customization. If you're looking for the best interiors in Pune, many top designers offer personalized solutions that include modular kitchens, wardrobes, false ceilings, and smart storage — often costing upwards of ₹18–25 lakh."
   },
   {
-    question: "What is a good budget for interior design?",
-    answer:
-      "A good budget for quality interior design in Pune is between ₹10–₹18 lakh for a 2 or 3 BHK. This allows for designer finishes, premium materials, modular furniture, and custom elements for a modern home.",
+    "question": "What is a good budget for interior design?",
+    "answer": "A good budget for quality interior design in Pune ranges between ₹10–₹18 lakh for a 2 or 3 BHK home. This budget typically covers designer finishes, premium materials, modular furniture, and customized solutions. Many architects in Pune offer interior design packages within this range, ensuring both aesthetics and functionality tailored to your lifestyle."
   },
   {
-    question: "What is the interior cost of 4 BHK in Pune?",
-    answer:
-      "Interior design for a 4 BHK in Pune generally costs ₹18–25 lakh or more, depending on style, furnishings, and space customization. Luxury homes may go even higher with imported materials and bespoke furniture.",
+    "question": "What is the interior cost of 4 BHK in Pune?",
+    "answer": "The interiors costing for a 4 BHK in Pune typically ranges from ₹18–25 lakh or more, depending on the design style, materials, and customization. For those seeking premium design, interiors costing may go higher due to features like imported materials, bespoke furniture, modular setups, and designer lighting for a fully personalized experience."
   },
   {
-    question: "Does interior design include furniture?",
-    answer:
-      "Yes, premium interior design packages include modular and custom furniture such as wardrobes, beds, sofas, dining sets, and more — tailored to your home's layout and design theme.",
+    "question": "Does interior design include furniture?",
+    "answer": "Yes, a professional interior designer typically includes furniture as part of the overall design package. This often involves modular and custom furniture such as beds, wardrobes, sofas, and dining sets. A skilled interior designer ensures that all furniture is planned, selected, and installed to perfectly complement your home's layout and style."
   },
   {
-    question: "Is 10 lakh enough for interior design?",
-    answer:
-      "Yes, ₹10 lakh is a good budget for a 2 or 3 BHK in Pune. It covers premium finishes, modern modular furniture, decorative lighting, and space planning for a stylish, functional home.",
+    "question": "Is 10 lakh enough for interior design?",
+    "answer": "Yes, ₹10 lakh is a reasonable budget for interior design of a 2 or 3 BHK in Pune. It covers modern modular furniture, lighting, premium finishes, and efficient design. With the right team, you can still achieve some of the best interiors in Pune within this budget through smart planning and cost-effective materials."
   },
   {
-    question: "Should you hire an interior design company in Pune?",
-    answer:
-      "Absolutely. Hiring an interior design company in Pune helps bring your vision to life with expert planning and efficient execution. Make My Ghar ensures a hassle-free experience while saving you time, money, and costly mistakes.",
+    "question": "Should you hire an interior design company in Pune?",
+    "answer": "Absolutely. Hiring a trusted interior design company is the key to achieving the best interiors in Pune. Professionals bring design expertise, space optimization, and execution quality. Companies like Make My Ghar ensure a seamless process with attention to detail, timely delivery, and value for money."
   },
 ];
 
