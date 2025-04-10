@@ -21,7 +21,10 @@ const Home = () => {
 </div>
 
       <Projects />
+      <div className="md:w-4/5 mx-auto">
       <Testimonials />
+</div>
+    
       <SliderText />
    
       <ContactUs />

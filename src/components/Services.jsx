@@ -148,8 +148,8 @@ const Services = () => {
         <div className={`flex-1 flex flex-col ${index === 5 ? "justify-between items-center text-center h-full" : "justify-between"}`}>
   {index === 5 && (
     <div className="mt-auto ">
-      <h3 className="text-5xl font-medium">{service.title}</h3>
-      <p className="text-lg font-medium mt-6 mb-15">{service.description}</p>
+      <h3 className="text-3xl p-4 md:text-5xl font-medium">{service.title}</h3>
+      <p className="text-lg p-4 font-medium md:mt-6 mb-15">{service.description}</p>
     </div>
   )}
   {index !== 5 && (

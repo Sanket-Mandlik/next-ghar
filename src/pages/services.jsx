@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import ServicesPage from "../components/ServicesPage";
 import SliderText from "../components/SliderText";
+import Testimonials from "../components/Testimonials";
+import ServiceHero from "../components/ServiceHero";
 
 
 const Services = () => {
@@ -29,7 +31,7 @@ const Services = () => {
 
       {/* Process Section */}
       <div className="mt-30">
-        <Process />
+        <ServiceHero />
       </div>
 
       {/* Services Section */}
@@ -58,6 +60,14 @@ const Services = () => {
     <ServicesPage />
 </div>
        
+<div className="bg-soft-white ">
+    <Testimonials />
+</div>
+
+
+<div className="mt-30">
+        <Process />
+      </div>
 
 <SliderText />
     

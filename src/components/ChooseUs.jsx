@@ -24,21 +24,10 @@ const textVariants = {
   },
 };
 
-const spinAnimation = {
-  animate: {
-    rotate: 360,
-    transition: {
-      repeat: Infinity,
-      ease: "linear",
-      duration: 20,
-    },
-  },
-};
-
 const ChooseUs = () => {
   return (
     <motion.div
-      className="lg:w-4/5 lg:mx-auto  mt-30"
+      className="lg:w-4/5 lg:mx-auto mt-30"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -49,7 +38,7 @@ const ChooseUs = () => {
         className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
         variants={textVariants}
       >
-        <span className="text-dark-brown">Why Choose</span> Make My Ghar?
+        <span className="text-dark-brown text-4xl md:text-5xl">Why Choose</span> Make My Ghar?
       </motion.h2>
 
       {/* Content Section */}
@@ -67,111 +56,109 @@ const ChooseUs = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
             variants={containerVariants}
           >
-           {/* Unmatched Expertise */}
-<motion.div
-  className="p-6 rounded-xl shadow-md flex flex-col items-center text-center gap-3 pt-10 relative overflow-hidden md:h-[39vh]"
-  style={{
-    backgroundImage: "url('/assets/mesh-476.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-  variants={containerVariants}
->
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
+            {/* Card 1 - Unmatched Expertise */}
+            <motion.div
+              className="relative h-[82vh] md:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              style={{
+                backgroundImage: "url('/assets/mesh-476.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              variants={containerVariants}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
+              <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
+                <motion.h3
+                  className="text-4xl md:text-3xl font-medium text-dark-brown"
+                  variants={textVariants}
+                >
+                  Unmatched Expertise
+                </motion.h3>
+                <motion.p
+                  className="text-md text-medium-brown mt-2"
+                  variants={textVariants}
+                >
+                  Our team of skilled designers brings years of experience to
+                  craft interiors that blend elegance with functionality.
+                </motion.p>
+              </div>
+            </motion.div>
 
-  {/* Foreground Content */}
-  <div className="relative z-20">
-    <motion.h3
-      className="text-2xl font-semibold 2xl:pt-12 pb-8 text-dark-brown"
-      variants={textVariants}
-    >
-      Unmatched Expertise
-    </motion.h3>
-    <motion.p className="text-medium-brown mb-20" variants={textVariants}>
-    Our top skilled designers bring years of experience to craft interiors that perfectly blend elegance with functionality, ensuring every space reflects superior design and thoughtful detail.
-    </motion.p>
-  </div>
-</motion.div>
-
-<motion.div
-  className="p-6 rounded-xl shadow-md flex flex-col items-end text-center gap-3 pt-10 relative md:h-[39vh]"
-  style={{
-    backgroundImage: "url('/assets/mesh-488.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
-  variants={containerVariants}
->
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
-
-  {/* Foreground Content */}
-  <div className="relative z-20">
-    <motion.h3
-      className="text-2xl mt-15 font-semibold pb-6 text-dark-brown"
-      variants={textVariants}
-    >
-      Premium Quality
-    </motion.h3>
-    <motion.p
-      className="text-medium-brown"
-      variants={textVariants}
-    >
-        We use top-tier materials and meticulous craftsmanship to deliver the best home interiors, tailored to your lifestyle and designed to elevate your everyday living experience.
-    </motion.p>
-  </div>
-</motion.div>
-
-
-
+            {/* Card 2 - Premium Quality */}
+            <motion.div
+              className="relative h-[82vh] md:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              style={{
+                backgroundImage: "url('/assets/mesh-488.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              variants={containerVariants}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
+              <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
+                <motion.h3
+                  className="text-4xl md:text-3xl font-medium text-dark-brown"
+                  variants={textVariants}
+                >
+                  Premium Quality
+                </motion.h3>
+                <motion.p
+                  className="text-md text-medium-brown mt-2"
+                  variants={textVariants}
+                >
+                  We use top-tier materials and meticulous craftsmanship to
+                  create stunning interiors tailored to your needs.
+                </motion.p>
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Bottom Row */}
+          {/* Card 3 - Tailored to Your Vision */}
           <motion.div
-  className="bg-white p-6 rounded-xl shadow-md md:h-[41vh] flex flex-col justify-end text-left text-soft-white gap-3 overflow-hidden relative"
-  style={{
-    backgroundImage:
-      "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
-    backgroundSize: "cover",
-    backgroundPosition: "bottom left",
-  }}
-  variants={containerVariants}
->
-  <motion.h3
-    className="text-4xl mt-30 font-medium"
-    variants={textVariants}
-  >
-    Tailored to Your Vision
-  </motion.h3>
-  <motion.p
-    className="text-light-gray pb-6 md:pr-40 2xl:pb-12"
-    variants={textVariants}
-  >
-    Every home is unique, and so is our approach. We design spaces
-    that reflect your style, needs, and personality.
-  </motion.p>
-</motion.div>
-
+            className="relative h-[82vh] md:h-[41vh] rounded-xl shadow-md overflow-hidden"
+            style={{
+              backgroundImage:
+                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom left",
+            }}
+            variants={containerVariants}
+          >
+            <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
+              <motion.h3
+                className="text-4xl font-medium text-soft-white"
+                variants={textVariants}
+              >
+                Tailored to Your Vision
+              </motion.h3>
+              <motion.p
+                className="text-md text-light-gray mt-2 md:pr-40"
+                variants={textVariants}
+              >
+                Every home is unique, and so is our approach. We design spaces
+                that reflect your style, needs, and personality.
+              </motion.p>
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* Right Side */}
+        {/* Card 4 - Right Side Full Height */}
         <motion.div
-          className="col-span-3 relative lg:h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-md"
+          className="col-span-3 relative h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-md"
           variants={containerVariants}
         >
           <motion.img
             src="/assets/mesh-969.png"
             alt="Elegant Home Interior"
-            className="w-full h-120 md:h-full object-cover"
+            className="w-full h-full object-cover"
             variants={containerVariants}
           />
           <motion.div
-            className="absolute inset-0 flex flex-col items-center justify-end p-6 pb-12 2xl:pb-20 gap-3"
+            className="absolute bottom-0 left-0 p-6 z-20 text-left"
             variants={containerVariants}
           >
             <motion.h3
-              className="text-4xl text-warm-beige mt-40 font-medium"
+              className="text-4xl text-warm-beige font-medium"
               variants={textVariants}
             >
               Elevating Lives, Transforming Spaces
@@ -180,8 +167,8 @@ const ChooseUs = () => {
               className="text-md text-soft-white mt-2 font-normal"
               variants={textVariants}
             >
-              From apartments to luxury villas, we specialize in creating luxury home interiors that turn your vision into reality with innovative and timeless designs.
-
+              From apartments to luxury villas, we turn your vision into reality
+              with innovative and timeless designs.
             </motion.p>
           </motion.div>
         </motion.div>

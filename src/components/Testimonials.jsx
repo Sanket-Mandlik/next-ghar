@@ -22,7 +22,7 @@ const Testimonials = () => {
       initial="hidden" 
       whileInView="visible" 
       viewport={{ once: true }} 
-      className="lg:w-4/5 lg:mx-auto mx-3 mt-30 text-dark-brown"
+      className=" mt-30 text-dark-brown"
     >
       <motion.div variants={fadeInUp()}>
         <h2 className="text-5xl font-montserrat text-medium-brown font-medium mb-6">
@@ -34,7 +34,7 @@ const Testimonials = () => {
         {/* Testimonial 1 */}
         <motion.div 
           variants={fadeInUp(0.2)} 
-          className="bg-gradient-to-bl from-warm-beige via-medium-brown to-dark-brown text-pure-white px-6 py-10 rounded-2xl shadow-lg"
+          className="bg-gradient-to-bl from-warm-beige via-medium-brown to-dark-brown text-pure-white px-8 py-10 rounded-2xl shadow-lg"
         >
           <FaQuoteLeft className="text-warm-beige text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.4)} className="text-lg italic py-4">

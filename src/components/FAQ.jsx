@@ -37,25 +37,29 @@ const FAQ = () => {
 
   return (
     <section
-      className="mx-auto md:w-4/5 rounded-2xl p-2 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold shadow-lg mt-30 bg-cover bg-center"
+      className="md:mx-auto mx-3 md:w-4/5 rounded-2xl p-2 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold shadow-lg mt-30 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-189.png')" }}
     >
-      <div className=" bg-soft-white rounded-2xl px-10 py-15">
-        <h2 className="text-5xl font-medium text-dark-brown mb-16">
+      <div className="bg-soft-white rounded-2xl px-6 md:px-10 py-10 md:py-16">
+        <h2 className="text-4xl md:text-5xl font-medium text-dark-brown mb-12 md:mb-20">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border-b-2 border-medium-brown/20 rounded-lg pb-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="border-b-2 border-medium-brown/20 rounded-lg pb-6"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="flex items-center justify-between w-full text-left"
+                className="flex items-center justify-between w-full text-left group"
               >
-                <span className="font-medium text-md text-dark-brown">
+                <span className="font-medium text-lg text-dark-brown group-hover:text-gold transition-colors">
                   {faq.question}
                 </span>
                 <motion.div
@@ -79,7 +83,7 @@ const FAQ = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
