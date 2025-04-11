@@ -7,6 +7,7 @@ import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
 import ProjectHero from "../components/ProjectHero";
+import ProjectsGallery from "../components/ProjectsGallery";
 
 
 const Projects = () => {
@@ -20,11 +21,11 @@ const Projects = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="text-center"
 >
-  <h1 className="text-5xl lg:text-6xl font-medium leading-tight">
+  <h1 className="text-5xl lg:text-6xl mt-60 font-medium leading-tight">
   What We’ve <span className="text-gold">Built </span>{" "}
     <span className="text-dark-brown">!</span>
   </h1>
-  <p className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+  <p className="text-lg font-medium leading-relaxed mb-30 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
     Reach out to Make My Ghar for any queries or to book a free consultation.
   </p>
 </motion.div>
@@ -37,38 +38,6 @@ const Projects = () => {
 
       {/* Services Section */}
   
-
-
-        <motion.h2
-  className="text-5xl mt-30  font-montserrat text-medium-brown font-medium mb-6"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-  <motion.span
-    className="text-dark-brown"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-  >
-    Services
-  </motion.span>{" "}
-  We Offer
-</motion.h2>
-
-
-<div className="bg-soft-white ">
-    <ServicesPage />
-</div>
-       
-<div className="bg-soft-white ">
-    <Testimonials />
-</div>
-
-
-<div className="mt-30">
-        <Process />
-      </div>
 
 <SliderText />
     

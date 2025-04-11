@@ -36,7 +36,7 @@ const ContactPage = () => {
 
   return (
     <div className="bg-soft-white lg:w-4/5 mx-auto min-h-screen">
-      <div className="mx-auto px-4 lg:px-0 pt-30">
+      <div className="mx-auto px-4 lg:px-0 pt-60">
         {/* Contact Us Heading */}
         <motion.div
           className="text-center mb-30"
