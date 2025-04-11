@@ -21,6 +21,8 @@ const Home = () => {
 </div>
 
       <Projects />
+
+      
       <div className="lg:w-4/5 px-4 lg:px-0 lg:mx-auto">
       <Testimonials />
 </div>

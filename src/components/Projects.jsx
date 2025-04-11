@@ -79,7 +79,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="flex flex-col lg:w-4/5 mx-4 max-w-screen-lg lg:mx-auto gap-4 mt-30 overflow-hidden"
+      className="flex flex-col lg:w-4/5  mx-4  lg:mx-auto gap-4 mt-30 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -132,13 +132,13 @@ const Projects = () => {
   <motion.h2 className="text-3xl font-semibold" variants={textVariants}>
     Start Your Project
   </motion.h2>
-  <motion.p className="text-lg mt-2" variants={textVariants}>
+  <motion.p className="text-lg lg:text-sm mt-2" variants={textVariants}>
    Let's start decorating your home with Make My Ghar.
   </motion.p>
 
   <Link href="/contactus">
   <motion.button
-    className="mt-4 px-6 py-2.5 text-xl bg-gradient-to-b from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
+    className="mt-4 px-8 py-2.5 text-lg lg:text-md bg-gradient-to-b from-gold to-dark-brown text-soft-white font-medium rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
     variants={textVariants}
   >
     Get Started

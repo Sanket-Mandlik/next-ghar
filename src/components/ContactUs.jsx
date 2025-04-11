@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Link from 'next/link';
+const MotionLink = motion(Link);
+
 
 const fadeInUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
@@ -35,16 +37,14 @@ const ContactUs = () => {
             </p>
 
             
-            <Link href="/contactus" passHref>
-  <motion.a
-    className="mt-6 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-    aria-label="Contact Us Now"
-  >
-    Contact Us Now
-  </motion.a>
-</Link>
+            <MotionLink
+  href="/contactus"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  className="mt-6 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
+>
+  Contact Us Now
+</MotionLink>
           </motion.div>
 
           {/* Right Section - Contact Info */}
@@ -53,7 +53,7 @@ const ContactUs = () => {
             variants={fadeInUp(0.4)}
           >
             {/* Address */}
-            <div className="flex items-start gap-3">
+            <div className="flex items-start mb-4 gap-3">
               <FaMapMarkerAlt className="text-white text-xl flex-shrink-0 mt-1" />
               <div className="flex-1">
                 <p className="text-lg bg-gradient-to-r from-warm-beige to-soft-white bg-clip-text text-transparent leading-relaxed">

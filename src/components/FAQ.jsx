@@ -37,10 +37,10 @@ const FAQ = () => {
 
   return (
     <section
-    className="lg:mx-auto mx-4 lg:w-4/5 rounded-2xl p-0 lg:p-1 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-30 bg-none  bg-cover bg-center"
+    className="lg:mx-auto mx-4 lg:w-4/5 rounded-2xl p-0 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-30 bg-none  bg-cover bg-center"
     >
     
-      <div className="bg-soft-white rounded-2xl px-6 lg:px-10 py-10 lg:py-16">
+      <div className="bg-soft-white rounded-2xl px-6 lg:px-10 py-10 lg:pb-16">
         <h2 className="text-4xl lg:text-5xl font-medium text-dark-brown mb-12 lg:mb-20">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
