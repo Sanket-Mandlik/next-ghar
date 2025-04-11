@@ -58,7 +58,7 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
     >
-      <section className="relative w-full h-[102vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
+      <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
         {/* Animated Background with Enhanced Transition */}
         <AnimatePresence exitBeforeEnter>
           <motion.div

@@ -19,18 +19,18 @@ const ContactUs = () => {
       {/* Main Container */}
       <div className="relative z-10 lg:p-8 lg:px-20 lg:py-30">
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12"
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Left Section - Heading */}
           <motion.div
-            className="lg:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-center lg:text-left"
+            className="lg:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-left"
             variants={fadeInUp(0.2)}
           >
-            <h2 className="text-4xl lg:text-5xl font-medium text-white mb-4">Contact Us</h2>
-            <p className="text-2xl lg:text-4xl font-montserrat font-medium bg-gradient-to-r from-gold via-warm-beige to-warm-beige bg-clip-text text-transparent">
+            <h2 className="text-5xl lg:text-5xl font-medium mt-15 lg:mt-0 bg-gradient-to-r from-gold via-warm-beige to-soft-white bg-clip-text text-transparent mb-4">Contact Us</h2>
+            <p className="text-2xl lg:text-4xl font-montserrat font-medium bg-gradient-to-r from-soft-white via-warm-beige to-soft-white bg-clip-text text-transparent">
               Book A Free Consultation
             </p>
 
@@ -49,7 +49,7 @@ const ContactUs = () => {
 
           {/* Right Section - Contact Info */}
           <motion.div
-            className="lg:w-1/2 py-10 lg:py-0 p-8 lg:p-0 space-y-6"
+            className="lg:w-1/2 pb-15 lg:py-0 p-8 lg:p-0 b-y-6"
             variants={fadeInUp(0.4)}
           >
             {/* Address */}

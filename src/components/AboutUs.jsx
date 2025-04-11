@@ -49,7 +49,7 @@ const AboutUs = () => {
           </p>
 
           {/* "About Us" Text in Center */}
-          <h2 className="text-5xl sm:text-6xl py-30 pr-2 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3">
+          <h2 className="text-6xl sm:text-6xl py-30 pr-2 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3">
             About Us
           </h2>
 

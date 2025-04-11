@@ -58,7 +58,7 @@ const ChooseUs = () => {
           >
             {/* Card 1 - Unmatched Expertise */}
             <motion.div
-              className="relative h-[82vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
               style={{
                 backgroundImage: "url('/assets/mesh-476.png')",
                 backgroundSize: "cover",
@@ -85,7 +85,7 @@ const ChooseUs = () => {
 
             {/* Card 2 - Premium Quality */}
             <motion.div
-              className="relative h-[82vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
+              className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md overflow-hidden"
               style={{
                 backgroundImage: "url('/assets/mesh-488.png')",
                 backgroundSize: "cover",
@@ -112,7 +112,7 @@ const ChooseUs = () => {
 
           {/* Card 3 - Tailored to Your Vision */}
           <motion.div
-            className="relative h-[82vh] lg:h-[41vh] rounded-xl shadow-md overflow-hidden"
+            className="relative h-[50vh] lg:h-[41vh] rounded-xl shadow-md overflow-hidden"
             style={{
               backgroundImage:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
@@ -141,7 +141,7 @@ const ChooseUs = () => {
 
         {/* Card 4 - Right Side Full Height */}
         <motion.div
-          className="col-span-3 relative h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-md"
+          className="col-span-3 relative h-[50vh] lg:h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-md"
           variants={containerVariants}
         >
           <motion.img
