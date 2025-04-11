@@ -41,7 +41,7 @@ const Footer = () => {
               </a>
               <div className="flex gap-4 mt-2 text-2xl">
                 <a href="https://wa.me/919876543210" className="hover:text-warm-beige transition"><FaWhatsapp /></a>
-                <a href="#" className="hover:text-warm-beige transition"><FaInstagram /></a>
+                <a href="https://www.instagram.com/make_my_ghar.co.in/" className="hover:text-warm-beige transition"><FaInstagram /></a>
                 <a href="#" className="hover:text-warm-beige transition"><FaLinkedinIn /></a>
               </div>
             </div>

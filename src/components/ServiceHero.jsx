@@ -98,7 +98,7 @@ const ServiceHero = () => {
         {/* Social Icons */}
         <div className="absolute bottom-4 right-4 flex space-x-4 z-10">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/make_my_ghar.co.in/"
             target="_blank"
             rel="noopener noreferrer"
           >

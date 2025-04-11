@@ -65,7 +65,7 @@ const AboutUs = () => {
 
           {/* Social Media Links */}
           <div className="absolute bottom-6 right-6 flex space-x-4">
-            <a href="https://www.instagram.com/mgdesign127" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
             </a>
             <a href="https://www.linkedin.com/company/100958944" target="_blank" rel="noopener noreferrer">

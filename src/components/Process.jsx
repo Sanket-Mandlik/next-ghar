@@ -44,7 +44,7 @@ const Process = () => {
 
         <div className="flex flex-col items-end space-y-6 mt-8  ">
           <div className="flex space-x-4">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-soft-white text-2xl" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
