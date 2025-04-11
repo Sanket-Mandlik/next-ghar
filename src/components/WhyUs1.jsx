@@ -83,7 +83,7 @@ const WhyUs1 = () => {
         </div>
         <div className="absolute bottom-4 right-4 flex space-x-4">
           <a
-            href="https://www.instagram.com/mgdesign127"
+            href="https://www.instagram.com/make_my_ghar.co.in/"
             target="_blank"
             rel="noopener noreferrer"
           >

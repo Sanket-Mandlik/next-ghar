@@ -131,7 +131,7 @@ const Navbar = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/make_my_ghar.co.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-brown text-2xl hover:text-gold transition"
