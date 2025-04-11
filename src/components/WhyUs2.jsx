@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Link from 'next/link';
 
 // Dynamically import react-compare-image with SSR disabled
 const ReactCompareImage = dynamic(() => import("react-compare-image"), {
@@ -63,14 +64,15 @@ const WhyUs2 = () => {
   </h3>
 
   <p className="text-sm lg:text-md text-center mb-10 py-3 bg-gradient-to-br from-warm-beige to-soft-white bg-clip-text text-transparent">
-    At Make My Ghar, we bring your dream home to life with precision,
-    creativity, and unmatched craftsmanship. Let us transform your
-    space into a masterpiece.
+ From 2BHKs to villas across Pune, Make My Ghar helps you choose the right layout, finishes, and style—just the way you want it.
+
   </p>
 
-  <button className="bg-gradient-to-br from-warm-beige  to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-soft-white transition-all">
-          Get Started Now
-        </button>
+  <Link href="/contactus" passHref>
+  <button className="bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-gold  transition-all">
+    Get Started Now
+  </button>
+</Link>
 </motion.div>
 
       </div>

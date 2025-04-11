@@ -1,7 +1,7 @@
 import React from "react";
 import Process from "../components/Process";
 import { motion } from "framer-motion";
-
+import Link from 'next/link';
 import ServicesPage from "../components/ServicesPage";
 import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
@@ -87,9 +87,12 @@ const Services = () => {
     Let us bring your vision to life with our expert design services.
   </p>
 
-  <button className="bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-soft-white transition-all">
-    Get Started Now
-  </button>
+  <Link
+  href="/contactus"
+  className="inline-block bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-gold transition-all"
+>
+  Get Started Now
+</Link>
 </div>
 
 

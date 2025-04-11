@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import Link from 'next/link';
+
 
 // Your background images
 const images = ["/assets/project1.jpeg","/assets/project6.jpeg", "/assets/project3.jpeg"];
@@ -95,11 +97,16 @@ const Hero = () => {
         Make My Ghar transforms your space into a modern home using top-tier materials.
       </p>
       <div className="mt-4 lg:mt-6">
-        <button className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group">
-          Start Your Journey
-          <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
-        </button>
-      </div>
+    <Link href="/contactus" passHref>
+      <button
+        className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group"
+        aria-label="Start Your Journey"
+      >
+        Start Your Journey
+        <FaArrowRight className="transition-transform duration-500 group-hover:rotate-180" />
+      </button>
+    </Link>
+  </div>
     </motion.div>
   </motion.div>
 </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import Link from 'next/link';
 
 const fadeInUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
@@ -32,14 +33,18 @@ const ContactUs = () => {
             <p className="text-2xl lg:text-4xl font-montserrat font-medium bg-gradient-to-r from-gold via-warm-beige to-warm-beige bg-clip-text text-transparent">
               Book A Free Consultation
             </p>
-            <motion.button
-              className="mt-6 px-6 py-2.5  bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label="Contact Us Now"
-            >
-              Contact Us Now
-            </motion.button>
+
+            
+            <Link href="/contactus" passHref>
+  <motion.a
+    className="mt-6 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    aria-label="Contact Us Now"
+  >
+    Contact Us Now
+  </motion.a>
+</Link>
           </motion.div>
 
           {/* Right Section - Contact Info */}

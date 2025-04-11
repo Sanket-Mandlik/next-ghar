@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 // Image arrays for the top and bottom carousels
 const topImages = [
@@ -134,12 +135,15 @@ const Projects = () => {
   <motion.p className="text-lg mt-2" variants={textVariants}>
    Let's start decorating your home with Make My Ghar.
   </motion.p>
+
+  <Link href="/contactus">
   <motion.button
     className="mt-4 px-6 py-2.5 text-xl bg-gradient-to-b from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
     variants={textVariants}
   >
     Get Started
   </motion.button>
+</Link>
 </motion.div>
 
       </div>
