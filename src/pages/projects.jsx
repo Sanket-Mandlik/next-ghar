@@ -6,6 +6,7 @@ import ServicesPage from "../components/ServicesPage";
 import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
+import ProjectHero from "../components/ProjectHero";
 
 
 const Projects = () => {
@@ -20,7 +21,7 @@ const Projects = () => {
   className="text-center"
 >
   <h1 className="text-5xl lg:text-6xl font-medium leading-tight">
-    Interior Designs <span className="text-gold">By Us </span>{" "}
+  What We’ve <span className="text-gold">Built </span>{" "}
     <span className="text-dark-brown">!</span>
   </h1>
   <p className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
@@ -30,8 +31,8 @@ const Projects = () => {
 
 
       {/* Process Section */}
-      <div className="mt-30">
-        <ServiceHero />
+      <div className="mt-10">
+        <ProjectHero />
       </div>
 
       {/* Services Section */}
