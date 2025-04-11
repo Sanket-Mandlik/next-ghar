@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full lg:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
+      className="w-full lg:pr-4 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -77,7 +77,7 @@ const Hero = () => {
         </AnimatePresence>
 
         {/* Blur Effect at the Bottom */}
-        <div className="absolute bottom-0 w-full  bg-gradient-to-t from-black/60 to-black/10 backdrop-blur-sm py-15 px-6 lg:px-20">
+        <div className="absolute bottom-0 w-full  bg-gradient-to-t from-black/60 to-black/0 backdrop-blur-sm py-15 px-6 lg:px-20">
   <motion.div
     className="relative z-10 flex flex-col lg:flex-row items-start  lg:items-end justify-end w-full gap-x-10 lg:gap-x-20"
     variants={childVariants}

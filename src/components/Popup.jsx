@@ -57,8 +57,9 @@ const Popup = ({ onClose }) => {
   return (
     <AnimatePresence>
       <div key="popup">
-        <motion.div
-          className="fixed inset-0 z-50 flex justify-start"
+      <motion.div
+  className="fixed inset-0 z-50 flex items-center justify-center"
+
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -75,16 +76,16 @@ const Popup = ({ onClose }) => {
   
           {/* Sliding Panel */}
           <motion.div
-            className="relative z-10 w-full lg:w-3/4 h-full lg:p-10 lg:gap-10 flex flex-col lg:flex-row bg-soft-white justify-center items-center shadow-xl overflow-y-auto"
-            style={{ left: 0 }}
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
-          >
+  className="relative z-10 h-full w-full lg:h-auto lg:w-2/3 lg:rounded-3xl bg-soft-white shadow-xl overflow-y-auto flex flex-col lg:flex-row"
+  style={{ left: 0 }}
+  initial={{ x: "-100%" }}
+  animate={{ x: 0 }}
+  exit={{ x: "-100%" }}
+  transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+>
             {/* Close button and content here */}
             <motion.button
-    className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center rounded-full border-4 border-gold text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
+    className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
     onClick={onClose}
     whileHover={{ rotate: 90 }}
     transition={{ type: 'spring', stiffness: 300 }}
@@ -96,11 +97,11 @@ const Popup = ({ onClose }) => {
             {/* Left Section */}
             <div className="w-full lg:w-1/2 flex-row items-center p-4 justify-center text-white  relative">
             <div className="mb-8">
-                <h2 className="text-5xl lg:text-6xl lg:px-6 pt-3 lg:pt-8 text-start font-medium mb-4">
+                <h2 className="text-5xl lg:text-5xl lg:px-6 pt-3 lg:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
                   <span className="text-medium-brown">Us</span>
                 </h2>
-                <p className="hidden lg:block text-lg font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
+                <p className="hidden lg:block text-md font-medium px-6 leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent">
                   Reach out to us for any queries or book a free consultation.
                 </p>
               </div>
@@ -168,7 +169,7 @@ const Popup = ({ onClose }) => {
 
             {/* Right Section - Form */}
             <div className="w-full lg:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none relative flex flex-col justify-center  ">
-              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-8 font-semibold text-dark-brown lg:text-left">
+              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-4 font-semibold text-dark-brown lg:text-left">
                 Know the cost of making interiors for your <span className="text-medium-brown">house</span>
               </h2>
               <p className="hidden lg:block text-md pb-6 lg:pb-12 mt-1 lg:mt-2 font-medium text-black text-start lg:text-left">
