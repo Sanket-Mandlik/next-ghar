@@ -83,7 +83,7 @@ const ContactPage = () => {
                     72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004
                   </p>
                   <a
-                    href="https://www.google.com/maps?q=123+Street+Name,City,India"
+                    href="https://www.google.com/maps/place/Manas+bunglow/@18.5115354,73.8269061,16.27z/data=!4m10!1m2!2m1!1smanas+bunglow!3m6!1s0x3bc2bf19794aaa1b:0xf6ba7af397580291!8m2!3d18.5111558!4d73.8281243!15sCg1tYW5hcyBidW5nbG93kgESYXBhcnRtZW50X2J1aWxkaW5n4AEA!16s%2Fg%2F11ryhfk9vn!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-white border-b border-white pb-1 hover:text-soft-white transition-colors"
@@ -119,7 +119,7 @@ const ContactPage = () => {
 
               {/* Social Icons */}
               <div className="flex items-center gap-6 border-2 border-warm-beige/50 rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
-              <a
+                <a
                   href="https://www.instagram.com/make_my_ghar.co.in/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -155,7 +155,7 @@ const ContactPage = () => {
             >
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d144.9537353153167!3d-37.81627974202144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8b3c5c8d7e!2s123%20Summer%20Street%2C%20Design%20Avenue%2C%20Mumbai-400231%2C%20India!5e0!3m2!1sen!2sus!4v1614311234567!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.707994917537!2d73.8269061!3d18.5111558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf19794aaa1b%3A0xf6ba7af397580291!2sManas%20Bungalow%2C%20Gulmohar%20Path%2C%20Off%20Law%20College%20Rd.%2C%20Pune%20411004!5e0!3m2!1sen!2sin!4v1614311234567!5m2!1sen!2sin"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}

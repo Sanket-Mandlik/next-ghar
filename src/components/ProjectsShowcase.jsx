@@ -5,21 +5,24 @@ const ProjectsShowcase = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const projects = [
-    { id: 1, title: "Cozy Living Room", image: "/assets/project1.jpeg", category: "Living & Dining" },
-    { id: 2, title: "Modern Dining", image: "/assets/project4.jpeg", category: "Living & Dining" },
-    { id: 3, title: "Master Bedroom", image: "/assets/project5.jpeg", category: "Bedroom" },
-    { id: 4, title: "Guest Bedroom", image: "/assets/project6.jpeg", category: "Bedroom" },
-    { id: 5, title: "Modular Kitchen", image: "/assets/project7.jpeg", category: "Kitchen" },
-    { id: 6, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 7, title: "Kids Playroom", image: "/assets/project9.jpeg", category: "Kids Bedroom" },
-    { id: 8, title: "Kids Playroom", image: "/assets/project10.jpeg", category: "Kids Bedroom" },
-    { id: 9, title: "Kids Playroom", image: "/assets/project11.jpeg", category: "Kids Bedroom" },
-    { id: 12, title: "Kids Playroom", image: "/assets/project12.png", category: "Kids Bedroom" },
-    { id: 19, title: "Kids Playroom", image: "/assets/project13.png", category: "Kids Bedroom" },
-    { id: 12, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
-    { id: 13, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
-    { id: 14, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
-    { id: 15, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
+    { id: 1, title: "Cozy Living Room", image: "/assets/after4.jpeg" },
+    { id: 2, title: "Cozy Living Room", image: "/assets/projectga1.png" },
+    { id: 3, title: "Cozy Living Room", image: "/assets/project6.jpeg" },
+    { id: 4, title: "Master Bedroom", image: "/assets/project5.jpeg" },
+    { id: 5, title: "Master Bedroom", image: "/assets/project10.jpeg" },
+    { id: 6, title: "Master Bedroom", image: "/assets/project8.jpeg" },
+    { id: 7, title: "Luxury TV Cabinet", image: "/assets/project9.jpeg" },
+    { id: 8, title: "Luxury TV Cabinet", image: "/assets/projectGa2.png" },
+    { id: 9, title: "Luxury TV Cabinet", image: "/assets/project11.jpeg" },
+    { id: 10, title: "Modular Kitchen", image: "/assets/project2.jpeg" },
+    { id: 11, title: "Modular Kitchen", image: "/assets/projectGa3.jpeg" },
+    { id: 12, title: "Modular Kitchen", image: "/assets/projectGa4.png" },
+    { id: 13, title: "Kids Bedroom", image: "/assets/project12.jpg" },
+    { id: 14, title: "Kids Bedroom", image: "/assets/projectGa5.jpg" },
+    { id: 15, title: "Kids Bedroom", image: "/assets/project19.png" },
+    { id: 16, title: "Living Space", image: "/assets/project13.png" },
+    { id: 17, title: "Living Space", image: "/assets/project14.jpeg" },
+    { id: 18, title: "Living Space", image: "/assets/projectGa6.png" },
   ];
 
   const openFullScreen = (image) => {
@@ -49,9 +52,8 @@ const ProjectsShowcase = () => {
       <div className="mx-auto px-4 lg:px-0">
         {/* Heading */}
         <h2 className="text-5xl lg:text-5xl mt-8 mb-6 font-medium text-medium-brown">
-  Interior Design <span className="text-dark-brown">Gallery</span>
-</h2>
-
+          Interior Design <span className="text-dark-brown">Gallery</span>
+        </h2>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
@@ -64,7 +66,7 @@ const ProjectsShowcase = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-[26vw] h-[40vh] object-cover rounded-2xl shadow-md"
+                className="w-[26vw] h-[40vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
               />
             </div>
           ))}
