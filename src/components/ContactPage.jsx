@@ -36,7 +36,7 @@ const ContactPage = () => {
 
   return (
     <div className="bg-soft-white lg:w-4/5 mx-auto min-h-screen">
-      <div className="mx-auto px-4 lg:px-0 pt-60">
+      <div className="mx-auto px-4 lg:px-0 pt-60 2xl">
         {/* Contact Us Heading */}
         <motion.div
           className="text-center mb-30"
@@ -80,7 +80,7 @@ const ContactPage = () => {
                 <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-lg leading-relaxed bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent">
-                    123 Summer Street, Design Avenue, Mumbai-400231, India
+                    72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004
                   </p>
                   <a
                     href="https://www.google.com/maps?q=123+Street+Name,City,India"
@@ -97,10 +97,10 @@ const ContactPage = () => {
               <div className="flex items-center gap-4 mb-6">
                 <FaPhoneAlt className="text-xl flex-shrink-0" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+9183295478180"
                   className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"
                 >
-                  +91 98765 43210
+                  +91 8329547818
                 </a>
               </div>
 
@@ -108,7 +108,7 @@ const ContactPage = () => {
               <div className="flex items-center gap-4 mb-6 lg:mb-0">
                 <FaWhatsapp className="text-2xl flex-shrink-0" />
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/9183295478180"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"
@@ -118,7 +118,7 @@ const ContactPage = () => {
               </div>
 
               {/* Social Icons */}
-              <div className="flex items-center gap-6 border-2 border-gold rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
+              <div className="flex items-center gap-6 border-2 border-warm-beige/50 rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
               <a
                   href="https://www.instagram.com/make_my_ghar.co.in/"
                   target="_blank"

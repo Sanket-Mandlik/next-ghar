@@ -142,7 +142,7 @@ useEffect(() => {
         We Offer
       </motion.h2>
 
-      <div className="flex lg:w-4/5 mx-auto relative w-full flex-col items-center mt-10">
+      <div className="flex lg:w-4/5 mx-auto relative w-full flex-col items-center ">
         {services.map((service, index) => (
           <motion.div
           key={service.id}
@@ -204,19 +204,21 @@ useEffect(() => {
   onClick={() =>
     setCarouselIndex((carouselIndex - 1 + carouselImages.length) % carouselImages.length)
   }
-  className="absolute left-2 top-1/2 -translate-y-1/2 bg-dark-brown bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-90 transition"
+  className="absolute left-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
 >
-  <ChevronLeft className="w-6 h-6" />
+  <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
 </button>
+
 
 <button
   onClick={() =>
     setCarouselIndex((carouselIndex + 1) % carouselImages.length)
   }
-  className="absolute right-2 top-1/2 -translate-y-1/2 bg-dark-brown bg-opacity-60 text-white p-2 rounded-full hover:bg-opacity-90 transition"
+  className="absolute right-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
 >
-  <ChevronRight className="w-6 h-6" />
+  <ChevronRight className="w-6 h-6" strokeWidth={2.5} />
 </button>
+
 
     </div>
   </div>

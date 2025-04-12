@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full lg:pr-4 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
+      className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

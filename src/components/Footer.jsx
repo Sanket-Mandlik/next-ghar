@@ -28,19 +28,19 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="text-md mt-4">123 Summer Street, Design Avenue, Mumbai - 400302, India</p>
+            <p className="text-md mt-4">72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004</p>
             <p className="text-sm mt-1 pt-2 mb-4">Email: contact@makemyghar.com</p>
 
             {/* Call Button & Social Icons in One Row */}
             <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
               <a 
-                href="tel:+919876543210" 
+                href="tel:+9183295478180" 
                 className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
               >
               Call Us  <FaPhone /> 
               </a>
               <div className="flex gap-4 mt-2 text-2xl">
-                <a href="https://wa.me/919876543210" className="hover:text-warm-beige transition"><FaWhatsapp /></a>
+                <a href="https://wa.me/9183295478180" className="hover:text-warm-beige transition"><FaWhatsapp /></a>
                 <a href="https://www.instagram.com/make_my_ghar.co.in/" className="hover:text-warm-beige transition"><FaInstagram /></a>
                 <a href="#" className="hover:text-warm-beige transition"><FaLinkedinIn /></a>
               </div>

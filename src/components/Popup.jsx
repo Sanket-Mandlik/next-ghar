@@ -118,7 +118,7 @@ const Popup = ({ onClose }) => {
                   <FaMapMarkerAlt className="text-xl flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-lg leading-relaxed bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent">
-                      123 Summer Street, Design Avenue, Mumbai-400231, India
+                      72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004
                     </p>
                     <a
                       href="https://www.google.com/maps?q=123+Street+Name,City,India"
@@ -134,17 +134,17 @@ const Popup = ({ onClose }) => {
                 <div className="flex items-center gap-4 mb-4 lg:mb-8">
                   <FaPhoneAlt className="text-xl flex-shrink-0" />
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+9183295478180"
                     className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"
                   >
-                    +91 98765 43210
+                    +91 8329547818
                   </a>
                 </div>
 
                 <div className="flex items-center gap-4 lg:mb-10">
                   <FaWhatsapp className="text-2xl flex-shrink-0" />
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/9183295478180"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"

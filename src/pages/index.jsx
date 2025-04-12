@@ -9,12 +9,14 @@ import SliderText from "../components/SliderText";
 import ContactUs from "../components/ContactUs";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
+import BeforeAfter from "../components/BeforeAfter";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <AboutUs />
+      <BeforeAfter />
       <Services />
       <div className="lg:px-0 px-4">
   <ChooseUs />

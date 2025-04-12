@@ -30,7 +30,7 @@ const Testimonials = () => {
         </h2>
       </motion.div>
 
-      <div className="grid lg:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         {/* Testimonial 1 */}
         <motion.div 
           variants={fadeInUp(0.2)} 

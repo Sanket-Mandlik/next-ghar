@@ -7,7 +7,7 @@ import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
 import ProjectHero from "../components/ProjectHero";
-import ProjectsGallery from "../components/ProjectsGallery";
+
 
 
 const Projects = () => {

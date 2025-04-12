@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const categories = {
-    "Living & Dining": [
+    "Living": [
         { image: "/assets/project1.jpeg", title: "Warm Living Room", subtitle: "Baner" },
         { image: "/assets/project3.jpeg", title: "Cozy Dining & Comfort Seating", subtitle: "K Town, Baner" },
     ],
@@ -15,7 +15,7 @@ const categories = {
         { image: "/assets/project8.jpeg", title: "Minimalist Bedroom", subtitle: "Pimple Nilakh" },
         { image: "/assets/project10.jpeg", title: "Luxury Bedroom", subtitle: "SB Road" },
     ],
-    "Kids Bedroom": [
+    "Kid's ": [
         { image: "/assets/project11.jpeg", title: "Colorful Kids Space", subtitle: "Aundh" },
         { image: "/assets/project12.jpeg", title: "Fun Kids Room", subtitle: "Hadapsar" },
 
@@ -35,7 +35,7 @@ const textVariants = {
 };
 
 const ProjectsHero = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Living & Dining");
+    const [selectedCategory, setSelectedCategory] = useState("Living");
     const [currentImage, setCurrentImage] = useState(0);
     const currentProjects = categories[selectedCategory];
 
@@ -53,17 +53,19 @@ const ProjectsHero = () => {
 
     return (
         <div className="w-full h-[550px] lg:h-[600px] rounded-2xl overflow-hidden relative shadow-xl shadow-warm-beige/50">
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={currentProjects[currentImage].image}
-                    variants={imageVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${currentProjects[currentImage].image})` }}
-                />
-            </AnimatePresence>
+          <div className="absolute inset-0">
+    {currentProjects.map((project, index) => (
+        <motion.div
+            key={project.image}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${project.image})` }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentImage ? 1 : 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+    ))}
+</div>
+
 
             {/* Text Overlay */}
             <AnimatePresence mode="wait">
@@ -83,7 +85,7 @@ const ProjectsHero = () => {
             </AnimatePresence>
 
             {/* Category Menu */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4 z-20 bg-warm-beige/40 backdrop-blur-sm px-6 py-2 rounded-full shadow-md">
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex sm:gap-4 z-20 bg-warm-beige/40 backdrop-blur-sm px-6 py-2 min-w-[80vw] sm:min-w-[50vw] lg:min-w-0 justify-center rounded-full shadow-md">
                 {Object.keys(categories).map((cat) => (
                     <button
                         key={cat}
