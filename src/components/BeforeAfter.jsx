@@ -3,19 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const categories = {
   "Before": [
-    { image: "/assets/project18.jpeg", title: "Before Renovation", subtitle: "Original Layout" },
+    { image: "/assets/before1.jpeg", title: "Before Renovation", subtitle: "Original Layout" },
   ],
   "Render": [
-    { image: "/assets/project17.png", title: "3D Render", subtitle: "Visual Plan" },
+    { image: "/assets/render1.jpg", title: "3D Render", subtitle: "Visual Plan" },
   ],
   "After 1": [
-    { image: "/assets/project10.jpeg", title: "After Renovation - Phase 1", subtitle: "Living Room" },
+    { image: "/assets/after1.png", title: "After Renovation - Phase 1", subtitle: "Living Room" },
   ],
   "After 2": [
-    { image: "/assets/project5.jpeg", title: "After Renovation - Phase 2", subtitle: "Kitchen & Dining" },
+    { image: "/assets/after2.png", title: "After Renovation - Phase 2", subtitle: "Kitchen & Dining" },
   ],
   "After 3": [
-    { image: "/assets/project8.jpeg", title: "Final Outcome", subtitle: "Full View" },
+    { image: "/assets/after3.jpeg", title: "Final Outcome", subtitle: "Full View" },
   ],
 };
 

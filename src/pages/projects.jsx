@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import Link from 'next/link';
 import SliderText from "../components/SliderText";
 import ProjectHero from "../components/ProjectHero";
-<<<<<<< HEAD
 
-=======
+
+
 import ProjectsShowcase from "../components/ProjectsShowcase";
->>>>>>> 868191db03fd968ea0d1703146b4528c1febad2e
+
 
 
 const Projects = () => {

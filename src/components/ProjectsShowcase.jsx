@@ -11,12 +11,15 @@ const ProjectsShowcase = () => {
     { id: 4, title: "Guest Bedroom", image: "/assets/project6.jpeg", category: "Bedroom" },
     { id: 5, title: "Modular Kitchen", image: "/assets/project7.jpeg", category: "Kitchen" },
     { id: 6, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 7, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 8, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 9, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 10, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 11, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
-    { id: 12, title: "Kids Playroom", image: "/assets/project8.jpeg", category: "Kids Bedroom" },
+    { id: 7, title: "Kids Playroom", image: "/assets/project9.jpeg", category: "Kids Bedroom" },
+    { id: 8, title: "Kids Playroom", image: "/assets/project10.jpeg", category: "Kids Bedroom" },
+    { id: 9, title: "Kids Playroom", image: "/assets/project11.jpeg", category: "Kids Bedroom" },
+    { id: 12, title: "Kids Playroom", image: "/assets/project12.png", category: "Kids Bedroom" },
+    { id: 19, title: "Kids Playroom", image: "/assets/project13.png", category: "Kids Bedroom" },
+    { id: 12, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
+    { id: 13, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
+    { id: 14, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
+    { id: 15, title: "Kids Playroom", image: "/assets/project14.jpeg", category: "Kids Bedroom" },
   ];
 
   const openFullScreen = (image) => {
@@ -42,28 +45,27 @@ const ProjectsShowcase = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 rounded-2xl shadow-[0_8px_30px_rgba(59,46,42,0.5)]">
-      <div className="lg:w-4/5 mx-auto px-4 lg:px-0">
+    <div className="w-full bg-warm-beige/20 p-4 mt-20 rounded-2xl">
+      <div className="mx-auto px-4 lg:px-0">
         {/* Heading */}
-        <h2 className="text-4xl lg:text-4xl mt-10 mb-8 font-medium">
-          Interior Gallery
-        </h2>
+        <h2 className="text-5xl lg:text-5xl mt-8 mb-6 font-medium text-medium-brown">
+  Interior Design <span className="text-dark-brown">Gallery</span>
+</h2>
+
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {projects.map((project) => (
             <div
               key={project.id}
               className="cursor-pointer group transform transition duration-300 hover:scale-105 rounded-2xl overflow-hidden"
               onClick={() => openFullScreen(project.image)}
             >
-              <div className="aspect-w-16 aspect-h-9">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover rounded-2xl shadow-md"
-                />
-              </div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-[26vw] h-[40vh] object-cover rounded-2xl shadow-md"
+              />
             </div>
           ))}
         </div>
