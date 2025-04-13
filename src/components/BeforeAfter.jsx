@@ -26,7 +26,7 @@ const BeforeAfter = () => {
   const intervalRef = useRef(null);
   const animationRef = useRef(null);
 
-  const runBleedReveal = async () => {
+  const runSimpleReveal = async () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -34,61 +34,41 @@ const BeforeAfter = () => {
     const width = (canvas.width = canvas.offsetWidth);
     const height = (canvas.height = canvas.offsetHeight);
 
-    const sketch = await loadImage(categories['Before'][0].image);
-    const render = await loadImage(categories[selectedCategory][currentImageIndex].image);
+    const prevImage = await loadImage(categories[selectedCategory][currentImageIndex - 1]?.image || categories[selectedCategory][0].image);
+    const newImage = await loadImage(categories[selectedCategory][currentImageIndex].image);
 
-    let progress = 0;
+    // Clear the canvas and draw the previous image
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(prevImage, 0, 0, width, height);
 
-    const draw = () => {
-      progress += 0.01;
+    let alpha = 0;
+    const fadeIn = () => {
+      alpha += 0.02;
 
-      // draw sketch first
-      ctx.clearRect(0, 0, width, height);
-      ctx.drawImage(sketch, 0, 0, width, height);
+      // Draw the new image with fading in effect
+      ctx.globalAlpha = alpha;
+      ctx.drawImage(newImage, 0, 0, width, height);
 
-      // now mask the render image
-      const imageData = ctx.getImageData(0, 0, width, height);
-      const renderCanvas = document.createElement('canvas');
-      renderCanvas.width = width;
-      renderCanvas.height = height;
-      const renderCtx = renderCanvas.getContext('2d');
-
-      renderCtx.drawImage(render, 0, 0, width, height);
-      const renderData = renderCtx.getImageData(0, 0, width, height);
-
-      for (let i = 0; i < renderData.data.length; i += 4) {
-        const x = (i / 4) % width;
-        const y = ~~((i / 4) / width);
-        const threshold = (Math.sin(x * 0.02 + progress * 4) + Math.cos(y * 0.02 + progress * 4)) * 0.5 + 0.5;
-
-        if (threshold < progress) {
-          // copy RGBA from render image
-          imageData.data[i] = renderData.data[i];
-          imageData.data[i + 1] = renderData.data[i + 1];
-          imageData.data[i + 2] = renderData.data[i + 2];
-          imageData.data[i + 3] = 255;
-        }
-      }
-
-      ctx.putImageData(imageData, 0, 0);
-
-      if (progress < 1.2) {
-        animationRef.current = requestAnimationFrame(draw);
+      if (alpha < 1) {
+        animationRef.current = requestAnimationFrame(fadeIn);
+      } else {
+        ctx.globalAlpha = 1;
       }
     };
 
-    draw();
+    fadeIn();
   };
 
   useEffect(() => {
-    runBleedReveal();
-  }, [selectedCategory]);
+    runSimpleReveal();
+  }, [selectedCategory, currentImageIndex]);
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       const currentCategoryIndex = categoryKeys.indexOf(selectedCategory);
       const nextCategoryIndex = (currentCategoryIndex + 1) % categoryKeys.length;
       setSelectedCategory(categoryKeys[nextCategoryIndex]);
+      setCurrentImageIndex(0); // Reset to the first image
     }, 4000);
 
     return () => {
