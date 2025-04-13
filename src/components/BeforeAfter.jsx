@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
 
 const categories = {
   Before: [{ image: '/assets/before1.jpeg', title: 'Before Renovation', subtitle: 'Original Layout' }],
@@ -12,66 +11,95 @@ const categories = {
 
 const categoryKeys = Object.keys(categories);
 
+const loadImage = (src) =>
+  new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = src;
+    img.onload = () => resolve(img);
+  });
+
 const BeforeAfter = () => {
   const [selectedCategory, setSelectedCategory] = useState('Render');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const currentProjects = categories[selectedCategory];
-
-  const slideRefs = useRef([]);
+  const canvasRef = useRef(null);
   const intervalRef = useRef(null);
+  const animationRef = useRef(null);
 
-  const changeSlide = () => {
-    const nextIndex = (currentImageIndex + 1) % currentProjects.length;
-    const currentSlide = slideRefs.current[currentImageIndex];
-    const nextSlide = slideRefs.current[nextIndex];
+  const runBleedReveal = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    if (!currentSlide || !nextSlide) return;
+    const ctx = canvas.getContext('2d');
+    const width = (canvas.width = canvas.offsetWidth);
+    const height = (canvas.height = canvas.offsetHeight);
 
-    // Animate the transition effect (wavy effect)
-    gsap.set(nextSlide, { opacity: 0, zIndex: 2 });
+    const sketch = await loadImage(categories['Before'][0].image);
+    const render = await loadImage(categories[selectedCategory][currentImageIndex].image);
 
-    gsap.to(currentSlide, {
-      clipPath: 'circle(0% at 50% 50%)',
-      duration: 1.5,
-      ease: 'power2.out',
-      onComplete: () => {
-        gsap.set(currentSlide, { zIndex: 1 });
-        setCurrentImageIndex(nextIndex);
-      },
-    });
+    let progress = 0;
 
-    // Wavy transition effect for the next image
-    gsap.to(nextSlide, {
-      opacity: 1,
-      duration: 1.5,
-      ease: 'power2.out',
-      clipPath: 'circle(150% at 50% 50%)',
-    });
-  };
+    const draw = () => {
+      progress += 0.01;
 
-  const autoPlay = () => {
-    intervalRef.current = setInterval(() => {
-      const currentCategoryIndex = categoryKeys.indexOf(selectedCategory);
-      const isLastImage = currentImageIndex === currentProjects.length - 1;
+      // draw sketch first
+      ctx.clearRect(0, 0, width, height);
+      ctx.drawImage(sketch, 0, 0, width, height);
 
-      if (isLastImage) {
-        const nextCategoryIndex = (currentCategoryIndex + 1) % categoryKeys.length;
-        setSelectedCategory(categoryKeys[nextCategoryIndex]);
-        setCurrentImageIndex(0);
-      } else {
-        changeSlide();
+      // now mask the render image
+      const imageData = ctx.getImageData(0, 0, width, height);
+      const renderCanvas = document.createElement('canvas');
+      renderCanvas.width = width;
+      renderCanvas.height = height;
+      const renderCtx = renderCanvas.getContext('2d');
+
+      renderCtx.drawImage(render, 0, 0, width, height);
+      const renderData = renderCtx.getImageData(0, 0, width, height);
+
+      for (let i = 0; i < renderData.data.length; i += 4) {
+        const x = (i / 4) % width;
+        const y = ~~((i / 4) / width);
+        const threshold = (Math.sin(x * 0.02 + progress * 4) + Math.cos(y * 0.02 + progress * 4)) * 0.5 + 0.5;
+
+        if (threshold < progress) {
+          // copy RGBA from render image
+          imageData.data[i] = renderData.data[i];
+          imageData.data[i + 1] = renderData.data[i + 1];
+          imageData.data[i + 2] = renderData.data[i + 2];
+          imageData.data[i + 3] = 255;
+        }
       }
-    }, 4000);
+
+      ctx.putImageData(imageData, 0, 0);
+
+      if (progress < 1.2) {
+        animationRef.current = requestAnimationFrame(draw);
+      }
+    };
+
+    draw();
   };
 
   useEffect(() => {
-    clearInterval(intervalRef.current);
-    autoPlay();
-    return () => clearInterval(intervalRef.current);
-  }, [selectedCategory, currentImageIndex]);
+    runBleedReveal();
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      const currentCategoryIndex = categoryKeys.indexOf(selectedCategory);
+      const nextCategoryIndex = (currentCategoryIndex + 1) % categoryKeys.length;
+      setSelectedCategory(categoryKeys[nextCategoryIndex]);
+    }, 4000);
+
+    return () => {
+      clearInterval(intervalRef.current);
+      cancelAnimationFrame(animationRef.current);
+    };
+  }, [selectedCategory]);
 
   const handleCategoryChange = (category) => {
     clearInterval(intervalRef.current);
+    cancelAnimationFrame(animationRef.current);
     setSelectedCategory(category);
     setCurrentImageIndex(0);
   };
@@ -83,33 +111,15 @@ const BeforeAfter = () => {
       </h2>
 
       <div className="relative w-full h-[550px] lg:h-[600px] overflow-hidden rounded-2xl shadow-xl shadow-warm-beige/50">
-        {/* Slide Layers */}
-        {currentProjects.map((project, index) => (
-          <div
-            key={index}
-            ref={(el) => (slideRefs.current[index] = el)}
-            className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-            style={{
-              backgroundImage: `url(${project.image})`,
-              zIndex: index === currentImageIndex ? 2 : 1,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-        ))}
+        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full object-cover rounded-2xl" />
 
-        {/* Text Overlay */}
         <div className="absolute hidden lg:block bottom-24 left-1/2 transform -translate-x-1/2 bg-warm-beige/30 backdrop-blur-sm rounded-xl px-6 py-4 z-10 text-center">
-  <h2 className="text-soft-white text-xl font-medium">
-    {currentProjects[currentImageIndex].title}
-  </h2>
-  <p className="text-black text-sm">
-    {currentProjects[currentImageIndex].subtitle}
-  </p>
-</div>
+          <h2 className="text-soft-white text-xl font-medium">
+            {categories[selectedCategory][currentImageIndex].title}
+          </h2>
+          <p className="text-black text-sm">{categories[selectedCategory][currentImageIndex].subtitle}</p>
+        </div>
 
-
-        {/* Category Buttons */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-wrap gap-3 z-20 bg-warm-beige/40 backdrop-blur-sm px-6 py-2 min-w-[80vw] sm:min-w-[50vw] lg:min-w-0 justify-center rounded-full shadow-md">
           {categoryKeys.map((category) => (
             <button
