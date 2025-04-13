@@ -3,6 +3,8 @@ import React, { useState } from "react";
 const ProjectsShowcase = () => {
   const [currentImage, setCurrentImage] = useState(null);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
 
   const projects = [
     { id: 1, title: "Cozy Living Room", image: "/assets/after4.jpeg" },
@@ -47,6 +49,23 @@ const ProjectsShowcase = () => {
     setCurrentImage(projects[prevIndex].image);
   };
 
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      nextImage();
+    }
+    if (touchEndX - touchStartX > 50) {
+      prevImage();
+    }
+  };
+
   return (
     <div className="w-full bg-warm-beige/20 p-4 mt-20 rounded-2xl">
       <div className="mx-auto px-4 lg:px-0">
@@ -66,7 +85,7 @@ const ProjectsShowcase = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-[26vw] h-[40vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
+                className="w-full h-auto sm:h-[35vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
               />
             </div>
           ))}
@@ -75,15 +94,22 @@ const ProjectsShowcase = () => {
 
       {/* Fullscreen Viewer */}
       {isFullScreen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center rounded-2xl">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center rounded-2xl"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             className="absolute top-6 right-6 text-white text-3xl"
             onClick={closeFullScreen}
           >
             ✖
           </button>
+
+          {/* Show arrows only on md+ screens */}
           <button
-            className="absolute left-6 text-white text-4xl"
+            className="hidden md:block absolute left-6 text-white text-4xl"
             onClick={prevImage}
           >
             ◀
@@ -94,7 +120,7 @@ const ProjectsShowcase = () => {
             className="max-w-[90%] max-h-[90%] rounded-2xl transition-opacity duration-300"
           />
           <button
-            className="absolute right-6 text-white text-4xl"
+            className="hidden md:block absolute right-6 text-white text-4xl"
             onClick={nextImage}
           >
             ▶
