@@ -68,7 +68,7 @@ const ProjectsShowcase = () => {
 
   return (
     <div className="w-full bg-warm-beige/20 p-4 mt-20 rounded-2xl">
-      <div className="mx-auto px-4 lg:px-0">
+      <div className="mx-auto lg:px-4">
         {/* Heading */}
         <h2 className="text-5xl lg:text-5xl mt-8 mb-6 font-medium text-medium-brown">
           Interior Design <span className="text-dark-brown">Gallery</span>
