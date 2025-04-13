@@ -85,7 +85,7 @@ const ProjectsShowcase = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-auto sm:h-[35vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
+                className="w-full h-full lg:w-[26vw] lg:h-[40vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
               />
             </div>
           ))}
