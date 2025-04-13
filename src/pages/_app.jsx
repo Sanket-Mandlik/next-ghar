@@ -5,13 +5,14 @@ import { MyContextProvider } from '../context/MyContext'; // Context provider
 import Navbar from '../components/Navbar'; // Navbar
 import Footer from '../components/Footer'; // Footer
 import Popup from '../components/Popup'; // Popup component
+import ContactIcons from '../components/ContactIcons'; // ✅ WhatsApp Icon component
 
 function MyApp({ Component, pageProps }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    // Show the popup after 10 seconds
+    // Show the popup after 5 seconds
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
     }, 5000);
@@ -27,10 +28,7 @@ function MyApp({ Component, pageProps }) {
       document.documentElement.style.width = '100vw';
     };
 
-    // Apply fix on every route change
     router.events.on('routeChangeComplete', fixLayout);
-
-    // Apply it once on mount just in case
     fixLayout();
 
     return () => {
@@ -47,6 +45,7 @@ function MyApp({ Component, pageProps }) {
         </main>
         <Footer />
         {isPopupVisible && <Popup onClose={() => setIsPopupVisible(false)} />}
+        <ContactIcons /> {/* ✅ WhatsApp icon fixed at bottom-right */}
       </div>
     </MyContextProvider>
   );
