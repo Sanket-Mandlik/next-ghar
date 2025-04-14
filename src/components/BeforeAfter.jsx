@@ -27,12 +27,12 @@ export default function BeforeAfter() {
   }, [isInView, hasStarted])
 
   return (
-    <section className="w-[95vw] lg:w-4/5 bg-warm-beige/30 px-4 pb-4 pt-8 rounded-2xl mx-auto mt-20">
-      <motion.h2 className="text-5xl font-montserrat text-medium-brown font-medium mb-6">
-        <span className="text-dark-brown text-5xl">Before-After</span> Options
+    <section className="w-[95vw] lg:w-4/5 bg-warm-beige/30 lg:px-8 px-4  pb-6 pt-8 rounded-2xl mx-auto mt-20">
+      <motion.h2 className="text-5xl font-montserrat px-2 lg:px-0  text-medium-brown font-medium mb-6">
+        <span className="text-dark-brown text-5xl">Before-After </span>Options
       </motion.h2>
 
-      <p className="text-sm text-dark-brown font-medium pb-6">
+      <p className="text-md text-dark-brown px-2 lg:px-0  font-medium pb-6">
         We give multiple thoughtfully curated design options to choose from while crafting your dream home interiors, ensuring every corner not only reflects your unique taste and lifestyle but also brings harmony, functionality, and timeless elegance to your living space.
       </p>
 

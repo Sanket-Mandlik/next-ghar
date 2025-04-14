@@ -64,7 +64,7 @@ const services = [
       </>
     ),
     description: "Productive and attractive commercial interiors that reflect your brand’s personality.",
-    image: "project4.jpeg",
+    image: "project14.jpeg",
     features: [
       "Office Interior",
       "Shop Makeover",
@@ -79,7 +79,7 @@ const services = [
       </>
     ),
     description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
-    image: "project5.jpeg",
+    image: "projectGa4.png",
     features: [
       "Sofa Sets & Armchairs",
       "Beds & Kids Furniture",
@@ -116,9 +116,9 @@ useEffect(() => {
 
 
   const carouselImages = [
-    "/assets/project10.jpeg",
-    "/assets/project4.jpeg",
-    "/assets/project3.jpeg",
+    "/assets/project14.jpeg",
+    "/assets/after2.png",
+    "/assets/projectGa4.png",
   ];
 
   
