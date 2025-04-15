@@ -234,7 +234,7 @@ useEffect(() => {
        {service.features.map((feature, i) => (
          <div key={i} className="flex items-start mt-4 gap-6">
            <CheckCircle className="text-gold  w-5 h-5 mt-1" />
-           <span className="text-soft-white text-lg bg-gold py-1 px-2 rounded-lg font-medium">
+           <span className="text-soft-white text-lg bg-medium-brown py-1 px-2 rounded-lg font-medium">
   {feature}
 </span>
          </div>
