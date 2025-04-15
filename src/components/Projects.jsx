@@ -179,7 +179,7 @@ const Projects = () => {
                 key={i}
                 src={src}
                 alt={`Project ${i + 1}`}
-                className="lg:h-[40vh] w-auto rounded-xl object-cover"
+                className="h-[40vh]  w-auto rounded-xl object-cover"
                 variants={containerVariants}
               />
             ))}
