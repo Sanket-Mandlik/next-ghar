@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* CTA Button - Desktop only */}
         <Link
           href="/contactus"
-          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-md font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brown hover:to-dark-brown shadow-lg"
+          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-md font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brownbrown hover:to-dark-brown shadow-lg"
           >
           Get Started Now
         </Link>
