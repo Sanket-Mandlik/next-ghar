@@ -7,9 +7,9 @@ const WhyUs1 = () => {
   const sliderRef = useRef(null);
 
   const sliderImages = [
-    "/assets/project5.jpeg",
-    "/assets/project8.jpeg",
-    "/assets/project10.jpeg",
+    "/assets/project7.jpeg",
+    "/assets/project9.jpeg",
+    "/assets/projectGa6.png",
   
   ];
 
@@ -70,7 +70,7 @@ const WhyUs1 = () => {
         <p className="absolute top-4 left-10 text-sm text-medium-brown">
           Building dreams, one home at a time.
         </p>
-        <h2 className="text-5xl sm:text-6xl py-35 font-normal text-center mb-3 bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
+        <h2 className="text-5xl sm:text-6xl py-35 pl-8 lg:pl-10 font-normal text-start mb-3 bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
           Excellent Execution
         </h2>
         <div className="absolute bottom-3 left-10 text-left">
