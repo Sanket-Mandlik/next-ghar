@@ -30,7 +30,7 @@ const Projects = () => {
   <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
   <div className="relative z-10">
     <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
-      Inteiors By <span className="text-gold">Make My Ghar </span>
+      Interiors By <span className="text-gold">Make My Ghar </span>
       <span className="text-dark-brown">!</span>
     </h1>
     <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
