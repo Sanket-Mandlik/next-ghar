@@ -3,8 +3,27 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const topImages = ["/assets/project1.jpeg", "/assets/project2.jpeg", "/assets/project3.jpeg", "/assets/project4.jpeg"];
-const bottomImages = ["/assets/project5.jpeg", "/assets/project6.jpeg", "/assets/project7.jpeg", "/assets/project8.jpeg"];
+const topImages = [
+  "/assets/project1.jpeg",
+  "/assets/project2.jpeg",
+  "/assets/project3.jpeg",
+
+
+  "/assets/project12.jpg",
+  "/assets/project14.jpeg",
+  "/assets/project17.png",
+  "/assets/project19.png",
+  "/assets/projectGa5.jpg"
+];
+
+const bottomImages = [
+  "/assets/plan (1).jpg",
+  "/assets/plan (2).jpg",
+  "/assets/plan (6).jpg",
+  "/assets/plan (7).jpg",
+  "/assets/plan (8).jpg"
+];
+
 
 const containerVariants = {
   hidden: { opacity: 0.98, y: 2 },
@@ -131,7 +150,7 @@ const Projects = () => {
               key={i}
               src={src}
               alt={`Project ${i + 1}`}
-              className="lg:h-[45vh] w-auto rounded-lg object-cover"
+              className="lg:h-[45vh] h-[60vh] w-full rounded-lg object-cover"
               variants={containerVariants}
             />
           ))}
@@ -169,7 +188,7 @@ const Projects = () => {
 
         {/* CTA */}
         <motion.div
-          className="lg:w-1/4 h-[40vh] p-6 bg-warm-white text-dark-brown border-3 border-dashed border-gold rounded-2xl space-y-2 flex flex-col justify-center"
+          className="lg:w-1/4 h-[40vh] p-6 bg-warm-white text-dark-brown border-3 border-dashed border-gold/30 rounded-2xl space-y-2 flex flex-col justify-center"
           variants={containerVariants}
         >
           <motion.h2 className="text-3xl font-semibold" variants={textVariants}>

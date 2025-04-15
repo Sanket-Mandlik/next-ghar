@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import {
   GiKitchenKnives,
@@ -105,11 +105,11 @@ const ServiceHero = () => {
             <FaInstagram className="text-soft-white text-2xl" />
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-soft-white text-2xl" />
+            <FaFacebook className="text-soft-white text-2xl" />
           </a>
         </div>
       </div>

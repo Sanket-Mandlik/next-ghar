@@ -5,7 +5,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
   FaInstagram,
-  FaLinkedin,
+ 
   FaFacebook,
 } from "react-icons/fa";
 
@@ -157,9 +157,7 @@ const Popup = ({ onClose }) => {
                   <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaInstagram className="text-xl" />
                   </a>
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
-                    <FaLinkedin className="text-xl" />
-                  </a>
+                
                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaFacebook className="text-xl" />
                   </a>

@@ -28,8 +28,8 @@ const WhyUs2 = () => {
         {/* Comparison Section */}
         <div className="lg:w-2/3 rounded-xl overflow-hidden flex">
           <ReactCompareImage
-            leftImage="/assets/project9.jpeg"
-            rightImage="/assets/project10.jpeg"
+            leftImage="/assets/beforelr.jpg"
+            rightImage="/assets/afterlr.png"
             sliderLineColor="#ffffff"
             leftImageCss={{
               objectFit: "cover",

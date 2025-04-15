@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaPhone, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -40,9 +40,9 @@ const Footer = () => {
               Call Us  <FaPhone /> 
               </a>
               <div className="flex gap-4 mt-2 text-2xl">
-                <a href="https://wa.me/9183295478180" className="hover:text-warm-beige transition"><FaWhatsapp /></a>
+                <a href="https://wa.me/9183295478180" className="hover:text-warm-beige transition"><FaFacebook /></a>
                 <a href="https://www.instagram.com/make_my_ghar.co.in/" className="hover:text-warm-beige transition"><FaInstagram /></a>
-                <a href="#" className="hover:text-warm-beige transition"><FaLinkedinIn /></a>
+                
               </div>
             </div>
           </div>

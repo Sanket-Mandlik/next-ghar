@@ -6,31 +6,41 @@ import ServicesPage from "../components/ServicesPage";
 import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
+import PlanSlider from "../components/PlanSlider";
 
 
 const Services = () => {
   return (
-    <div className="w-full px-4 lg:px-0  lg:w-4/5 mx-auto mt-60 space-y-12">
+    <div className="w-full px-4 lg:px-0  lg:w-4/5 mx-auto mt-30 space-y-12">
       {/* Heading and Subheading */}
       {/* Heading and Subheading */}
 <motion.div
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-  className="text-center"
+  className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
+  style={{
+    backgroundImage: "url('/assets/plan (7).jpg')",
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
 >
-  <h1 className="text-5xl lg:text-6xl font-medium leading-tight">
-    What We <span className="text-gold">Offer</span>{" "}
-    <span className="text-dark-brown">?</span>
-  </h1>
-  <p className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-    Reach out to Make My Ghar for any queries or to book a free consultation.
-  </p>
+  <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
+  <div className="relative z-10">
+    <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
+      What We <span className="text-gold">Offer</span>
+      <span className="text-dark-brown">?</span>
+    </h1>
+    <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+      Reach out to Make My Ghar for any queries or to book a free consultation.
+    </p>
+  </div>
 </motion.div>
 
 
       {/* Process Section */}
-      <div className="mt-30">
+      <div className="mt-0">
         <ServiceHero />
       </div>
 
@@ -59,7 +69,11 @@ const Services = () => {
 <div className="bg-soft-white ">
     <ServicesPage />
 </div>
-       
+
+
+   1<div className="bg-soft-white ">
+    <PlanSlider />
+</div>    
 <div className="bg-soft-white ">
     <Testimonials />
 </div>

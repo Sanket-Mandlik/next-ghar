@@ -117,7 +117,7 @@ useEffect(() => {
 
   const carouselImages = [
     "/assets/project14.jpeg",
-    "/assets/after2.png",
+    "/assets/projectGa5.jpg",
     "/assets/projectGa4.png",
   ];
 
@@ -234,7 +234,9 @@ useEffect(() => {
        {service.features.map((feature, i) => (
          <div key={i} className="flex items-start mt-4 gap-6">
            <CheckCircle className="text-gold  w-5 h-5 mt-1" />
-           <span className="text-soft-white text-xl  bg-medium-brown py-1 px-2 rounded-lg font-medium">{feature}</span>
+           <span className="text-soft-white text-xl bg-gold py-1 px-2 rounded-lg font-medium">
+  {feature}
+</span>
          </div>
        ))}
      </div>

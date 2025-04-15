@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const WhyUs1 = () => {
   const [count, setCount] = useState(0);
@@ -54,7 +54,7 @@ const WhyUs1 = () => {
 
   return (
     <div
-      className="lg:w-4/5 mx-auto mt-30 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
+      className="lg:w-4/5 mx-auto mt-10 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
       }}
@@ -90,11 +90,11 @@ const WhyUs1 = () => {
             <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
           </a>
           <a
-            href="https://www.linkedin.com/company/100958944"
+            href="https://www.facebook.com/company/100958944"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-golden text-2xl hover:text-soft-white transition" />
+            <FaFacebook className="text-golden text-2xl hover:text-soft-white transition" />
           </a>
         </div>
       </motion.div>

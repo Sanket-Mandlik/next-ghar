@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Process = () => {
@@ -22,9 +22,22 @@ const Process = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
+  const timeline = ["Day 1", "Day 7", "1 to 2 Weeks", "4th Week", "2 to 3 Months", "Day 45"];
+
+  const highlightPayment = (text) =>
+    text.includes("payment") ? (
+      <>
+        {text.split("payment")[0]}
+        <span className="bg-gradient-to-br font-medium to-warm-beige from-soft-white text-transparent bg-clip-text">payment</span>
+        {text.split("payment")[1]}
+      </>
+    ) : (
+      text
+    );
+
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 lg:p-10 p-8 flex flex-col gap-8 relative"
+      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 lg:pt-10 lg:px-10 lg:pb-4 p-8 flex flex-col gap-8 relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
         backgroundSize: "cover",
@@ -35,20 +48,28 @@ const Process = () => {
       <div className="w-full flex justify-between items-start z-10">
         <div className="flex flex-col items-start space-y-1">
           <p className="text-md text-gold/80">
-           What is the process for doing home interior?
+            What is the process for doing home interior?
           </p>
           <h1 className="text-6xl mt-8 lg:mt-0 lg:text-6xl py-3 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
             Process - Perfected
           </h1>
         </div>
 
-        <div className="flex flex-col items-end space-y-6 mt-8  ">
+        <div className="flex flex-col items-end space-y-6 mt-8">
           <div className="flex space-x-4">
-            <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/make_my_ghar.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="text-soft-white text-2xl" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-soft-white text-2xl" />
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="text-soft-white text-2xl" />
             </a>
           </div>
         </div>
@@ -60,32 +81,53 @@ const Process = () => {
           {
             number: 1,
             name: "Initiation",
-            description: `Initial 5% payment\nSite measurements and brief capture`,
+            description: [
+              "Initial 5% payment",
+              "Site measurements and brief capture",
+            ],
           },
           {
             number: 2,
             name: "Discussion",
-            description: `Next 5% payment\nDesign concepts & floor plan discussion (PPT)\nMaterial preferences for walls/furniture`,
+            description: [
+              "Next 5% payment",
+              "Design concepts & floor plan discussion (PPT)",
+        
+            ],
           },
           {
             number: 3,
             name: "Quote",
-            description: `Quote revision (if needed)\n3D renders and visual options shared`,
+            description: [
+        
+              "3D renders and visual options shared",
+              "Material preferences for walls/furniture",
+              "Quote revision (if needed)",
+            ],
           },
           {
             number: 4,
-            name: "Finalisation",
-            description: `Design confirmation\n40% payment towards execution`,
+            name: "Finalization",
+            description: [
+              "Design confirmation",
+              "40% payment towards execution",
+            ],
           },
           {
             number: 5,
             name: "Execution",
-            description: `Vendor assignment\nDetailed site meeting with final 3Ds and working drawings`,
+            description: [
+              "Vendor assignment (15 Days)",
+              "Detailed site meeting with final 3Ds and working drawings",
+            ],
           },
           {
             number: 6,
             name: "Handover",
-            description: `Final 50% before handover\nProject completion and handover`,
+            description: [
+              "Final 50% payment before handover",
+              "Project completion and handover",
+            ],
           },
         ].map((process, index, array) => (
           <motion.div
@@ -96,7 +138,7 @@ const Process = () => {
             viewport={{ once: true }}
             className="flex flex-col items-start relative space-y-3"
           >
-            {/* Number Circle */}
+            {/* Step Number */}
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="w-10 h-10 border-2 border-warm-beige text-soft-white flex items-center justify-center rounded-full font-bold text-lg"
@@ -104,21 +146,34 @@ const Process = () => {
               {process.number}
             </motion.div>
 
+            {/* Title */}
             <h3 className="text-2xl lg:text-xl font-medium bg-gradient-to-r from-soft-white to-warm-beige text-transparent bg-clip-text">
               Step {process.number}: {process.name}
             </h3>
 
-            <p className="text-md lg:text-sm text-warm-beige font-normal whitespace-pre-line">
-              {process.description}
-            </p>
+            {/* Description List */}
+            <ul className="space-y-1 text-md lg:text-sm text-warm-beige font-normal list-none">
+              {process.description.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-warm-beige">-</span>
+                  <span>{highlightPayment(point)}</span>
+                </li>
+              ))}
+            </ul>
 
-            {/* Arrow to Next Step */}
+            {/* Arrow and Timeline on Top Right */}
             {index < array.length - 1 && (
               <motion.div
-                animate={{ y: [0, -3, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-[10px] top-[10px]"
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute right-2 top-2 flex items-center gap-2"
               >
+                <span className="text-medium-brown text-sm font-normal">
+                  {timeline[index]}
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-gold"
@@ -127,7 +182,11 @@ const Process = () => {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 12h14M13 5l7 7-7 7"
+                  />
                 </svg>
               </motion.div>
             )}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,14 +138,7 @@ const Navbar = () => {
               >
                 <FaInstagram />
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dark-brown text-2xl hover:text-gold transition"
-              >
-                <FaLinkedinIn />
-              </a>
+             
             </div>
           </div>
         )}

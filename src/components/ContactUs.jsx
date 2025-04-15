@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaInstagram, FaLinkedin, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Link from 'next/link';
 const MotionLink = motion(Link);
 

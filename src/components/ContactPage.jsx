@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaLinkedin, FaFacebook, FaTag } from "react-icons/fa";
+import { FaPhoneAlt, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaFacebook, FaTag } from "react-icons/fa";
 import { motion, useInView } from "framer-motion"; // Import framer-motion and useInView
 import { useRef } from "react"; // Import useRef for section references
 import ContactForm from "./ContactForm";
@@ -36,27 +36,36 @@ const ContactPage = () => {
 
   return (
     <div className="bg-soft-white lg:w-4/5 mx-auto min-h-screen">
-      <div className="mx-auto px-4 lg:px-0 pt-60 2xl">
+      <div className="mx-auto px-4 lg:px-0 mt-30 2xl">
         {/* Contact Us Heading */}
-        <motion.div
-          className="text-center mb-30"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl lg:text-6xl font-medium">
-            <span className="text-dark-brown">Contact</span>{" "}
-            <span className="text-medium-brown">Us</span>
-          </h1>
-          <h2 className="text-lg font-medium leading-relaxed bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-            Reach out to Make My Ghar for any interior design queries.
-          </h2>
-        </motion.div>
+          <motion.div
+         initial={{ opacity: 0, y: -20 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.8, ease: "easeOut" }}
+         className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
+         style={{
+           backgroundImage: "url('/assets/plan (7).jpg')",
+           backgroundSize: "contain",
+           backgroundPosition: "center",
+           backgroundRepeat: "no-repeat",
+         }}
+       >
+         <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
+         <div className="relative z-10">
+           <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
+             Contact - <span className="text-gold">Make My Ghar </span>
+             <span className="text-dark-brown">!</span>
+           </h1>
+           <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+             Reach out to Make My Ghar for any queries or to book a free consultation.
+           </p>
+         </div>
+       </motion.div>
 
         {/* Contact Details Section */}
         <motion.div
           ref={contactDetailsRef}
-          className="text-white p-4 mb-20 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
+          className="text-white p-4 mb-20 mt-10 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
@@ -127,14 +136,7 @@ const ContactPage = () => {
                 >
                   <FaInstagram className="text-2xl " />
                 </a>
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-md text-white hover:text-soft-white transition-colors"
-                >
-                  <FaLinkedin className="text-2xl" />
-                </a>
+               
                 <a
                   href="https://www.facebook.com"
                   target="_blank"
