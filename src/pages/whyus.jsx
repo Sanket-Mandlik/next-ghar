@@ -21,7 +21,7 @@ const WhyUs = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
   style={{
-    backgroundImage: "url('/assets/plan (7).jpg')",
+    backgroundImage: "url('/assets/plan (8).jpg')",
     backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
