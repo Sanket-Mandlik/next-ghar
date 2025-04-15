@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const topImages = [
+  "/assets/after4.jpeg",
   "/assets/project1.jpeg",
   "/assets/project2.jpeg",
   "/assets/project3.jpeg",
@@ -118,7 +119,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="flex flex-col lg:w-4/5 mx-4 lg:mx-auto gap-4 mt-20 overflow-hidden"
+      className="flex flex-col lg:w-4/5 mx-4 lg:mx-auto gap-4 mt-30 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -199,10 +200,10 @@ const Projects = () => {
           </motion.p>
           <Link href="/contactus">
             <motion.button
-              className="mt-4 px-8 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all"
+              className="mt-4 px-8 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all"
               variants={textVariants}
             >
-              Get Started
+              Get Started Now
             </motion.button>
           </Link>
         </motion.div>

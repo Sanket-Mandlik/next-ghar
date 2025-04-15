@@ -124,7 +124,7 @@ useEffect(() => {
   
 
   return (
-    <div className="relative lg:w-4/5 lg:mx-auto mx-4 px-1 flex flex-col items-start mt-30">
+    <div className="relative lg:w-4/5 lg:mx-auto mx-5 px-2 flex flex-col items-start mt-30">
       <motion.h2
         className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
         initial={{ opacity: 0, y: 30 }}
@@ -151,7 +151,7 @@ useEffect(() => {
             y: hovered !== null && index > hovered && index < 5 ? 250 : 0,
           }}
           transition={{ type: "spring", stiffness: 50 }}
-          className={`relative h-auto lg:h-[520px] w-[94vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
+          className={`relative h-auto lg:h-[520px] w-[91vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
             index === 5
               ? "flex-col items-center justify-center text-center bg-cover bg-center text-pure-white"
               : "flex-col lg:flex-row gap-4 pt-25 items-start text-medium-brown bg-soft-white"
@@ -180,7 +180,7 @@ useEffect(() => {
     <div className="w-full lg:w-1/2 flex flex-col justify-center items-start text-left">
       <h3 className="text-4xl lg:text-5xl text-soft-white font-medium mb-4">{service.title}</h3>
       <p className="text-lg font-medium text-warm-beige mb-6">{service.description}</p>
-      <button className="px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-pure-white transition-all">
+      <button className="px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl  transition-all">
         Get Started Now
       </button>
     </div>

@@ -73,7 +73,7 @@ const Projects = () => {
 
         <Link
           href="/contactus"
-          className="inline-block bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-gold transition-all"
+          className="inline-block bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-xl hover:scale-105 hover:bg-dark-brown hover:text-gold transition-all"
         >
           Get Started Now
         </Link>

@@ -99,7 +99,7 @@ const Hero = () => {
       <div className="mt-4 lg:mt-6">
     <Link href="/contactus" passHref>
       <button
-        className="flex items-center gap-2 bg-gradient-to-b from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group"
+        className="flex items-center gap-2 bg-gradient-to-b hover:scale-102 from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group"
         aria-label="Start Your Journey"
       >
         Start Your Journey

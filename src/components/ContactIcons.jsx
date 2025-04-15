@@ -16,7 +16,7 @@ export default function ContactIcons() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 border-2 border-warm-beige rounded-full
-                     bg-gradient-to-tr from-gold to-dark-brown   text-soft-white"
+                      bg-gradient-to-tr from-gold via-green-800 to-green-900  shadow-xl text-warm-beige"
         >
           {/* WhatsApp SVG */}
           <svg

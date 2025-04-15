@@ -69,7 +69,7 @@ const WhyUs2 = () => {
   </p>
 
   <Link href="/contactus" passHref>
-  <button className="bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-md hover:bg-dark-brown hover:text-gold  transition-all">
+  <button className="bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold hover:bg-dark-brown hover:text-gold shadow-xl hover:scale-105 transition-all">
     Get Started Now
   </button>
 </Link>
