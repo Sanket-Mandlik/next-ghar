@@ -71,7 +71,7 @@ const Services = () => {
 </div>
 
 
-   1<div className="bg-soft-white ">
+   1<div className="bg-soft-white -mb-15 ">
     <PlanSlider />
 </div>    
 <div className="bg-soft-white ">

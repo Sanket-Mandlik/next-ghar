@@ -40,7 +40,7 @@ const services = [
     description:
       "Brand-aligned office and retail design for shops, studios & salons in Pune’s commercial zones.",
     points: ["Office design", "Retail makeovers", "Co-working & studios"],
-    image: "/assets/project5.jpeg",
+    image: "/assets/project14.jpeg",
   },
   {
     title: "Loose Furniture",

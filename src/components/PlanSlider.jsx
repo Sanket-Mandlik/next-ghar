@@ -6,7 +6,7 @@ const PlanSlider = () => {
   return (
     <div className="overflow-hidden w-full py-10 bg-soft-white">
       <motion.div
-        className="flex space-x-6"
+        className="flex space-x-10"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           duration: 40,
