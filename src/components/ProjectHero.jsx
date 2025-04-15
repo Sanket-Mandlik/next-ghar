@@ -11,13 +11,13 @@ const categories = {
         { image: "/assets/project2.jpeg", title: "Stylish Kitchen", subtitle: "Wakad" },
     ],
     "Bedroom": [
-        { image: "/assets/project5.jpeg", title: "Elegant Master Bedroom", subtitle: "Bavdhan" },
+     
         { image: "/assets/project8.jpeg", title: "Minimalist Bedroom", subtitle: "Pimple Nilakh" },
         { image: "/assets/project10.jpeg", title: "Luxury Bedroom", subtitle: "SB Road" },
     ],
     "Kid's ": [
-        { image: "/assets/project11.jpeg", title: "Colorful Kids Space", subtitle: "Aundh" },
-        { image: "/assets/project12.jpeg", title: "Fun Kids Room", subtitle: "Hadapsar" },
+        { image: "/assets/project12.jpg", title: "Colorful Kids Space", subtitle: "Aundh" },
+        { image: "/assets/project19.png", title: "Fun Kids Room", subtitle: "Hadapsar" },
 
     ],
 };
