@@ -5,7 +5,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
   FaInstagram,
- 
+
   FaFacebook,
 } from "react-icons/fa";
 
@@ -13,7 +13,8 @@ const Popup = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     number: "",
-    location: "",
+    propertyType: "",
+    interiorBudget: "",
     startDate: "",
   });
 
@@ -47,7 +48,14 @@ const Popup = ({ onClose }) => {
       const data = await response.json();
       setResponseMessage(data.message);
       if (response.ok) {
-        setFormData({ name: "", number: "", location: "", startDate: "" });
+        // Reset form fields after successful submission
+        setFormData({
+          name: "",
+          number: "",
+          propertyType: "",
+          interiorBudget: "",
+          startDate: "",
+        });
       }
     } catch (error) {
       setResponseMessage("An error occurred. Please try again later.");
@@ -57,8 +65,8 @@ const Popup = ({ onClose }) => {
   return (
     <AnimatePresence>
       <div key="popup">
-      <motion.div
-  className="fixed inset-0 z-50 flex items-center justify-center"
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center"
 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -73,30 +81,30 @@ const Popup = ({ onClose }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           />
-  
+
           {/* Sliding Panel */}
           <motion.div
-  className="relative z-10 h-full w-full lg:h-auto lg:w-2/3 lg:rounded-3xl bg-soft-white shadow-xl overflow-y-auto flex flex-col lg:flex-row"
-  style={{ left: 0 }}
-  initial={{ x: "-100%" }}
-  animate={{ x: 0 }}
-  exit={{ x: "-100%" }}
-  transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
->
+            className="relative z-10 h-full w-full lg:h-auto lg:w-2/3 lg:rounded-3xl bg-soft-white shadow-xl overflow-y-auto flex flex-col lg:flex-row"
+            style={{ left: 0 }}
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
+          >
             {/* Close button and content here */}
             <motion.button
-    className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
-    onClick={onClose}
-    whileHover={{ rotate: 90 }}
-    transition={{ type: 'spring', stiffness: 300 }}
-  >
-    &times;
-  </motion.button>
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
+              onClick={onClose}
+              whileHover={{ rotate: 90 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              &times;
+            </motion.button>
 
             {/* Your existing left and right sections */}
             {/* Left Section */}
             <div className="w-full lg:w-1/2 flex-row items-center p-4 justify-center text-white  relative">
-            <div className="mb-8">
+              <div className="mb-8">
                 <h2 className="text-5xl lg:text-5xl lg:px-6 pt-3 lg:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
                   <span className="text-medium-brown">Us</span>
@@ -157,7 +165,7 @@ const Popup = ({ onClose }) => {
                   <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaInstagram className="text-xl" />
                   </a>
-                
+
                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-md text-white hover:text-soft-white transition-colors">
                     <FaFacebook className="text-xl" />
                   </a>
@@ -200,40 +208,38 @@ const Popup = ({ onClose }) => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
-                <div className="relative w-full">
-  {/* Fake Placeholder */}
-  {!formData.startDate && !isDateFocused && (
-    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
-      Select start date
-    </span>
-  )}
+                  <div className="relative w-full">
+                    {/* Fake Placeholder */}
+                    {!formData.startDate && !isDateFocused && (
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
+                        Select start date
+                      </span>
+                    )}
 
-  <input
-    type="date"
-    id="startDate"
-    name="startDate"
-    value={formData.startDate}
-    onChange={handleChange}
-    onFocus={() => setIsDateFocused(true)}
-    onBlur={() => setIsDateFocused(false)}
-    className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
-      formData.startDate || isDateFocused ? "text-black" : "text-transparent"
-    }`}
-    required
-  />
-</div>
-
-
+                    <input
+                      type="date"
+                      id="startDate"
+                      name="startDate"
+                      value={formData.startDate}
+                      onChange={handleChange}
+                      onFocus={() => setIsDateFocused(true)}
+                      onBlur={() => setIsDateFocused(false)}
+                      className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${formData.startDate || isDateFocused ? "text-black" : "text-transparent"
+                        }`}
+                      required
+                    />
+                  </div>
 
                   <select
-                    id="area"
-                    name="area"
+                    id="propertyType"
+                    name="propertyType"
+                    value={formData.propertyType} // Bind to formData
                     onChange={handleChange}
                     className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                     required
                   >
-                    <option value="" disabled selected>
-                      Select Property Type 
+                    <option value="" disabled>
+                      Select Property Type
                     </option>
                     <option value="500">2 Bhk</option>
                     <option value="1000">3 Bhk</option>
@@ -244,13 +250,14 @@ const Popup = ({ onClose }) => {
                 </div>
 
                 <select
-                  id="interiorType"
-                  name="interiorType"
+                  id="interiorBudget"
+                  name="interiorBudget"
+                  value={formData.interiorBudget} // Bind to formData
                   onChange={handleChange}
                   className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
                   required
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select Interior Budget
                   </option>
                   <option value="budget">Between ₹10 L - 15 Lakhs</option>
@@ -264,19 +271,19 @@ const Popup = ({ onClose }) => {
                 >
                   Submit
                 </button>
-                </form>
+              </form>
 
-                {responseMessage && (
-                  <p className="mt-4 text-center text-lg font-medium text-dark-brown">
-                    {responseMessage}
-                  </p>
-                )}
-              </div> {/* End of Right Section - Form */}
-            </motion.div> {/* End of Sliding Panel */}
-          </motion.div> {/* End of Main Flex Container */}
-          </div>
-      </AnimatePresence>
-    );
-  };
+              {responseMessage && (
+                <p className="mt-4 text-center text-lg font-medium text-dark-brown">
+                  {responseMessage}
+                </p>
+              )}
+            </div> {/* End of Right Section - Form */}
+          </motion.div> {/* End of Sliding Panel */}
+        </motion.div> {/* End of Main Flex Container */}
+      </div>
+    </AnimatePresence>
+  );
+};
 
 export default Popup;

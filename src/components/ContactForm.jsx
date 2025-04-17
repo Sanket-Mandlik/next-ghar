@@ -5,8 +5,8 @@ const ContactForm = () => {
     name: "",
     number: "",
     propertyType: "",
-    area: "",
-    interiorType: "",
+    interiorBudget: "",
+    startDate: "",
   });
 
   const [responseMessage, setResponseMessage] = useState("");
@@ -20,7 +20,7 @@ const ContactForm = () => {
   const [isDateFocused, setIsDateFocused] = useState(false);
 
 
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -40,9 +40,9 @@ const ContactForm = () => {
         setFormData({
           name: "",
           number: "",
+          startDate: "",
           propertyType: "",
-          area: "",
-          interiorType: "",
+          interiorBudget: "",
         });
       } else {
         setResponseMessage(data.message || "Something went wrong.");
@@ -80,33 +80,32 @@ const ContactForm = () => {
 
       {/* Property Type and Area */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-      <div className="relative w-full">
-  {/* Fake Placeholder */}
-  {!formData.startDate && !isDateFocused && (
-    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
-      Select start date
-    </span>
-  )}
+        <div className="relative w-full">
+          {/* Fake Placeholder */}
+          {!formData.startDate && !isDateFocused && (
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
+              Select start date
+            </span>
+          )}
 
-  <input
-    type="date"
-    id="startDate"
-    name="startDate"
-    value={formData.startDate}
-    onChange={handleChange}
-    onFocus={() => setIsDateFocused(true)}
-    onBlur={() => setIsDateFocused(false)}
-    className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${
-      formData.startDate || isDateFocused ? "text-black" : "text-transparent"
-    }`}
-    required
-  />
-</div>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            value={formData.startDate}
+            onChange={handleChange}
+            onFocus={() => setIsDateFocused(true)}
+            onBlur={() => setIsDateFocused(false)}
+            className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${formData.startDate || isDateFocused ? "text-black" : "text-transparent"
+              }`}
+            required
+          />
+        </div>
 
         <select
-          id="area"
-          name="area"
-          value={formData.area}
+          id="propertyType"
+          name="propertyType"
+          value={formData.propertyType} // Bind to formData
           onChange={handleChange}
           className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
           required
@@ -114,20 +113,21 @@ const ContactForm = () => {
           <option value="" disabled>
             Select Property Type
           </option>
-          <option value="2 bhk">2 Bhk</option>
-          <option value="3 bhk">3 Bhk</option>
-          <option value="4 bhk+">4 Bhk+</option>
+          <option value="2 Bhk">2 Bhk</option>
+          <option value="3 Bhk">3 Bhk</option>
+          <option value="4 Bhk+">4 Bhk+</option>
           <option value="Villa">Villa</option>
           <option value="Commercial">Commercial</option>
         </select>
+
       </div>
-       
+
 
       {/* Type of Interior */}
       <select
-        id="interiorType"
-        name="interiorType"
-        value={formData.interiorType}
+        id="interiorBudget"
+        name="interiorBudget"
+        value={formData.interiorBudget} // Bind to formData
         onChange={handleChange}
         className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
         required
@@ -135,9 +135,9 @@ const ContactForm = () => {
         <option value="" disabled>
           Select Interior Budget
         </option>
-        <option value="premium"> Between ₹10 L - 15 Lakhs</option>
+        <option value="premium">Between ₹10 L - 15 Lakhs</option>
         <option value="luxury">Between ₹15 L - 18 Lakhs</option>
-        <option value="luxury">Above ₹18 Lakhs  </option>
+        <option value="luxury">Above ₹18 Lakhs</option>
       </select>
 
       {/* Submit Button */}
