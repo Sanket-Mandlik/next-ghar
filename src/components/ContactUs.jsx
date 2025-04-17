@@ -12,14 +12,14 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
+      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-2xl shadow-xl overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* Main Container */}
-      <div className="relative z-10 lg:p-8 lg:px-20 lg:py-30">
+      <div className="relative z-10 lg:p-8 lg:px-16  lg:py-32">
         <motion.div
           className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-12"
           initial="hidden"
@@ -28,12 +28,12 @@ const ContactUs = () => {
         >
           {/* Left Section - Heading */}
           <motion.div
-            className="lg:w-1/2 py-10 p-6 lg:p-0 lg:py-0 text-left"
+            className="lg:w-1/2 p-6 pb-12 pt-20 lg:pt-0 lg:pb-0 lg:p-0 l  text-left"
             variants={fadeInUp(0.2)}
           >
-            <h2 className="text-5xl lg:text-5xl font-medium mt-15 lg:mt-0 bg-gradient-to-r from-gold via-warm-beige to-soft-white bg-clip-text text-transparent mb-4">Contact Us</h2>
-            <p className="text-2xl lg:text-4xl font-montserrat font-medium bg-gradient-to-r from-soft-white via-warm-beige to-soft-white bg-clip-text text-transparent">
-              Book A Free Consultation
+            <h2 className="text-5xl font-medium  bg-gradient-to-r from-soft-white via-warm-beige to-warm-beige bg-clip-text text-transparent mb-3">Contact Us</h2>
+            <p className="text-2xl lg:text-3xl font-montserrat font-medium bg-gradient-to-r from-warm-beige via-warm-beige to-soft-white bg-clip-text text-transparent">
+              Book A Free Design Consultation
             </p>
 
             
@@ -41,7 +41,7 @@ const ContactUs = () => {
   href="/contactus"
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.95 }}
-  className="mt-6 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
+  className="mt-8 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
 >
   Contact Us Now
 </MotionLink>
@@ -49,16 +49,17 @@ const ContactUs = () => {
 
           {/* Right Section - Contact Info */}
           <motion.div
-            className="lg:w-1/2 pb-15 lg:py-0 p-8 lg:p-0 b-y-6"
+            className="lg:w-1/2 pb-13 lg:py-0 p-8 lg:p-0 "
             variants={fadeInUp(0.4)}
           >
             {/* Address */}
-            <div className="flex items-start mb-4 gap-3">
+            <div className="flex items-start mb-8 gap-3">
               <FaMapMarkerAlt className="text-white text-xl flex-shrink-0 mt-1" />
               <div className="flex-1">
                 <p className="text-lg bg-gradient-to-r from-warm-beige to-soft-white bg-clip-text text-transparent leading-relaxed">
                   72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004{" "}
-                  <a
+                  <br />
+                                    <a
                     href="https://www.google.com/maps/place/Manas+bunglow/@18.5115354,73.8269061,16z/data=!4m10!1m2!2m1!1smanas+bunglow!3m6!1s0x3bc2bf19794aaa1b:0xf6ba7af397580291!8m2!3d18.5111558!4d73.8281243!15sCg1tYW5hcyBidW5nbG93kgESYXBhcnRtZW50X2J1aWxkaW5n4AEA!16s%2Fg%2F11ryhfk9vn!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -71,13 +72,13 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Methods */}
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-6 lg:gap-8">
               {/* Phone */}
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-white text-xl flex-shrink-0" />
                 <a
                   href="tel:+9183295478180"
-                  className="text-lg font-medium bg-gradient-to-r from-warm-beige to-soft-white bg-clip-text text-transparent hover:text-white transition-colors"
+                  className="text-lg font-medium bg-gradient-to-r to-warm-beige from-soft-white bg-clip-text text-transparent hover:text-white transition-colors"
                 >
                   +91 8329547818
                 </a>
@@ -90,7 +91,7 @@ const ContactUs = () => {
                   href="https://wa.me/9183295478180"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-medium bg-gradient-to-r from-warm-beige to-soft-white bg-clip-text text-transparent hover:text-white transition-colors"
+                  className="text-lg font-medium bg-gradient-to-r to-warm-beige from-soft-white bg-clip-text text-transparent hover:text-white transition-colors"
                 >
                   Chat on WhatsApp
                 </a>

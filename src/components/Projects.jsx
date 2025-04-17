@@ -132,15 +132,15 @@ const Projects = () => {
       </motion.h2>
 
       {/* Top Carousel */}
-      <div className="relative w-full rounded-xl overflow-hidden">
+      <div className="relative w-full rounded-xl  overflow-hidden">
         <button
           onClick={() => scrollTop(1)}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
         >
 <ChevronLeft size={28} strokeWidth={2.5} />        </button>
         <button
           onClick={() => scrollTop(-1)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white  text-dark-brown p-1 rounded-full shadow"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white  text-dark-brown p-1 rounded-full shadow"
         >
   <ChevronRight size={28} strokeWidth={2.5} />
   </button>
@@ -151,7 +151,7 @@ const Projects = () => {
               key={i}
               src={src}
               alt={`Project ${i + 1}`}
-              className="lg:h-[45vh] h-[60vh] w-full rounded-lg object-cover"
+              className="lg:h-[45vh] h-[60vh] w-full rounded-2xl object-cover"
               variants={containerVariants}
             />
           ))}
@@ -164,12 +164,12 @@ const Projects = () => {
         <div className="relative rounded-xl lg:w-3/4 overflow-hidden">
           <button
             onClick={() => scrollBottom(1)}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
           >
 <ChevronLeft size={28} strokeWidth={2.5} />          </button>
           <button
             onClick={() => scrollBottom(-1)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
           >
   <ChevronRight size={28} strokeWidth={2.5} />
   </button>
@@ -200,7 +200,7 @@ const Projects = () => {
           </motion.p>
           <Link href="/contactus">
             <motion.button
-              className="mt-4 px-8 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all"
+              className="mt-4 px-5 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all"
               variants={textVariants}
             >
               Get Started Now

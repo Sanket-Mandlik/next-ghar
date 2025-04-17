@@ -25,7 +25,7 @@ const Testimonials = () => {
       className="mt-30 text-dark-brown"
     >
       <motion.div variants={fadeInUp()}>
-        <h2 className="text-5xl font-montserrat text-medium-brown font-medium mb-6">
+        <h2 className="text-5xl font-montserrat text-medium-brown font-medium mb-8">
           <span className="text-dark-brown">What Our</span> Clients Say?
         </h2>
       </motion.div>
@@ -34,7 +34,7 @@ const Testimonials = () => {
         {/* Testimonial 1 */}
         <motion.div 
           variants={fadeInUp(0.2)} 
-          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-10 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
+          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-13 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
         >
           <FaQuoteLeft className="text-warm-beige text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.4)} className="text-lg font-medium italic py-4">
@@ -49,7 +49,7 @@ const Testimonials = () => {
         {/* Testimonial 2 */}
         <motion.div 
           variants={fadeInUp(0.4)} 
-          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-10 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
+          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-13 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
         >
           <FaQuoteLeft className="text-warm-beige text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.6)} className="text-lg  font-medium italic py-4">
@@ -64,7 +64,7 @@ const Testimonials = () => {
         {/* Testimonial 3 */}
         <motion.div 
           variants={fadeInUp(0.6)} 
-          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-10 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
+          className="bg-soft-white text-dark-brown border-3 border-gold px-8 py-13 rounded-2xl shadow-[0_4px_20px_rgba(234,216,195,0.5)]"
         >
           <FaQuoteLeft className="text-warm-beige  text-3xl mb-6" />
           <motion.p variants={fadeInUp(0.8)} className="text-lg italic font-medium py-4">

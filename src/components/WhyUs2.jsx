@@ -10,7 +10,7 @@ const ReactCompareImage = dynamic(() => import("react-compare-image"), {
 
 const WhyUs2 = () => {
   return (
-    <div className="lg:w-4/5 mx-auto bg-soft-white flex flex-col items-start mt-30 space-y-6">
+    <div className="lg:w-4/5 mx-auto bg-soft-white flex flex-col items-start mt-30 ">
       {/* Headings */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -18,7 +18,7 @@ const WhyUs2 = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-full max-w-6xl"
       >
-        <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown ">
+        <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown mb-8">
           Before After <span className="text-medium-brown">Comparison</span>
         </h2>
       </motion.div>
@@ -52,24 +52,24 @@ const WhyUs2 = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 1, ease: "easeOut" }}
   viewport={{ once: true }}
-  className="lg:w-1/3 shadow-lg shadow-medium-brown/50 from-warm-beige to-medium-brown via-warm-beige text-soft-white px-6 py-8 rounded-2xl flex flex-col items-center justify-center"
+  className="lg:w-1/3 shadow-lg shadow-medium-brown/50 from-warm-beige to-medium-brown via-warm-beige text-soft-white px-6 py-16 rounded-2xl flex flex-col items-center justify-center"
   style={{
     backgroundImage: "url('/assets/mesh-969.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
 >
-  <h3 className="text-3xl lg:text-4xl font-medium mb-6 text-center bg-gradient-to-br from-soft-white to-warm-beige bg-clip-text text-transparent">
+  <h3 className="text-4xl font-medium mb-5 text-center bg-gradient-to-br from-soft-white to-warm-beige bg-clip-text text-transparent">
     Your Vision, Our Expertise
   </h3>
 
-  <p className="text-sm lg:text-md text-center mb-10 py-3 bg-gradient-to-br from-warm-beige to-soft-white bg-clip-text text-transparent">
+  <p className="text-sm lg:text-md text-center mb-8  bg-gradient-to-br from-warm-beige to-soft-white bg-clip-text text-transparent">
  From 2BHKs to villas across Pune, Make My Ghar helps you choose the right layout, finishes, and style—just the way you want it.
 
   </p>
 
   <Link href="/contactus" passHref>
-  <button className="bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold hover:bg-dark-brown hover:text-gold shadow-xl hover:scale-105 transition-all">
+  <button className="bg-gradient-to-b from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold hover:bg-dark-brown hover:text-gold shadow-xl hover:scale-105 transition-all">
     Get Started Now
   </button>
 </Link>

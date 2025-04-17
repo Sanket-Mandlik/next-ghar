@@ -34,7 +34,7 @@ const AboutUs = () => {
             backgroundPosition: "right center",
           }}
         >
-          <p className="absolute top-6 left-6 text-sm text-medium-brown">
+          <p className="absolute top-5 left-6 text-sm text-medium-brown">
             Building dreams, one home at a time.
           </p>
 
@@ -48,7 +48,7 @@ const AboutUs = () => {
             About Us
           </motion.h2>
 
-          <div className="absolute bottom-6 left-6 text-left">
+          <div className="absolute bottom-5 left-6 text-left">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="absolute bottom-6 right-6 flex space-x-4">
+          <div className="absolute bottom-5 right-6 flex space-x-4">
             <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
             </a>
@@ -74,7 +74,7 @@ const AboutUs = () => {
 
         {/* Right Section */}
         <div
-          className="lg:col-span-6 px-8 py-12 rounded-xl shadow-md text-dark-brown"
+          className="lg:col-span-6 p-6 lg:p-8 rounded-xl shadow-md text-dark-brown"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",
@@ -86,9 +86,9 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-4xl pb-2 font-medium text-dark-brown"
+            className="text-4xl font-medium text-dark-brown"
           >
-            Who Are We?
+            Who Are  <span className=" text-medium-brown">We?</span>
           </motion.h2>
 
           <motion.div
@@ -96,10 +96,10 @@ const AboutUs = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-medium-brown to-dark-brown rounded-full text-soft-white text-center py-1.5 px-4 mt-4 w-max"
+            className="bg-gradient-to-br from-dark-brown to-warm-beige rounded-lg text-soft-white text-center py-1.5 px-4 mt-4 w-max"
           >
-            <p className="text-md sm:text-md font-normal">
-              Established in 2014
+            <p className="text-md sm:text-md font-medium">
+            Inspiring homes since 2014
             </p>
           </motion.div>
 
@@ -108,7 +108,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-6 font-medium sm:text-md text-dark-brown"
+            className="mt-5 font-medium sm:text-md text-dark-brown"
           >
             At Make My Ghar, our team of expert interior designers and architects in Pune specialize in crafting stylish, functional, and sustainable home interiors. Whether it’s a modern 2BHK apartment in Pune or a luxury villa in nearby suburbs, we offer smart space planning, premium material selection, and hassle-free execution.
           </motion.p>

@@ -1,8 +1,10 @@
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 
 
@@ -12,7 +14,7 @@ const services = [
     id: 1,
     title: (
       <>
-        Complete <span className="text-dark-brown">Makeover</span>
+        Complete <span className="text-gold">Makeover</span>
       </>
     ),
     description: "Interiors thoughtfully crafted to reflect your lifestyle and traditions for a home that truly feels like yours in Pune.",
@@ -28,7 +30,7 @@ const services = [
     id: 2,
     title: (
       <>
-        Spacious <span className="text-dark-brown">Planning</span>
+        Spacious <span className="text-gold">Planning</span>
       </>
     ),
     description: "Smart space utilization that blends comfort, utility, and elegant style.",
@@ -45,7 +47,7 @@ const services = [
     id: 3,
     title: (
       <>
-        Modular <span className="text-dark-brown">Kitchen</span>
+        Modular <span className="text-gold">Kitchen</span>
       </>
     ),
     description: "A modular kitchen that complements your lifestyle, functionally and aesthetically.",
@@ -60,7 +62,7 @@ const services = [
     id: 4,
     title: (
       <>
-        Commercial <span className="text-dark-brown">Interiors</span>
+        Commercial <span className="text-gold">Interiors</span>
       </>
     ),
     description: "Productive and attractive commercial interiors that reflect your brand’s personality.",
@@ -75,7 +77,7 @@ const services = [
     id: 5,
     title: (
       <>
-        Loose <span className="text-dark-brown">Furniture</span>
+        Loose <span className="text-gold">Furniture</span>
       </>
     ),
     description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
@@ -92,7 +94,7 @@ const services = [
     id: 6,
     title: (
       <>
-        Start Your Project With <span className="text-gold">Make My Ghar</span>
+        Start Designing Home With <span className="text-warm-beige">Make My Ghar</span>
       </>
     ),
     description: "Contact us today to begin work on your dream home!",
@@ -124,9 +126,9 @@ useEffect(() => {
   
 
   return (
-    <div className="relative lg:w-4/5 lg:mx-auto mx-5 px-2 flex flex-col items-start mt-30">
+    <div className="relative lg:w-4/5 lg:mx-auto mx-5  flex flex-col items-start mt-30">
       <motion.h2
-        className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
+        className="text-5xl font-montserrat text-medium-brown font-medium mb-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -137,9 +139,9 @@ useEffect(() => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Services
+         What Services Do
         </motion.span>{" "}
-        We Offer
+        We Offer?
       </motion.h2>
 
       <div className="flex lg:w-4/5 mx-auto relative w-full flex-col items-center ">
@@ -151,10 +153,10 @@ useEffect(() => {
             y: hovered !== null && index > hovered && index < 5 ? 250 : 0,
           }}
           transition={{ type: "spring", stiffness: 50 }}
-          className={`relative h-auto lg:h-[520px] w-[91vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
+          className={`relative h-auto lg:h-[520px] w-[91vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(100,100,100,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${
             index === 5
               ? "flex-col items-center justify-center text-center bg-cover bg-center text-pure-white"
-              : "flex-col lg:flex-row gap-4 pt-25 items-start text-medium-brown bg-soft-white"
+              : "flex-col lg:flex-row gap-4 pt-23 items-start text-medium-brown bg-soft-white"
           }`}
           style={{
             marginTop: index !== 0 && index < 5 ? "-300px" : "0",
@@ -164,7 +166,7 @@ useEffect(() => {
           onMouseLeave={() => (index < 5 ? setHovered(null) : null)}
         >
           {index !== 5 && (
-            <div className="absolute top-[20px] left-[40px] -translate-x-1/2 w-10 h-10 flex items-center justify-center bg-dark-brown text-pure-white text-lg font-bold rounded-full">
+            <div className="absolute top-[30px] left-[45px] -translate-x-1/2 w-10 h-10 flex items-center justify-center shadow-lg bg-gradient-to-br to-dark-brown via-dark-brown from-medium-brown text-soft-white text-xl font-semibold rounded-full">
               {service.id}
             </div>
           )}
@@ -175,66 +177,76 @@ useEffect(() => {
   
 
         {index === 5 && (
-  <div className="flex flex-col lg:flex-row w-full h-full gap-10 py-20 lg:py-0 lg:pl-12 text-dark-brown">
+  <div className="flex flex-col lg:flex-row h-full py-13 lg:py-0   text-dark-brown">
     {/* Left Side Content */}
-    <div className="w-full lg:w-1/2 flex flex-col justify-center items-start text-left">
-      <h3 className="text-4xl lg:text-5xl text-soft-white font-medium mb-4">{service.title}</h3>
-      <p className="text-lg font-medium text-warm-beige mb-6">{service.description}</p>
+    <div className="w-full lg: lg:pl-5 lg:pr-8 lg:w-1/2 flex flex-col justify-center items-start text-left">
+      <h3 className="text-5xl text-soft-white font-medium mb-5">{service.title}</h3>
+      <p className="text-lg font-medium text-warm-beige mb-8">{service.description}</p>
       <button className="px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl  transition-all">
         Get Started Now
       </button>
     </div>
 
     {/* Right Side Carousel */}
-    <div className="w-full lg:w-1/2 hidden lg:flex justify-center items-center relative overflow-hidden rounded-xl shadow-xl">
-      {/* Image Slides */}
-      <motion.img
-        key={carouselImages[carouselIndex]}
-        src={carouselImages[carouselIndex]}
-        alt="Project Carousel"
-        initial={{ x: 100, opacity: 50 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -100, opacity: 0 }}
-        transition={{ duration: 0.6 }}
-        className="w-full h-full object-cover rounded-xl"
-      />
+   {/* Right Side Carousel (inside index===5) */}
+<div className="w-full lg:w-1/2 hidden lg:flex justify-center items-center relative overflow-hidden rounded-2xl shadow-xl h-[480px]">
+  {/* Viewport */}
+  <div className="w-full h-full overflow-hidden">
+    {/* Track */}
+    <motion.div
+      className="flex gap-4 h-full"
+      animate={{ x: `calc(-${carouselIndex} * (100% + 1rem))` }}
+      transition={{ type: "tween", ease: "easeInOut", duration: 2 }}
+    >
+      {carouselImages.map((src, idx) => (
+        <div
+          key={idx}
+          className="flex-shrink-0 w-full h-full"
+        >
+          <img
+            src={src}
+            alt={`Slide ${idx + 1}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+      ))}
+    </motion.div>
+  </div>
 
-      {/* Buttons */}
-      <button
-  onClick={() =>
-    setCarouselIndex((carouselIndex - 1 + carouselImages.length) % carouselImages.length)
-  }
-  className="absolute left-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
->
-  <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
-</button>
+  {/* Prev/Next Buttons */}
+  <button
+    onClick={() =>
+      setCarouselIndex((carouselIndex - 1 + carouselImages.length) % carouselImages.length)
+    }
+    className="absolute left-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
+  >
+    <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
+  </button>
 
+  <button
+    onClick={() =>
+      setCarouselIndex((carouselIndex + 1) % carouselImages.length)
+    }
+    className="absolute right-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
+  >
+    <ChevronRight className="w-6 h-6" strokeWidth={2.5} />
+  </button>
+</div>
 
-<button
-  onClick={() =>
-    setCarouselIndex((carouselIndex + 1) % carouselImages.length)
-  }
-  className="absolute right-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
->
-  <ChevronRight className="w-6 h-6" strokeWidth={2.5} />
-</button>
-
-
-    </div>
   </div>
 )}
 
 
   {index !== 5 && (
     <div>
-      <h3 className="text-5xl font-medium">{service.title}</h3>
-      <p className="text-lg font-medium mt-6 mb-8 text-gold lg:mb-10">{service.description}</p>
+      <h3 className="text-5xl text-dark-brown font-medium">{service.title}</h3>
+      <p className="text-lg font-medium mt-3 mb-8 text-medium-brown lg:mb-8">{service.description}</p>
       {service.features && (
        <div className="space-y-3 mt-6">
        {service.features.map((feature, i) => (
          <div key={i} className="flex items-start mt-4 gap-6">
            <CheckCircle className="text-gold  w-5 h-5 mt-1" />
-           <span className="text-soft-white text-lg bg-medium-brown py-1 px-2 rounded-lg font-medium">
+           <span className="text-soft-white text-lg bg-medium-brown py-1 px-3 rounded-lg font-medium">
   {feature}
 </span>
          </div>

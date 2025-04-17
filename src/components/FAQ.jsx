@@ -40,8 +40,8 @@ const FAQ = () => {
     className="lg:mx-auto mx-4 lg:w-4/5 rounded-2xl p-0 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-30 bg-none  bg-cover bg-center"
     >
     
-      <div className="bg-soft-white rounded-2xl px-6 lg:px-10 py-10 lg:pb-16">
-        <h2 className="text-4xl lg:text-5xl font-medium text-dark-brown mb-12 lg:mb-20">
+      <div className="bg-soft-white rounded-2xl px-6 lg:px-8 py-8 lg:pb-12">
+        <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown mb-15 lg:mb-20">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
 
@@ -53,7 +53,7 @@ const FAQ = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-b-2 border-medium-brown/20 rounded-lg pb-6"
+              className="border-b-2 border-medium-brown/20 rounded-lg pb-10"
             >
               <button
                 onClick={() => toggleFAQ(index)}

@@ -54,7 +54,7 @@ const WhyUs1 = () => {
 
   return (
     <div
-      className="lg:w-4/5 mx-auto mt-10 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-6 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
+      className="lg:w-4/5 mx-auto mt-10 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-3 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
       }}
@@ -65,15 +65,15 @@ const WhyUs1 = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="lg:w-1/3 h-full p-6 rounded-xl text-soft-white relative flex flex-col justify-center items-center"
+        className="lg:w-1/3 h-full p-6 lg:p-8 rounded-xl text-soft-white relative flex flex-col justify-center items-center"
       >
-        <p className="absolute top-4 left-10 text-sm text-medium-brown">
+        <p className="absolute top-5 left-6 text-sm text-medium-brown">
           Building dreams, one home at a time.
         </p>
-        <h2 className="text-5xl sm:text-6xl py-35 pl-8 lg:pl-10 font-normal text-start mb-3 bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
+        <h2 className="text-6xl sm:text-6xl py-35 pl-3 lg:pl-6 font-normal text-start mb-3 bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
           Excellent Execution
         </h2>
-        <div className="absolute bottom-3 left-10 text-left">
+        <div className="absolute bottom-5 left-6 text-left">
           <p className="text-3xl sm:text-4xl text-warm-beige font-extrabold text-golden">
             {count}+
           </p>
@@ -81,7 +81,7 @@ const WhyUs1 = () => {
             Projects Completed
           </p>
         </div>
-        <div className="absolute bottom-4 right-4 flex space-x-4">
+        <div className="absolute bottom-5 right-6 flex space-x-5">
           <a
             href="https://www.instagram.com/make_my_ghar.co.in/"
             target="_blank"
@@ -107,9 +107,9 @@ const WhyUs1 = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="lg:w-2/3 p-8 rounded-2xl flex flex-col items-start justify-start"
+        className="lg:w-2/3 p-6 lg:p-8 rounded-2xl flex flex-col items-start justify-start"
       >
-        <h2 className="text-4xl lg:text-4xl font-normal mb-6">
+        <h2 className="text-4xl lg:text-4xl font-normal mb-8">
           <span className="bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent">
             Customize
           </span>{" "}
@@ -121,20 +121,20 @@ const WhyUs1 = () => {
         
 
         {/* Image Slider */}
-        <div className="relative w-full rounded-xl overflow-hidden mt-2 mb-4">
+        <div className="relative w-full rounded-xl overflow-hidden  mb-5">
           <div ref={sliderRef} className="flex gap-4 flex-nowrap">
             {[...sliderImages, ...sliderImages].map((src, index) => (
               <img
                 key={index}
                 src={src}
                 alt={`Slide ${index}`}
-                className="h-[40vh] w-auto rounded-2xl object-cover"
+                className="h-[42vh] w-auto rounded-2xl object-cover"
               />
             ))}
           </div>
         </div>
 
-        <p className="text-md font-normal mt-2 bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
+        <p className="text-md font-normal  bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
           At Make My Ghar, we bring your dream home to life with precision,
           creativity, and unmatched craftsmanship. Let us transform your space
           into a masterpiece.

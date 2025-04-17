@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed  left-1/2 transform -translate-x-1/2 z-50 w-full pointer-events-none">
-    <nav className="pointer-events-auto mx-auto  mt-4 lg:mt-2 lg:w-[90%] w-[95%] py-2.5 px-6 bg-soft-white shadow-lg shadow-warm-beige/50 rounded-2xl border-t-4 border-gold flex justify-between items-center">
+    <nav className="pointer-events-auto mx-auto  mt-4 lg:mt-2 lg:w-[90%] w-[95%] py-2.5 px-5 bg-soft-white shadow-lg shadow-warm-beige/50 rounded-2xl border-t-4 border-gold flex justify-between items-center">
   
         {/* Logo - Clickable */}
         <Link href="/" passHref legacyBehavior>
@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex space-x-10">
+        <ul className="hidden lg:flex space-x-13">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
@@ -67,13 +67,13 @@ const Navbar = () => {
         {isOpen && (
           <div className="fixed top-0 left-0 w-full h-screen bg-soft-white bg-opacity-95 z-40 overflow-y-auto flex flex-col items-center pt-55 pb-12 space-y-6">
           <button
-              className="absolute top-6 right-6 text-3xl text-dark-brown"
+              className="absolute top-5 right-5 text-3xl text-dark-brown"
               onClick={() => setIsOpen(false)}
             >
               <FaTimes />
             </button>
 
-            <ul className="text-center space-y-4 text-xl font-medium text-dark-brown">
+            <ul className="text-center space-y-5 text-xl font-medium text-dark-brown">
               <li key="home">
                 <Link
                   href="/"
