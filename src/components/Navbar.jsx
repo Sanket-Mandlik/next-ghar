@@ -21,10 +21,14 @@ const Navbar = () => {
   
         {/* Logo - Clickable */}
         <Link href="/" passHref legacyBehavior>
-          <a className="text-xl font-heading font-semibold text-transparent bg-gradient-to-r via-dark-brown from-dark-brown to-dark-brown bg-clip-text">
-            Make My Ghar
-          </a>
-        </Link>
+  <a className="flex items-center space-x-2">
+    <img src="/assets/mmglogo.png" alt="Make My Ghar Logo" className="h-10 mb-1 w-auto" />
+    <span className="text-2xl font-heading font-semibold text-transparent bg-gradient-to-r via-dark-brown from-dark-brown to-dark-brown bg-clip-text">
+      Make My Ghar
+    </span>
+  </a>
+</Link>
+
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-13">

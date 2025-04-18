@@ -186,7 +186,7 @@ const ContactPage = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
             {/* Left Section - Offers Text */}
             <motion.div
-              className="lg:w-1/3 text-white px-4 py-6"
+              className="lg:w-1/3 text-white px-2 lg:px-4 py-6"
               initial={{ x: -100, opacity: 0 }}
               animate={isContactFormInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}

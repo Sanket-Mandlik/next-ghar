@@ -37,7 +37,7 @@ const Process = () => {
 
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 lg:pt-10 lg:px-10 lg:pb-4 p-8 flex flex-col gap-8 relative"
+      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 p-6 lg:p-8 flex flex-col gap-8 relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.png')",
         backgroundSize: "cover",
@@ -47,15 +47,15 @@ const Process = () => {
       {/* Top Bar */}
       <div className="w-full flex justify-between items-start z-10">
         <div className="flex flex-col items-start space-y-1">
-          <p className="text-md text-gold/80">
+          <p className="text-md mb-3 text-gold/80">
             What is the process for doing home interior?
           </p>
-          <h1 className="text-6xl mt-8 lg:mt-0 lg:text-6xl py-3 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
+          <h1 className="text-6xl  lg:text-6xl lg:py-0 pt-20 pb-10 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
             Process - Perfected
           </h1>
         </div>
 
-        <div className="flex flex-col items-end space-y-6 mt-8">
+        <div className="flex-col hidden lg:block items-end space-y-6 mt-8">
           <div className="flex space-x-4">
             <a
               href="https://www.instagram.com/make_my_ghar.co.in/"
@@ -76,7 +76,7 @@ const Process = () => {
       </div>
 
       {/* Steps */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-10 z-10 py-4 lg:px-4">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-10 z-10 mt-5 lg:px-2">
         {[
           {
             number: 1,

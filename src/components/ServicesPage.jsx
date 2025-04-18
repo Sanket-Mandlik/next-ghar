@@ -94,11 +94,11 @@ const ServicesPage = () => {
 
               {/* Text Content */}
               <div className="absolute inset-0 z-20 flex flex-col justify-center text-soft-white px-6 lg:px-0 items-end lg:pr-20">
-                <div className="absolute top-8 left-8 z-30">
+                <div className="absolute lg:top-8 lg:left-8 top-6 left-6 z-30">
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
+                    transition={{ delay: 0.1, duration: 0.5 }}
                     className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-soft-white rounded-full flex items-center justify-center font-normal bg-transparent backdrop-blur-sm text-3xl lg:text-5xl"
                   >
                     {number}
@@ -113,9 +113,9 @@ const ServicesPage = () => {
                 </div>
 
                 {/* Mobile Text */}
-                <div className="flex lg:hidden flex-col absolute bottom-8 left-8 text-left space-y-2 max-w-xs">
-                  <h3 className="text-2xl font-medium">{service.title}</h3>
-                  <p className="text-md">{service.description}</p>
+                <div className="flex lg:hidden flex-col absolute bottom-6 left-6 text-left space-y-2 max-w-xs">
+                  <h3 className="text-3xl font-medium">{service.title}</h3>
+                  <p className="text-lg">{service.description}</p>
                 </div>
               </div>
             </motion.div>

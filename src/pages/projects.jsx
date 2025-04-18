@@ -55,7 +55,7 @@ const Projects = () => {
 
       {/* Call-to-Action Section */}
       <div
-        className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-8  sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-6"
+        className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white py-24 px-6 lg:px-8  sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
         style={{
           backgroundImage: "url('/assets/mesh-994.png')",
           backgroundSize: "cover",
@@ -67,7 +67,7 @@ const Projects = () => {
         <h2 className="text-4xl lg:text-5xl font-medium bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
           Ready to Transform Your Space?
         </h2>
-        <p className="text-sm lg:text-md bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
+        <p className="text-sm lg:text-md bg-gradient-to-br mb-8 from-warm-beige to-gold bg-clip-text text-transparent">
           Let us bring your vision to life with our expert design services.
         </p>
 

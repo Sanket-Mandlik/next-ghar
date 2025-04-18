@@ -3,12 +3,13 @@ import { FaWhatsapp, FaPhone, FaInstagram, FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-2xl  shadow-2xl shadow-warm-beige ">
-      <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-10">
+      <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-6">
         
         {/* Logo & About */}
         <div className="lg:col-span-3 text-center lg:text-left">
-          <h2 className="text-4xl lg:text-5xl mt-15 font-medium">Make My Ghar</h2>
-          <p className="mt-2 text-md">Transforming spaces with elegance and precision.</p>
+        <img src="/assets/mmglogo.png" alt="Make My Ghar Logo" className="h-24 w-auto" />
+          <h2 className="text-4xl lg:text-5xl mt-2 font-medium">Make My Ghar</h2>
+          <p className="mt-3 text-warm-beige font-medium text-md">Transforming spaces with elegance and precision.</p>
         </div>
 
         {/* Grouped Sections */}
@@ -50,8 +51,12 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-center text-sm opacity-80 mt-5 pt-5 w-full lg:w-2/5 mx-auto border-t border-soft-white">
+      <div className="text-center text-sm opacity-80  w-full lg:w-2/5 mx-auto ">
         © {new Date().getFullYear()} Make My Ghar. All Rights Reserved.
+      </div>
+
+      <div className="text-center text-sm opacity-80 mt-3 pt-3 w-full lg:w-2/5 mx-auto border-t border-soft-white">
+      A Project By - Meta Genius 
       </div>
     </footer>
   );

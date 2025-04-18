@@ -143,7 +143,7 @@ const ContactForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="lg:w-1/3  px-4 lg:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2 lg:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+        className="lg:w-1/3  px-4 lg:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2.5  lg:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
       >
         Get Free Consultation
       </button>

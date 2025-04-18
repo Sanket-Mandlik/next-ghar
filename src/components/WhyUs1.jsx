@@ -128,7 +128,7 @@ const WhyUs1 = () => {
                 key={index}
                 src={src}
                 alt={`Slide ${index}`}
-                className="h-[42vh] w-auto rounded-2xl object-cover"
+                className="h-[44vh] w-auto rounded-2xl object-cover"
               />
             ))}
           </div>

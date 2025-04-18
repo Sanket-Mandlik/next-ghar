@@ -9,14 +9,14 @@ export default function ContactIcons() {
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="rounded-full shadow-lg"
+        className="rounded-full shadow-md shadow-warm-beige/50"
       >
         <Link
           href="https://wa.me/9183295478180" // replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 border-2 border-warm-beige rounded-full
-                      bg-gradient-to-tr from-gold via-green-800 to-green-900  shadow-xl text-soft-white"
+                      bg-gradient-to-tr from-gold via-green-800 to-green-900  shadow-2xl shadow-warm-beige/50 text-soft-white"
         >
           {/* WhatsApp SVG */}
           <svg
