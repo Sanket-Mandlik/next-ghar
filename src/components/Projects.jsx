@@ -200,7 +200,7 @@ const Projects = () => {
           </motion.p>
           <Link href="/contactus">
             <motion.button
-              className="mt-4 px-5 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all"
+              className="mt-4 px-5 py-2.5 text-lg lg:text-sm bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg shadow-warm-beige/50 hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all"
               variants={textVariants}
             >
               Get Started Now

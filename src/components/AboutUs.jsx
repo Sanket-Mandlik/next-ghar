@@ -27,7 +27,7 @@ const AboutUs = () => {
 
         {/* Left Section */}
         <div
-          className="lg:col-span-4 p-8 rounded-xl shadow-md text-soft-white relative flex flex-col justify-center items-center"
+          className="lg:col-span-4 p-8 rounded-xl shadow-xl shadow-warm-beige/50 text-soft-white relative flex flex-col justify-center items-center"
           style={{
             backgroundImage: "url('/assets/mesh-994.png')",
             backgroundSize: "cover",
@@ -74,7 +74,7 @@ const AboutUs = () => {
 
         {/* Right Section */}
         <div
-          className="lg:col-span-6 p-6 lg:p-8 rounded-xl shadow-md text-dark-brown"
+          className="lg:col-span-6 p-6 lg:p-8 rounded-xl shadow-md shadow-warm-beige/90 text-dark-brown"
           style={{
             backgroundImage: "url('/assets/mesh-488.png')",
             backgroundSize: "cover",

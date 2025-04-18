@@ -27,7 +27,7 @@ export default function BeforeAfter() {
   }, [isInView, hasStarted])
 
   return (
-    <section className="w-[91vw] lg:w-4/5 bg-warm-beige/30 lg:px-8  px-4 shadow-xl pb-8 pt-16 rounded-2xl mx-auto mt-30">
+    <section className="w-[91vw] lg:w-4/5 bg-warm-beige/30 lg:px-8  px-4 shadow-lg shadow-warm-beige/50 pb-8 pt-16 rounded-2xl mx-auto mt-30">
       <motion.h2 className="text-5xl font-montserrat px-2 lg:px-0  text-medium-brown font-medium mb-5">
         <span className="text-dark-brown text-5xl">Before-After </span>Options
       </motion.h2>
