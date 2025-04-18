@@ -16,7 +16,8 @@ export default function ContactIcons() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 border-2 border-warm-beige rounded-full
-                      bg-gradient-to-tr from-gold via-green-800 to-green-900  shadow-2xl shadow-warm-beige/50 text-soft-white"
+                      bg-gradient-to-tr from-gold via-green-800 to-green-900 shadow-2xl shadow-warm-beige/50 text-soft-white"
+          aria-label="Contact us on WhatsApp"  // Added accessible label
         >
           {/* WhatsApp SVG */}
           <svg

@@ -93,13 +93,15 @@ const Popup = ({ onClose }) => {
           >
             {/* Close button and content here */}
             <motion.button
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
-              onClick={onClose}
-              whileHover={{ rotate: 90 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              &times;
-            </motion.button>
+  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
+  onClick={onClose}
+  whileHover={{ rotate: 90 }}
+  transition={{ type: 'spring', stiffness: 300 }}
+  aria-label="Close"
+>
+  &times;
+</motion.button>
+
 
             {/* Your existing left and right sections */}
             {/* Left Section */}

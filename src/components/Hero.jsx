@@ -115,7 +115,7 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-warm-beige">
+              <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white">
                 Best Interior Design For Your Home In Pune
               </h1>
             </motion.div>
