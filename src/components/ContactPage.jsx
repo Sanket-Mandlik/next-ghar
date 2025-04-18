@@ -67,7 +67,7 @@ const ContactPage = () => {
           ref={contactDetailsRef}
           className="text-white p-4 mb-20 mt-10 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
           style={{
-            backgroundImage: "url('/assets/mesh-994.png')",
+            backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

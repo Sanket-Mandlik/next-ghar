@@ -160,7 +160,7 @@ useEffect(() => {
           }`}
           style={{
             marginTop: index !== 0 && index < 5 ? "-300px" : "0",
-            backgroundImage: index === 5 ? "url('/assets/mesh-994.png')" : "none",
+            backgroundImage: index === 5 ? "url('/assets/mesh-994.webp')" : "none",
           }}
           onMouseEnter={() => (index < 5 ? setHovered(index) : null)}
           onMouseLeave={() => (index < 5 ? setHovered(null) : null)}

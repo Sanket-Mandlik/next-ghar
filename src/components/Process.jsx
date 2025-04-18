@@ -39,7 +39,7 @@ const Process = () => {
     <div
       className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 p-6 lg:p-8 flex flex-col gap-8 relative"
       style={{
-        backgroundImage: "url('/assets/mesh-994.png')",
+        backgroundImage: "url('/assets/mesh-994.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

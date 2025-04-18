@@ -63,7 +63,7 @@ const ServiceHero = () => {
     <div
       className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 flex flex-col lg:flex-row items-center justify-center relative"
       style={{
-        backgroundImage: "url('/assets/mesh-994.png')",
+        backgroundImage: "url('/assets/mesh-994.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

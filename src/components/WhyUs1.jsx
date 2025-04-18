@@ -56,7 +56,7 @@ const WhyUs1 = () => {
     <div
       className="lg:w-4/5 mx-auto mt-10 bg-cover bg-center shadow-xl shadow-warm-beige/50 bg-no-repeat gap-3 flex flex-col lg:flex-row items-center justify-center rounded-2xl"
       style={{
-        backgroundImage: "url('/assets/mesh-994.png')",
+        backgroundImage: "url('/assets/mesh-994.webp')",
       }}
     >
       {/* Left Section */}
