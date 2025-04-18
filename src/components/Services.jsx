@@ -215,22 +215,27 @@ useEffect(() => {
 
   {/* Prev/Next Buttons */}
   <button
-    onClick={() =>
-      setCarouselIndex((carouselIndex - 1 + carouselImages.length) % carouselImages.length)
-    }
-    className="absolute left-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
-  >
-    <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
-  </button>
+  onClick={() =>
+    setCarouselIndex((carouselIndex - 1 + carouselImages.length) % carouselImages.length)
+  }
+  className="absolute left-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
+  aria-label="Previous image"
+  title="Previous image"
+>
+  <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
+</button>
 
-  <button
-    onClick={() =>
-      setCarouselIndex((carouselIndex + 1) % carouselImages.length)
-    }
-    className="absolute right-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
-  >
-    <ChevronRight className="w-6 h-6" strokeWidth={2.5} />
-  </button>
+<button
+  onClick={() =>
+    setCarouselIndex((carouselIndex + 1) % carouselImages.length)
+  }
+  className="absolute right-4 top-1/2 -translate-y-1/2 bg-soft-white bg-opacity-60 text-dark-brown p-1 rounded-full hover:bg-opacity-90 shadow-md transition"
+  aria-label="Next image"
+  title="Next image"
+>
+  <ChevronRight className="w-6 h-6" strokeWidth={2.5} />
+</button>
+
 </div>
 
   </div>

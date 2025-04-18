@@ -133,17 +133,24 @@ const Projects = () => {
 
       {/* Top Carousel */}
       <div className="relative w-full rounded-xl  overflow-hidden">
-        <button
-          onClick={() => scrollTop(1)}
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
-        >
-<ChevronLeft size={28} strokeWidth={2.5} />        </button>
-        <button
-          onClick={() => scrollTop(-1)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white  text-dark-brown p-1 rounded-full shadow"
-        >
+      <button
+  onClick={() => scrollTop(1)}
+  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+  aria-label="Scroll left"
+  title="Scroll left"
+>
+  <ChevronLeft size={28} strokeWidth={2.5} />
+</button>
+
+<button
+  onClick={() => scrollTop(-1)}
+  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+  aria-label="Scroll right"
+  title="Scroll right"
+>
   <ChevronRight size={28} strokeWidth={2.5} />
-  </button>
+</button>
+
 
         <div ref={topRef} className="flex gap-3 flex-nowrap will-change-transform">
           {tripledTop.map((src, i) => (
@@ -162,17 +169,24 @@ const Projects = () => {
       <div className="w-full flex flex-col lg:flex-row items-center gap-4">
         {/* Bottom Carousel */}
         <div className="relative rounded-xl lg:w-3/4 overflow-hidden">
-          <button
-            onClick={() => scrollBottom(1)}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
-          >
-<ChevronLeft size={28} strokeWidth={2.5} />          </button>
-          <button
-            onClick={() => scrollBottom(-1)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
-          >
+        <button
+  onClick={() => scrollBottom(1)}
+  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
+  aria-label="Scroll left"
+  title="Scroll left"
+>
+  <ChevronLeft size={28} strokeWidth={2.5} />
+</button>
+
+<button
+  onClick={() => scrollBottom(-1)}
+  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+  aria-label="Scroll right"
+  title="Scroll right"
+>
   <ChevronRight size={28} strokeWidth={2.5} />
-  </button>
+</button>
+
 
           <div ref={bottomRef} className="flex gap-4 flex-nowrap will-change-transform">
             {tripledBottom.map((src, i) => (

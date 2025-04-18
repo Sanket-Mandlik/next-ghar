@@ -97,20 +97,26 @@ const ServiceHero = () => {
 
         {/* Social Icons */}
         <div className="absolute bottom-5 right-6 flex space-x-4 z-10">
-          <a
-            href="https://www.instagram.com/make_my_ghar.co.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className="text-soft-white text-2xl" />
-          </a>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook className="text-soft-white text-2xl" />
-          </a>
+        <a
+  href="https://www.instagram.com/make_my_ghar.co.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Instagram"
+  title="Instagram"
+>
+  <FaInstagram className="text-soft-white text-2xl" />
+</a>
+
+<a
+  href="https://www.facebook.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Facebook"
+  title="Facebook"
+>
+  <FaFacebook className="text-soft-white text-2xl" />
+</a>
+
         </div>
       </div>
 

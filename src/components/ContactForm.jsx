@@ -83,9 +83,13 @@ const ContactForm = () => {
         <div className="relative w-full">
           {/* Fake Placeholder */}
           {!formData.startDate && !isDateFocused && (
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
-              Select start date
-            </span>
+           <span
+           className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200"
+           aria-hidden="true"
+         >
+           Select start date
+         </span>
+         
           )}
 
           <input

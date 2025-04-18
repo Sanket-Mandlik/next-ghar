@@ -126,22 +126,28 @@ const Navbar = () => {
 
             {/* Social Icons */}
             <div className="flex space-x-6 mt-6">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dark-brown text-2xl hover:text-gold transition"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.instagram.com/make_my_ghar.co.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dark-brown text-2xl hover:text-gold transition"
-              >
-                <FaInstagram />
-              </a>
+            <a
+  href="https://facebook.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Facebook"
+  title="Facebook"
+  className="text-dark-brown text-2xl hover:text-gold transition"
+>
+  <FaFacebookF />
+</a>
+
+<a
+  href="https://www.instagram.com/make_my_ghar.co.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Instagram"
+  title="Instagram"
+  className="text-dark-brown text-2xl hover:text-gold transition"
+>
+  <FaInstagram />
+</a>
+
              
             </div>
           </div>

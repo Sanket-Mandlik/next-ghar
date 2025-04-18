@@ -34,18 +34,37 @@ const Footer = () => {
 
             {/* Call Button & Social Icons in One Row */}
             <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
-              <a 
-                href="tel:+9183295478180" 
-                className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
-              >
-              Call Us  <FaPhone /> 
-              </a>
-              <div className="flex gap-4 mt-2 text-2xl">
-                <a href="https://wa.me/9183295478180" className="hover:text-warm-beige transition"><FaFacebook /></a>
-                <a href="https://www.instagram.com/make_my_ghar.co.in/" className="hover:text-warm-beige transition"><FaInstagram /></a>
-                
-              </div>
-            </div>
+  {/* Call Us Link – already good, but adding aria-label for clarity */}
+  <a 
+    href="tel:+9183295478180" 
+    className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
+    aria-label="Call us at +91 83295478180"
+    title="Call Us"
+  >
+    Call Us <FaPhone /> 
+  </a>
+
+  {/* Social Links with aria-labels */}
+  <div className="flex gap-4 mt-2 text-2xl">
+    <a
+      href="https://wa.me/9183295478180"
+      className="hover:text-warm-beige transition"
+      aria-label="Chat with us on WhatsApp"
+      title="WhatsApp"
+    >
+      <FaFacebook />
+    </a>
+    <a
+      href="https://www.instagram.com/make_my_ghar.co.in/"
+      className="hover:text-warm-beige transition"
+      aria-label="Visit Make My Ghar on Instagram"
+      title="Instagram"
+    >
+      <FaInstagram />
+    </a>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

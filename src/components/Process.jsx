@@ -57,20 +57,26 @@ const Process = () => {
 
         <div className="flex-col hidden lg:block items-end space-y-6 mt-8">
           <div className="flex space-x-4">
-            <a
-              href="https://www.instagram.com/make_my_ghar.co.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="text-soft-white text-2xl" />
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook className="text-soft-white text-2xl" />
-            </a>
+          <a
+  href="https://www.instagram.com/make_my_ghar.co.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Instagram"
+  title="Instagram"
+>
+  <FaInstagram className="text-soft-white text-2xl" />
+</a>
+
+<a
+  href="https://www.facebook.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit Make My Ghar on Facebook"
+  title="Facebook"
+>
+  <FaFacebook className="text-soft-white text-2xl" />
+</a>
+
           </div>
         </div>
       </div>

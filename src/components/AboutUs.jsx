@@ -63,13 +63,26 @@ const AboutUs = () => {
           </div>
 
           <div className="absolute bottom-5 right-6 flex space-x-4">
-            <a href="https://www.instagram.com/make_my_ghar.co.in/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
-            </a>
-            <a href="https://www.facebook.com/company/100958944" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-golden text-2xl hover:text-soft-white transition" />
-            </a>
-          </div>
+  <a
+    href="https://www.instagram.com/make_my_ghar.co.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit Make My Ghar on Instagram"
+    title="Instagram"
+  >
+    <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
+  </a>
+  <a
+    href="https://www.facebook.com/company/100958944"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit Make My Ghar on Facebook"
+    title="Facebook"
+  >
+    <FaFacebook className="text-golden text-2xl hover:text-soft-white transition" />
+  </a>
+</div>
+
         </div>
 
         {/* Right Section */}
