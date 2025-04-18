@@ -24,11 +24,11 @@ const containerVariants = {
 
 // Variants for the child elements
 const childVariants = {
-  hidden: { opacity: 30, y: 10 },
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
@@ -96,10 +96,10 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h2 className="text-5xl lg:text-6xl font-medium  leading-tight text-soft-white">
-                Make My Ghar Pune, 
-                <span className="text-white"> Interior In 45 Days </span>
-              </h2>
+              <h1 className="text-5xl lg:text-6xl font-medium  leading-tight text-soft-white">
+                Best Interior Design For Your Home In Pune
+            
+              </h1>
             </motion.div>
 
             {/* Right Section: Description and Button */}
