@@ -7,6 +7,14 @@ import Footer from '../components/Footer'; // Footer
 import ContactIcons from '../components/ContactIcons'; // ✅ WhatsApp Icon component
 import Head from 'next/head'; // ✅ Import Head
 import Popup from '../components/Popup'; // Popup component
+import { Montserrat } from 'next/font/google'; // ✅ Import Montserrat
+
+// ✅ Initialize Montserrat
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'], // Use only the weights you actually need
+  display: 'swap',
+});
 
 function MyApp({ Component, pageProps }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -49,7 +57,7 @@ function MyApp({ Component, pageProps }) {
           type="image/webp"
         />
       </Head>
-      <div className="w-screen overflow-x-hidden min-h-screen flex flex-col">
+      <div className={`w-screen overflow-x-hidden min-h-screen flex flex-col ${montserrat.className}`}>
         <Navbar />
         <main className="flex-grow w-full">
           <Component {...pageProps} />
