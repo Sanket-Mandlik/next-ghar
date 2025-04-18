@@ -96,10 +96,9 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h1 className="text-5xl lg:text-6xl font-medium font-heading leading-tight text-soft-white">
-                Make My Ghar{" "}
-                <span className="text-soft-white font-medium">Pune, </span>
-                <span className="text-white font-medium">Interior In 45 Days </span>
+              <h1 className="text-5xl lg:text-6xl font-medium  leading-tight text-soft-white">
+                Make My Ghar Pune, 
+                <span className="text-white"> Interior In 45 Days </span>
               </h1>
             </motion.div>
 
@@ -108,9 +107,9 @@ const Hero = () => {
               className="w-full lg:w-2/5 flex flex-col items-start justify-end text-left mt-4 lg:mt-0"
               variants={childVariants}
             >
-              <p className="text-md lg:text-xl font-medium text-light-gray">
+              <h2 className="text-md lg:text-xl font-medium text-light-gray">
                 Make My Ghar transforms your space into a modern home using top-tier materials.
-              </p>
+              </h2>
               <div className="mt-4 lg:mt-6">
                 <Link href="/contactus" passHref>
                   <button
