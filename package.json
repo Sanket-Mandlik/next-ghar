@@ -10,23 +10,15 @@
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@fortawesome/fontawesome-free": "^6.7.2",
-    "@react-three/drei": "^10.0.6",
     "@react-three/fiber": "^9.1.2",
     "framer-motion": "^12.6.3",
-    "gsap": "^3.12.7",
     "lucide-react": "^0.487.0",
     "next": "15.2.4",
     "nodemailer": "^6.10.1",
-    "pixi.js": "^8.9.1",
     "react": "^19.1.0",
     "react-compare-image": "^3.5.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.6",
     "three": "^0.175.0"
   },
   "devDependencies": {

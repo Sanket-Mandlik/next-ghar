@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
+import NextImage from "next/image"; // ✅ Rename import
 
 // Your background images
 const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/project3.webp"];
@@ -32,7 +33,7 @@ const childVariants = {
   },
 };
 
-// Variants for the background image transition
+// Variants for background image transition
 const imageVariants = {
   initial: { opacity: 0, x: 50 },
   animate: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
@@ -50,6 +51,14 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Preload other background images after first render
+  useEffect(() => {
+    images.slice(1).forEach((src) => {
+      const img = new window.Image(); // ✅ Use browser-native Image constructor
+      img.src = src;
+    });
+  }, []);
+
   return (
     <motion.div
       className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
@@ -58,34 +67,44 @@ const Hero = () => {
       animate="visible"
     >
       <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
-        
-        {/* LCP Optimization Image (invisible but counts) */}
+
+        {/* Optimized First Image for LCP */}
         {currentImage === 0 && (
-          <img
-            src={images[0]}
-            alt="Make My Ghar Project"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 pointer-events-none"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-          />
+          <motion.div
+            className="absolute inset-0 w-full h-full z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <NextImage
+  src={images[0]}
+  alt="Make My Ghar Project"
+  fill
+  priority
+  className="object-cover"
+/>
+
+          </motion.div>
         )}
 
-        {/* Animated Background Slideshow */}
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            key={currentImage}
-            variants={imageVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="absolute bg-gradient-to-t lg:rounded-2xl overflow-hidden inset-0"
-            style={{
-              backgroundImage: `url(${images[currentImage]})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+        {/* Animated Background Slideshow (skip if first image is showing) */}
+        <AnimatePresence mode="wait">
+          {currentImage !== 0 && (
+            <motion.div
+              key={currentImage}
+              variants={imageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="absolute bg-gradient-to-t lg:rounded-2xl overflow-hidden inset-0 z-0"
+              style={{
+                backgroundImage: `url(${images[currentImage]})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          )}
         </AnimatePresence>
 
         {/* Bottom Gradient and Content */}
@@ -96,9 +115,8 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h1 className="text-5xl lg:text-6xl font-medium  leading-tight text-warm-beige">
+              <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-warm-beige">
                 Best Interior Design For Your Home In Pune
-            
               </h1>
             </motion.div>
 
