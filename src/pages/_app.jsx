@@ -4,15 +4,16 @@ import { useRouter } from 'next/router';
 import { MyContextProvider } from '../context/MyContext'; // Context provider
 import Navbar from '../components/Navbar'; // Navbar
 import Footer from '../components/Footer'; // Footer
-import Popup from '../components/Popup'; // Popup component
 import ContactIcons from '../components/ContactIcons'; // ✅ WhatsApp Icon component
+import Head from 'next/head'; // ✅ Import Head
+import Popup from '../components/Popup'; // Popup component
 
 function MyApp({ Component, pageProps }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    // Show the popup after 5 seconds
+    // Show the popup after 7 seconds
     const timer = setTimeout(() => {
       setIsPopupVisible(true);
     }, 7000);
@@ -38,6 +39,16 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <MyContextProvider>
+      <Head>
+        {/* ✅ Preload LCP image used in Hero */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/project1.webp"
+          imagesrcset="/assets/project1.webp"
+          type="image/webp"
+        />
+      </Head>
       <div className="w-screen overflow-x-hidden min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow w-full">
