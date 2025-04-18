@@ -18,7 +18,7 @@ const services = [
       </>
     ),
     description: "Interiors thoughtfully crafted to reflect your lifestyle and traditions for a home that truly feels like yours in Pune.",
-    image: "project1.jpeg",
+    image: "project1.webp",
     features: [
       "Custom carpentry",
       "Bedrooms & Kid's rooms",
@@ -34,7 +34,7 @@ const services = [
       </>
     ),
     description: "Smart space utilization that blends comfort, utility, and elegant style.",
-    image: "project3.jpeg",
+    image: "project3.webp",
     features: [
       "Wall Paneling",
       "Wall Painting",
@@ -51,7 +51,7 @@ const services = [
       </>
     ),
     description: "A modular kitchen that complements your lifestyle, functionally and aesthetically.",
-    image: "project2.jpeg",
+    image: "project2.webp",
     features: [
       "Modular Kitchen",
       "Semi-Modular Kitchen",
@@ -66,7 +66,7 @@ const services = [
       </>
     ),
     description: "Productive and attractive commercial interiors that reflect your brand’s personality.",
-    image: "project14.jpeg",
+    image: "project14.webp",
     features: [
       "Office Interior",
       "Shop Makeover",
@@ -81,7 +81,7 @@ const services = [
       </>
     ),
     description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
-    image: "projectGa4.png",
+    image: "projectGa4.webp",
     features: [
       "Sofa Sets & Armchairs",
       "Beds & Kids Furniture",
@@ -98,7 +98,7 @@ const services = [
       </>
     ),
     description: "Contact us today to begin work on your dream home!",
-    image: "mesh-994.png",
+    image: "mesh-994.webp",
     cta: true,
   },
 ];
@@ -118,9 +118,9 @@ useEffect(() => {
 
 
   const carouselImages = [
-    "/assets/project14.jpeg",
-    "/assets/projectGa5.jpg",
-    "/assets/projectGa4.png",
+    "/assets/project14.webp",
+    "/assets/projectGa5.webp",
+    "/assets/projectGa4.webp",
   ];
 
   

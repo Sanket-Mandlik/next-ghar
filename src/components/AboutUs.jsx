@@ -29,7 +29,7 @@ const AboutUs = () => {
         <div
           className="lg:col-span-4 p-8 rounded-xl shadow-xl shadow-warm-beige/50 text-soft-white relative flex flex-col justify-center items-center"
           style={{
-            backgroundImage: "url('/assets/mesh-994.png')",
+            backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
             backgroundPosition: "right center",
           }}
@@ -89,7 +89,7 @@ const AboutUs = () => {
         <div
           className="lg:col-span-6 p-6 lg:p-8 rounded-xl shadow-md shadow-warm-beige/90 text-dark-brown"
           style={{
-            backgroundImage: "url('/assets/mesh-488.png')",
+            backgroundImage: "url('/assets/mesh-488.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}

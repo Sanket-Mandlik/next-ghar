@@ -42,7 +42,7 @@ export default function BeforeAfter() {
       >
         {/* Background before image (only initially visible) */}
         <Image
-          src="/assets/render1.jpg"
+          src="/assets/render1.webp"
           alt="Before"
           fill
           className="object-cover z-0"
@@ -60,7 +60,7 @@ export default function BeforeAfter() {
           className="absolute inset-0 z-10 pointer-events-none"
         >
           <Image
-            src="/assets/after1.png"
+            src="/assets/after1.webp"
             alt="After 1"
             fill
             className="object-cover"
@@ -78,7 +78,7 @@ export default function BeforeAfter() {
           className="absolute inset-0 z-20 pointer-events-none"
         >
           <Image
-            src="/assets/after2.png"
+            src="/assets/after2.webp"
             alt="After 2"
             fill
             className="object-cover"

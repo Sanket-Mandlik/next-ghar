@@ -13,7 +13,7 @@ const ContactUs = () => {
   return (
     <div
       className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-2xl shadow-xl shadow-warm-beige/50 overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url('/assets/mesh-198.png')" }}
+      style={{ backgroundImage: "url('/assets/mesh-198.webp')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-0"></div>

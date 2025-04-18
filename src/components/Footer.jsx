@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* Logo & About */}
         <div className="lg:col-span-3 text-center lg:text-left">
-        <img src="/assets/mmglogo.png" alt="Make My Ghar Logo" className="h-24 w-auto" />
+        <img src="/assets/mmglogo.webp" alt="Make My Ghar Logo" className="h-24 w-auto" />
           <h2 className="text-4xl lg:text-5xl mt-2 font-medium">Make My Ghar</h2>
           <p className="mt-3 text-warm-beige font-medium text-md">Transforming spaces with elegance and precision.</p>
         </div>

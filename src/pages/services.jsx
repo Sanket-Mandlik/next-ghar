@@ -20,7 +20,7 @@ const Services = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
   style={{
-    backgroundImage: "url('/assets/plan (3).jpg')",
+    backgroundImage: "url('/assets/plan (3).webp')",
     backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -79,9 +79,9 @@ const Services = () => {
 </div>
 
 
-<div className="mt-30">
+<div className="mt-30">z[]
         <Process />
-      </div>
+      </div>3333333 e
 
 <SliderText />
     
@@ -89,7 +89,7 @@ const Services = () => {
       <div
   className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-6 lg:px-8  sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
   style={{
-    backgroundImage: "url('/assets/mesh-994.png')",
+    backgroundImage: "url('/assets/mesh-994.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}

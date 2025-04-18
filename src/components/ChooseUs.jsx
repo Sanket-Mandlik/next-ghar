@@ -60,7 +60,7 @@ const ChooseUs = () => {
             <motion.div
               className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md  shadow-warm-beige/50 overflow-hidden"
               style={{
-                backgroundImage: "url('/assets/mesh-476.png')",
+                backgroundImage: "url('/assets/mesh-476.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -87,7 +87,7 @@ const ChooseUs = () => {
             <motion.div
               className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md shadow-warm-beige/50 overflow-hidden"
               style={{
-                backgroundImage: "url('/assets/mesh-488.png')",
+                backgroundImage: "url('/assets/mesh-488.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -115,7 +115,7 @@ const ChooseUs = () => {
             className="relative h-[50vh] lg:h-[41vh] rounded-xl shadow-md shadow-warm-beige/50 overflow-hidden"
             style={{
               backgroundImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.jpeg')",
+                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.webp')",
               backgroundSize: "cover",
               backgroundPosition: "bottom left",
             }}
@@ -145,7 +145,7 @@ const ChooseUs = () => {
           variants={containerVariants}
         >
           <motion.img
-            src="/assets/mesh-969.png"
+            src="/assets/mesh-969.webp"
             alt="Elegant Home Interior"
             className="w-full h-full object-cover"
             variants={containerVariants}

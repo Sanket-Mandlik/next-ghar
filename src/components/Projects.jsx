@@ -4,25 +4,23 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const topImages = [
-  "/assets/after4.jpeg",
-  "/assets/project1.jpeg",
-  "/assets/project2.jpeg",
-  "/assets/project3.jpeg",
-
-
-  "/assets/project12.jpg",
-  "/assets/project14.jpeg",
-  "/assets/project17.png",
-  "/assets/project19.png",
-  "/assets/projectGa5.jpg"
+  "/assets/after4.webp",
+  "/assets/project1.webp",
+  "/assets/project2.webp",
+  "/assets/project3.webp",
+  "/assets/project12.webp",
+  "/assets/project14.webp",
+  "/assets/project17.webp",
+  "/assets/project19.webp",
+  "/assets/projectGa5.webp"
 ];
 
 const bottomImages = [
-  "/assets/plan (1).jpg",
-  "/assets/plan (2).jpg",
-  "/assets/plan (6).jpg",
-  "/assets/plan (7).jpg",
-  "/assets/plan (8).jpg"
+  "/assets/plan (1).webp",
+  "/assets/plan (2).webp",
+  "/assets/plan (6).webp",
+  "/assets/plan (7).webp",
+  "/assets/plan (8).webp"
 ];
 
 
