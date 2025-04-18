@@ -3,31 +3,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import Link from 'next/link';
 
-const images = ["/assets/project1.jpeg", "/assets/project6.jpeg", "/assets/project3.jpeg"];
+const images = ["/assets/project1.jpeg","/assets/project6.jpeg", "/assets/project3.jpeg"];
 
-// Variants
 const containerVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
+  visible: { 
+    opacity: 1, 
+    y: 0, 
     scale: 1,
     transition: {
       duration: 0.6,
       ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.2,
-    },
-  },
+    }
+  }
 };
 
 const childVariants = {
   hidden: { opacity: 0, y: 10 },
-  visible: {
-    opacity: 1,
+  visible: { 
+    opacity: 1, 
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
 };
 
 const imageVariants = {
@@ -41,10 +40,13 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024); // lg breakpoint
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -54,16 +56,15 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const Wrapper = isMobile ? "div" : motion.div;
-
   return (
-    <Wrapper
+    <motion.div
       className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
-      {...(!isMobile && { variants: containerVariants, initial: "hidden", animate: "visible" })}
+      variants={!isMobile ? containerVariants : undefined}
+      initial={!isMobile ? "hidden" : false}
+      animate={!isMobile ? "visible" : false}
     >
       <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
-        {/* Animated Background */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence exitBeforeEnter>
           <motion.div
             key={currentImage}
             variants={imageVariants}
@@ -79,13 +80,13 @@ const Hero = () => {
           />
         </AnimatePresence>
 
-        {/* Text Overlay */}
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-black/0 backdrop-blur-sm py-13 lg:py-10 px-6 lg:px-20">
           <motion.div
             className="relative z-10 flex flex-col lg:flex-row items-start lg:items-end justify-end w-full gap-x-10 lg:gap-x-20"
             variants={childVariants}
+            initial="hidden"
+            animate="visible"
           >
-            {/* Left Text */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
               <h1 className="text-5xl lg:text-6xl font-medium font-heading leading-tight text-soft-white">
                 Make My Ghar{" "}
@@ -94,7 +95,6 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            {/* Right Text + Button */}
             <motion.div className="w-full lg:w-2/5 flex flex-col items-start justify-end text-left mt-4 lg:mt-0" variants={childVariants}>
               <p className="text-md lg:text-xl font-medium text-light-gray">
                 Make My Ghar transforms your space into a modern home using top-tier materials.
@@ -102,7 +102,7 @@ const Hero = () => {
               <div className="mt-4 lg:mt-6">
                 <Link href="/contactus" passHref>
                   <button
-                    className="flex items-center gap-2 bg-gradient-to-b hover:scale-102 from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold shadow-warm-beige/50 text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group"
+                    className="flex items-center gap-2 bg-gradient-to-b hover:scale-102 from-pure-white via-soft-white to-pure-white text-md lg:text-lg font-semibold text-gold px-6 py-3 rounded-xl shadow-xl hover:text-dark-brown transition-all group"
                     aria-label="Start Your Journey"
                   >
                     Start Your Journey
@@ -114,7 +114,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
-    </Wrapper>
+    </motion.div>
   );
 };
 
