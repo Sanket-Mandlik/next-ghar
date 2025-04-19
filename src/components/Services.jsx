@@ -34,7 +34,7 @@ const services = [
       </>
     ),
     description: "Smart space utilization that blends comfort, utility, and elegant style.",
-    image: "project3.webp=",
+    image: "project3.webp",
     features: [
       "Wall Paneling",
       "Wall Painting",
