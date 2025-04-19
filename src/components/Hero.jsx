@@ -5,7 +5,7 @@ import Link from "next/link";
 import NextImage from "next/image"; // ✅ Rename import
 
 // Your background images
-const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/project3.webp"];
+const images = ["/assets/project1.webp",  "/assets/project3.webp"];
 
 // Variants for the outer container
 const containerVariants = {

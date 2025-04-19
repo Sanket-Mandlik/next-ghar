@@ -10,7 +10,6 @@ const topImages = [
   "/assets/project3.webp",
   "/assets/project12.webp",
   "/assets/project14.webp",
-  "/assets/project17.webp",
   "/assets/project19.webp",
   "/assets/projectGa5.webp"
 ];
