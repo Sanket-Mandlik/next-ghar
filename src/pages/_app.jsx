@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import { MyContextProvider } from '../context/MyContext'; // Context provider
 import Navbar from '../components/Navbar'; // Navbar
 import Footer from '../components/Footer'; // Footer
-import ContactIcons from '../components/ContactIcons'; // ✅ WhatsApp Icon component
-import Head from 'next/head'; // ✅ Import Head
+import ContactIcons from '../components/ContactIcons'; // WhatsApp Icon component
+import Head from 'next/head'; // Import Head
 import Popup from '../components/Popup'; // Popup component
-import { Montserrat } from 'next/font/google'; // ✅ Import Montserrat
+import { Montserrat } from 'next/font/google'; // Import Montserrat
 
-// ✅ Initialize Montserrat
+// Initialize Montserrat
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'], // Use only the weights you actually need
@@ -48,7 +48,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <MyContextProvider>
       <Head>
-        {/* ✅ Preload LCP image used in Hero */}
+        {/* Favicon links */}
+        <link rel="icon" href="/assets/favicon.png" />
+        <link rel="shortcut icon" href="/assets/favicon.png" />
+
+        {/* Preload LCP image used in Hero */}
         <link
           rel="preload"
           as="image"
@@ -64,7 +68,7 @@ function MyApp({ Component, pageProps }) {
         </main>
         <Footer />
         {isPopupVisible && <Popup onClose={() => setIsPopupVisible(false)} />}
-        <ContactIcons /> {/* ✅ WhatsApp icon fixed at bottom-right */}
+        <ContactIcons /> {/* WhatsApp icon fixed at bottom-right */}
       </div>
     </MyContextProvider>
   );

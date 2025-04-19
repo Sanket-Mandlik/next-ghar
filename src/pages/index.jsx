@@ -58,7 +58,8 @@ const Home = () => {
         <meta name="twitter:image" content="https://makemyghar.co/og-image.jpg" />
 
         <link rel="canonical" href="https://www.makemyghar.co/" />
-        <link rel="icon" href="/favicon.ico" />
+
+
       </Head>
 
       <Hero />

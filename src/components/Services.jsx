@@ -1,5 +1,6 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 import { CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -182,9 +183,13 @@ useEffect(() => {
     <div className="w-full lg: lg:pl-5 lg:pr-8 lg:w-1/2 flex flex-col justify-center items-start text-left">
       <h3 className="text-5xl text-soft-white font-medium mb-5">{service.title}</h3>
       <p className="text-lg font-medium text-warm-beige mb-8">{service.description}</p>
-      <button className="px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl  transition-all">
-        Get Started Now
-      </button>
+      <Link
+  href="/contactus"
+  aria-label="Get started by contacting us"
+  className="inline-block px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl transition-all"
+>
+  Get Started Now
+</Link>
     </div>
 
     {/* Right Side Carousel */}

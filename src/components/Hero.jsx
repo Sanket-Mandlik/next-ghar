@@ -5,7 +5,7 @@ import Link from "next/link";
 import NextImage from "next/image"; // ✅ Rename import
 
 // Your background images
-const images = ["/assets/project1.webp",  "/assets/project3.webp"];
+const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/project3.webp"];
 
 // Variants for the outer container
 const containerVariants = {
@@ -123,7 +123,7 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h1 className={`text-5xl lg:text-6xl font-medium leading-tight text-soft-white ${isMobile ? 'font-sans' : ''}`}>
+              <h1 className={`text-5xl lg:text-6xl font-medium leading-tight text-soft-white `}>
                 Best Interior Design For Your Home In Pune
               </h1>
             </motion.div>
