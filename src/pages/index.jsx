@@ -1,9 +1,13 @@
+import { useState, useEffect } from "react";
+
+import dynamic from "next/dynamic";
+
 import Head from 'next/head';
 import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
-import Simplify from "../components/Simplify";
+
 import ChooseUs from "../components/ChooseUs";
-import HeroLabel from "../components/HeroLabel";
+
 import Services from "../components/Services";
 import Projects from "../components/Projects";
 import SliderText from "../components/SliderText";
@@ -12,7 +16,25 @@ import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import BeforeAfter from "../components/BeforeAfter";
 
+// Lazy-loaded components (client-only)
+const LazyBeforeAfter = dynamic(() => import("../components/BeforeAfter"), { ssr: false });
+const LazyServices = dynamic(() => import("../components/Services"), { ssr: false });
+const LazyChooseUs = dynamic(() => import("../components/ChooseUs"), { ssr: false });
+const LazyProjects = dynamic(() => import("../components/Projects"), { ssr: false });
+const LazyTestimonials = dynamic(() => import("../components/Testimonials"), { ssr: false });
+
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <>
       <Head>
@@ -22,7 +44,7 @@ const Home = () => {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph */}
         <meta property="og:title" content="Best Interior Design In Pune - Make My Ghar" />
         <meta property="og:description" content="Transform your home with top-rated interior designers in Pune. Book a free consultation today." />
         <meta property="og:url" content="https://www.makemyghar.co/" />
@@ -41,14 +63,14 @@ const Home = () => {
 
       <Hero />
       <AboutUs />
-      <BeforeAfter />
-      <Services />
+      {isMobile ? <LazyBeforeAfter /> : <BeforeAfter />}
+      {isMobile ? <LazyServices /> : <Services />}
       <div className="lg:px-0 px-4">
-        <ChooseUs />
+        {isMobile ? <LazyChooseUs /> : <ChooseUs />}
       </div>
-      <Projects />
+      {isMobile ? <LazyProjects /> : <Projects />}
       <div className="lg:w-4/5 px-4 lg:px-0 lg:mx-auto">
-        <Testimonials />
+        {isMobile ? <LazyTestimonials /> : <Testimonials />}
       </div>
       <SliderText />
       <ContactUs />

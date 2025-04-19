@@ -6,11 +6,19 @@ const Footer = () => {
       <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-6">
 
         {/* Logo & About */}
-        <div className="lg:col-span-3 text-center lg:text-left">
-          <img src="/assets/mmglogo.webp" alt="Make My Ghar Logo" className="h-24 w-auto" />
-          <h2 className="text-4xl lg:text-5xl mt-2 font-medium">Make My Ghar</h2>
-          <p className="mt-3 text-warm-beige font-medium text-md">Transforming spaces with elegance and precision.</p>
-        </div>
+        <div className="text-center lg:text-left lg:col-span-3">
+  <img 
+    src="/assets/mmglogo.webp" 
+    alt="Make My Ghar Logo" 
+    className="h-24 w-auto mx-auto lg:mx-0" 
+  />
+  <h2 className="text-4xl lg:text-5xl mt-2 font-medium lg:text-left">
+    Make My Ghar
+  </h2>
+  <p className="mt-3 text-warm-beige font-medium text-md lg:text-left">
+    Transforming spaces with elegance and precision.
+  </p>
+</div>
 
         {/* Grouped Sections */}
         <div className="lg:col-span-5 flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 text-center lg:text-left">
