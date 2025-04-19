@@ -180,7 +180,7 @@ const ContactPage = () => {
           ref={contactFormRef}
           className="bg-soft-white px-4 lg:px-6 py-8 mt-30 mb-10 rounded-2xl shadow-warm-beige/50 shadow-lg"
           style={{
-            backgroundImage: "url('/assets/mesh-488.png')",
+            backgroundImage: "url('/assets/mesh-488.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

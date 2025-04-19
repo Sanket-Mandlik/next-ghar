@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const plans = Array.from({ length: 8 }, (_, i) => `/assets/plan (${i + 1}).jpg`);
+const plans = Array.from({ length: 8 }, (_, i) => `/assets/plan (${i + 1}).webp`);
 
 const PlanSlider = () => {
   return (

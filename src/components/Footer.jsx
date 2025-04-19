@@ -4,17 +4,17 @@ const Footer = () => {
   return (
     <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-2xl  shadow-2xl shadow-warm-beige ">
       <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-6">
-        
+
         {/* Logo & About */}
         <div className="lg:col-span-3 text-center lg:text-left">
-        <img src="/assets/mmglogo.webp" alt="Make My Ghar Logo" className="h-24 w-auto" />
+          <img src="/assets/mmglogo.webp" alt="Make My Ghar Logo" className="h-24 w-auto" />
           <h2 className="text-4xl lg:text-5xl mt-2 font-medium">Make My Ghar</h2>
           <p className="mt-3 text-warm-beige font-medium text-md">Transforming spaces with elegance and precision.</p>
         </div>
 
         {/* Grouped Sections */}
         <div className="lg:col-span-5 flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 text-center lg:text-left">
-          
+
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
@@ -34,36 +34,36 @@ const Footer = () => {
 
             {/* Call Button & Social Icons in One Row */}
             <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
-  {/* Call Us Link – already good, but adding aria-label for clarity */}
-  <a 
-    href="tel:+9183295478180" 
-    className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
-    aria-label="Call us at +91 83295478180"
-    title="Call Us"
-  >
-    Call Us <FaPhone /> 
-  </a>
+              {/* Call Us Link – already good, but adding aria-label for clarity */}
+              <a
+                href="tel:+9183295478180"
+                className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
+                aria-label="Call us at +91 83295478180"
+                title="Call Us"
+              >
+                Call Us <FaPhone />
+              </a>
 
-  {/* Social Links with aria-labels */}
-  <div className="flex gap-4 mt-2 text-2xl">
-    <a
-      href="https://wa.me/9183295478180"
-      className="hover:text-warm-beige transition"
-      aria-label="Chat with us on WhatsApp"
-      title="WhatsApp"
-    >
-      <FaFacebook />
-    </a>
-    <a
-      href="https://www.instagram.com/make_my_ghar.co.in/"
-      className="hover:text-warm-beige transition"
-      aria-label="Visit Make My Ghar on Instagram"
-      title="Instagram"
-    >
-      <FaInstagram />
-    </a>
-  </div>
-</div>
+              {/* Social Links with aria-labels */}
+              <div className="flex gap-4 mt-2 text-2xl">
+                <a
+                  href="https://wa.me/9183295478180"
+                  className="hover:text-warm-beige transition"
+                  aria-label="Chat with us on WhatsApp"
+                  title="WhatsApp"
+                >
+                  <FaFacebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/make_my_ghar.co.in/"
+                  className="hover:text-warm-beige transition"
+                  aria-label="Visit Make My Ghar on Instagram"
+                  title="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -75,7 +75,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-sm opacity-80 mt-3 pt-3 w-full lg:w-2/5 mx-auto border-t border-soft-white">
-      A Project By - Meta Genius 
+        A Project By - Meta Genius
       </div>
     </footer>
   );

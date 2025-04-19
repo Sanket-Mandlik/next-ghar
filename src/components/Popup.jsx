@@ -119,7 +119,7 @@ const Popup = ({ onClose }) => {
               <div
                 className="px-8 py-10 shadow-lg shadow-warm-beige/50 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70"
                 style={{
-                  backgroundImage: "url('/assets/mesh-626.png')",
+                  backgroundImage: "url('/assets/mesh-626.webp')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}

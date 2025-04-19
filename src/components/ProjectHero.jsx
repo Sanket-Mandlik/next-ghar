@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const categories = {
     "Living": [
-        { image: "/assets/project1.jpeg", title: "Warm Living Room", subtitle: "Baner" },
-        { image: "/assets/project3.jpeg", title: "Cozy Dining & Comfort Seating", subtitle: "K Town, Baner" },
+        { image: "/assets/project1.webp", title: "Warm Living Room", subtitle: "Baner" },
+        { image: "/assets/project3.webp", title: "Cozy Dining & Comfort Seating", subtitle: "K Town, Baner" },
     ],
     "Kitchen": [
-        { image: "/assets/project2.jpeg", title: "Modular Kitchen in Kalyani Nagar", subtitle: "Pune" },
-        { image: "/assets/project2.jpeg", title: "Stylish Kitchen", subtitle: "Wakad" },
+        { image: "/assets/project2.webp", title: "Modular Kitchen in Kalyani Nagar", subtitle: "Pune" },
+        { image: "/assets/project2.webp", title: "Stylish Kitchen", subtitle: "Wakad" },
     ],
     "Bedroom": [
      
-        { image: "/assets/project8.jpeg", title: "Minimalist Bedroom", subtitle: "Pimple Nilakh" },
-        { image: "/assets/project10.jpeg", title: "Luxury Bedroom", subtitle: "SB Road" },
+        { image: "/assets/project8.webp", title: "Minimalist Bedroom", subtitle: "Pimple Nilakh" },
+        { image: "/assets/project10.webp", title: "Luxury Bedroom", subtitle: "SB Road" },
     ],
     "Kid's ": [
-        { image: "/assets/project12.jpg", title: "Colorful Kids Space", subtitle: "Aundh" },
-        { image: "/assets/project19.png", title: "Fun Kids Room", subtitle: "Hadapsar" },
+        { image: "/assets/project12.webp", title: "Colorful Kids Space", subtitle: "Aundh" },
+        { image: "/assets/project19.webp", title: "Fun Kids Room", subtitle: "Hadapsar" },
 
     ],
 };

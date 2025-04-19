@@ -13,7 +13,7 @@ const services = [
       "Wardrobes & kid’s rooms",
       "End-to-end design planning",
     ],
-    image: "/assets/project7.jpeg",
+    image: "/assets/project7.webp",
   },
   {
     title: "Spacious Planning",
@@ -26,21 +26,21 @@ const services = [
       "False ceiling + POP moulding",
       "Safety doors with design",
     ],
-    image: "/assets/project3.jpeg",
+    image: "/assets/project3.webp",
   },
   {
     title: "Modular Kitchen",
     description:
       "Optimized modular kitchen designs with chimney, trolleys & storage, popular in Pune homes.",
     points: ["L-shaped / U-shaped layouts", "Chimney + Hob fitting", "Space-efficient storage"],
-    image: "/assets/project2.jpeg",
+    image: "/assets/project2.webp",
   },
   {
     title: "Commercial Spaces",
     description:
       "Brand-aligned office and retail design for shops, studios & salons in Pune’s commercial zones.",
     points: ["Office design", "Retail makeovers", "Co-working & studios"],
-    image: "/assets/project14.jpeg",
+    image: "/assets/project14.webp",
   },
   {
     title: "Loose Furniture",
@@ -52,16 +52,16 @@ const services = [
       "Dining sets & coffee tables",
       "Custom work desks",
     ],
-    image: "/assets/project1.jpeg",
+    image: "/assets/project1.webp",
   },
 ];
 
 const meshBackgrounds = [
-  "/assets/mesh-207.png",
-  "/assets/mesh-189.png",
-  "/assets/mesh-207.png",
-  "/assets/mesh-292.png",
-  "/assets/mesh-207.png",
+  "/assets/mesh-207.webp",
+  "/assets/mesh-189.webp",
+  "/assets/mesh-207.webp",
+  "/assets/mesh-292.webp",
+  "/assets/mesh-207.webp",
 ];
 
 const ServicesPage = () => {

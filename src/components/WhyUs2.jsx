@@ -28,8 +28,8 @@ const WhyUs2 = () => {
         {/* Comparison Section */}
         <div className="lg:w-2/3 rounded-xl overflow-hidden flex">
           <ReactCompareImage
-            leftImage="/assets/beforelr.jpg"
-            rightImage="/assets/afterlr.png"
+            leftImage="/assets/beforelr.webp"
+            rightImage="/assets/afterlr.webp"
             sliderLineColor="#ffffff"
             leftImageCss={{
               objectFit: "cover",
@@ -54,7 +54,7 @@ const WhyUs2 = () => {
   viewport={{ once: true }}
   className="lg:w-1/3 shadow-lg shadow-medium-brown/50 from-warm-beige to-medium-brown via-warm-beige text-soft-white px-6 py-16 rounded-2xl flex flex-col items-center justify-center"
   style={{
-    backgroundImage: "url('/assets/mesh-969.png')",
+    backgroundImage: "url('/assets/mesh-969.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
