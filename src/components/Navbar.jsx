@@ -73,6 +73,7 @@ const Navbar = () => {
           <button
               className="absolute top-5 right-5 text-3xl text-dark-brown"
               onClick={() => setIsOpen(false)}
+              aria-label="Close"
             >
               <FaTimes />
             </button>
