@@ -61,22 +61,25 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-dark-brown text-2xl focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+  className="lg:hidden text-dark-brown text-2xl focus:outline-none"
+  onClick={() => setIsOpen(!isOpen)}
+  aria-label={isOpen ? "Close menu" : "Open menu"}
+>
+  {isOpen ? <FaTimes /> : <FaBars />}
+</button>
+
 
         {/* Mobile Menu */}
         {isOpen && (
           <div className="fixed top-0 left-0 w-full h-screen bg-soft-white bg-opacity-95 z-40 overflow-y-auto flex flex-col items-center pt-55 pb-12 space-y-6">
-          <button
-              className="absolute top-5 right-5 text-3xl text-dark-brown"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close"
-            >
-              <FaTimes />
-            </button>
+        <button
+  className="absolute top-5 right-5 text-3xl text-dark-brown"
+  onClick={() => setIsOpen(false)}
+  aria-label="Close"
+>
+  <FaTimes />
+</button>
+
 
             <ul className="text-center space-y-5 text-xl font-medium text-dark-brown">
               <li key="home">
