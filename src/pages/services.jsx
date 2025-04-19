@@ -7,112 +7,117 @@ import SliderText from "../components/SliderText";
 import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
 import PlanSlider from "../components/PlanSlider";
-
+import Head from "next/head";
 
 const Services = () => {
   return (
-    <div className="w-full px-4 lg:px-0  lg:w-4/5 mx-auto mt-30 space-y-12">
-      {/* Heading and Subheading */}
-      {/* Heading and Subheading */}
-<motion.div
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
-  style={{
-    backgroundImage: "url('/assets/plan (3).webp')",
-    backgroundSize: "contain",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-  <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
-  <div className="relative z-10">
-    <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
-      What We <span className="text-gold">Offer</span>
-      <span className="text-dark-brown">?</span>
-    </h1>
-    <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-      Reach out to Make My Ghar for any queries or to book a free consultation.
-    </p>
-  </div>
-</motion.div>
+    <>
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>Services Offered by Make My Ghar – Interior Design & Renovation</title>
+        <meta
+          name="description"
+          content="Explore the wide range of interior design and renovation services offered by Make My Ghar. From personalized designs to expert consultations, transform your home with us."
+        />
+        <meta
+          name="keywords"
+          content="interior design pune, home renovation services, best interior designers, home decor, home renovation, personalized interior designs, Make My Ghar, design consultation, modern interiors"
+        />
+      </Head>
 
+      {/* Page Content */}
+      <div className="w-full px-4 lg:px-0 lg:w-4/5 mx-auto mt-30 space-y-12">
+        {/* Heading and Subheading */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
+          style={{
+            backgroundImage: "url('/assets/plan (3).webp')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
+          <div className="relative z-10">
+            <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
+              What We <span className="text-gold">Offer</span>
+              <span className="text-dark-brown">?</span>
+            </h1>
+            <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+              Reach out to Make My Ghar for any queries or to book a free consultation.
+            </p>
+          </div>
+        </motion.div>
 
-      {/* Process Section */}
-      <div className="mt-0">
-        <ServiceHero />
-      </div>
+        {/* Process Section */}
+        <div className="mt-0">
+          <ServiceHero />
+        </div>
 
-      {/* Services Section */}
-  
-
-
+        {/* Services Section */}
         <motion.h2
-  className="text-5xl mt-30  font-montserrat text-medium-brown font-medium mb-6"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-  <motion.span
-    className="text-dark-brown"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-  >
-    Services
-  </motion.span>{" "}
-  We Offer
-</motion.h2>
+          className="text-5xl mt-30 font-montserrat text-medium-brown font-medium mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.span
+            className="text-dark-brown"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
+            Services
+          </motion.span>{" "}
+          We Offer
+        </motion.h2>
 
+        <div className="bg-soft-white">
+          <ServicesPage />
+        </div>
 
-<div className="bg-soft-white ">
-    <ServicesPage />
-</div>
+        <div className="bg-soft-white -mb-15">
+          <PlanSlider />
+        </div>
+        
+        <div className="bg-soft-white">
+          <Testimonials />
+        </div>
 
+        <div className="mt-30">
+          <Process />
+        </div>
 
-   1<div className="bg-soft-white -mb-15 ">
-    <PlanSlider />
-</div>    
-<div className="bg-soft-white ">
-    <Testimonials />
-</div>
+        <SliderText />
 
+        {/* Call-to-Action Section */}
+        <div
+          className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-6 lg:px-8 sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
+          style={{
+            backgroundImage: "url('/assets/mesh-994.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <h2 className="text-4xl lg:text-5xl font-medium bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-sm lg:text-md bg-gradient-to-br from-warm-beige pb-3 to-gold bg-clip-text text-transparent">
+            Let us bring your vision to life with our expert design services.
+          </p>
 
-<div className="mt-30">z[]
-        <Process />
-      </div>3333333 e
-
-<SliderText />
-    
-      {/* Call-to-Action Section */} 
-      <div
-  className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-6 lg:px-8  sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
-  style={{
-    backgroundImage: "url('/assets/mesh-994.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <h2 className="text-4xl lg:text-5xl font-medium bg-gradient-to-br from-warm-beige to-gold bg-clip-text text-transparent">
-    Ready to Transform Your Space?
-  </h2>
-  <p className="text-sm lg:text-md bg-gradient-to-br from-warm-beige pb-3 to-gold bg-clip-text text-transparent">
-    Let us bring your vision to life with our expert design services.
-  </p>
-
-  <Link
-  href="/contactus"
-  className="inline-block bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-xl hover:scale-105 hover:bg-dark-brown hover:text-gold transition-all"
->
-  Get Started Now
-</Link>
-</div>
-
-
-    
+          <Link
+            href="/contactus"
+            className="inline-block bg-gradient-to-br from-warm-beige to-soft-white text-dark-brown px-6 py-3 rounded-xl text-md font-semibold shadow-xl hover:scale-105 hover:bg-dark-brown hover:text-gold transition-all"
+          >
+            Get Started Now
+          </Link>
+        </div>
       </div>
-
+    </>
   );
 };
 
