@@ -2,8 +2,8 @@ import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const fadeInUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay } },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay } },
 });
 
 const StarRating = () => (

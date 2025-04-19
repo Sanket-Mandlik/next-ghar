@@ -15,7 +15,7 @@ const WhyUs2 = () => {
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-6xl"
       >
         <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown mb-8">
@@ -50,7 +50,7 @@ const WhyUs2 = () => {
 <motion.div
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, ease: "easeOut" }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
   viewport={{ once: true }}
   className="lg:w-1/3 shadow-lg shadow-medium-brown/50 from-warm-beige to-medium-brown via-warm-beige text-soft-white px-6 py-16 rounded-2xl flex flex-col items-center justify-center"
   style={{

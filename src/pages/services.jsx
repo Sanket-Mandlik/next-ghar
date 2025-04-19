@@ -31,7 +31,7 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
           style={{
             backgroundImage: "url('/assets/plan (3).webp')",
@@ -62,13 +62,13 @@ const Services = () => {
           className="text-5xl mt-30 font-montserrat text-medium-brown font-medium mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <motion.span
             className="text-dark-brown"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             Services
           </motion.span>{" "}

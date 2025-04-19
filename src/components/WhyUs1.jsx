@@ -63,7 +63,7 @@ const WhyUs1 = () => {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         className="lg:w-1/3 h-full p-6 lg:p-8 rounded-xl text-soft-white relative flex flex-col justify-center items-center"
       >
@@ -111,7 +111,7 @@ const WhyUs1 = () => {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         className="lg:w-2/3 p-6 lg:p-8 rounded-2xl flex flex-col items-start justify-start"
       >

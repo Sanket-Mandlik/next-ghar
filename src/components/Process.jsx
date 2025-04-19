@@ -171,7 +171,7 @@ const Process = () => {
             {index < array.length - 1 && (
               <motion.div
                 transition={{
-                  duration: 1.5,
+                  duration: 0.5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}

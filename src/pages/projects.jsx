@@ -28,7 +28,7 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
           style={{
             backgroundImage: "url('/assets/plan (3).webp')",

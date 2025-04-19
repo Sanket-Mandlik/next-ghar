@@ -79,7 +79,7 @@ const ServiceHero = () => {
           className="text-5xl lg:text-5xl pt-32 pb-36 font-normal pl-3 bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text z-10"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           Interior - New Trends
         </motion.h1>

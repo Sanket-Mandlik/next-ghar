@@ -7,7 +7,7 @@ const AboutUs = () => {
 
   useEffect(() => {
     const end = 120;
-    const duration = 2500;
+    const duration = 1500;
     const startTime = performance.now();
 
     const animateCounter = (currentTime) => {
@@ -41,7 +41,7 @@ const AboutUs = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-6xl sm:text-6xl py-30 pr-2 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3"
           >
@@ -52,7 +52,7 @@ const AboutUs = () => {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="text-3xl lg:text-4xl font-medium text-warm-beige"
             >
               {count}+
@@ -97,7 +97,7 @@ const AboutUs = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-4xl font-medium text-dark-brown"
           >
@@ -119,7 +119,7 @@ const AboutUs = () => {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
             className="mt-5 font-medium sm:text-md text-dark-brown"
           >
@@ -129,7 +129,7 @@ const AboutUs = () => {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
             className="mt-2 font-medium sm:text-md text-dark-brown"
           >
