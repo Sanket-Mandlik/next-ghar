@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.makemyghar.co
+
+# Sitemaps
+Sitemap: https://www.makemyghar.co/sitemap.xml
