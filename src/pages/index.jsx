@@ -1,4 +1,3 @@
-// pages/index.js or app/page.js (depending on your setup)
 import Head from 'next/head';
 import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
@@ -17,8 +16,29 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Best Interior Design In Pune - Make My Ghar</title> {/* Set a title for the Home page */}
+        <title>Best Interior Designers In Pune - Make My Ghar</title>
+        <meta name="description" content="Get stunning interiors with Pune's best interior designers. Make My Ghar offers modular kitchens, elegant living rooms, and custom bedroom designs." />
+        <meta name="keywords" content="interior design Pune, best interior designer in Pune, modular kitchen Pune, home interiors Pune, Make My Ghar, Kid's bedroom design Pune" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Best Interior Design In Pune - Make My Ghar" />
+        <meta property="og:description" content="Transform your home with top-rated interior designers in Pune. Book a free consultation today." />
+        <meta property="og:url" content="https://www.makemyghar.co/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.makemyghar.co/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best Interior Design In Pune - Make My Ghar" />
+        <meta name="twitter:description" content="Book your dream home interiors in Pune. Expertly crafted by Make My Ghar." />
+        <meta name="twitter:image" content="https://makemyghar.co/og-image.jpg" />
+
+        <link rel="canonical" href="https://www.makemyghar.co/" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Hero />
       <AboutUs />
       <BeforeAfter />
