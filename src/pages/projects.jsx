@@ -11,14 +11,15 @@ const Projects = () => {
     <>
       {/* SEO Meta Tags */}
       <Head>
-        <title>Interior Design Projects – Make My Ghar</title>
+        <title>Interior Design Projects – Make My Ghar | Best Interior Designers In Pune</title>
         <meta
           name="description"
           content="Explore a wide range of interior design projects by Make My Ghar. See how our expertise in modern home decor brings your vision to life."
         />
         <meta
           name="keywords"
-          content="interior design projects, home interior decor, home renovation projects, interior design ideas, Make My Ghar, modern interiors, home transformation"
+          content="interior design projects, home interior decor, home renovation projects, interior design ideas, Make My Ghar, modern interiors, home transformation, 2BHK interior design Baner, 3BHK interior design Baner, interior design Aundh, interior design Kothrud, interior design Pune, Baner interior design, Aundh home renovation, Kothrud home decor"
+
         />
       </Head>
 

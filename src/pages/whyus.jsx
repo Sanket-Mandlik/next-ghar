@@ -17,14 +17,14 @@ const WhyUs = () => {
     <>
       {/* SEO Meta Tags */}
       <Head>
-        <title>Why Choose Make My Ghar – Interior Excellence & Personalized Design</title>
+        <title>Why Choose Make My Ghar - Best Interior Designers In Pune</title>
         <meta
           name="description"
-          content="Discover what makes Make My Ghar stand out in the world of interior design. From tailored design plans to transparent pricing and expert consultation—explore why clients trust us to transform their dream spaces."
+          content="Discover what makes Make My Ghar stand out in the world of interior design. From tailored design plans to transparent pricing and expert consultation—explore why clients across Pune trust us to transform their dream spaces."
         />
         <meta
           name="keywords"
-          content="interior design pune, personalized home design, home renovation pune, best interior designers, make my ghar, home decor experts, interior design consultation, modern home interiors, plan my home, design your dream home"
+          content="interior design pune, personalized home design, home renovation pune, best interior designers in pune, make my ghar, home decor experts in pune, interior design consultation in pune, modern home interiors, design my home"
         />
       </Head>
 

@@ -14,14 +14,15 @@ const Services = () => {
     <>
       {/* SEO Meta Tags */}
       <Head>
-        <title>Services Offered by Make My Ghar – Interior Design & Renovation</title>
+        <title>Services Offered by Make My Ghar – Best Interior Designers In Pune</title>
         <meta
           name="description"
           content="Explore the wide range of interior design and renovation services offered by Make My Ghar. From personalized designs to expert consultations, transform your home with us."
         />
         <meta
           name="keywords"
-          content="interior design pune, home renovation services, best interior designers, home decor, home renovation, personalized interior designs, Make My Ghar, design consultation, modern interiors"
+          content="modular kitchen in Pune, modular kitchen designs Pune, kids bedroom design Pune, puja room design Pune, office design Pune, shop renovation Pune, best interior designers in Pune, home decor Pune, modern interiors Pune, design consultation Pune, cost of interior design Pune, process for interior design Pune"
+
         />
       </Head>
 
