@@ -42,6 +42,15 @@ const imageVariants = {
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile viewport for mobile-only overrides
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1023);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Cycle background images every 6 seconds
   useEffect(() => {
@@ -72,19 +81,18 @@ const Hero = () => {
         {currentImage === 0 && (
           <motion.div
             className="absolute inset-0 w-full h-full z-0"
-            initial={{ opacity: 0 }}
+            initial={isMobile ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
             <NextImage
-  src={images[0]}
-  alt="Make My Ghar Project"
-  fill
-  priority
-  className="object-cover"
-/>
-
+              src={images[0]}
+              alt="Make My Ghar Project"
+              fill
+              priority
+              className="object-cover"
+            />
           </motion.div>
         )}
 
@@ -115,7 +123,7 @@ const Hero = () => {
           >
             {/* Left Section: Title */}
             <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
-              <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white">
+              <h1 className={`text-5xl lg:text-6xl font-medium leading-tight text-soft-white `}>
                 Best Interior Design For Your Home In Pune
               </h1>
             </motion.div>
