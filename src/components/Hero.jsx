@@ -25,11 +25,11 @@ const containerVariants = {
 
 // Variants for the child elements
 const childVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 15 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
@@ -70,11 +70,12 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
+    variants={!isMobile ? containerVariants : undefined}
+    initial={!isMobile ? "hidden" : false}
+    animate={!isMobile ? "visible" : false}
+  >
+  
       <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
 
         {/* Optimized First Image for LCP */}
