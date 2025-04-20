@@ -68,32 +68,45 @@ const Home = () => {
         <meta name="twitter:image" content="https://www.makemyghar.co/assets/mmglogo.webp" />
 
         <link rel="canonical" href="https://www.makemyghar.co/" />
+
+        {/* Google Analytics Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L9PDETZMR7');
+      `,
+          }}
+        />
       </Head>
 
       {/* ✅ Add Schema JSON-LD */}
       <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Make My Ghar",
-      "image": "https://www.makemyghar.co/asstes/mmglogo.webp",
-      "url": "https://www.makemyghar.co/",
-      "description": "Top interior designers in Pune offering modular kitchen, bedroom, living room, and office design services.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pune",
-        "addressCountry": "IN"
-      },
- 
-      "sameAs": [
-        "https://www.instagram.com/make_my_ghar.co.in/",
-             "https://www.facebook.com/makemyghar127"
-      ]
-    })
-  }}
-/>
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Make My Ghar",
+            "image": "https://www.makemyghar.co/asstes/mmglogo.webp",
+            "url": "https://www.makemyghar.co/",
+            "description": "Top interior designers in Pune offering modular kitchen, bedroom, living room, and office design services.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Pune",
+              "addressCountry": "IN"
+            },
+
+            "sameAs": [
+              "https://www.instagram.com/make_my_ghar.co.in/",
+              "https://www.facebook.com/makemyghar127"
+            ]
+          })
+        }}
+      />
 
 
       <Hero />

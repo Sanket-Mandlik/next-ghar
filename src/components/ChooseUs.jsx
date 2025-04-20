@@ -62,6 +62,7 @@ const ChooseUs = () => {
               style={{
                 backgroundImage: "url('/assets/mesh-476.webp')",
                 backgroundSize: "cover",
+                alt:"Expert Architect in Pune",
                 backgroundPosition: "center",
               }}
               variants={containerVariants}
@@ -89,6 +90,7 @@ const ChooseUs = () => {
               style={{
                 backgroundImage: "url('/assets/mesh-488.webp')",
                 backgroundSize: "cover",
+                alt:"Premium Home Interior in Pune",
                 backgroundPosition: "center",
               }}
               variants={containerVariants}
@@ -117,6 +119,7 @@ const ChooseUs = () => {
               backgroundImage:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.webp')",
               backgroundSize: "cover",
+              alt:"Best Home Interior in Pune",
               backgroundPosition: "bottom left",
             }}
             variants={containerVariants}

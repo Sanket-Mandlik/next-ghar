@@ -1,5 +1,4 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
 import ContactPage from "../components/ContactPage";
 import FAQ from "@/components/FAQ";
 import Head from "next/head";
@@ -17,6 +16,19 @@ const ContactUs = () => {
         <meta
           name="keywords"
           content="contact Make My Ghar, interior design consultation in pune, contact pune interior designers, home design experts in pune, Make My Ghar contact"
+        />
+
+        {/* Google Analytics Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L9PDETZMR7');
+      `,
+          }}
         />
       </Head>
 

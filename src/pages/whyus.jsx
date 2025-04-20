@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-
 import WhyUs1 from "../components/WhyUs1";
 import WhyUs2 from "../components/WhyUs2";
 import PlanSlider from "../components/PlanSlider";
@@ -25,6 +24,18 @@ const WhyUs = () => {
         <meta
           name="keywords"
           content="interior design pune, personalized home design, home renovation pune, best interior designers in pune, make my ghar, home decor experts in pune, interior design consultation in pune, modern home interiors, design my home"
+        />
+        {/* Google Analytics Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L9PDETZMR7');
+            `,
+          }}
         />
       </Head>
 

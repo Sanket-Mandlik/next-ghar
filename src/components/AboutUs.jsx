@@ -33,6 +33,7 @@ const AboutUs = () => {
             backgroundSize: "cover",
             backgroundPosition: "right center",
           }}
+          aria-label="Background image of a modern design pattern"
         >
           <p className="absolute top-5 left-6 text-sm text-medium-brown">
             Building dreams, one home at a time.
@@ -63,26 +64,31 @@ const AboutUs = () => {
           </div>
 
           <div className="absolute bottom-5 right-6 flex space-x-4">
-  <a
-    href="https://www.instagram.com/make_my_ghar.co.in/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit Make My Ghar on Instagram"
-    title="Instagram"
-  >
-    <FaInstagram className="text-golden text-2xl hover:text-soft-white transition" />
-  </a>
-  <a
-    href="https://www.facebook.com/company/100958944"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit Make My Ghar on Facebook"
-    title="Facebook"
-  >
-    <FaFacebook className="text-golden text-2xl hover:text-soft-white transition" />
-  </a>
-</div>
-
+            <a
+              href="https://www.instagram.com/make_my_ghar.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Make My Ghar on Instagram"
+              title="Instagram"
+            >
+              <FaInstagram
+                className="text-golden text-2xl hover:text-soft-white transition"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/company/100958944"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Make My Ghar on Facebook"
+              title="Facebook"
+            >
+              <FaFacebook
+                className="text-golden text-2xl hover:text-soft-white transition"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Right Section */}
@@ -93,6 +99,7 @@ const AboutUs = () => {
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
+          aria-label="Best architect in Pune"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +108,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="text-4xl font-medium text-dark-brown"
           >
-            Who Are  <span className=" text-medium-brown">We?</span>
+            Who Are <span className="text-medium-brown">We?</span>
           </motion.h2>
 
           <motion.div
@@ -112,7 +119,7 @@ const AboutUs = () => {
             className="bg-gradient-to-br from-dark-brown to-warm-beige rounded-lg text-soft-white text-center py-1.5 px-4 mt-4 w-max"
           >
             <p className="text-md sm:text-md font-medium">
-            Inspiring homes since 2014
+              Inspiring homes since 2014
             </p>
           </motion.div>
 

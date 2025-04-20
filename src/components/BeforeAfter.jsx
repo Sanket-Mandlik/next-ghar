@@ -43,7 +43,7 @@ export default function BeforeAfter() {
         {/* Background before image (only initially visible) */}
         <Image
           src="/assets/render1.webp"
-          alt="Before"
+          alt="Lounge in Hinjewadi Pune"
           fill
           className="object-cover z-0"
           priority
@@ -61,7 +61,7 @@ export default function BeforeAfter() {
         >
           <Image
             src="/assets/after1.webp"
-            alt="After 1"
+            alt="Best Lounge interiors in Pune"
             fill
             className="object-cover"
           />
@@ -79,7 +79,7 @@ export default function BeforeAfter() {
         >
           <Image
             src="/assets/after2.webp"
-            alt="After 2"
+            alt="Best Lounge Space in Pune"
             fill
             className="object-cover"
           />

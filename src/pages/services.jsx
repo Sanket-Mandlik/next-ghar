@@ -22,7 +22,19 @@ const Services = () => {
         <meta
           name="keywords"
           content="modular kitchen in Pune, modular kitchen designs Pune, kids bedroom design Pune, puja room design Pune, office design Pune, shop renovation Pune, best interior designers in Pune, home decor Pune, modern interiors Pune, design consultation Pune, cost of interior design Pune, process for interior design Pune"
+        />
 
+        {/* Google Analytics Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L9PDETZMR7');
+      `,
+          }}
         />
       </Head>
 
@@ -83,7 +95,7 @@ const Services = () => {
         <div className="bg-soft-white -mb-15">
           <PlanSlider />
         </div>
-        
+
         <div className="bg-soft-white">
           <Testimonials />
         </div>

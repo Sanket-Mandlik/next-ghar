@@ -19,7 +19,19 @@ const Projects = () => {
         <meta
           name="keywords"
           content="interior design projects, home interior decor, home renovation projects, interior design ideas, Make My Ghar, modern interiors, home transformation, 2BHK interior design Baner, 3BHK interior design Baner, interior design Aundh, interior design Kothrud, interior design Pune, Baner interior design, Aundh home renovation, Kothrud home decor"
+        />
 
+        {/* Google Analytics Script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L9PDETZMR7');
+      `,
+          }}
         />
       </Head>
 

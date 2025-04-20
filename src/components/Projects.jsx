@@ -4,24 +4,23 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const topImages = [
-  "/assets/after4.webp",
-  "/assets/project1.webp",
-  "/assets/project2.webp",
-  "/assets/project3.webp",
-  "/assets/project12.webp",
-  "/assets/project14.webp",
-  "/assets/project19.webp",
-  "/assets/projectGa5.webp"
+  { src: "/assets/after4.webp", alt: "Modern seating area in Pune" },
+  { src: "/assets/project1.webp", alt: "Confort Seating Facility" },
+  { src: "/assets/project2.webp", alt: "Modular Kitchen" },
+  { src: "/assets/project3.webp", alt: "Comfy living space" },
+  { src: "/assets/project12.webp", alt: "Modern Kids Bedroom in Pune" },
+  { src: "/assets/project14.webp", alt: "Commercial Spaces in Pune" },
+  { src: "/assets/project19.webp", alt: "Cozy Kids Bedroom" },
+  { src: "/assets/projectGa5.webp", alt: "Work From Home in Pune" }
 ];
 
 const bottomImages = [
-  "/assets/plan (1).webp",
-  "/assets/plan (2).webp",
-  "/assets/plan (6).webp",
-  "/assets/plan (7).webp",
-  "/assets/plan (8).webp"
+  { src: "/assets/plan (1).webp", alt: "2D House floor plan with spacious living area" },
+  { src: "/assets/plan (2).webp", alt: "Architectural blueprint of a two-story home" },
+  { src: "/assets/plan (6).webp", alt: "Modern villa layout with landscape design" },
+  { src: "/assets/plan (7).webp", alt: "2D Compact floor plan with functional zones" },
+  { src: "/assets/plan (8).webp", alt: "Detailed architectural drawing with furniture layout" }
 ];
-
 
 const containerVariants = {
   hidden: { opacity: 0.98, y: 2 },
@@ -130,31 +129,30 @@ const Projects = () => {
 
       {/* Top Carousel */}
       <div className="relative w-full rounded-xl  overflow-hidden">
-      <button
-  onClick={() => scrollTop(1)}
-  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
-  aria-label="Scroll left"
-  title="Scroll left"
->
-  <ChevronLeft size={28} strokeWidth={2.5} />
-</button>
+        <button
+          onClick={() => scrollTop(1)}
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+          aria-label="Scroll left"
+          title="Scroll left"
+        >
+          <ChevronLeft size={28} strokeWidth={2.5} />
+        </button>
 
-<button
-  onClick={() => scrollTop(-1)}
-  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
-  aria-label="Scroll right"
-  title="Scroll right"
->
-  <ChevronRight size={28} strokeWidth={2.5} />
-</button>
-
+        <button
+          onClick={() => scrollTop(-1)}
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+          aria-label="Scroll right"
+          title="Scroll right"
+        >
+          <ChevronRight size={28} strokeWidth={2.5} />
+        </button>
 
         <div ref={topRef} className="flex gap-3 flex-nowrap will-change-transform">
-          {tripledTop.map((src, i) => (
+          {tripledTop.map((img, i) => (
             <motion.img
               key={i}
-              src={src}
-              alt={`Project ${i + 1}`}
+              src={img.src}
+              alt={img.alt}
               className="lg:h-[45vh] h-[60vh] w-full rounded-2xl object-cover"
               variants={containerVariants}
             />
@@ -166,31 +164,30 @@ const Projects = () => {
       <div className="w-full flex flex-col lg:flex-row items-center gap-4">
         {/* Bottom Carousel */}
         <div className="relative rounded-xl lg:w-3/4 overflow-hidden">
-        <button
-  onClick={() => scrollBottom(1)}
-  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
-  aria-label="Scroll left"
-  title="Scroll left"
->
-  <ChevronLeft size={28} strokeWidth={2.5} />
-</button>
+          <button
+            onClick={() => scrollBottom(1)}
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
+            aria-label="Scroll left"
+            title="Scroll left"
+          >
+            <ChevronLeft size={28} strokeWidth={2.5} />
+          </button>
 
-<button
-  onClick={() => scrollBottom(-1)}
-  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
-  aria-label="Scroll right"
-  title="Scroll right"
->
-  <ChevronRight size={28} strokeWidth={2.5} />
-</button>
-
+          <button
+            onClick={() => scrollBottom(-1)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+            aria-label="Scroll right"
+            title="Scroll right"
+          >
+            <ChevronRight size={28} strokeWidth={2.5} />
+          </button>
 
           <div ref={bottomRef} className="flex gap-4 flex-nowrap will-change-transform">
-            {tripledBottom.map((src, i) => (
+            {tripledBottom.map((img, i) => (
               <motion.img
                 key={i}
-                src={src}
-                alt={`Project ${i + 1}`}
+                src={img.src}
+                alt={img.alt}
                 className="h-[40vh]  w-auto rounded-xl object-cover"
                 variants={containerVariants}
               />

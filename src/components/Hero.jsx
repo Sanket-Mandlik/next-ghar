@@ -5,7 +5,11 @@ import Link from "next/link";
 import NextImage from "next/image";
 
 // Background images
-const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/project3.webp"];
+const images = [
+  { src: "/assets/project1.webp", alt: "Modern living room in Pune by MakeMyGhar" },
+  { src: "/assets/project6.webp", alt: "Elegant living space in Baner" },
+  { src: "/assets/project3.webp", alt: "Living area in Viman Nagar" },
+];
 
 // Container animation
 const containerVariants = {
@@ -84,8 +88,8 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <NextImage
-              src={images[0]}
-              alt="Make My Ghar Project"
+              src={images[0].src} // Pass only the src property
+              alt={images[0].alt} // Pass the alt property separately
               fill
               priority
               className="object-cover"
@@ -104,10 +108,11 @@ const Hero = () => {
               exit="exit"
               className="absolute bg-gradient-to-t lg:rounded-2xl overflow-hidden inset-0 z-0"
               style={{
-                backgroundImage: `url(${images[currentImage]})`,
+                backgroundImage: `url(${images[currentImage].src})`, // Use the src property here
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
+              aria-label={images[currentImage].alt} // Use the alt property for accessibility
             />
           )}
         </AnimatePresence>
@@ -142,7 +147,7 @@ const Hero = () => {
               variants={childVariants}
             >
               <h2 className="text-md lg:text-xl font-medium text-light-gray">
-              Make My Ghar offers home decor, lifestyle solutions, and modern home interiors in Pune.              </h2>
+                Make My Ghar offers home decor, lifestyle solutions, and modern home interiors in Pune.              </h2>
               <div className="mt-4 lg:mt-6">
                 <Link href="/contactus" passHref>
                   <button
