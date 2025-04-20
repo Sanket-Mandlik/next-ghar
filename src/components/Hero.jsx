@@ -142,8 +142,7 @@ const Hero = () => {
               variants={childVariants}
             >
               <h2 className="text-md lg:text-xl font-medium text-light-gray">
-                Make My Ghar transforms your space into a modern home using top-tier materials.
-              </h2>
+              Make My Ghar offers home decor, lifestyle solutions, and modern home interiors in Pune.              </h2>
               <div className="mt-4 lg:mt-6">
                 <Link href="/contactus" passHref>
                   <button
