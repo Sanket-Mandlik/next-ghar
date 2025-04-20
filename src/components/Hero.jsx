@@ -119,13 +119,13 @@ const Hero = () => {
         {/* Bottom Gradient and Content */}
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-black/0 backdrop-blur-sm py-13 lg:py-10 px-6 lg:px-20">
           <motion.div
-            className="relative z-10 flex flex-col lg:flex-row items-start lg:items-end justify-end w-full gap-x-10 lg:gap-x-20"
+            className="relative z-10 flex flex-col lg:flex-row items-start lg:items-end justify-end w-full gap-x-10 lg:gap-x-15"
             variants={childVariants}
           >
             {/* Left Section: Title */}
-            <motion.div className="w-full lg:w-3/5 lg:pr-20 flex-shrink-0" variants={childVariants}>
+            <motion.div className="w-full lg:w-3/5 lg:pr-15 flex-shrink-0" variants={childVariants}>
               <h1 className={`text-5xl lg:text-6xl font-medium leading-tight text-soft-white `}>
-                Best Interior Design For Your Home In Pune
+              Interior Designers in Pune - Ready In 45 Days 
               </h1>
             </motion.div>
 

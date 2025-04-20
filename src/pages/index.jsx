@@ -36,14 +36,14 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Best Interior Designers In Pune - Make My Ghar</title>
+        <title>Interior Designers In Pune - Make My Ghar</title>
         <meta
           name="description"
           content="Get stunning interiors with Pune's best interior designers. Make My Ghar offers modular kitchens, elegant living rooms, and custom bedroom designs."
         />
         <meta
           name="keywords"
-          content="interior design Pune, best interior designer in Pune, modular kitchen Pune, home interiors Pune, Make My Ghar, Kid's bedroom design Pune"
+          content="interior designers in pune, best interior designer in Pune, modular kitchen Pune, home interiors Pune, Make My Ghar, Kid's bedroom design Pune"
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
