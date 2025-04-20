@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
-import NextImage from "next/image"; // ✅ Rename import
+import NextImage from "next/image";
 
-// Your background images
+// Background images
 const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/project3.webp"];
 
-// Variants for the outer container
+// Container animation
 const containerVariants = {
   hidden: { opacity: 0, y: 10, scale: 0.95 },
   visible: {
@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-// Variants for the child elements
+// Child animations
 const childVariants = {
   hidden: { opacity: 0, y: 15 },
   visible: {
@@ -33,7 +33,7 @@ const childVariants = {
   },
 };
 
-// Variants for background image transition
+// Image transition
 const imageVariants = {
   initial: { opacity: 0, x: 50 },
   animate: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
@@ -44,15 +44,13 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect mobile viewport for mobile-only overrides
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 1023);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Cycle background images every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -60,25 +58,23 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Preload other background images after first render
   useEffect(() => {
     images.slice(1).forEach((src) => {
-      const img = new window.Image(); // ✅ Use browser-native Image constructor
+      const img = new window.Image();
       img.src = src;
     });
   }, []);
 
   return (
     <motion.div
-    className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
-    variants={!isMobile ? containerVariants : undefined}
-    initial={!isMobile ? "hidden" : false}
-    animate={!isMobile ? "visible" : false}
-  >
-  
+      className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
+      variants={containerVariants}
+      initial={!isMobile ? "hidden" : false}
+      animate={!isMobile ? "visible" : false}
+    >
       <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
 
-        {/* Optimized First Image for LCP */}
+        {/* First Image */}
         {currentImage === 0 && (
           <motion.div
             className="absolute inset-0 w-full h-full z-0"
@@ -97,7 +93,7 @@ const Hero = () => {
           </motion.div>
         )}
 
-        {/* Animated Background Slideshow (skip if first image is showing) */}
+        {/* Image Slideshow */}
         <AnimatePresence mode="wait">
           {currentImage !== 0 && (
             <motion.div
@@ -116,20 +112,31 @@ const Hero = () => {
           )}
         </AnimatePresence>
 
-        {/* Bottom Gradient and Content */}
+        {/* Content Block */}
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-black/0 backdrop-blur-sm py-13 lg:py-10 px-6 lg:px-20">
           <motion.div
             className="relative z-10 flex flex-col lg:flex-row items-start lg:items-end justify-end w-full gap-x-10 lg:gap-x-15"
             variants={childVariants}
+            initial={!isMobile ? "hidden" : false}
+            animate={!isMobile ? "visible" : false}
           >
-            {/* Left Section: Title */}
-            <motion.div className="w-full lg:w-3/5 lg:pr-15 flex-shrink-0" variants={childVariants}>
-              <h1 className={`text-5xl lg:text-6xl font-medium leading-tight text-soft-white `}>
-              Interior Designers in Pune - Ready In 45 Days 
-              </h1>
-            </motion.div>
+            {/* Title */}
+            <div className="w-full lg:w-3/5 lg:pr-15 flex-shrink-0">
+              {isMobile ? (
+                <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white">
+                  Interior Designers in Pune - Ready In 45 Days
+                </h1>
+              ) : (
+                <motion.h1
+                  className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white"
+                  variants={childVariants}
+                >
+                  Interior Designers in Pune - Ready In 45 Days
+                </motion.h1>
+              )}
+            </div>
 
-            {/* Right Section: Description and Button */}
+            {/* Subtitle + CTA */}
             <motion.div
               className="w-full lg:w-2/5 flex flex-col items-start justify-end text-left mt-4 lg:mt-0"
               variants={childVariants}
