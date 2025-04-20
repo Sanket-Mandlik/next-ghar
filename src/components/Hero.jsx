@@ -9,7 +9,7 @@ const images = ["/assets/project1.webp", "/assets/project6.webp", "/assets/proje
 
 // Variants for the outer container
 const containerVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 10, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
@@ -29,7 +29,7 @@ const childVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -56,7 +56,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -84,7 +84,7 @@ const Hero = () => {
             initial={isMobile ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
           >
             <NextImage
               src={images[0]}
