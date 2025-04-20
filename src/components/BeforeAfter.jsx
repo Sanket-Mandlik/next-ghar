@@ -21,7 +21,7 @@ export default function BeforeAfter() {
         }
         return prev === 1 ? 2 : 1 // toggle between after1 and after2
       })
-    }, 2500)
+    }, 1500)
 
     return () => clearInterval(interval)
   }, [isInView, hasStarted])
