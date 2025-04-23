@@ -77,7 +77,7 @@ const ContactUs = () => {
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-white text-xl flex-shrink-0" />
                 <a
-                  href="tel:+9183295478180"
+                  href="tel:+918329547818"
                   className="text-lg font-medium bg-gradient-to-r to-warm-beige from-soft-white bg-clip-text text-transparent hover:text-white transition-colors"
                 >
                   +91 8329547818
@@ -88,7 +88,7 @@ const ContactUs = () => {
               <div className="flex items-center gap-3">
                 <FaWhatsapp className="text-white text-2xl flex-shrink-0" />
                 <a
-                  href="https://wa.me/9183295478180"
+                  href="https://wa.me/918329547818"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-medium bg-gradient-to-r to-warm-beige from-soft-white bg-clip-text text-transparent hover:text-white transition-colors"

@@ -44,9 +44,9 @@ const Footer = () => {
             <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
               {/* Call Us Link – already good, but adding aria-label for clarity */}
               <a
-                href="tel:+9183295478180"
+                href="tel:+918329547818"
                 className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
-                aria-label="Call us at +91 83295478180"
+                aria-label="Call us at +91 8329547818"
                 title="Call Us"
               >
                 Call Us <FaPhone />
@@ -55,7 +55,7 @@ const Footer = () => {
               {/* Social Links with aria-labels */}
               <div className="flex gap-4 mt-2 text-2xl">
                 <a
-                  href="https://wa.me/9183295478180"
+                  href="https://wa.me/918329547818"
                   className="hover:text-warm-beige transition"
                   aria-label="Chat with us on WhatsApp"
                   title="WhatsApp"

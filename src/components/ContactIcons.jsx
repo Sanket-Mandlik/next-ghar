@@ -12,7 +12,7 @@ export default function ContactIcons() {
         className="rounded-full shadow-md shadow-warm-beige/50"
       >
         <Link
-          href="https://wa.me/9183295478180" // replace with your WhatsApp number
+          href="https://wa.me/918329547818" // replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 border-2 border-warm-beige rounded-full

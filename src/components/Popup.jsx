@@ -144,7 +144,7 @@ const Popup = ({ onClose }) => {
                 <div className="flex items-center gap-4 mb-4 lg:mb-8">
                   <FaPhoneAlt className="text-xl flex-shrink-0" />
                   <a
-                    href="tel:+9183295478180"
+                    href="tel:+918329547818"
                     className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"
                   >
                     +91 8329547818
@@ -154,7 +154,7 @@ const Popup = ({ onClose }) => {
                 <div className="flex items-center gap-4 lg:mb-10">
                   <FaWhatsapp className="text-2xl flex-shrink-0" />
                   <a
-                    href="https://wa.me/9183295478180"
+                    href="https://wa.me/918329547818"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg font-medium bg-gradient-to-r from-soft-white to-warm-beige bg-clip-text text-transparent hover:text-soft-white transition-colors"
