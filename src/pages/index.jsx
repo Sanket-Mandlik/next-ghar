@@ -101,7 +101,7 @@ const Home = () => {
             },
 
             "sameAs": [
-              "https://www.instagram.com/make_my_ghar.co.in/",
+              "https://www.instagram.com/makemyghar.co/",
               "https://www.facebook.com/makemyghar127"
             ]
           })

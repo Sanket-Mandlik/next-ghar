@@ -63,7 +63,7 @@ const Footer = () => {
                   <FaFacebook />
                 </a>
                 <a
-                  href="https://www.instagram.com/make_my_ghar.co.in/"
+                  href="https://www.instagram.com/makemyghar.co/"
                   className="hover:text-warm-beige transition"
                   aria-label="Visit Make My Ghar on Instagram"
                   title="Instagram"
@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-sm opacity-80 mt-3 pt-3 w-full lg:w-2/5 mx-auto border-t border-soft-white">
-        A Project By - Meta Genius
+        A Project By - <a href="https://www.antrixh.com/" className="hover:text-warm-beige text-white -700 transition pb-2" style={{textDecoration: 'underline'}}>Antrixh AI</a>
       </div>
     </footer>
   );

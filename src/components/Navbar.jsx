@@ -142,7 +142,7 @@ const Navbar = () => {
 </a>
 
 <a
-  href="https://www.instagram.com/make_my_ghar.co.in/"
+  href="https://www.instagram.com/makemyghar.co/"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Visit Make My Ghar on Instagram"

@@ -58,7 +58,7 @@ const Process = () => {
         <div className="flex-col hidden lg:block items-end space-y-6 mt-8">
           <div className="flex space-x-4">
           <a
-  href="https://www.instagram.com/make_my_ghar.co.in/"
+  href="https://www.instagram.com/makemyghar.co/"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Visit Make My Ghar on Instagram"

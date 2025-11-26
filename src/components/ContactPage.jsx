@@ -129,7 +129,7 @@ const ContactPage = () => {
               {/* Social Icons */}
               <div className="flex items-center gap-6 border-2 border-warm-beige/50 rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
   <a
-    href="https://www.instagram.com/make_my_ghar.co.in/"
+    href="https://www.instagram.com/makemyghar.co/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Visit Make My Ghar on Instagram"

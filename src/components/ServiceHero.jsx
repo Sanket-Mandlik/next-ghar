@@ -98,7 +98,7 @@ const ServiceHero = () => {
         {/* Social Icons */}
         <div className="absolute bottom-5 right-6 flex space-x-4 z-10">
         <a
-  href="https://www.instagram.com/make_my_ghar.co.in/"
+  href="https://www.instagram.com/makemyghar.co/"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Visit Make My Ghar on Instagram"
