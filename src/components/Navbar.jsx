@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* CTA Button - Desktop only */}
         <Link
           href="/contactus"
-          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-md font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brownbrown hover:to-dark-brown shadow-lg"
+          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-8 py-4 rounded-xl text-md font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brownbrown hover:to-dark-brown shadow-lg min-h-[48px] flex items-center justify-center"
           >
           Get Started Now
         </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
             <Link
               href="/contactus"
               onClick={() => setIsOpen(false)}
-              className="mt-4 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-xl text-lg font-semibold shadow-lg"
+              className="mt-4 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg min-h-[48px] flex items-center justify-center w-[80%]"
             >
               Get Started Now
             </Link>

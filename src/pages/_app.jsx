@@ -58,9 +58,9 @@ function MyApp({ Component, pageProps }) {
       {/* Google Tag Manager - Global Base Code */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       {/* Microsoft Clarity - Global Base Code */}
-      <Script id="microsoft-clarity" strategy="afterInteractive">
+      <Script id="microsoft-clarity" strategy="lazyOnload">
         {`
           (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

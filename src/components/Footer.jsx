@@ -1,5 +1,6 @@
 import { FaWhatsapp, FaPhone, FaInstagram, FaFacebook } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
   <h2 className="text-4xl lg:text-5xl mt-2 font-medium lg:text-left">
     Make My Ghar
   </h2>
-  <p className="mt-3 text-warm-beige font-medium text-md lg:text-left">
+  <p className="mt-4 text-light-gray font-medium text-md lg:text-left leading-relaxed">
     Transforming spaces with elegance and precision.
   </p>
 </div>
@@ -29,11 +30,11 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 lg:space-y-3 text-sm">
-              <li><a href="#" className="hover:text-warm-beige transition">About Us</a></li>
-              <li><a href="#" className="hover:text-warm-beige transition">Our Services</a></li>
-              <li><a href="#" className="hover:text-warm-beige transition">Projects</a></li>
-              <li><a href="#" className="hover:text-warm-beige transition">Testimonials</a></li>
+            <ul className="space-y-3 lg:space-y-4 text-sm">
+              <li><Link href="/about" className="hover:text-gold transition-colors py-1 inline-block">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-gold transition-colors py-1 inline-block">Our Services</Link></li>
+              <li><Link href="/projects" className="hover:text-gold transition-colors py-1 inline-block">Projects</Link></li>
+              <li><Link href="/contactus" className="hover:text-gold transition-colors py-1 inline-block">Testimonials</Link></li>
             </ul>
           </div>
 
@@ -44,7 +45,7 @@ const Footer = () => {
             <p className="text-sm mt-1 pt-2 mb-4">Email: contact@makemyghar.com</p>
 
             {/* Call Button & Social Icons in One Row */}
-            <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-6">
+            <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-6">
               {/* Call Us Link – already good, but adding aria-label for clarity */}
               <a
                 href="tel:+918329547818"
@@ -56,18 +57,18 @@ const Footer = () => {
               </a>
 
               {/* Social Links with aria-labels */}
-              <div className="flex gap-4 mt-2 text-2xl">
+              <div className="flex gap-4 items-center text-2xl">
                 <a
                   href="https://wa.me/918329547818"
-                  className="hover:text-warm-beige transition"
+                  className="hover:text-gold transition-colors p-2"
                   aria-label="Chat with us on WhatsApp"
                   title="WhatsApp"
                 >
-                  <FaFacebook />
+                  <FaWhatsapp />
                 </a>
                 <a
                   href="https://www.instagram.com/makemyghar.co/"
-                  className="hover:text-warm-beige transition"
+                  className="hover:text-gold transition-colors p-2"
                   aria-label="Visit Make My Ghar on Instagram"
                   title="Instagram"
                 >

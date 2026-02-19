@@ -91,7 +91,7 @@ const ContactForm = () => {
           {/* Fake Placeholder */}
           {!formData.startDate && !isDateFocused && (
             <span
-              className="absolute left-0 top-[38px] text-black pointer-events-none transition-opacity duration-200"
+              className="absolute left-0 bottom-[10px] text-black pointer-events-none transition-opacity duration-200"
               aria-hidden="true"
             >
               Select start date
@@ -106,8 +106,7 @@ const ContactForm = () => {
             onChange={handleChange}
             onFocus={() => setIsDateFocused(true)}
             onBlur={() => setIsDateFocused(false)}
-            className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${formData.startDate || isDateFocused ? "text-black" : "text-transparent"
-              }`}
+            className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent text-black"
             required
           />
         </div>
@@ -117,6 +116,7 @@ const ContactForm = () => {
           <select
             id="propertyType"
             name="propertyType"
+            aria-label="Select Property Type"
             value={formData.propertyType}
             onChange={handleChange}
             className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
@@ -141,6 +141,7 @@ const ContactForm = () => {
         <select
           id="interiorBudget"
           name="interiorBudget"
+          aria-label="Select Interior Budget"
           value={formData.interiorBudget}
           onChange={handleChange}
           className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
@@ -158,7 +159,7 @@ const ContactForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="lg:w-1/3  px-4 lg:px-6 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-2.5  lg:py-3 rounded-xl font-semibold hover:opacity-90 transition-all"
+        className="lg:w-1/3 px-8 lg:px-10 bg-soft-white shadow-xl shadow-warm-beige/50 bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-soft-white py-4 lg:py-4.5 rounded-xl font-semibold hover:opacity-90 transition-all min-h-[48px]"
       >
         Get Free Consultation
       </button>

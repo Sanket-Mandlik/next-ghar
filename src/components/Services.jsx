@@ -186,7 +186,7 @@ const Services = () => {
                     <Link
                       href="/contactus"
                       aria-label="Get started by contacting us"
-                      className="inline-block px-8 py-3 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl transition-all"
+                      className="inline-block px-10 py-4 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl transition-all min-h-[48px] text-center"
                     >
                       Get Started Now
                     </Link>
