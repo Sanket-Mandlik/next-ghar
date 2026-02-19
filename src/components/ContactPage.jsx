@@ -38,29 +38,29 @@ const ContactPage = () => {
     <div className="bg-soft-white lg:w-4/5 mx-auto min-h-screen">
       <div className="mx-auto px-4 lg:px-0 mt-30 2xl">
         {/* Contact Us Heading */}
-          <motion.div
-         initial={{ opacity: 0, y: -20 }}
-         animate={{ opacity: 1, y: 0 }}
-         transition={{ duration: 0.8, ease: "easeOut" }}
-         className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
-         style={{
-           backgroundImage: "url('/assets/plan (5).jpg')",
-           backgroundSize: "contain",
-           backgroundPosition: "center",
-           backgroundRepeat: "no-repeat",
-         }}
-       >
-         <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
-         <div className="relative z-10">
-           <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
-             Contact - <span className="text-gold">Make My Ghar </span>
-             <span className="text-dark-brown">!</span>
-           </h1>
-           <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
-             Reach out to Make My Ghar for any queries or to book a free consultation.
-           </p>
-         </div>
-       </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
+          style={{
+            backgroundImage: "url('/assets/plan (5).jpg')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-soft-white/70 via-soft-white/90 to-soft-white/70 "></div>
+          <div className="relative z-10">
+            <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-dark-brown ">
+              Contact - <span className="text-gold">Make My Ghar </span>
+              <span className="text-dark-brown">!</span>
+            </h1>
+            <p className="text-lg font-medium leading-relaxed mb-10 bg-gradient-to-r from-dark-brown to-gold bg-clip-text text-transparent mt-4">
+              Reach out to Make My Ghar for any queries or to book a free consultation.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Contact Details Section */}
         <motion.div
@@ -128,28 +128,28 @@ const ContactPage = () => {
 
               {/* Social Icons */}
               <div className="flex items-center gap-6 border-2 border-warm-beige/50 rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
-  <a
-    href="https://www.instagram.com/makemyghar.co/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit Make My Ghar on Instagram"
-    title="Instagram"
-    className="text-md text-white hover:text-soft-white transition-colors"
-  >
-    <FaInstagram className="text-2xl" />
-  </a>
+                <a
+                  href="https://www.instagram.com/makemyghar.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Make My Ghar on Instagram"
+                  title="Instagram"
+                  className="text-md text-white hover:text-soft-white transition-colors"
+                >
+                  <FaInstagram className="text-2xl" />
+                </a>
 
-  <a
-    href="https://www.facebook.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Visit Make My Ghar on Facebook"
-    title="Facebook"
-    className="text-md text-white hover:text-soft-white transition-colors"
-  >
-    <FaFacebook className="text-2xl" />
-  </a>
-</div>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Make My Ghar on Facebook"
+                  title="Facebook"
+                  className="text-md text-white hover:text-soft-white transition-colors"
+                >
+                  <FaFacebook className="text-2xl" />
+                </a>
+              </div>
 
             </motion.div>
 
