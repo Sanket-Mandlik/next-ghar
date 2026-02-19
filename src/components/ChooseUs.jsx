@@ -62,7 +62,7 @@ const ChooseUs = () => {
               style={{
                 backgroundImage: "url('/assets/mesh-476.webp')",
                 backgroundSize: "cover",
-                alt:"Expert Architect in Pune",
+                alt: "Expert Architect in Pune",
                 backgroundPosition: "center",
               }}
               variants={containerVariants}
@@ -79,7 +79,7 @@ const ChooseUs = () => {
                   className="text-md lg:text-sm text-medium-brown mt-2"
                   variants={textVariants}
                 >
-                   Best interiors in Pune blend style and practicality to create elegant, functional spaces tailored to your lifestyle.
+                  Best interiors in Pune blend style and practicality to create elegant, functional spaces tailored to your lifestyle.
                 </motion.p>
               </div>
             </motion.div>
@@ -90,7 +90,7 @@ const ChooseUs = () => {
               style={{
                 backgroundImage: "url('/assets/mesh-488.webp')",
                 backgroundSize: "cover",
-                alt:"Premium Home Interior in Pune",
+                alt: "Premium Home Interior in Pune",
                 backgroundPosition: "center",
               }}
               variants={containerVariants}
@@ -119,7 +119,7 @@ const ChooseUs = () => {
               backgroundImage:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.webp')",
               backgroundSize: "cover",
-              alt:"Best Home Interior in Pune",
+              alt: "Best Home Interior in Pune",
               backgroundPosition: "bottom left",
             }}
             variants={containerVariants}
