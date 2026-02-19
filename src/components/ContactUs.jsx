@@ -36,15 +36,15 @@ const ContactUs = () => {
               Book A Free Design Consultation
             </p>
 
-            
+
             <MotionLink
-  href="/contactus"
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.95 }}
-  className="mt-8 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
->
-  Contact Us Now
-</MotionLink>
+              href="/contactus"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
+            >
+              Contact Us Now
+            </MotionLink>
           </motion.div>
 
           {/* Right Section - Contact Info */}
@@ -59,7 +59,7 @@ const ContactUs = () => {
                 <p className="text-lg bg-gradient-to-r from-warm-beige to-soft-white bg-clip-text text-transparent leading-relaxed">
                   72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004{" "}
                   <br />
-                                    <a
+                  <a
                     href="https://www.google.com/maps/place/Manas+bunglow/@18.5115354,73.8269061,16z/data=!4m10!1m2!2m1!1smanas+bunglow!3m6!1s0x3bc2bf19794aaa1b:0xf6ba7af397580291!8m2!3d18.5111558!4d73.8281243!15sCg1tYW5hcyBidW5nbG93kgESYXBhcnRtZW50X2J1aWxkaW5n4AEA!16s%2Fg%2F11ryhfk9vn!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
