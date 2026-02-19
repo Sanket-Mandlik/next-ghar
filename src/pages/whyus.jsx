@@ -2,14 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import WhyUs1 from "../components/WhyUs1";
-import WhyUs2 from "../components/WhyUs2";
-import PlanSlider from "../components/PlanSlider";
 
-// Dynamically import ChooseUs with SSR disabled
-const ChooseUs = dynamic(() => import("../components/ChooseUs"), {
-  ssr: false,
-});
+const WhyUs1 = dynamic(() => import("../components/WhyUs1"));
+const WhyUs2 = dynamic(() => import("../components/WhyUs2"));
+const PlanSlider = dynamic(() => import("../components/PlanSlider"));
+const ChooseUs = dynamic(() => import("../components/ChooseUs"));
 
 const WhyUs = () => {
   return (

@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const topImages = [
@@ -55,6 +56,7 @@ const useInfiniteScroll = (ref, speed) => {
     if (!ref.current) return;
 
     const step = () => {
+      if (!ref.current) return;
       if (!isPaused.current) {
         currentX.current -= speed;
         const totalWidth = ref.current.scrollWidth / 3;
@@ -149,13 +151,16 @@ const Projects = () => {
 
         <div ref={topRef} className="flex gap-3 flex-nowrap will-change-transform">
           {tripledTop.map((img, i) => (
-            <motion.img
-              key={i}
-              src={img.src}
-              alt={img.alt}
-              className="lg:h-[45vh] h-[60vh] w-full rounded-2xl object-cover"
-              variants={containerVariants}
-            />
+            <div key={i} className="flex-shrink-0 lg:h-[45vh] h-[60vh]">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={800}
+                height={600}
+                className="lg:h-[45vh] h-[60vh] w-auto rounded-2xl object-cover"
+                priority={i < 3}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -184,13 +189,15 @@ const Projects = () => {
 
           <div ref={bottomRef} className="flex gap-4 flex-nowrap will-change-transform">
             {tripledBottom.map((img, i) => (
-              <motion.img
-                key={i}
-                src={img.src}
-                alt={img.alt}
-                className="h-[40vh]  w-auto rounded-xl object-cover"
-                variants={containerVariants}
-              />
+              <div key={i} className="flex-shrink-0 h-[40vh]">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={500}
+                  height={400}
+                  className="h-[40vh] w-auto rounded-xl object-cover"
+                />
+              </div>
             ))}
           </div>
         </div>

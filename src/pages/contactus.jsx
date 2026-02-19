@@ -1,7 +1,9 @@
 import React from "react";
-import ContactPage from "../components/ContactPage";
-import FAQ from "@/components/FAQ";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+
+const ContactPage = dynamic(() => import("../components/ContactPage"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
 
 const ContactUs = () => {
   return (

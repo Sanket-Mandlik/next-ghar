@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -22,7 +23,7 @@ const Navbar = () => {
         {/* Logo - Clickable */}
         <Link href="/" passHref legacyBehavior>
   <a className="flex items-center space-x-2">
-    <img src="/assets/mmglogo.webp" alt="Make My Ghar Logo" className="h-10 mb-1 w-auto" />
+    <Image src="/assets/mmglogo.webp" alt="Make My Ghar Logo" width={80} height={40} className="h-10 mb-1 w-auto" priority />
     <span className="text-2xl font-heading font-semibold text-transparent bg-gradient-to-r via-dark-brown from-dark-brown to-dark-brown bg-clip-text">
       Make My Ghar
     </span>

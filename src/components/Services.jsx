@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -204,12 +205,14 @@ const Services = () => {
                         {carouselImages.map((src, idx) => (
                           <div
                             key={idx}
-                            className="flex-shrink-0 w-full h-full"
+                            className="relative flex-shrink-0 w-full h-full"
                           >
-                            <img
+                            <Image
                               src={src}
                               alt={`Carousel image ${idx + 1} showcasing our services`}
-                              className="w-full h-full object-cover rounded-2xl"
+                              fill
+                              className="object-cover rounded-2xl"
+                              sizes="50vw"
                             />
                           </div>
                         ))}
@@ -271,11 +274,15 @@ const Services = () => {
 
             {/* Image */}
             {service.image && index !== 5 && (
-              <img
-                src={`/assets/${service.image}`}
-                alt={service.alt}
-                className="mt-4 lg:-mt-20 lg:ml-6 w-full lg:w-1/2 h-80 lg:h-[480px] object-cover rounded-2xl"
-              />
+              <div className="relative mt-4 lg:-mt-20 lg:ml-6 w-full lg:w-1/2 h-80 lg:h-[480px]">
+                <Image
+                  src={`/assets/${service.image}`}
+                  alt={service.alt}
+                  fill
+                  className="object-cover rounded-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             )}
           </motion.div>
         ))}

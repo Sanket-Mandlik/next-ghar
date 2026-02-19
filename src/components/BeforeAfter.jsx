@@ -46,7 +46,6 @@ export default function BeforeAfter() {
           alt="Lounge in Hinjewadi Pune"
           fill
           className="object-cover z-0"
-          priority
         />
 
         {/* After 1 layer */}

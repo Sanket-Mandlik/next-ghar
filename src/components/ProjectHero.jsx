@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Image from "next/image";
+
 const categories = {
     "Living": [
         { image: "/assets/project1.webp", title: "Warm Living Room", subtitle: "Baner" },
@@ -57,12 +59,19 @@ const ProjectsHero = () => {
     {currentProjects.map((project, index) => (
         <motion.div
             key={project.image}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${project.image})` }}
+            className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentImage ? 1 : 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-        />
+        >
+            <Image 
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+                priority={index === 0}
+            />
+        </motion.div>
     ))}
 </div>
 

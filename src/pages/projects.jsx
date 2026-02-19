@@ -1,10 +1,12 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import SliderText from "../components/SliderText";
 import ProjectHero from "../components/ProjectHero";
-import ProjectsShowcase from "../components/ProjectsShowcase";
 import Head from "next/head";
+
+const SliderText = dynamic(() => import("../components/SliderText"));
+const ProjectsShowcase = dynamic(() => import("../components/ProjectsShowcase"));
 
 const Projects = () => {
   return (

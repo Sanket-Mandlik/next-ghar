@@ -1,4 +1,5 @@
 import { FaWhatsapp, FaPhone, FaInstagram, FaFacebook } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -7,9 +8,11 @@ const Footer = () => {
 
         {/* Logo & About */}
         <div className="text-center lg:text-left lg:col-span-3">
-  <img 
+  <Image 
     src="/assets/mmglogo.webp" 
     alt="Make My Ghar Logo" 
+    width={200}
+    height={96}
     className="h-24 w-auto mx-auto lg:mx-0" 
   />
   <h2 className="text-4xl lg:text-5xl mt-2 font-medium lg:text-left">

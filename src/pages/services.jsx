@@ -1,13 +1,16 @@
 import React from "react";
-import Process from "../components/Process";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import ServicesPage from "../components/ServicesPage";
-import SliderText from "../components/SliderText";
-import Testimonials from "../components/Testimonials";
 import ServiceHero from "../components/ServiceHero";
-import PlanSlider from "../components/PlanSlider";
 import Head from "next/head";
+
+// Code-split below-the-fold components
+const ServicesPage = dynamic(() => import("../components/ServicesPage"));
+const PlanSlider = dynamic(() => import("../components/PlanSlider"));
+const Testimonials = dynamic(() => import("../components/Testimonials"));
+const Process = dynamic(() => import("../components/Process"));
+const SliderText = dynamic(() => import("../components/SliderText"));
 
 const Services = () => {
   return (

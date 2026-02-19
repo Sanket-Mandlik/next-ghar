@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const WhyUs1 = () => {
@@ -130,11 +131,14 @@ const WhyUs1 = () => {
         <div className="relative w-full rounded-xl overflow-hidden  mb-5">
           <div ref={sliderRef} className="flex gap-4 flex-nowrap">
             {[...sliderImages, ...sliderImages].map((src, index) => (
-              <img
+              <Image
                 key={index}
                 src={src}
                 alt={`Slide ${index}`}
+                width={600}
+                height={400}
                 className="h-[44vh] w-auto rounded-2xl object-cover"
+                sizes="(max-width: 1024px) 80vw, 40vw"
               />
             ))}
           </div>

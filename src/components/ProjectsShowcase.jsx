@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const ProjectsShowcase = () => {
   const [currentImage, setCurrentImage] = useState(null);
@@ -79,13 +80,15 @@ const ProjectsShowcase = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="cursor-pointer group transform transition duration-300 hover:scale-105 rounded-2xl overflow-hidden"
+              className="relative cursor-pointer group transform transition duration-300 hover:scale-105 rounded-2xl overflow-hidden h-[40vh]"
               onClick={() => openFullScreen(project.image)}
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full lg:w-[26vw] lg:h-[40vh] object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
+                fill
+                className="object-cover rounded-2xl group-hover:shadow-[0_0_8px_3px_rgba(139,69,19,0.8)] transition-shadow duration-300"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           ))}
@@ -114,11 +117,15 @@ const ProjectsShowcase = () => {
           >
             ◀
           </button>
-          <img
-            src={currentImage}
-            alt="Fullscreen"
-            className="max-w-[90%] max-h-[90%] rounded-2xl transition-opacity duration-300"
-          />
+          <div className="relative w-[90vw] h-[80vh]">
+            <Image
+              src={currentImage}
+              alt="Fullscreen"
+              fill
+              className="object-contain rounded-2xl transition-opacity duration-300"
+              sizes="90vw"
+            />
+          </div>
           <button
             className="hidden md:block absolute right-6 text-white text-4xl"
             onClick={nextImage}

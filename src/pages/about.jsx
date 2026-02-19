@@ -1,5 +1,7 @@
-import ContactPage from "../components/ContactPage";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+
+const ContactPage = dynamic(() => import("../components/ContactPage"));
 
 const AboutUs = () => {
   return (

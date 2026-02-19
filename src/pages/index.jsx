@@ -1,38 +1,20 @@
-import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Script from "next/script"; // Add this import
 
 import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
-import ChooseUs from "../components/ChooseUs";
-import Services from "../components/Services";
-import Projects from "../components/Projects";
 import SliderText from "../components/SliderText";
 import ContactUs from "../components/ContactUs";
-import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
-import BeforeAfter from "../components/BeforeAfter";
 
-// Lazy-loaded components (client-only)
-const LazyBeforeAfter = dynamic(() => import("../components/BeforeAfter"), { ssr: false });
-const LazyServices = dynamic(() => import("../components/Services"), { ssr: false });
-const LazyChooseUs = dynamic(() => import("../components/ChooseUs"), { ssr: false });
-const LazyProjects = dynamic(() => import("../components/Projects"), { ssr: false });
-const LazyTestimonials = dynamic(() => import("../components/Testimonials"), { ssr: false });
+// Code-split below-the-fold components (SSR enabled for SEO)
+const BeforeAfter = dynamic(() => import("../components/BeforeAfter"));
+const Services = dynamic(() => import("../components/Services"));
+const ChooseUs = dynamic(() => import("../components/ChooseUs"));
+const Projects = dynamic(() => import("../components/Projects"));
+const Testimonials = dynamic(() => import("../components/Testimonials"));
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   return (
     <>
       <Head>
@@ -91,7 +73,7 @@ const Home = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Make My Ghar",
-            "image": "https://www.makemyghar.co/asstes/mmglogo.webp",
+            "image": "https://www.makemyghar.co/assets/mmglogo.webp",
             "url": "https://www.makemyghar.co/",
             "description": "Top interior designers in Pune offering modular kitchen, bedroom, living room, and office design services.",
             "address": {
@@ -108,15 +90,14 @@ const Home = () => {
         }}
       />
 
-
       <Hero />
       <AboutUs />
-      {isMobile ? <LazyBeforeAfter /> : <BeforeAfter />}
-      {isMobile ? <LazyServices /> : <Services />}
-      <div className="lg:px-0 px-4">{isMobile ? <LazyChooseUs /> : <ChooseUs />}</div>
-      {isMobile ? <LazyProjects /> : <Projects />}
+      <BeforeAfter />
+      <Services />
+      <div className="lg:px-0 px-4"><ChooseUs /></div>
+      <Projects />
       <div className="lg:w-4/5 px-4 lg:px-0 lg:mx-auto">
-        {isMobile ? <LazyTestimonials /> : <Testimonials />}
+        <Testimonials />
       </div>
       <SliderText />
       <ContactUs />
@@ -126,3 +107,4 @@ const Home = () => {
 };
 
 export default Home;
+

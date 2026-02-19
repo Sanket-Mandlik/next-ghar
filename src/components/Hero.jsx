@@ -62,12 +62,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    images.slice(1).forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-    });
-  }, []);
+
 
   return (
     <motion.div
@@ -92,6 +87,7 @@ const Hero = () => {
               alt={images[0].alt} // Pass the alt property separately
               fill
               priority
+              unoptimized
               className="object-cover"
             />
           </motion.div>
@@ -106,14 +102,17 @@ const Hero = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="absolute bg-gradient-to-t lg:rounded-2xl overflow-hidden inset-0 z-0"
-              style={{
-                backgroundImage: `url(${images[currentImage].src})`, // Use the src property here
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              aria-label={images[currentImage].alt} // Use the alt property for accessibility
-            />
+              className="absolute lg:rounded-2xl overflow-hidden inset-0 z-0"
+            >
+              <NextImage
+                src={images[currentImage].src}
+                alt={images[currentImage].alt}
+                fill
+                unoptimized
+                className="object-cover"
+                sizes="100vw"
+              />
+            </motion.div>
           )}
         </AnimatePresence>
 
@@ -128,12 +127,12 @@ const Hero = () => {
             {/* Title */}
             <div className="w-full lg:w-3/5 lg:pr-15 flex-shrink-0">
               {isMobile ? (
-                <h1 className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white">
+                <h1 className="text-5xl xl:text-6xl font-medium leading-tight text-soft-white">
                   Interior Designers in Pune - Ready In 45 Days
                 </h1>
               ) : (
                 <motion.h1
-                  className="text-5xl lg:text-6xl font-medium leading-tight text-soft-white"
+                  className="text-5xl xl:text-6xl font-medium leading-tight text-soft-white"
                   variants={childVariants}
                 >
                   Interior Designers in Pune - Ready In 45 Days
