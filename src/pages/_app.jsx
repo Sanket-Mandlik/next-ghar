@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'; // Navbar
 import Footer from '../components/Footer'; // Footer
 import ContactIcons from '../components/ContactIcons'; // WhatsApp Icon component
 import Head from 'next/head'; // Import Head
+import Script from 'next/script'; // Import Script
 import Popup from '../components/Popup'; // Popup component
 import { Montserrat } from 'next/font/google'; // Import Montserrat
 
@@ -48,19 +49,36 @@ function MyApp({ Component, pageProps }) {
   return (
     <MyContextProvider>
       <Head>
+        <title>Make My Ghar | Best Interior Designers in Pune</title>
         {/* Favicon links */}
         <link rel="icon" href="/assets/favicon.png" />
         <link rel="shortcut icon" href="/assets/favicon.png" />
-
-        {/* Preload LCP image used in Hero */}
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/project1.webp"
-          imagesrcset="/assets/project1.webp"
-          type="image/webp"
-        />
       </Head>
+
+      {/* Google Tag Manager - Global Base Code */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L9PDETZMR7');
+        `}
+      </Script>
+
+      {/* Microsoft Clarity - Global Base Code */}
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "vjt74rgcen");
+        `}
+      </Script>
       <div className={`w-screen overflow-x-hidden min-h-screen flex flex-col ${montserrat.className}`}>
         <Navbar />
         <main className="flex-grow w-full">

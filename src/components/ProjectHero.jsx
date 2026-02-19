@@ -54,7 +54,7 @@ const ProjectsHero = () => {
     };
 
     return (
-        <div className="w-full h-[550px] lg:h-[600px] rounded-2xl overflow-hidden relative shadow-xl shadow-warm-beige/50">
+        <div className="w-full h-[550px] lg:h-[600px] rounded-2xl overflow-hidden relative shadow-xl shadow-warm-beige/50 bg-dark-brown">
           <div className="absolute inset-0">
     {currentProjects.map((project, index) => (
         <motion.div

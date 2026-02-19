@@ -39,9 +39,9 @@ const childVariants = {
 
 // Image transition
 const imageVariants = {
-  initial: { opacity: 0, x: 50 },
-  animate: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  exit: { opacity: 0, x: -50, transition: { duration: 1, ease: "easeIn" } },
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 1, ease: "easeInOut" } },
+  exit: { opacity: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const Hero = () => {
@@ -71,49 +71,27 @@ const Hero = () => {
       initial={!isMobile ? "hidden" : false}
       animate={!isMobile ? "visible" : false}
     >
-      <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-gradient-to-t from-black/50 to-black/10 overflow-hidden">
-
-        {/* First Image */}
-        {currentImage === 0 && (
+      <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-2xl bg-dark-brown overflow-hidden">
+        {/* Image Slideshow */}
+        <AnimatePresence initial={false}>
           <motion.div
-            className="absolute inset-0 w-full h-full z-0"
-            initial={isMobile ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            key={currentImage}
+            variants={imageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="absolute inset-0 z-0"
           >
             <NextImage
-              src={images[0].src} // Pass only the src property
-              alt={images[0].alt} // Pass the alt property separately
+              src={images[currentImage].src}
+              alt={images[currentImage].alt}
               fill
-              priority
-              unoptimized
+              priority={currentImage === 0}
+              quality={80}
               className="object-cover"
+              sizes="100vw"
             />
           </motion.div>
-        )}
-
-        {/* Image Slideshow */}
-        <AnimatePresence mode="wait">
-          {currentImage !== 0 && (
-            <motion.div
-              key={currentImage}
-              variants={imageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="absolute lg:rounded-2xl overflow-hidden inset-0 z-0"
-            >
-              <NextImage
-                src={images[currentImage].src}
-                alt={images[currentImage].alt}
-                fill
-                unoptimized
-                className="object-cover"
-                sizes="100vw"
-              />
-            </motion.div>
-          )}
         </AnimatePresence>
 
         {/* Content Block */}

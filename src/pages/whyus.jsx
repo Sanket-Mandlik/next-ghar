@@ -22,18 +22,6 @@ const WhyUs = () => {
           name="keywords"
           content="interior design pune, personalized home design, home renovation pune, best interior designers in pune, make my ghar, home decor experts in pune, interior design consultation in pune, modern home interiors, design my home"
         />
-        {/* Google Analytics Script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L9PDETZMR7');
-            `,
-          }}
-        />
       </Head>
 
       {/* Page Content */}

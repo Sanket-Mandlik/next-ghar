@@ -19,19 +19,6 @@ const ContactUs = () => {
           name="keywords"
           content="contact Make My Ghar, interior design consultation in pune, contact pune interior designers, home design experts in pune, Make My Ghar contact"
         />
-
-        {/* Google Analytics Script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-L9PDETZMR7');
-      `,
-          }}
-        />
       </Head>
 
       {/* Page Content */}

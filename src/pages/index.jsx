@@ -50,19 +50,6 @@ const Home = () => {
         <meta name="twitter:image" content="https://www.makemyghar.co/assets/mmglogo.webp" />
 
         <link rel="canonical" href="https://www.makemyghar.co/" />
-
-        {/* Google Analytics Script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-L9PDETZMR7');
-      `,
-          }}
-        />
       </Head>
 
       {/* ✅ Add Schema JSON-LD */}

@@ -56,40 +56,46 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-10">
       {/* Name and Contact Number */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-          placeholder="Enter Your Name"
-          required
-        />
-        <input
-          type="text"
-          id="number"
-          name="number"
-          value={formData.number}
-          onChange={handleChange}
-          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-          placeholder="Enter Your Contact No."
-          required
-        />
+        <div className="flex flex-col">
+          <label htmlFor="name" className="text-sm font-medium mb-1 text-dark-brown">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+            placeholder="Enter Your Name"
+            required
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="number" className="text-sm font-medium mb-1 text-dark-brown">Contact Number</label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            value={formData.number}
+            onChange={handleChange}
+            className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+            placeholder="Enter Your Contact No."
+            required
+          />
+        </div>
       </div>
 
       {/* Property Type and Area */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-        <div className="relative w-full">
+        <div className="relative w-full flex flex-col">
+          <label htmlFor="startDate" className="text-sm font-medium mb-1 text-dark-brown">Preferred Start Date</label>
           {/* Fake Placeholder */}
           {!formData.startDate && !isDateFocused && (
-           <span
-           className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200"
-           aria-hidden="true"
-         >
-           Select start date
-         </span>
-         
+            <span
+              className="absolute left-0 top-[38px] text-black pointer-events-none transition-opacity duration-200"
+              aria-hidden="true"
+            >
+              Select start date
+            </span>
           )}
 
           <input
@@ -106,43 +112,48 @@ const ContactForm = () => {
           />
         </div>
 
-        <select
-          id="propertyType"
-          name="propertyType"
-          value={formData.propertyType} // Bind to formData
-          onChange={handleChange}
-          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-          required
-        >
-          <option value="" disabled>
-            Select Property Type
-          </option>
-          <option value="2 Bhk">2 Bhk</option>
-          <option value="3 Bhk">3 Bhk</option>
-          <option value="4 Bhk+">4 Bhk+</option>
-          <option value="Villa">Villa</option>
-          <option value="Commercial">Commercial</option>
-        </select>
-
+        <div className="flex flex-col">
+          <label htmlFor="propertyType" className="text-sm font-medium mb-1 text-dark-brown">Property Type</label>
+          <select
+            id="propertyType"
+            name="propertyType"
+            value={formData.propertyType}
+            onChange={handleChange}
+            className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+            required
+          >
+            <option value="" disabled>
+              Select Property Type
+            </option>
+            <option value="2 Bhk">2 Bhk</option>
+            <option value="3 Bhk">3 Bhk</option>
+            <option value="4 Bhk+">4 Bhk+</option>
+            <option value="Villa">Villa</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+        </div>
       </div>
 
 
       {/* Type of Interior */}
-      <select
-        id="interiorBudget"
-        name="interiorBudget"
-        value={formData.interiorBudget} // Bind to formData
-        onChange={handleChange}
-        className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black"
-        required
-      >
-        <option value="" disabled>
-          Select Interior Budget
-        </option>
-        <option value="premium">Between ₹10 L - 15 Lakhs</option>
-        <option value="luxury">Between ₹15 L - 18 Lakhs</option>
-        <option value="luxury">Above ₹18 Lakhs</option>
-      </select>
+      <div className="flex flex-col">
+        <label htmlFor="interiorBudget" className="text-sm font-medium mb-1 text-dark-brown">Interior Budget</label>
+        <select
+          id="interiorBudget"
+          name="interiorBudget"
+          value={formData.interiorBudget}
+          onChange={handleChange}
+          className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+          required
+        >
+          <option value="" disabled>
+            Select Interior Budget
+          </option>
+          <option value="premium">Between ₹10 L - 15 Lakhs</option>
+          <option value="luxury">Between ₹15 L - 18 Lakhs</option>
+          <option value="luxury_high">Above ₹18 Lakhs</option>
+        </select>
+      </div>
 
       {/* Submit Button */}
       <button
