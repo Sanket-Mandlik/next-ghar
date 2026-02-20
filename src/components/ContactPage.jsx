@@ -126,7 +126,6 @@ const ContactPage = () => {
                 </a>
               </div>
 
-              {/* Social Icons */}
               <div className="flex items-center gap-6 border-2 border-warm-beige/50 rounded-full px-6 py-2.5 mt-6 mb-4 lg:mt-0 lg:mb-0 self-start lg:self-end max-w-max">
                 <a
                   href="https://www.instagram.com/makemyghar.co/"
@@ -134,18 +133,18 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   aria-label="Visit Make My Ghar on Instagram"
                   title="Instagram"
-                  className="text-md text-white hover:text-soft-white transition-colors"
+                  className="text-md text-white hover:text-soft-white transition-colors p-2"
                 >
                   <FaInstagram className="text-2xl" />
                 </a>
 
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/company/100958944"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Make My Ghar on Facebook"
                   title="Facebook"
-                  className="text-md text-white hover:text-soft-white transition-colors"
+                  className="text-md text-white hover:text-soft-white transition-colors p-2"
                 >
                   <FaFacebook className="text-2xl" />
                 </a>

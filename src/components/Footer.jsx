@@ -74,6 +74,16 @@ const Footer = () => {
                 >
                   <FaInstagram />
                 </a>
+                <a
+                  href="https://www.facebook.com/company/100958944"
+                  className="hover:text-gold transition-colors p-2"
+                  aria-label="Visit Make My Ghar on Facebook"
+                  title="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook />
+                </a>
               </div>
             </div>
 

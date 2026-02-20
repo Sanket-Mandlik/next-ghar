@@ -133,7 +133,7 @@ const Projects = () => {
       <div className="relative w-full rounded-xl  overflow-hidden">
         <button
           onClick={() => scrollTop(1)}
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-2.5 rounded-full shadow"
           aria-label="Scroll left"
           title="Scroll left"
         >
@@ -142,7 +142,7 @@ const Projects = () => {
 
         <button
           onClick={() => scrollTop(-1)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-2.5 rounded-full shadow"
           aria-label="Scroll right"
           title="Scroll right"
         >
@@ -171,7 +171,7 @@ const Projects = () => {
         <div className="relative rounded-xl lg:w-3/4 overflow-hidden">
           <button
             onClick={() => scrollBottom(1)}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-1 rounded-full shadow"
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-2.5 rounded-full shadow"
             aria-label="Scroll left"
             title="Scroll left"
           >
@@ -180,7 +180,7 @@ const Projects = () => {
 
           <button
             onClick={() => scrollBottom(-1)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-1 rounded-full shadow"
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-2.5 rounded-full shadow"
             aria-label="Scroll right"
             title="Scroll right"
           >

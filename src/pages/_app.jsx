@@ -55,20 +55,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" href="/assets/favicon.png" />
       </Head>
 
-      {/* Google Tag Manager - Global Base Code */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-L9PDETZMR7"
-        strategy="lazyOnload"
-      />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-L9PDETZMR7');
-        `}
-      </Script>
-
       {/* Microsoft Clarity - Global Base Code */}
       <Script id="microsoft-clarity" strategy="lazyOnload">
         {`
