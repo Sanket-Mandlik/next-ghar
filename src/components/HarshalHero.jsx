@@ -4,20 +4,20 @@ import Image from "next/image";
 
 const categories = {
     "Living": [
-        { image: "/assets/harshal-cover.jpg", title: "Living Room", subtitle: "Kalpataru Jade, Baner" },
-        { image: "/assets/harshal-living (2).jpg", title: "Lounge Space", subtitle: "Kalpataru Jade, Baner" },
+        { image: "/assets/harshal-cover.jpg", title: "Kalpataru Jade - Living Room", subtitle: "Contemporary Design" },
+        { image: "/assets/harshal-living (2).jpg", title: "Kalpataru Jade - Lounge Space", subtitle: "Modern Comfort" },
     ],
     "Dining": [
-        { image: "/assets/harshal-living (1).jpg", title: "Dining Area", subtitle: "Kalpataru Jade, Baner" },
+        { image: "/assets/harshal-living (1).jpg", title: "Kalpataru Jade - Dining Area", subtitle: "Elegant Dining" },
     ],
     "Bedroom": [
-        { image: "/assets/harshal bedroom (2).jpg", title: "Master Bedroom", subtitle: "Kalpataru Jade, Baner" },
-        { image: "/assets/harshal bedroom (1).jpg", title: "Bedroom Detail", subtitle: "Kalpataru Jade, Baner" },
+        { image: "/assets/harshal bedroom (2).jpg", title: "Kalpataru Jade - Master Bedroom", subtitle: "Luxury Suite" },
+        { image: "/assets/harshal bedroom (1).jpg", title: "Kalpataru Jade - Bedroom Detail", subtitle: "Minimalist Decor" },
     ],
     "Pooja & Others": [
-        { image: "/assets/harsha others (1).jpg", title: "Vanity Design", subtitle: "Kalpataru Jade, Baner" },
-        { image: "/assets/harsha others (2).jpg", title: "Pooja + Study Area", subtitle: "Kalpataru Jade, Baner" },
-        { image: "/assets/harsha others (3).jpg", title: "Pooja Unit", subtitle: "Kalpataru Jade, Baner" },
+        { image: "/assets/harsha others (1).jpg", title: "Kalpataru Jade - Vanity Design", subtitle: "Smart Storage" },
+        { image: "/assets/harsha others (2).jpg", title: "Kalpataru Jade - Pooja + Study Area", subtitle: "Functional Spaces" },
+        { image: "/assets/harsha others (3).jpg", title: "Kalpataru Jade - Pooja Unit", subtitle: "Serene Design" },
     ],
 };
 
@@ -68,8 +68,8 @@ const HarshalHero = () => {
 
             {/* Project Tag at Bottom */}
             <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
-                <span className="px-4 py-2 bg-gold text-white text-sm font-medium rounded-full shadow-lg">
-                    Kalpataru Jade, Baner
+                <span className="px-4 py-2 bg-gold text-white text-sm font-medium rounded-full shadow-lg whitespace-nowrap">
+                    Kalpataru Jade - {selectedCategory}
                 </span>
             </div>
 
