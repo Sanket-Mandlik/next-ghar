@@ -27,7 +27,7 @@ const AboutUs = () => {
 
         {/* Left Section */}
         <div
-          className="lg:col-span-4 p-8 rounded-3xl text-soft-white relative flex flex-col justify-center items-center aspect-square"
+          className="lg:col-span-4 p-8 rounded-3xl text-soft-white relative flex flex-col justify-center items-center h-full min-h-[380px]"
           style={{
             backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
