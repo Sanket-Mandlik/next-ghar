@@ -200,25 +200,35 @@ const ChooseUs = () => {
           className="col-span-3 relative h-[50vh] lg:h-[85vh] bg-dark-brown overflow-hidden rounded-4xl group"
           variants={containerVariants}
         >
-          {/* Solid Horizontal Blinds/Shutter Animation - Top Part Only */}
-          <div className="absolute top-0 left-0 w-full h-80 flex flex-col pointer-events-none opacity-[0.15] group-hover:opacity-30 transition-opacity duration-700">
-            {[...Array(10)].map((_, i) => (
-              <div key={i} className="w-full h-8 relative">
-                <motion.div
-                  className="absolute inset-0 bg-warm-beige/40 border-b border-soft-white/10"
-                  animate={{ 
-                    scaleY: [1, 0.05, 1],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    delay: i * 0.2,
-                    ease: "easeInOut",
-                  }}
-                  style={{ originY: 0 }}
-                />
-              </div>
-            ))}
+          {/* Frameless Shutter/Blinds Animation */}
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[85%] h-52 overflow-hidden pointer-events-none transition-colors duration-700">
+            {/* Horizontal Blinds Slats */}
+            <div className="absolute inset-0 flex flex-col opacity-[0.25] group-hover:opacity-45 transition-opacity duration-700">
+              {[...Array(12)].map((_, i) => (
+                <div key={i} className="w-full flex-grow relative">
+                  <motion.div
+                    className="absolute inset-0 bg-warm-beige/40 border-b border-dark-brown/20"
+                    animate={{ 
+                      scaleY: [1, 0.05, 1],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      delay: i * 0.2,
+                      ease: "easeInOut",
+                    }}
+                    style={{ originY: 0 }}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Blind Pull Strings */}
+            <div className="absolute inset-y-0 left-[15%] w-[0.5px] bg-soft-white/40" />
+            <div className="absolute inset-y-0 right-[15%] w-[0.5px] bg-soft-white/40" />
+            
+            {/* Center String */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[0.5px] h-full bg-soft-white/20" />
           </div>
 
           <motion.div
