@@ -67,12 +67,12 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full lg:pr-4 2xl:pr-6 lg:pl-2 flex mx-auto justify-center lg:mt-[6vh] mb-10 relative"
+      className="w-full h-screen mx-auto justify-center relative"
       variants={containerVariants}
       initial={!isMobile ? "hidden" : false}
       animate={!isMobile ? "visible" : false}
     >
-      <section className="relative w-full h-[100vh] lg:h-[93vh] lg:rounded-[30px] bg-dark-brown overflow-hidden">
+      <section className="relative w-full h-full bg-dark-brown overflow-hidden">
         {/* Image Slideshow */}
         <AnimatePresence initial={false}>
           <motion.div

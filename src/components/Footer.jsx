@@ -4,89 +4,59 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-4xl  shadow-2xl shadow-warm-beige ">
-      <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-6">
+    <footer className="w-full px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-12 pt-6 pb-4 shadow-2xl shadow-warm-beige">
+      <div className="px-6 lg:px-20 py-6 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-16">
+        
+        {/* Left Section (40%) - Logo & About */}
+        <div className="lg:col-span-4 text-center lg:text-left">
+          <Image 
+            src="/assets/mmglogo.webp" 
+            alt="Make My Ghar Logo" 
+            width={180}
+            height={80}
+            className="h-20 w-auto mx-auto lg:mx-0" 
+          />
+          <h2 className="text-4xl text-dark-brown  mt-2 font-medium tracking-tight">
+            Make My Ghar
+          </h2>
+          <p className="mt-3 text-light-gray font-medium text-md leading-relaxed max-w-md">
+            Transforming spaces with elegance and precision. Specialized in premium interior design solutions in Pune.
+          </p>
+        </div>
 
-        {/* Logo & About */}
-        <div className="text-center lg:text-left lg:col-span-3">
-  <Image 
-    src="/assets/mmglogo.webp" 
-    alt="Make My Ghar Logo" 
-    width={200}
-    height={96}
-    className="h-24 w-auto mx-auto lg:mx-0" 
-  />
-  <h2 className="text-4xl lg:text-5xl mt-2 font-medium lg:text-left">
-    Make My Ghar
-  </h2>
-  <p className="mt-4 text-light-gray font-medium text-md lg:text-left leading-relaxed">
-    Transforming spaces with elegance and precision.
-  </p>
-</div>
+        {/* Middle Section (20%) - Quick Links */}
+        <div className="lg:col-span-2 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <h3 className="text-xl font-semibold mb-4 text-dark-brown">Quick Links</h3>
+          <ul className="space-y-3 text-md font-medium">
+            <li><Link href="/about" className="hover:text-gold transition-colors">About Us</Link></li>
+            <li><Link href="/services" className="hover:text-gold transition-colors">Our Services</Link></li>
+            <li><Link href="/projects" className="hover:text-gold transition-colors">Projects Gallery</Link></li>
+            <li><Link href="/contactus" className="hover:text-gold transition-colors">Testimonials</Link></li>
+          </ul>
+        </div>
 
-        {/* Grouped Sections */}
-        <div className="lg:col-span-5 flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 text-center lg:text-left">
+        {/* Right Section (40%) - Contact & Socials */}
+        <div className="lg:col-span-4 text-center lg:text-left">
+          <h3 className="text-xl font-semibold mb-4 text-dark-brown">Get In Touch</h3>
+          <p className="text-lg leading-relaxed mb-3">
+            72/32 Manas Bungalow, Gulmohar Path,<br />
+            Off Law College Rd., Pune 411004
+          </p>
+          <p className="text-md font-medium mb-6">Email: contact@makemyghar.com</p>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3 lg:space-y-4 text-sm">
-              <li><Link href="/about" className="hover:text-gold transition-colors py-1 inline-block">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-gold transition-colors py-1 inline-block">Our Services</Link></li>
-              <li><Link href="/projects" className="hover:text-gold transition-colors py-1 inline-block">Projects</Link></li>
-              <li><Link href="/contactus" className="hover:text-gold transition-colors py-1 inline-block">Testimonials</Link></li>
-            </ul>
-          </div>
+          <div className="flex flex-col lg:flex-row items-center gap-6">
+            <a
+              href="tel:+918329547818"
+              className="flex items-center gap-3 px-6 py-2.5 bg-soft-white text-dark-brown rounded-2xl font-bold hover:bg-gold hover:text-soft-white transition-all shadow-lg"
+            >
+              Call Us <FaPhone />
+            </a>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="text-md mt-4">72/32 Manas Bungalow, Gulmohar Path, Off Law College Rd., Pune 411004</p>
-            <p className="text-sm mt-1 pt-2 mb-4">Email: contact@makemyghar.com</p>
-
-            {/* Call Button & Social Icons in One Row */}
-            <div className="mt-4 flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-6">
-              {/* Call Us Link – already good, but adding aria-label for clarity */}
-              <a
-                href="tel:+918329547818"
-                className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-2xl hover:bg-medium-brown hover:text-pure-white transition"
-                aria-label="Call us at +91 8329547818"
-                title="Call Us"
-              >
-                Call Us <FaPhone />
-              </a>
-
-              {/* Social Links with aria-labels */}
-              <div className="flex gap-4 items-center text-2xl">
-                <a
-                  href="https://wa.me/918329547818"
-                  className="hover:text-gold transition-colors p-2"
-                  aria-label="Chat with us on WhatsApp"
-                  title="WhatsApp"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a
-                  href="https://www.instagram.com/makemyghar.co/"
-                  className="hover:text-gold transition-colors p-2"
-                  aria-label="Visit Make My Ghar on Instagram"
-                  title="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.facebook.com/company/100958944"
-                  className="hover:text-gold transition-colors p-2"
-                  aria-label="Visit Make My Ghar on Facebook"
-                  title="Facebook"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook />
-                </a>
-              </div>
+            <div className="flex gap-5 items-center text-2xl">
+              <a href="https://wa.me/918329547818" className="hover:text-gold transition-transform hover:scale-110"><FaWhatsapp /></a>
+              <a href="https://www.instagram.com/makemyghar.co/" className="hover:text-gold transition-transform hover:scale-110"><FaInstagram /></a>
+              <a href="https://www.facebook.com/makemyghar127" className="hover:text-gold transition-transform hover:scale-110"><FaFacebook /></a>
             </div>
-
           </div>
         </div>
       </div>
