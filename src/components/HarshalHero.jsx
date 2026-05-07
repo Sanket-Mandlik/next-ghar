@@ -45,7 +45,7 @@ const HarshalHero = () => {
     };
 
     return (
-        <div className="w-full h-[550px] lg:h-[600px] rounded-2xl overflow-hidden relative shadow-xl shadow-warm-beige/50 bg-dark-brown mt-20">
+        <div className="w-full aspect-[4/5]  lg:aspect-[2/1] rounded-4xl overflow-hidden relative shadow-xl shadow-warm-beige/50 bg-dark-brown mt-20">
             <div className="absolute inset-0">
                 <AnimatePresence initial={false}>
                     <motion.div

@@ -32,6 +32,12 @@ const ContactUs = () => {
             variants={fadeInUp(0.2)}
           >
             <h2 className="text-5xl font-medium  bg-gradient-to-r from-soft-white via-warm-beige to-warm-beige bg-clip-text text-transparent mb-3">Contact Us</h2>
+            <motion.div 
+              initial={{ width: 0 }}
+              whileInView={{ width: "100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-1 bg-gold mt-2 mb-4 rounded-full"
+            />
             <p className="text-2xl lg:text-3xl font-montserrat font-medium bg-gradient-to-r from-warm-beige via-warm-beige to-soft-white bg-clip-text text-transparent">
               Book A Free Design Consultation
             </p>

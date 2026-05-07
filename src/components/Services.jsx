@@ -126,7 +126,7 @@ const Services = () => {
   return (
     <div className="relative lg:w-4/5 lg:mx-auto mx-5 flex flex-col items-start mt-30">
       <motion.h2
-        className="text-5xl font-montserrat text-medium-brown font-medium mb-8"
+        className="text-5xl font-montserrat text-medium-brown font-medium"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -141,6 +141,12 @@ const Services = () => {
         </motion.span>{" "}
         We Offer?
       </motion.h2>
+      <motion.div 
+        initial={{ width: 0 }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="h-1 bg-gold mt-4 mb-8 rounded-full"
+      />
 
       <div className="flex relative w-full flex-col items-center ">
         {services.map((service, index) => (

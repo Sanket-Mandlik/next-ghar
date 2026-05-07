@@ -128,11 +128,17 @@ const Projects = () => {
       animate="visible"
     >
       <motion.h2
-        className="text-5xl font-montserrat text-medium-brown font-medium mb-6"
+        className="text-5xl font-montserrat text-medium-brown font-medium"
         variants={textVariants}
       >
         <span className="text-dark-brown">Our Project</span> Gallery
       </motion.h2>
+      <motion.div 
+        initial={{ width: 0 }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="h-1 bg-gold mt-4 mb-8 rounded-full"
+      />
 
       {/* Top Carousel */}
       <div className="relative w-full rounded-2xl  overflow-hidden">

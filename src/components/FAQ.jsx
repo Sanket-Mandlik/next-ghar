@@ -41,9 +41,15 @@ const FAQ = () => {
     >
     
       <div className="bg-soft-white rounded-2xl px-6 lg:px-8 py-8 lg:pb-12">
-        <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown mb-15 lg:mb-20">
+        <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
+        <motion.div 
+          initial={{ width: 0 }}
+          whileInView={{ width: "100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="h-1 bg-gold mt-4 mb-12 rounded-full"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {faqs.map((faq, index) => (

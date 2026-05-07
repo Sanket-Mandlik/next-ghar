@@ -35,25 +35,31 @@ const ChooseUs = () => {
     >
       {/* Heading */}
       <motion.h2
-        className="text-4xl lg:text-5xl font-montserrat text-medium-brown font-medium mb-8"
+        className="text-4xl lg:text-5xl font-montserrat text-medium-brown font-medium"
         variants={textVariants}
       >
         <span className="text-dark-brown text-5xl">Why Choose</span> Us?
       </motion.h2>
+      <motion.div 
+        initial={{ width: 0 }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="h-1 bg-gold mt-4 mb-8 rounded-full"
+      />
 
       {/* Content Section */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-10 lg:gap-2"
+        className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4"
         variants={containerVariants}
       >
         {/* Left Side */}
         <motion.div
-          className="col-span-1 lg:col-span-7 mb-4 lg:mb-0 flex flex-col gap-2 w-full"
+          className="col-span-1 lg:col-span-7 mb-4 lg:mb-0 flex flex-col gap-4 w-full"
           variants={containerVariants}
         >
           {/* Top Row */}
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full"
             variants={containerVariants}
           >
             {/* Card 1 - Unmatched Expertise */}
@@ -110,10 +116,39 @@ const ChooseUs = () => {
 
             {/* Card 2 - Premium Quality */}
             <motion.div
-              className="relative h-[50vh] lg:h-[40vh] rounded-4xl overflow-hidden"
-              style={{ background: "radial-gradient(circle at bottom left, #fff2d7ff 0%, #fcf5e5ff 20%, #dbc199ff 100%)" }}
+              className="relative h-[50vh] lg:h-[40vh] rounded-4xl overflow-hidden bg-warm-beige/10 border border-warm-beige/20 group"
               variants={containerVariants}
             >
+              {/* Premium Quality - Continuous Symmetric Architectural Arches */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.35] group-hover:opacity-55 transition-opacity duration-700">
+                <motion.div
+                  className="absolute inset-0 w-[200%] h-full flex items-end"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                >
+                  {/* First Set of Arches */}
+                  <div className="w-full h-full flex justify-around items-end">
+                    {[...Array(2)].map((_, i) => (
+                      <div key={i} className="relative w-40 h-[60%] flex flex-col items-center">
+                        <div className="absolute bottom-0 w-full h-full border-t-2 border-x-2 border-dark-brown/50 rounded-t-full" />
+                        <div className="absolute bottom-0 w-[70%] h-[85%] border-t border-x border-dark-brown/40 rounded-t-full" />
+                        <div className="absolute bottom-0 w-[40%] h-[70%] border-t border-x border-dark-brown/30 rounded-t-full" />
+                      </div>
+                    ))}
+                  </div>
+                  {/* Duplicated Set for Seamless Loop */}
+                  <div className="w-full h-full flex justify-around items-end">
+                    {[...Array(2)].map((_, i) => (
+                      <div key={i} className="relative w-40 h-[60%] flex flex-col items-center">
+                        <div className="absolute bottom-0 w-full h-full border-t-2 border-x-2 border-dark-brown/50 rounded-t-full" />
+                        <div className="absolute bottom-0 w-[70%] h-[85%] border-t border-x border-dark-brown/40 rounded-t-full" />
+                        <div className="absolute bottom-0 w-[40%] h-[70%] border-t border-x border-dark-brown/30 rounded-t-full" />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
                   className="text-2xl font-medium text-dark-brown"
@@ -162,67 +197,28 @@ const ChooseUs = () => {
 
         {/* Card 4 - Right Side Full Height */}
         <motion.div
-          className="col-span-3 relative h-[50vh] lg:h-[85vh] bg-dark-brown overflow-hidden rounded-4xl"
+          className="col-span-3 relative h-[50vh] lg:h-[85vh] bg-dark-brown overflow-hidden rounded-4xl group"
           variants={containerVariants}
         >
-          {/* Animated Waves at the top */}
-          <div className="absolute top-0 left-0 w-full h-64 overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute top-0 left-0 w-[200%] h-full flex"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-medium-brown/20">
-                <path d="M0,0V50c125,0,125,30,250,30s125-30,250-30,125,30,250,30,125-30,250-30V0H0Z" />
-              </svg>
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-medium-brown/20">
-                <path d="M0,0V50c125,0,125,30,250,30s125-30,250-30,125,30,250,30,125-30,250-30V0H0Z" />
-              </svg>
-            </motion.div>
-            
-            <motion.div
-              className="absolute top-0 left-0 w-[200%] h-full flex"
-              animate={{
-                x: ["-50%", "0%"],
-              }}
-              transition={{
-                duration: 18,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-gold/10">
-                <path d="M0,0V60c125,0,125-40,250-40s125,40,250,40,125-40,250-40,125,40,250,40V0H0Z" />
-              </svg>
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-gold/10">
-                <path d="M0,0V60c125,0,125-40,250-40s125,40,250,40,125-40,250-40,125,40,250,40V0H0Z" />
-              </svg>
-            </motion.div>
-
-            <motion.div
-              className="absolute top-0 left-0 w-[200%] h-full flex"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                duration: 25,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-warm-beige/5">
-                <path d="M0,0V40c125,0,125,20,250,20s125-20,250-20,125,20,250,20,125-20,250-20V0H0Z" />
-              </svg>
-              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-warm-beige/5">
-                <path d="M0,0V40c125,0,125,20,250,20s125-20,250-20,125,20,250,20,125-20,250-20V0H0Z" />
-              </svg>
-            </motion.div>
+          {/* Solid Horizontal Blinds/Shutter Animation - Top Part Only */}
+          <div className="absolute top-0 left-0 w-full h-80 flex flex-col pointer-events-none opacity-[0.15] group-hover:opacity-30 transition-opacity duration-700">
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="w-full h-8 relative">
+                <motion.div
+                  className="absolute inset-0 bg-warm-beige/40 border-b border-soft-white/10"
+                  animate={{ 
+                    scaleY: [1, 0.05, 1],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                    ease: "easeInOut",
+                  }}
+                  style={{ originY: 0 }}
+                />
+              </div>
+            ))}
           </div>
 
           <motion.div

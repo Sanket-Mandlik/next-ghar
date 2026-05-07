@@ -44,15 +44,18 @@ const Testimonials = () => {
         className="w-full"
       >
         <motion.div variants={fadeInUp()} className="mb-12">
-           <div className="flex items-center gap-3 mb-4">
-              <span className="h-[1px] w-12 bg-gold/50"></span>
-           </div>
           <h2 className="text-5xl font-montserrat text-medium-brown font-medium tracking-tight leading-tight">
-            What Our <span className="font-serif italic text-dark-brown">Clients</span> Say?
+            What Our <span className=" text-dark-brown">Clients</span> Say?
           </h2>
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: "100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="h-1 bg-gold mt-4 rounded-full"
+          />
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-4">
           {testimonials.map((t, i) => (
             <motion.div 
               key={i}

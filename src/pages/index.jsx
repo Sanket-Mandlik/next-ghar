@@ -13,6 +13,7 @@ const Services = dynamic(() => import("../components/Services"));
 const ChooseUs = dynamic(() => import("../components/ChooseUs"));
 const Projects = dynamic(() => import("../components/Projects"));
 const Testimonials = dynamic(() => import("../components/Testimonials"));
+const OnSite = dynamic(() => import("../components/OnSite"));
 
 const Home = () => {
   return (
@@ -83,6 +84,7 @@ const Home = () => {
       <Services />
       <div className="lg:px-0 px-4"><ChooseUs /></div>
       <Projects />
+      <OnSite />
       <div className="lg:w-4/5 px-4 lg:px-0 lg:mx-auto">
         <Testimonials />
       </div>

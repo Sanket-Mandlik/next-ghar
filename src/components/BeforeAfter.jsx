@@ -71,10 +71,16 @@ export default function BeforeAfter() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl  font-montserrat text-dark-brown font-medium mb-4"
+            className="text-5xl font-montserrat text-dark-brown font-medium mb-4"
           >
             Before & After  <span className=" font-light text-medium-brown"> Transformations </span>
           </motion.h2>
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: "100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="h-1 bg-gold mt-4 mb-8 rounded-full"
+          />
           <p className="text-lg text-dark-brown/70 font-medium leading-relaxed">
             Witness the seamless transition from conceptual blueprints to realized architectural excellence. Our before-and-after comparisons showcase the precision and artistry we bring to every square foot.
           </p>

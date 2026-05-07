@@ -106,16 +106,27 @@ const Hero = () => {
             {/* Title */}
             <div className="w-full lg:w-3/5 lg:pr-15 flex-shrink-0">
               {isMobile ? (
-                <h1 className="text-5xl 2xl:text-6xl font-medium leading-tight text-soft-white">
-                  Interior Designers in Pune - Ready In 45 Days
-                </h1>
+                <>
+                  <h1 className="text-5xl 2xl:text-6xl font-medium leading-tight text-soft-white">
+                    Interior Designers in Pune - Ready In 45 Days
+                  </h1>
+                  <div className="h-1 bg-gold mt-4 rounded-full w-[100px]" />
+                </>
               ) : (
-                <motion.h1
-                  className="text-5xl xl:text-[50px] 2xl:text-6xl font-medium leading-tight text-soft-white"
-                  variants={childVariants}
-                >
-                 Top Interior Designers in Pune - Ready In 45 Days
-                </motion.h1>
+                <>
+                  <motion.h1
+                    className="text-5xl xl:text-[50px] 2xl:text-6xl font-medium leading-tight text-soft-white"
+                    variants={childVariants}
+                  >
+                   Top Interior Designers in Pune - Ready In 45 Days
+                  </motion.h1>
+                  <motion.div 
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100px" }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    className="h-1 bg-gold mt-4 rounded-full"
+                  />
+                </>
               )}
             </div>
 

@@ -27,7 +27,7 @@ const AboutUs = () => {
 
         {/* Left Section */}
         <div
-          className="lg:col-span-4 p-8 rounded-3xl  text-soft-white relative flex flex-col justify-center items-center"
+          className="lg:col-span-4 p-8 rounded-3xl text-soft-white relative flex flex-col justify-center items-center aspect-square"
           style={{
             backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
@@ -38,16 +38,23 @@ const AboutUs = () => {
           <p className="absolute top-5 left-6 text-sm text-medium-brown">
             Building dreams, one home at a time.
           </p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-6xl sm:text-6xl py-30 pr-2 font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3"
-          >
-            About Us
-          </motion.h2>
+          <div className="flex flex-col items-center justify-center flex-grow">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-6xl sm:text-6xl font-normal bg-gradient-to-br from-soft-white to-gold bg-clip-text text-transparent text-center mb-3"
+            >
+              About Us
+            </motion.h2>
+            <motion.div 
+              initial={{ width: 0 }}
+              whileInView={{ width: "100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-1 bg-gold rounded-full"
+            />
+          </div>
 
           <div className="absolute bottom-5 left-6 text-left">
             <motion.p
@@ -77,7 +84,7 @@ const AboutUs = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/company/100958944"
+              href="https://www.facebook.com/makemyghar127"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Make My Ghar on Facebook"
@@ -93,13 +100,7 @@ const AboutUs = () => {
 
         {/* Right Section */}
         <div
-          className="lg:col-span-6 p-6 lg:p-8 rounded-3xl text-dark-brown"
-          style={{
-            backgroundImage: "url('/assets/mesh-488.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-          }}
-          aria-label="Best architect in Pune"
+          className="lg:col-span-6 p-6 lg:p-8 rounded-3xl text-dark-brown bg-warm-beige/10 border border-warm-beige/20 flex flex-col justify-center h-full"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -128,7 +129,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-12  font-medium sm:text-sm text-dark-brown"
+            className="mt-12  font-medium sm:text-md text-dark-brown"
           >
             At Make My Ghar, our team of expert interior designers and architects in Pune specialize in crafting stylish, functional, and sustainable home interiors. Whether it’s a modern 2BHK apartment in Pune or a luxury villa in nearby suburbs, we offer smart space planning, premium material selection, and hassle-free execution.
           </motion.p>
@@ -138,7 +139,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-4 font-semibold sm:text-sm text-dark-brown"
+            className="mt-4 font-medium sm:text-md text-dark-brown"
           >
             With 120+ completed projects, we bring expertise in customized designs, smart layouts, and high-quality finishes to create spaces that are elegant, efficient, and built to last.
           </motion.p>
