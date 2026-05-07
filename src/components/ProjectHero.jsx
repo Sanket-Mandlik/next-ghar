@@ -76,22 +76,12 @@ const ProjectsHero = () => {
 </div>
 
 
-            {/* Text Overlay */}
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={`text-${currentImage}-${selectedCategory}`}
-                    variants={textVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    className="absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-warm-beige/30 backdrop-blur-sm rounded-xl px-6 py-4 z-10 text-center"
-                >
-                    <h2 className="text-soft-white text-xl font-medium">
-                        {currentProjects[currentImage].title}
-                    </h2>
-                    <p className="text-black text-sm">{currentProjects[currentImage].subtitle}</p>
-                </motion.div>
-            </AnimatePresence>
+            {/* Project Tag at Bottom */}
+            <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
+                <span className="px-4 py-2 bg-gold text-white text-sm font-medium rounded-full shadow-lg">
+                    Supreme Estia, Baner
+                </span>
+            </div>
 
             {/* Category Menu */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex sm:gap-4 z-20 bg-warm-beige/40 backdrop-blur-sm px-6 py-2 min-w-[80vw] sm:min-w-[50vw] lg:min-w-0 justify-center rounded-full shadow-md">

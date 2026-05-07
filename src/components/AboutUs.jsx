@@ -27,7 +27,7 @@ const AboutUs = () => {
 
         {/* Left Section */}
         <div
-          className="lg:col-span-4 p-8 rounded-xl shadow-xl shadow-warm-beige/50 text-soft-white relative flex flex-col justify-center items-center"
+          className="lg:col-span-4 p-8 rounded-3xl  text-soft-white relative flex flex-col justify-center items-center"
           style={{
             backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
@@ -93,7 +93,7 @@ const AboutUs = () => {
 
         {/* Right Section */}
         <div
-          className="lg:col-span-6 p-6 lg:p-8 rounded-xl shadow-md shadow-warm-beige/90 text-dark-brown"
+          className="lg:col-span-6 p-6 lg:p-8 rounded-3xl text-dark-brown"
           style={{
             backgroundImage: "url('/assets/mesh-488.webp')",
             backgroundSize: "cover",
@@ -116,9 +116,9 @@ const AboutUs = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-dark-brown to-warm-beige rounded-lg text-soft-white text-center py-1.5 px-4 mt-4 w-max"
+            className="bg-dark-brown rounded-full text-white  text-center py-1.5 px-4 mt-4 w-max"
           >
-            <p className="text-md sm:text-md font-medium">
+            <p className="text-md sm:text-sm font-medium">
               Inspiring homes since 2014
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-5 font-medium sm:text-md text-dark-brown"
+            className="mt-12  font-medium sm:text-sm text-dark-brown"
           >
             At Make My Ghar, our team of expert interior designers and architects in Pune specialize in crafting stylish, functional, and sustainable home interiors. Whether it’s a modern 2BHK apartment in Pune or a luxury villa in nearby suburbs, we offer smart space planning, premium material selection, and hassle-free execution.
           </motion.p>
@@ -138,7 +138,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-2 font-medium sm:text-md text-dark-brown"
+            className="mt-4 font-semibold sm:text-sm text-dark-brown"
           >
             With 120+ completed projects, we bring expertise in customized designs, smart layouts, and high-quality finishes to create spaces that are elegant, efficient, and built to last.
           </motion.p>

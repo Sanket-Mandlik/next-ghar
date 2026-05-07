@@ -117,9 +117,10 @@ const Services = () => {
   }, []);
 
   const carouselImages = [
-    "/assets/project14.webp",
-    "/assets/projectGa5.webp",
-    "/assets/projectGa4.webp",
+    "/assets/prashant (1).png",
+        "/assets/prashant (3).png",
+
+        "/assets/prashant (4).png",
   ];
 
   return (
@@ -141,7 +142,7 @@ const Services = () => {
         We Offer?
       </motion.h2>
 
-      <div className="flex lg:w-4/5 mx-auto relative w-full flex-col items-center ">
+      <div className="flex relative w-full flex-col items-center ">
         {services.map((service, index) => (
           <motion.div
             key={service.id}
@@ -150,9 +151,9 @@ const Services = () => {
               y: hovered !== null && index > hovered && index < 5 ? 250 : 0,
             }}
             transition={{ type: "spring", stiffness: 50 }}
-            className={`relative h-auto lg:h-[520px] w-[91vw] lg:w-[80vw] p-6 rounded-2xl shadow-[0_-10px_15px_-3px_rgba(100,100,100,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${index === 5
-                ? "flex-col items-center justify-center text-center bg-cover bg-center text-pure-white"
-                : "flex-col lg:flex-row gap-4 pt-23 items-start text-medium-brown bg-soft-white"
+            className={`relative h-auto p-6 lg:h-[520px] w-[91vw] lg:w-[80vw]  rounded-4xl shadow-[0_-10px_15px_-3px_rgba(100,100,100,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${index === 5
+                ? "flex-col items-start justify-center bg-cover bg-center text-pure-white"
+                : "flex-col lg:flex-row gap-4 pt-26 items-start text-medium-brown bg-soft-white"
               }`}
             style={{
               marginTop: index !== 0 && index < 5 ? "-300px" : "0",
@@ -168,15 +169,15 @@ const Services = () => {
             )}
 
             <div
-              className={`flex-1 flex flex-col ${index === 5
-                  ? "justify-between items-center text-center h-full"
+              className={`flex-1 flex flex-col w-full ${index === 5
+                  ? "justify-between items-start h-full"
                   : "justify-between"
                 }`}
             >
               {index === 5 && (
-                <div className="flex flex-col lg:flex-row h-full py-13 lg:py-0 text-dark-brown">
+                <div className="flex flex-col lg:flex-row h-full w-full py-13 lg:py-0 text-dark-brown">
                   {/* Left Side Content */}
-                  <div className="w-full lg: lg:pl-5 lg:pr-8 lg:w-1/2 flex flex-col justify-center items-start text-left">
+                  <div className="w-full lg:w-1/2 lg:pl-10 lg:pr-8 flex flex-col justify-center items-start text-left">
                     <h3 className="text-5xl text-soft-white font-medium mb-5">
                       {service.title}
                     </h3>
@@ -186,14 +187,14 @@ const Services = () => {
                     <Link
                       href="/contactus"
                       aria-label="Get started by contacting us"
-                      className="inline-block px-10 py-4 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl transition-all min-h-[48px] text-center"
+                      className="inline-block px-10 py-4 bg-gradient-to-b from-soft-white to-warm-beige text-dark-brown font-semibold rounded-2xl hover:bg-medium-brown hover:text-dark-brown hover:scale-105 shadow-xl transition-all min-h-[48px] text-center"
                     >
                       Get Started Now
                     </Link>
                   </div>
 
                   {/* Right Side Carousel */}
-                  <div className="w-full lg:w-1/2 hidden lg:flex justify-center items-center relative overflow-hidden rounded-2xl shadow-xl h-[480px]">
+                  <div className="w-full lg:w-1/2 hidden lg:flex justify-center items-center relative overflow-hidden rounded-3xl shadow-xl h-[480px]">
                     {/* Viewport */}
                     <div className="w-full h-full overflow-hidden">
                       {/* Track */}
@@ -211,7 +212,7 @@ const Services = () => {
                               src={src}
                               alt={`Carousel image ${idx + 1} showcasing our services`}
                               fill
-                              className="object-cover rounded-2xl"
+                              className="object-cover rounded-3xl"
                               sizes="50vw"
                             />
                           </div>
@@ -250,10 +251,10 @@ const Services = () => {
 
               {index !== 5 && (
                 <div>
-                  <h3 className="text-5xl text-dark-brown font-medium">
+                  <h3 className="text-4xl text-dark-brown font-medium">
                     {service.title}
                   </h3>
-                  <p className="text-lg font-medium mt-3 mb-8 text-medium-brown lg:mb-8">
+                  <p className="text-md font-medium mt-3 mb-8 text-medium-brown lg:mb-8">
                     {service.description}
                   </p>
                   {service.features && (
@@ -261,7 +262,7 @@ const Services = () => {
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mt-4 gap-6">
                           <CheckCircle className="text-gold  w-5 h-5 mt-1" />
-                          <span className="text-soft-white text-lg bg-medium-brown py-1 px-3 rounded-lg font-medium">
+                          <span className="text-soft-white text-md bg-dark-brown py-1 px-3 rounded-full font-medium">
                             {feature}
                           </span>
                         </div>
@@ -279,7 +280,7 @@ const Services = () => {
                   src={`/assets/${service.image}`}
                   alt={service.alt}
                   fill
-                  className="object-cover rounded-2xl"
+                  className="object-cover rounded-3xl"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

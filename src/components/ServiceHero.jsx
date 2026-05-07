@@ -61,7 +61,7 @@ const ServiceHero = () => {
 
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 flex flex-col lg:flex-row items-center justify-center relative"
+      className="w-full rounded-4xl shadow-xl flex flex-col lg:flex-row items-center justify-center relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.webp')",
         backgroundSize: "cover",
@@ -81,7 +81,7 @@ const ServiceHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Interior - New Trends
+          Interior Trends
         </motion.h1>
 
         {/* Animated Counter */}
@@ -91,8 +91,8 @@ const ServiceHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <p className="text-3xl font-bold text-warm-beige">{counter}+</p>
-          <p className="text-sm text-light-gray">Projects Completed</p>
+          <p className="text-3xl font-normal text-warm-beige">{counter}+</p>
+          <p className="text-sm text-light-gray/40">Projects Completed</p>
         </motion.div>
 
         {/* Social Icons */}

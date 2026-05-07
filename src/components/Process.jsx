@@ -37,7 +37,7 @@ const Process = () => {
 
   return (
     <div
-      className="w-full rounded-2xl shadow-xl shadow-warm-beige/50 p-6 lg:p-8 flex flex-col gap-8 relative"
+      className="w-full rounded-4xl shadow-xl p-6 lg:p-12 flex flex-col gap-8 relative"
       style={{
         backgroundImage: "url('/assets/mesh-994.webp')",
         backgroundSize: "cover",
@@ -47,38 +47,13 @@ const Process = () => {
       {/* Top Bar */}
       <div className="w-full flex justify-between items-start z-10">
         <div className="flex flex-col items-start space-y-1">
-          <p className="text-md mb-3 text-gold/80">
-            What is the process for doing home interior?
-          </p>
-          <h1 className="text-6xl  lg:text-6xl lg:py-0 pt-20 pb-10 font-normal bg-gradient-to-r from-white via-warm-beige to-gold text-transparent bg-clip-text">
-            Process - Perfected
-          </h1>
+          <h3 className="text-5xl text-gold/80">
+            What is  <span className="text-white">the process?</span> 
+          </h3>
+        
         </div>
 
-        <div className="flex-col hidden lg:block items-end space-y-6 mt-8">
-          <div className="flex space-x-4">
-          <a
-  href="https://www.instagram.com/makemyghar.co/"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Visit Make My Ghar on Instagram"
-  title="Instagram"
->
-  <FaInstagram className="text-soft-white text-2xl" />
-</a>
-
-<a
-  href="https://www.facebook.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Visit Make My Ghar on Facebook"
-  title="Facebook"
->
-  <FaFacebook className="text-soft-white text-2xl" />
-</a>
-
-          </div>
-        </div>
+       
       </div>
 
       {/* Steps */}

@@ -5,6 +5,11 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const topImages = [
+  { src: "/assets/ekta-cover.jpg", alt: "Modern Residential Interior Pune" },
+  { src: "/assets/harshal-cover.jpg", alt: "Premium Living Room Pune" },
+  { src: "/assets/prashant (1).png", alt: "Luxury Apartment Interior Pune" },
+  { src: "/assets/prashant (2).png", alt: "Contemporary Interior Design Pune" },
+  { src: "/assets/prashant (3).png", alt: "Modern Living Space Pune" },
   { src: "/assets/after4.webp", alt: "Modern seating area in Pune" },
   { src: "/assets/project1.webp", alt: "Confort Seating Facility" },
   { src: "/assets/project2.webp", alt: "Modular Kitchen" },
@@ -130,7 +135,7 @@ const Projects = () => {
       </motion.h2>
 
       {/* Top Carousel */}
-      <div className="relative w-full rounded-xl  overflow-hidden">
+      <div className="relative w-full rounded-2xl  overflow-hidden">
         <button
           onClick={() => scrollTop(1)}
           className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-dark-brown p-2.5 rounded-full shadow"
@@ -157,7 +162,7 @@ const Projects = () => {
                 alt={img.alt}
                 width={800}
                 height={600}
-                className="lg:h-[45vh] h-[60vh] w-auto rounded-2xl object-cover"
+                className="lg:h-[45vh] h-[60vh] w-auto rounded-3xl object-cover"
                 priority={i < 3}
               />
             </div>
@@ -168,7 +173,7 @@ const Projects = () => {
       {/* Bottom Carousel + CTA */}
       <div className="w-full flex flex-col lg:flex-row items-center gap-4">
         {/* Bottom Carousel */}
-        <div className="relative rounded-xl lg:w-3/4 overflow-hidden">
+        <div className="relative rounded-2xl lg:w-3/4 overflow-hidden">
           <button
             onClick={() => scrollBottom(1)}
             className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white text-semibold text-dark-brown p-2.5 rounded-full shadow"
@@ -195,7 +200,7 @@ const Projects = () => {
                   alt={img.alt}
                   width={500}
                   height={400}
-                  className="h-[40vh] w-auto rounded-xl object-cover"
+                  className="h-[40vh] w-auto rounded-2xl object-cover"
                 />
               </div>
             ))}
@@ -204,7 +209,7 @@ const Projects = () => {
 
         {/* CTA */}
         <motion.div
-          className="lg:w-1/4 h-[40vh] p-6 bg-warm-white text-dark-brown border-3 border-dashed border-gold/30 rounded-2xl space-y-2 flex flex-col justify-center"
+          className="lg:w-1/4 h-[40vh] p-6 bg-warm-white text-dark-brown border-3 border-dashed border-gold/30 rounded-3xl space-y-2 flex flex-col justify-center"
           variants={containerVariants}
         >
           <motion.h2 className="text-3xl font-semibold" variants={textVariants}>
@@ -215,7 +220,7 @@ const Projects = () => {
           </motion.p>
           <Link href="/contactus">
             <motion.button
-              className="mt-4 px-8 py-4 text-lg bg-gradient-to-br from-gold to-dark-brown text-soft-white font-semibold rounded-lg shadow-warm-beige/50 hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all min-h-[48px] flex items-center justify-center"
+              className="mt-4 px-6 py-3 text-md bg-gradient-to-br from-gold to-dark-brown text-soft-white font-medium  rounded-2xl shadow-warm-beige/50 hover:bg-medium-brown hover:scale-105 hover:text-warm-beige shadow-xl transition-all min-h-[48px] flex items-center justify-center"
               variants={textVariants}
             >
               Get Started Now

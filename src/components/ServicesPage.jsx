@@ -21,7 +21,6 @@ const services = [
       "Maximizing usable space for Pune homes — ideal for compact flats in Wakad or Viman Nagar.",
     points: [
       "Wall paneling",
-      "Textured paints",
       "Electrical & lighting setup",
       "False ceiling + POP moulding",
       "Safety doors with design",
@@ -99,7 +98,7 @@ const ServicesPage = () => {
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
-                    className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-soft-white rounded-full flex items-center justify-center font-normal bg-transparent backdrop-blur-sm text-3xl lg:text-5xl"
+                    className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-soft-white rounded-full flex items-center justify-center font-normal bg-transparent backdrop-blur-sm text-3xl "
                   >
                     {number}
                   </motion.div>
@@ -130,7 +129,7 @@ const ServicesPage = () => {
               viewport={{ once: true }}
             >
               <div className="w-full space-y-6 text-left">
-                <h4 className="text-3xl font-medium text-soft-white">
+                <h4 className="text-2xl font-medium text-soft-white">
                   What's included:
                 </h4>
                 <ul className="space-y-4 text-base">
@@ -143,8 +142,8 @@ const ServicesPage = () => {
                       transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
                       viewport={{ once: true }}
                     >
-                      <Sparkles className="w-5 h-5 mt-1 text-warm-beige animate-spin" />
-                      <span className="text-lg">{point}</span>
+                      <Sparkles className="w-4 h-4 mt-1 text-warm-beige animate-spin" />
+                      <span className="text-md">{point}</span>
                     </motion.li>
                   ))}
                 </ul>

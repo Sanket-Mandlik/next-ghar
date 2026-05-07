@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed  left-1/2 transform -translate-x-1/2 z-50 w-full pointer-events-none">
-    <nav className="pointer-events-auto mx-auto  mt-4 lg:mt-2 lg:w-[90%] w-[95%] py-2.5 px-5 bg-soft-white shadow-lg shadow-warm-beige/50 rounded-2xl border-t-4 border-gold flex justify-between items-center">
+    <nav className="pointer-events-auto mx-auto  mt-4 lg:mt-2 lg:w-[90%] w-[95%] py-2 px-5 bg-soft-white shadow-lg  rounded-3xl border-t-4 border-gold flex justify-between items-center">
   
         {/* Logo - Clickable */}
         <Link href="/" passHref legacyBehavior>
@@ -32,12 +32,12 @@ const Navbar = () => {
 
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex space-x-13">
+        <ul className="hidden lg:flex space-x-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-dark-brown text-lg  font-medium relative transition group ${
+                className={`text-dark-brown text-md  font-medium relative transition group ${
                   router.pathname === link.href ? "active-link" : ""
                 }`}
               >
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* CTA Button - Desktop only */}
         <Link
           href="/contactus"
-          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-8 py-4 rounded-xl text-md font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brownbrown hover:to-dark-brown shadow-lg min-h-[48px] flex items-center justify-center"
+          className="hidden lg:block bg-gradient-to-br from-gold via-dark-brown to-dark-brown text-pure-white px-6 py-3 rounded-2xl text-md font-medium transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-gold hover:via-medium-brownbrown hover:to-dark-brown shadow-lg min-h-[48px] flex items-center justify-center"
           >
           Get Started Now
         </Link>

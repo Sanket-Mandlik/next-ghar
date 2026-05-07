@@ -8,24 +8,57 @@ const ProjectsShowcase = () => {
   const [touchEndX, setTouchEndX] = useState(0);
 
   const projects = [
+    // Ekta Project
+    { id: "ekta-cover", title: "Ekta Project", image: "/assets/ekta-cover.jpg" },
+    { id: "ekta-living1", title: "Ekta Living", image: "/assets/ekta-living (1).jpg" },
+    { id: "ekta-living2", title: "Ekta Living", image: "/assets/ekta-living (2).jpg" },
+    { id: "ekta-bedroom1", title: "Ekta Bedroom", image: "/assets/ekta-bedroom (1).jpg" },
+    { id: "ekta-bedroom2", title: "Ekta Bedroom", image: "/assets/ekta-bedroom (2).jpg" },
+    { id: "ekta-cover", title: "Residential Interior", image: "/assets/ekta-cover.jpg" },
+    { id: "ekta-living1", title: "Living Space", image: "/assets/ekta-living (1).jpg" },
+    { id: "ekta-living2", title: "Living Space", image: "/assets/ekta-living (2).jpg" },
+    { id: "ekta-bedroom1", title: "Bedroom Design", image: "/assets/ekta-bedroom (1).jpg" },
+    { id: "ekta-bedroom2", title: "Bedroom Design", image: "/assets/ekta-bedroom (2).jpg" },
+    // Residential Project 1
+    { id: "res1-cover", title: "Residential Interior", image: "/assets/ekta-cover.jpg" },
+    { id: "res1-living1", title: "Living Space", image: "/assets/ekta-living (1).jpg" },
+    { id: "res1-living2", title: "Living Space", image: "/assets/ekta-living (2).jpg" },
+    { id: "res1-bedroom1", title: "Bedroom Design", image: "/assets/ekta-bedroom (1).jpg" },
+    { id: "res1-bedroom2", title: "Bedroom Design", image: "/assets/ekta-bedroom (2).jpg" },
+    { id: "res1-bedroom3", title: "Bedroom Design", image: "/assets/ekta-bedroom (3).jpg" },
+    { id: "res1-kitchen1", title: "Modern Kitchen", image: "/assets/ekta-kitchen (1).jpg" },
+    { id: "res1-kitchen2", title: "Modern Kitchen", image: "/assets/ekta-kitchen (2).jpg" },
+    { id: "res1-kitchen3", title: "Modern Kitchen", image: "/assets/ekta-kitchen (3).jpg" },
+
+    // Premium Residence Project
+    { id: "harsha-others3", title: "Interior Details", image: "/assets/harsha others (3).jpg" },
+    { id: "harsha-others4", title: "Interior Details", image: "/assets/harsha others (4).jpg" },
+
+    // Contemporary Residence Project
+    { id: "prashant1", title: "Contemporary Home", image: "/assets/prashant (1).png" },
+    { id: "prashant2", title: "Modern Interior", image: "/assets/prashant (2).png" },
+    { id: "prashant3", title: "Interior Details", image: "/assets/prashant (3).png" },
+    { id: "prashant4", title: "Living Space", image: "/assets/prashant (4).png" },
+
+    // Other Projects
     { id: 1, title: "Cozy Living Room", image: "/assets/after4.webp" },
-    { id: 2, title: "Cozy Living Room", image: "/assets/projectga1.webp" },
-    { id: 3, title: "Cozy Living Room", image: "/assets/project6.webp" },
+    { id: 2, title: "Modern Interior", image: "/assets/projectga1.webp" },
+    { id: 3, title: "Living Room Design", image: "/assets/project6.webp" },
     { id: 4, title: "Master Bedroom", image: "/assets/project5.webp" },
-    { id: 5, title: "Master Bedroom", image: "/assets/project10.webp" },
-    { id: 6, title: "Master Bedroom", image: "/assets/project8.webp" },
+    { id: 5, title: "Bedroom Decor", image: "/assets/project10.webp" },
+    { id: 6, title: "Comfortable Bedroom", image: "/assets/project8.webp" },
     { id: 7, title: "Luxury TV Cabinet", image: "/assets/project9.webp" },
-    { id: 8, title: "Luxury TV Cabinet", image: "/assets/projectGa2.webp" },
-    { id: 9, title: "Luxury TV Cabinet", image: "/assets/project11.webp" },
+    { id: 8, title: "Media Unit", image: "/assets/projectGa2.webp" },
+    { id: 9, title: "TV Unit Design", image: "/assets/project11.webp" },
     { id: 10, title: "Modular Kitchen", image: "/assets/project2.webp" },
-    { id: 11, title: "Modular Kitchen", image: "/assets/projectGa3.webp" },
-    { id: 12, title: "Modular Kitchen", image: "/assets/projectGa4.webp" },
+    { id: 11, title: "Modern Kitchen", image: "/assets/projectGa3.webp" },
+    { id: 12, title: "Kitchen Interior", image: "/assets/projectGa4.webp" },
     { id: 13, title: "Kids Bedroom", image: "/assets/project12.webp" },
-    { id: 14, title: "Kids Bedroom", image: "/assets/projectGa5.webp" },
-    { id: 15, title: "Kids Bedroom", image: "/assets/project19.webp" },
+    { id: 14, title: "Children's Room", image: "/assets/projectGa5.webp" },
+    { id: 15, title: "Kids Space", image: "/assets/project19.webp" },
     { id: 16, title: "Living Space", image: "/assets/project13.webp" },
-    { id: 17, title: "Living Space", image: "/assets/project14.webp" },
-    { id: 18, title: "Living Space", image: "/assets/projectGa6.webp" },
+    { id: 17, title: "Functional Living", image: "/assets/project14.webp" },
+    { id: 18, title: "Modern Hall", image: "/assets/projectGa6.webp" },
   ];
 
   const openFullScreen = (image) => {

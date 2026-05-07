@@ -38,83 +38,101 @@ const ChooseUs = () => {
         className="text-4xl lg:text-5xl font-montserrat text-medium-brown font-medium mb-8"
         variants={textVariants}
       >
-        <span className="text-dark-brown text-5xl">Why Choose</span> Make My Ghar?
+        <span className="text-dark-brown text-5xl">Why Choose</span> Us?
       </motion.h2>
 
       {/* Content Section */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-10 lg:gap-4"
+        className="grid grid-cols-1 lg:grid-cols-10 lg:gap-2"
         variants={containerVariants}
       >
         {/* Left Side */}
         <motion.div
-          className="col-span-1 lg:col-span-7 mb-4 lg:mb-0 flex flex-col gap-4 w-full"
+          className="col-span-1 lg:col-span-7 mb-4 lg:mb-0 flex flex-col gap-2 w-full"
           variants={containerVariants}
         >
           {/* Top Row */}
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full"
             variants={containerVariants}
           >
             {/* Card 1 - Unmatched Expertise */}
             <motion.div
-              className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md  shadow-warm-beige/50 overflow-hidden"
-              style={{
-                backgroundImage: "url('/assets/mesh-476.webp')",
-                backgroundSize: "cover",
-                alt: "Expert Architect in Pune",
-                backgroundPosition: "center",
-              }}
+              className="relative h-[50vh] lg:h-[40vh] rounded-4xl overflow-hidden bg-gradient-to-b from-gold to-dark-brown group"
               variants={containerVariants}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
-              <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
+              {/* Text at bottom left */}
+              <div className="absolute bottom-0 left-0 p-8 z-20 text-left">
                 <motion.h3
-                  className="text-4xl lg:text-2xl font-medium text-dark-brown"
+                  className="text-2xl font-medium text-soft-white"
                   variants={textVariants}
                 >
                   Unmatched Expertise
                 </motion.h3>
                 <motion.p
-                  className="text-md lg:text-sm text-medium-brown mt-2"
+                  className="text-sm text-soft-white/80 mt-2 "
                   variants={textVariants}
                 >
-                  Best interiors in Pune blend style and practicality to create elegant, functional spaces tailored to your lifestyle.
+                  Elegant, functional spaces in Pune tailored to your unique style and lifestyle.
                 </motion.p>
+              </div>
+
+              {/* Architectural Animation at top right */}
+              <div className="absolute -top-24 -right-24 w-80 h-80 pointer-events-none opacity-30">
+                <motion.div
+                  className="w-full h-full relative"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                >
+                  {/* Rotating Rings */}
+                  <div className="absolute inset-0 border-[1px] border-soft-white/20 rounded-full" />
+                  <motion.div 
+                    className="absolute inset-6 border-[1px] border-dashed border-soft-white/30 rounded-full"
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  />
+                  <div className="absolute inset-12 border-[0.5px] border-soft-white/10 rounded-full" />
+                  <motion.div 
+                    className="absolute inset-20 border-[1px] border-soft-white/20 rounded-full"
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  
+                  {/* Axis Lines */}
+                  <div className="absolute top-1/2 left-0 w-full h-[0.5px] bg-soft-white/20" />
+                  <div className="absolute left-1/2 top-0 w-[0.5px] h-full bg-soft-white/20" />
+                  
+                  {/* Center Dot */}
+                  <div className="absolute top-1/2 left-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-soft-white/40 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
+                </motion.div>
               </div>
             </motion.div>
 
             {/* Card 2 - Premium Quality */}
             <motion.div
-              className="relative h-[50vh] lg:h-[39vh] rounded-xl shadow-md shadow-warm-beige/50 overflow-hidden"
-              style={{
-                backgroundImage: "url('/assets/mesh-488.webp')",
-                backgroundSize: "cover",
-                alt: "Premium Home Interior in Pune",
-                backgroundPosition: "center",
-              }}
+              className="relative h-[50vh] lg:h-[40vh] rounded-4xl overflow-hidden"
+              style={{ background: "radial-gradient(circle at bottom left, #fff2d7ff 0%, #fcf5e5ff 20%, #dbc199ff 100%)" }}
               variants={containerVariants}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/10 via-warm-beige/30 to-medium-brown/90 z-10" />
               <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
                 <motion.h3
-                  className="text-4xl lg:text-2xl font-medium text-dark-brown"
+                  className="text-2xl font-medium text-dark-brown"
                   variants={textVariants}
                 >
                   Premium Quality
                 </motion.h3>
                 <motion.p
-                  className="text-md lg:text-sm text-medium-brown mt-2"
+                  className="text-sm text-dark-brown/80 mt-2"
                   variants={textVariants}
                 >
-                  We use premium quality materials and expert craftsmanship to create beautiful, customised home interiors that perfectly match your lifestyle and needs in Pune.                </motion.p>
+                  Premium materials and expert craftsmanship for beautiful, customized interiors in Pune.                </motion.p>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Card 3 - Tailored to Your Vision */}
           <motion.div
-            className="relative h-[50vh] lg:h-[41vh] rounded-xl shadow-md shadow-warm-beige/50 overflow-hidden"
+            className="relative h-[50vh] lg:h-[44vh] rounded-4xl  overflow-hidden"
             style={{
               backgroundImage:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.webp')",
@@ -126,13 +144,13 @@ const ChooseUs = () => {
           >
             <div className="absolute bottom-0 left-0 p-6 z-20 text-left">
               <motion.h3
-                className="text-4xl font-medium text-soft-white"
+                className="text-2xl font-medium text-soft-white"
                 variants={textVariants}
               >
                 Tailored to Your Vision
               </motion.h3>
               <motion.p
-                className="text-md text-light-gray mt-2 lg:pr-40"
+                className="text-sm text-light-gray mt-2 lg:pr-40"
                 variants={textVariants}
               >
                 Every home is unique, and so is our approach. We design spaces
@@ -144,27 +162,81 @@ const ChooseUs = () => {
 
         {/* Card 4 - Right Side Full Height */}
         <motion.div
-          className="col-span-3 relative h-[50vh] lg:h-[82vh] bg-dark-brown/50 overflow-hidden rounded-xl shadow-warm-beige/50 shadow-md"
+          className="col-span-3 relative h-[50vh] lg:h-[85vh] bg-dark-brown overflow-hidden rounded-4xl"
           variants={containerVariants}
         >
-          <motion.img
-            src="/assets/mesh-969.webp"
-            alt="Elegant Home Interior"
-            className="w-full h-full object-cover"
-            variants={containerVariants}
-          />
+          {/* Animated Waves at the top */}
+          <div className="absolute top-0 left-0 w-full h-64 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute top-0 left-0 w-[200%] h-full flex"
+              animate={{
+                x: ["0%", "-50%"],
+              }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-medium-brown/20">
+                <path d="M0,0V50c125,0,125,30,250,30s125-30,250-30,125,30,250,30,125-30,250-30V0H0Z" />
+              </svg>
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-medium-brown/20">
+                <path d="M0,0V50c125,0,125,30,250,30s125-30,250-30,125,30,250,30,125-30,250-30V0H0Z" />
+              </svg>
+            </motion.div>
+            
+            <motion.div
+              className="absolute top-0 left-0 w-[200%] h-full flex"
+              animate={{
+                x: ["-50%", "0%"],
+              }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-gold/10">
+                <path d="M0,0V60c125,0,125-40,250-40s125,40,250,40,125-40,250-40,125,40,250,40V0H0Z" />
+              </svg>
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-gold/10">
+                <path d="M0,0V60c125,0,125-40,250-40s125,40,250,40,125-40,250-40,125,40,250,40V0H0Z" />
+              </svg>
+            </motion.div>
+
+            <motion.div
+              className="absolute top-0 left-0 w-[200%] h-full flex"
+              animate={{
+                x: ["0%", "-50%"],
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-warm-beige/5">
+                <path d="M0,0V40c125,0,125,20,250,20s125-20,250-20,125,20,250,20,125-20,250-20V0H0Z" />
+              </svg>
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="none" className="w-full h-full fill-warm-beige/5">
+                <path d="M0,0V40c125,0,125,20,250,20s125-20,250-20,125,20,250,20,125-20,250-20V0H0Z" />
+              </svg>
+            </motion.div>
+          </div>
+
           <motion.div
             className="absolute bottom-0 left-0 p-6 z-20 text-left"
             variants={containerVariants}
           >
             <motion.h3
-              className="text-4xl text-warm-beige font-medium"
+              className="text-2xl text-warm-beige font-medium"
               variants={textVariants}
             >
               Elevating Lives, Transforming Spaces
             </motion.h3>
             <motion.p
-              className="text-md text-soft-white mt-2 font-normal"
+              className="text-sm text-soft-white mt-2 font-normal"
               variants={textVariants}
             >
               From apartments of Hinjewadi to luxury villas of Shivaji Nagar, we specialize in creating luxury home interiors.

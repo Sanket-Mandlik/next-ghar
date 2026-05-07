@@ -12,7 +12,7 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-2xl shadow-xl shadow-warm-beige/50 overflow-hidden bg-cover bg-center"
+      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-4xl shadow-xl shadow-warm-beige/50 overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.webp')" }}
     >
       {/* Overlay */}
@@ -41,7 +41,7 @@ const ContactUs = () => {
               href="/contactus"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-8 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-lg hover:bg-medium-brown hover:text-gold transition-all"
+              className="mt-8 inline-block px-6 py-2.5 bg-gradient-to-b to-warm-beige from-soft-white text-dark-brown font-semibold rounded-2xl hover:bg-medium-brown hover:text-gold transition-all"
             >
               Contact Us Now
             </MotionLink>

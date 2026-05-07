@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-2xl  shadow-2xl shadow-warm-beige ">
+    <footer className="lg:w-4/5 lg:mx-auto px-4 mx-0 lg:px-0 bg-gradient-to-br from-medium-brown/90 via-medium-brown/90 to-warm-beige text-soft-white mt-20 pt-10 pb-4 lg:rounded-t-4xl  shadow-2xl shadow-warm-beige ">
       <div className="px-4 lg:px-15  py-5 lg:py-10 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-6">
 
         {/* Logo & About */}
@@ -49,7 +49,7 @@ const Footer = () => {
               {/* Call Us Link – already good, but adding aria-label for clarity */}
               <a
                 href="tel:+918329547818"
-                className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-lg hover:bg-medium-brown hover:text-pure-white transition"
+                className="flex items-center gap-3 px-4 py-2 bg-soft-white text-dark-brown rounded-2xl hover:bg-medium-brown hover:text-pure-white transition"
                 aria-label="Call us at +91 8329547818"
                 title="Call Us"
               >
