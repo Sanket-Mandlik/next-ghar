@@ -93,14 +93,14 @@ const Popup = ({ onClose }) => {
           >
             {/* Close button and content here */}
             <motion.button
-  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
-  onClick={onClose}
-  whileHover={{ rotate: 90 }}
-  transition={{ type: 'spring', stiffness: 300 }}
-  aria-label="Close"
->
-  &times;
-</motion.button>
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-dark-brown text-dark-brown text-3xl font-bold hover:text-medium-brown transition-colors z-50"
+              onClick={onClose}
+              whileHover={{ rotate: 90 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              aria-label="Close"
+            >
+              &times;
+            </motion.button>
 
 
             {/* Your existing left and right sections */}
@@ -164,27 +164,27 @@ const Popup = ({ onClose }) => {
                 </div>
 
                 <div className="hidden lg:flex items-center justify-end gap-5">
-                <a 
-  href="https://www.instagram.com/makemyghar.co/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  aria-label="Visit Make My Ghar on Instagram" 
-  title="Instagram"
-  className="text-md text-white hover:text-soft-white transition-colors p-2"
->
-  <FaInstagram className="text-2xl" />
-</a>
+                  <a
+                    href="https://www.instagram.com/makemyghar.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Make My Ghar on Instagram"
+                    title="Instagram"
+                    className="text-md text-white hover:text-soft-white transition-colors p-2"
+                  >
+                    <FaInstagram className="text-2xl" />
+                  </a>
 
-<a 
-  href="https://www.facebook.com/company/100958944" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  aria-label="Visit Make My Ghar on Facebook" 
-  title="Facebook"
-  className="text-md text-white hover:text-soft-white transition-colors p-2"
->
-  <FaFacebook className="text-2xl" />
-</a>
+                  <a
+                    href="https://www.facebook.com/company/100958944"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Make My Ghar on Facebook"
+                    title="Facebook"
+                    className="text-md text-white hover:text-soft-white transition-colors p-2"
+                  >
+                    <FaFacebook className="text-2xl" />
+                  </a>
 
                 </div>
               </div>
@@ -192,7 +192,7 @@ const Popup = ({ onClose }) => {
 
             {/* Right Section - Form */}
             <div className="w-full lg:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none relative flex flex-col justify-center  ">
-              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-4 font-semibold text-dark-brown lg:text-left">
+              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-4 font-semibold text-dark-brown lg:text-left max-w-lg">
                 Know the cost of making interiors for your <span className="text-medium-brown">house</span>
               </h2>
               <p className="hidden lg:block text-md pb-6 lg:pb-12 mt-1 lg:mt-2 font-medium text-black text-start lg:text-left">
