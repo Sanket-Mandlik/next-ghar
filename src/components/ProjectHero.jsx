@@ -43,7 +43,7 @@ const ProjectsHero = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImage((prev) => (prev + 1) % currentProjects.length);
+            setCurrentImage((prev) => (prev + 1) % (currentProjects?.length || 1));
         }, 4000);
         return () => clearInterval(interval);
     }, [selectedCategory]);
@@ -56,7 +56,7 @@ const ProjectsHero = () => {
     return (
         <div className="w-full aspect-[4/3] lg:aspect-[16/8] rounded-4xl overflow-hidden relative shadow-xl shadow-warm-beige/50 bg-dark-brown">
           <div className="absolute inset-0">
-    {currentProjects.map((project, index) => (
+    {currentProjects && currentProjects.map((project, index) => (
         <motion.div
             key={project.image}
             className="absolute inset-0"

@@ -86,7 +86,7 @@ const Services = () => {
           <PlanSlider />
         </div>
 
-        <div className="bg-soft-white">
+        <div className="bg-soft-white pt-24">
           <Testimonials />
         </div>
 
@@ -98,7 +98,7 @@ const Services = () => {
 
         {/* Call-to-Action Section */}
         <div
-          className="bg-gradient-to-br mt-20 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-6 lg:px-8 sm:py-30 rounded-2xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
+          className="bg-gradient-to-br mt-30 from-gold to-medium-brown via-warm-beige text-soft-white pt-24 pb-24 px-6 lg:px-8 sm:py-30 rounded-4xl shadow-xl shadow-warm-beige/50 text-left sm:text-center space-y-5"
           style={{
             backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",

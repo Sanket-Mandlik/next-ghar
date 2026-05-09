@@ -37,21 +37,21 @@ const FAQ = () => {
 
   return (
     <section
-    className="lg:mx-auto mx-4 lg:w-4/5 rounded-2xl p-0 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-30 bg-none  bg-cover bg-center"
+      className="lg:mx-auto  lg:w-4/5 rounded-2xl p-0 bg-gradient-to-bl from-medium-brown via-warm-beige to-gold  mt-24 bg-none  bg-cover bg-center"
     >
-    
-      <div className="bg-soft-white rounded-2xl px-6 lg:px-8 py-8 lg:pb-12">
+
+      <div className="bg-soft-white rounded-2xl px-4 lg:px-0  py-16 lg:py-20">
         <h2 className="text-5xl lg:text-5xl font-medium text-dark-brown">
           Frequently Asked <span className="text-gold">Questions</span>
         </h2>
-        <motion.div 
+        <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: "100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="h-1 bg-gold mt-4 mb-12 rounded-full"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 px-2 lg:px-0 lg:grid-cols-2 gap-10">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}

@@ -37,7 +37,7 @@ const HarshalHero = () => {
             setCurrentImage((prev) => (prev + 1) % currentProjects.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, [selectedCategory, currentProjects.length]);
+    }, [selectedCategory, currentProjects?.length]);
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
@@ -47,23 +47,29 @@ const HarshalHero = () => {
     return (
         <div className="w-full aspect-[4/5]  lg:aspect-[2/1] rounded-4xl overflow-hidden relative shadow-xl shadow-warm-beige/50 bg-dark-brown mt-20">
             <div className="absolute inset-0">
-                <AnimatePresence initial={false}>
-                    <motion.div
-                        key={`${selectedCategory}-${currentImage}`}
-                        className="absolute inset-0"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1.2, ease: "easeInOut" }}
-                    >
-                        <Image 
-                            src={currentProjects[currentImage].image}
-                            alt={currentProjects[currentImage].title}
-                            fill
-                            className="object-cover"
-                        />
-                    </motion.div>
-                </AnimatePresence>
+                {Object.entries(categories).map(([catName, images]) => (
+                    images.map((img, idx) => (
+                        <motion.div
+                            key={`${catName}-${idx}`}
+                            className="absolute inset-0"
+                            initial={{ opacity: 0 }}
+                            animate={{ 
+                                opacity: (selectedCategory === catName && currentImage === idx) ? 1 : 0 
+                            }}
+                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                        >
+                            <Image 
+                                src={img.image}
+                                alt={img.title}
+                                fill
+                                priority={catName === "Living" && idx === 0}
+                                className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 80vw"
+                                quality={75}
+                            />
+                        </motion.div>
+                    ))
+                ))}
             </div>
 
             {/* Project Tag at Bottom */}

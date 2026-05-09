@@ -38,7 +38,7 @@ export default function BeforeAfter() {
   }
 
   const onTouchMove = (e) => {
-    if (isDragging && e.touches[0]) handleMove(e.touches[0].clientX)
+    if (isDragging && e?.touches?.[0]) handleMove(e.touches[0].clientX)
   }
 
   // Automatic slow movement
@@ -64,18 +64,18 @@ export default function BeforeAfter() {
   }, [isDragging, autoDirection, motionPos])
 
   return (
-    <section className="w-full lg:w-4/5 bg-warm-beige/10 p-2 lg:p-6 rounded-[2.5rem] mx-auto mt-20 overflow-hidden">
+    <section className="w-full lg:w-4/5 bg-warm-beige/10 p-2 lg:p-6 rounded-[2.5rem] mx-auto mt-32 overflow-hidden">
       <div className="w-full p-4 lg:py-8 mt-8 mb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         <div className="">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-5xl font-montserrat text-dark-brown font-medium mb-4"
           >
-            Before & After  <span className=" font-light text-medium-brown"> Transformations </span>
+            Before & After  <span className="  text-medium-brown"> Transformations </span>
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +87,7 @@ export default function BeforeAfter() {
         </div>
       </div>
 
-      <div 
+      <div
         ref={containerRef}
         className="relative h-[45vh] lg:h-[80vh] rounded-3xl overflow-hidden cursor-ew-resize select-none shadow-2xl bg-white"
         onMouseDown={() => setIsDragging(true)}
@@ -122,7 +122,7 @@ export default function BeforeAfter() {
             </div>
 
             {/* After Image (Top Layer with Clip) */}
-            <motion.div 
+            <motion.div
               className="absolute inset-0 z-10"
               style={{ clipPath }}
             >
@@ -148,10 +148,10 @@ export default function BeforeAfter() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 backdrop-blur-sm">
             <div className="flex gap-1">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15 18L9 12L15 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M9 18L15 12L9 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
           </div>
@@ -163,18 +163,17 @@ export default function BeforeAfter() {
           <div className="w-2 h-2 bg-medium-brown rounded-full animate-pulse" />
           Drag or tap to interact
         </div>
-        
+
         {/* Navigation Buttons */}
         <div className="flex gap-4 order-1">
           {options.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`w-10 h-10 rounded-full flex items-center justify-center text-base font-montserrat transition-all duration-300 border-2 ${
-                activeIndex === idx 
-                ? 'bg-dark-brown border-dark-brown text-white shadow-md' 
-                : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
-              }`}
+              className={`w-10 h-10 rounded-full flex items-center justify-center text-base font-montserrat transition-all duration-300 border-2 ${activeIndex === idx
+                  ? 'bg-dark-brown border-dark-brown text-white shadow-md'
+                  : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
+                }`}
             >
               {idx + 1}
             </button>

@@ -36,7 +36,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="mt-30 mb-20">
+    <div className="mt-12">
       <motion.div 
         initial="hidden" 
         whileInView="visible" 

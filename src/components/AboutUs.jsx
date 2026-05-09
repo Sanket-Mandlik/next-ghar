@@ -22,7 +22,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="w-full lg:p-0 p-4 lg:w-4/5 mx-auto mt-20">
+    <div className="w-full lg:p-0 p-4 lg:w-4/5 mx-auto mt-32">
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
 
         {/* Left Section */}

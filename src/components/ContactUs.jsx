@@ -12,14 +12,14 @@ const fadeInUp = (delay = 0) => ({
 const ContactUs = () => {
   return (
     <div
-      className="lg:w-4/5 lg:mx-auto mx-4 mt-20 relative rounded-4xl shadow-xl shadow-warm-beige/50 overflow-hidden bg-cover bg-center"
+      className="lg:w-4/5 lg:mx-auto mx-4 mt-24 relative rounded-4xl shadow-xl shadow-warm-beige/50 overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/mesh-198.webp')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* Main Container */}
-      <div className="relative z-10 lg:p-8 lg:px-16  lg:py-32">
+      <div className="relative z-10 lg:p-8 lg:px-16  lg:py-24">
         <motion.div
           className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-12"
           initial="hidden"
@@ -28,11 +28,11 @@ const ContactUs = () => {
         >
           {/* Left Section - Heading */}
           <motion.div
-            className="lg:w-1/2 p-6 pb-12 pt-20 lg:pt-0 lg:pb-0 lg:p-0 l  text-left"
+            className="lg:w-1/2 p-6 pb-12 pt-12 lg:pt-0 lg:pb-0 lg:p-0 l  text-left"
             variants={fadeInUp(0.2)}
           >
             <h2 className="text-5xl font-medium  bg-gradient-to-r from-soft-white via-warm-beige to-warm-beige bg-clip-text text-transparent mb-3">Contact Us</h2>
-            <motion.div 
+            <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100px" }}
               transition={{ duration: 0.8, delay: 0.2 }}

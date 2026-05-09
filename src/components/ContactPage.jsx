@@ -42,7 +42,7 @@ const ContactPage = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative text-center py-30 px-4 rounded-3xl overflow-hidden"
+          className="relative text-center py-30 px-4 rounded-4xl overflow-hidden"
           style={{
             backgroundImage: "url('/assets/plan (5).jpg')",
             backgroundSize: "contain",
@@ -65,7 +65,7 @@ const ContactPage = () => {
         {/* Contact Details Section */}
         <motion.div
           ref={contactDetailsRef}
-          className="text-white p-4 mb-20 mt-10 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
+          className="text-white p-4 mb-20 mt-10 rounded-4xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70 shadow-lg shadow-warm-beige/50"
           style={{
             backgroundImage: "url('/assets/mesh-994.webp')",
             backgroundSize: "cover",
@@ -159,11 +159,11 @@ const ContactPage = () => {
               animate={isContactDetailsInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-lg">
+              <div className="rounded-3xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.707994917537!2d73.8269061!3d18.5111558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf19794aaa1b%3A0xf6ba7af397580291!2sManas%20Bungalow%2C%20Gulmohar%20Path%2C%20Off%20Law%20College%20Rd.%2C%20Pune%20411004!5e0!3m2!1sen!2sin!4v1614311234567!5m2!1sen!2sin"
                   width="100%"
-                  height="400"
+                  height="420"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
@@ -177,7 +177,7 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <motion.div
           ref={contactFormRef}
-          className="bg-soft-white px-4 lg:px-6 py-8 mt-30 mb-10 rounded-2xl shadow-warm-beige/50 shadow-lg"
+          className="bg-soft-white px-4 lg:px-6 py-8 mt-30 mb-10 rounded-3xl shadow-warm-beige/50 shadow-lg"
           style={{
             backgroundImage: "url('/assets/mesh-488.webp')",
             backgroundSize: "cover",
@@ -247,7 +247,7 @@ const ContactPage = () => {
 
             {/* Right Section - Contact Form */}
             <motion.div
-              className="lg:w-2/3 bg-white px-6 py-8 rounded-2xl"
+              className="lg:w-2/3 bg-white px-6 py-8 rounded-3xl"
               initial={{ x: 100, opacity: 0 }}
               animate={isContactFormInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8 }}
