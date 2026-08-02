@@ -61,6 +61,7 @@ const HarshalHero = () => {
                             alt={currentProjects[currentImage].title}
                             fill
                             className="object-cover"
+                            sizes="(max-width: 1024px) 100vw, 80vw"
                         />
                     </motion.div>
                 </AnimatePresence>

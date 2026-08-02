@@ -108,6 +108,7 @@ const WhyUs2 = () => {
                     fill
                     priority
                     className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
                   />
                   <div className="absolute bottom-6 left-6 z-10 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
                     <span className="text-white text-[10px] font-bold uppercase tracking-widest">Original Space</span>
@@ -125,6 +126,7 @@ const WhyUs2 = () => {
                     fill
                     priority
                     className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
                   />
                   <div className="absolute bottom-6 right-6 z-10 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/40">
                     <span className="text-white text-[10px] font-bold uppercase tracking-widest">Transformed</span>

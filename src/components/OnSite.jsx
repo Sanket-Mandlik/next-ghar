@@ -54,6 +54,7 @@ const OnSite = () => {
                                     alt={vid.title}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    sizes="(max-width: 1024px) 50vw, 20vw"
                                 />
                                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                                     <div className="w-14 h-14 bg-gold/90 rounded-full flex items-center justify-center text-white backdrop-blur-sm border border-white/30 transform transition-transform group-hover:scale-110">
@@ -82,6 +83,7 @@ const OnSite = () => {
                                     alt={img.alt}
                                     fill
                                     className="object-cover hover:scale-110 transition-transform duration-700"
+                                    sizes="(max-width: 1024px) 50vw, 20vw"
                                 />
                             </motion.div>
                         ))}
