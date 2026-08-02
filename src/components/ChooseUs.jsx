@@ -27,7 +27,7 @@ const textVariants = {
 const ChooseUs = () => {
   return (
     <motion.div
-      className="lg:w-4/5 lg:mx-auto mt-30"
+      className="lg:w-4/5 lg:mx-auto mt-32"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -35,16 +35,16 @@ const ChooseUs = () => {
     >
       {/* Heading */}
       <motion.h2
-        className="text-4xl lg:text-5xl font-montserrat text-medium-brown font-medium"
+        className="text-5xl font-montserrat text-medium-brown font-medium"
         variants={textVariants}
       >
         <span className="text-dark-brown text-5xl">Why Choose</span> Us?
       </motion.h2>
-      <motion.div 
+      <motion.div
         initial={{ width: 0 }}
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="h-1 bg-gold mt-4 mb-8 rounded-full"
+        className="h-1 bg-gold  mt-4 mb-8 rounded-full"
       />
 
       {/* Content Section */}
@@ -92,22 +92,22 @@ const ChooseUs = () => {
                 >
                   {/* Rotating Rings */}
                   <div className="absolute inset-0 border-[1px] border-soft-white/20 rounded-full" />
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-6 border-[1px] border-dashed border-soft-white/30 rounded-full"
                     animate={{ rotate: -360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                   />
                   <div className="absolute inset-12 border-[0.5px] border-soft-white/10 rounded-full" />
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-20 border-[1px] border-soft-white/20 rounded-full"
                     animate={{ scale: [1, 1.05, 1] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   />
-                  
+
                   {/* Axis Lines */}
                   <div className="absolute top-1/2 left-0 w-full h-[0.5px] bg-soft-white/20" />
                   <div className="absolute left-1/2 top-0 w-[0.5px] h-full bg-soft-white/20" />
-                  
+
                   {/* Center Dot */}
                   <div className="absolute top-1/2 left-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-soft-white/40 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
                 </motion.div>
@@ -208,7 +208,7 @@ const ChooseUs = () => {
                 <div key={i} className="w-full flex-grow relative">
                   <motion.div
                     className="absolute inset-0 bg-warm-beige/40 border-b border-dark-brown/20"
-                    animate={{ 
+                    animate={{
                       scaleY: [1, 0.05, 1],
                     }}
                     transition={{
@@ -226,7 +226,7 @@ const ChooseUs = () => {
             {/* Blind Pull Strings */}
             <div className="absolute inset-y-0 left-[15%] w-[0.5px] bg-soft-white/40" />
             <div className="absolute inset-y-0 right-[15%] w-[0.5px] bg-soft-white/40" />
-            
+
             {/* Center String */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[0.5px] h-full bg-soft-white/20" />
           </div>

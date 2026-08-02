@@ -15,7 +15,7 @@ const services = [
     ),
     description: "Interiors thoughtfully crafted to reflect your lifestyle and traditions for a home that truly feels like yours in Pune.",
     image: "project1.webp",
-    alt:"Custom Living Room in Pune",
+    alt: "Custom Living Room in Pune",
     features: [
       "Custom carpentry",
       "Bedrooms & Kid's rooms",
@@ -32,7 +32,7 @@ const services = [
     ),
     description: "Smart space utilization that blends comfort, utility, and elegant style.",
     image: "project3.webp",
-    alt:"Spacious Interiors in Baner",
+    alt: "Spacious Interiors in Baner",
     features: [
       "Wall Paneling",
       "Wall Painting",
@@ -50,7 +50,7 @@ const services = [
     ),
     description: "A modular kitchen that complements your lifestyle, functionally and aesthetically.",
     image: "project2.webp",
-    alt:"Modular Kitchen in Akurdi",
+    alt: "Modular Kitchen in Akurdi",
     features: [
       "Modular Kitchen",
       "Semi-Modular Kitchen",
@@ -66,7 +66,7 @@ const services = [
     ),
     description: "Productive and attractive commercial interiors that reflect your brand’s personality.",
     image: "project14.webp",
-    alt:"Commercial Interiors in Pune",
+    alt: "Commercial Interiors in Pune",
     features: [
       "Office Interior",
       "Shop Makeover",
@@ -82,7 +82,7 @@ const services = [
     ),
     description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
     image: "projectGa4.webp",
-    alt:"Furnished Apartment in Pune",
+    alt: "Furnished Apartment in Pune",
     features: [
       "Sofa Sets & Armchairs",
       "Beds & Kids Furniture",
@@ -118,15 +118,15 @@ const Services = () => {
 
   const carouselImages = [
     "/assets/prashant (1).png",
-        "/assets/prashant (3).png",
+    "/assets/prashant (3).png",
 
-        "/assets/prashant (4).png",
+    "/assets/prashant (4).png",
   ];
 
   return (
-    <div className="relative lg:w-4/5 lg:mx-auto mx-5 flex flex-col items-start mt-30">
+    <div className="relative lg:w-4/5 lg:mx-auto mx-4 flex flex-col items-start mt-32">
       <motion.h2
-        className="text-5xl font-montserrat text-medium-brown font-medium"
+        className="text-5xl  lg:px-0 font-montserrat text-medium-brown font-medium"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -141,11 +141,11 @@ const Services = () => {
         </motion.span>{" "}
         We Offer?
       </motion.h2>
-      <motion.div 
+      <motion.div
         initial={{ width: 0 }}
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="h-1 bg-gold mt-4 mb-8 rounded-full"
+        className="h-1 bg-gold  mt-4 mb-8 rounded-full"
       />
 
       <div className="flex relative w-full flex-col items-center ">
@@ -157,9 +157,9 @@ const Services = () => {
               y: hovered !== null && index > hovered && index < 5 ? 250 : 0,
             }}
             transition={{ type: "spring", stiffness: 50 }}
-            className={`relative h-auto p-6 lg:h-[520px] w-[91vw] lg:w-[80vw]  rounded-4xl shadow-[0_-10px_15px_-3px_rgba(100,100,100,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${index === 5
-                ? "flex-col items-start justify-center bg-cover bg-center text-pure-white"
-                : "flex-col lg:flex-row gap-4 pt-26 items-start text-medium-brown bg-soft-white"
+            className={`relative h-auto p-6 lg:h-[520px] lg:w-[80vw]  rounded-4xl shadow-[0_-10px_15px_-3px_rgba(100,100,100,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] cursor-pointer flex ${index === 5
+              ? "flex-col items-start justify-center bg-cover bg-center text-pure-white"
+              : "flex-col lg:flex-row gap-4 pt-26 items-start text-medium-brown bg-soft-white"
               }`}
             style={{
               marginTop: index !== 0 && index < 5 ? "-300px" : "0",
@@ -176,8 +176,8 @@ const Services = () => {
 
             <div
               className={`flex-1 flex flex-col w-full ${index === 5
-                  ? "justify-between items-start h-full"
-                  : "justify-between"
+                ? "justify-between items-start h-full"
+                : "justify-between"
                 }`}
             >
               {index === 5 && (

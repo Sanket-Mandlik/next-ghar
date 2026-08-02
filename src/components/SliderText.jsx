@@ -26,7 +26,7 @@ const SliderText = () => {
   }, [speed]);
 
   return (
-    <div className="w-full mt-15 -mb-5  max-w-[95vw] mx-auto overflow-clip flex items-center text-warm-beige/30 font-semibold text-6xl">
+    <div className="w-full mt-32 max-w-[95vw] mx-auto overflow-clip flex items-center text-warm-beige/30 font-semibold text-6xl">
       <div ref={marqueeRef} className="flex whitespace-nowrap gap-12">
         {/* Duplicate content so the loop appears seamless */}
         {[...Array(10)].map((_, index) => (

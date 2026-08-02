@@ -37,7 +37,7 @@ const HarshalHero = () => {
             setCurrentImage((prev) => (prev + 1) % currentProjects.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, [selectedCategory, currentProjects.length]);
+    }, [selectedCategory, currentProjects?.length]);
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
@@ -56,12 +56,14 @@ const HarshalHero = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.2, ease: "easeInOut" }}
                     >
-                        <Image 
+                        <Image
                             src={currentProjects[currentImage].image}
                             alt={currentProjects[currentImage].title}
                             fill
+                            priority={selectedCategory === "Living" && currentImage === 0}
                             className="object-cover"
                             sizes="(max-width: 1024px) 100vw, 80vw"
+                            quality={75}
                         />
                     </motion.div>
                 </AnimatePresence>

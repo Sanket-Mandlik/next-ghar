@@ -57,7 +57,10 @@ const WhyUs = () => {
         <div className="lg:w-4/5 mt-20 mx-auto -mb-10">
           <PlanSlider />
         </div>
-        <ChooseUs />
+
+        <div className="mb-24">
+          <ChooseUs />
+        </div>
       </div>
     </>
   );

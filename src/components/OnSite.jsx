@@ -1,27 +1,151 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useMotionValue, useAnimationFrame, useSpring } from "framer-motion";
 import { Play, X } from "lucide-react";
 import Image from "next/image";
+
+const VideoItem = ({ src, id, isDragging, onActive }) => {
+    const videoRef = useRef(null);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        const isPC = window.matchMedia("(hover: hover)").matches;
+        if (isPC && videoRef.current) {
+            if (isHovered && !isDragging) {
+                videoRef.current.play().catch(() => {});
+            } else {
+                videoRef.current.pause();
+            }
+        }
+    }, [isHovered, isDragging]);
+
+    return (
+        <motion.div 
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            whileHover={{ scale: 0.98 }}
+            className="relative flex-shrink-0 w-[200px] md:w-[280px] aspect-[10/16] rounded-2xl overflow-hidden group/item cursor-pointer"
+            onClick={() => !isDragging && onActive(src)}
+        >
+            <video 
+                ref={videoRef}
+                src={src} 
+                muted 
+                loop 
+                playsInline 
+                autoPlay={typeof window !== "undefined" && !window.matchMedia("(hover: hover)").matches}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-opacity duration-300">
+                <div className="w-14 h-14 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/40">
+                    <Play fill="currentColor" size={24} className="ml-1" />
+                </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p className="text-white text-sm font-medium">Phase {id}</p>
+            </div>
+        </motion.div>
+    );
+};
+
+const MarqueeRow = ({ items, direction = "left", speed = 0.5, type = "video", onActive }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [isDragging, setIsDragging] = useState(false);
+    const containerRef = useRef(null);
+    const x = useMotionValue(0);
+    
+    // Smooth speed control
+    const velocityFactor = useSpring(1, { damping: 30, stiffness: 100 });
+
+    useEffect(() => {
+        velocityFactor.set((isHovered || isDragging) ? 0 : 1);
+    }, [isHovered, isDragging]);
+
+    useAnimationFrame((t, delta) => {
+        if (!containerRef.current || isDragging) return;
+        
+        const moveBy = speed * velocityFactor.get() * (delta / 16);
+        const currentX = x.get();
+        let nextX = direction === "left" ? currentX - moveBy : currentX + moveBy;
+
+        const contentWidth = containerRef.current.scrollWidth / 2;
+        if (nextX <= -contentWidth) {
+            nextX += contentWidth;
+        } else if (nextX >= 0) {
+            nextX -= contentWidth;
+        }
+
+        x.set(nextX);
+    });
+
+    return (
+        <div 
+            className="overflow-hidden relative select-none"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <motion.div 
+                ref={containerRef}
+                className="flex gap-4 cursor-grab active:cursor-grabbing"
+                style={{ x, width: "max-content" }}
+                drag="x"
+                dragConstraints={{ left: -10000, right: 10000 }}
+                onDragStart={() => setIsDragging(true)}
+                onDragEnd={(e, info) => {
+                    setIsDragging(false);
+                    const contentWidth = containerRef.current.scrollWidth / 2;
+                    let finalX = x.get();
+                    while (finalX <= -contentWidth) finalX += contentWidth;
+                    while (finalX >= 0) finalX -= contentWidth;
+                    x.set(finalX);
+                }}
+            >
+                {[...items, ...items].map((item, idx) => (
+                    type === "video" ? (
+                        <VideoItem 
+                            key={`video-${idx}`}
+                            src={item.src}
+                            id={item.id}
+                            isDragging={isDragging}
+                            onActive={onActive}
+                        />
+                    ) : (
+                        <motion.div 
+                            key={`image-${idx}`}
+                            whileHover={{ scale: 0.98 }}
+                            className="relative flex-shrink-0 w-[200px] md:w-[300px] aspect-square rounded-2xl overflow-hidden group/img"
+                        >
+                            <Image 
+                                src={item.src} 
+                                alt={`Site Progress ${item.id}`}
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover/img:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                        </motion.div>
+                    )
+                ))}
+            </motion.div>
+        </div>
+    );
+};
 
 const OnSite = () => {
     const [activeVideo, setActiveVideo] = useState(null);
 
-    const videos = [
-        { id: 1, src: "/assets/vid (1).mp4", title: "Site Progress - Phase 1", thumbnail: "/assets/site (1).jpg" },
-        { id: 2, src: "/assets/vid (2).mp4", title: "Quality Check & Detailing", thumbnail: "/assets/site (2).jpg" },
-    ];
+    const videoAssets = Array.from({ length: 13 }, (_, i) => ({
+        id: i + 1,
+        src: `/assets/vid (${i + 1}).mp4`,
+        thumbnail: `/assets/site (${(i % 12) + 1}).jpg`
+    }));
 
-    const images = [
-        { src: "/assets/site (1).jpg", alt: "On-site progress 1" },
-        { src: "/assets/site (2).jpg", alt: "On-site progress 2" },
-        { src: "/assets/site (3).jpg", alt: "On-site progress 3" },
-        { src: "/assets/site (4).jpg", alt: "On-site progress 4" },
-    ];
+    const imageAssets = Array.from({ length: 12 }, (_, i) => ({
+        id: i + 1,
+        src: `/assets/site (${i + 1}).jpg`
+    }));
 
     return (
-        <section className="w-full pt-20 bg-soft-white overflow-hidden">
-            <div className="lg:w-4/5 mx-auto px-4 lg:px-0">
-                {/* Heading */}
+        <section className="w-full mt-12 py-20 bg-soft-white overflow-hidden relative">
+            <div className="lg:w-4/5 mx-4 lg:mx-auto relative z-10">
                 <div className="mb-12">
                     <motion.h2 
                         initial={{ opacity: 0, x: -20 }}
@@ -39,57 +163,28 @@ const OnSite = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-stretch">
-                    {/* Left: Videos dynamically matching Right column height */}
-                    <div className="grid grid-cols-2 gap-2 h-full">
-                        {videos.map((vid) => (
-                            <motion.div 
-                                key={vid.id}
-                                whileHover={{ scale: 1.01 }}
-                                className="relative h-full rounded-2xl overflow-hidden -2xl cursor-pointer group min-h-[300px] lg:min-h-0"
-                                onClick={() => setActiveVideo(vid.src)}
-                            >
-                                <Image 
-                                    src={vid.thumbnail} 
-                                    alt={vid.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    sizes="(max-width: 1024px) 50vw, 20vw"
-                                />
-                                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                                    <div className="w-14 h-14 bg-gold/90 rounded-full flex items-center justify-center text-white backdrop-blur-sm border border-white/30 transform transition-transform group-hover:scale-110">
-                                        <Play fill="currentColor" size={24} className="ml-1" />
-                                    </div>
-                                </div>
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent text-white">
-                                    <p className="font-medium text-sm leading-tight  text-white">{vid.title}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                {/* Video Slider - Slides Left (Vertical 10:16) */}
+                <div className="relative mb-8 rounded-3xl overflow-hidden group">
+                    <MarqueeRow
+                        items={videoAssets}
+                        direction="left"
+                        speed={0.6}
+                        type="video"
+                        onActive={setActiveVideo}
+                    />
+                </div>
 
-                    {/* Right: 4 Images in 2x2 Grid (4:3) - Sets the height for the row */}
-                    <div className="grid grid-cols-2 gap-2">
-                        {images.map((img, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="relative aspect-[4/3] rounded-2xl overflow-hidden -xl"
-                            >
-                                <Image 
-                                    src={img.src} 
-                                    alt={img.alt}
-                                    fill
-                                    className="object-cover hover:scale-110 transition-transform duration-700"
-                                    sizes="(max-width: 1024px) 50vw, 20vw"
-                                />
-                            </motion.div>
-                        ))}
-                    </div>
+                {/* Image Slider - Slides Right (Square) */}
+                <div className="relative rounded-3xl overflow-hidden group">
+                    <MarqueeRow
+                        items={imageAssets}
+                        direction="right"
+                        speed={0.5}
+                        type="image"
+                    />
                 </div>
             </div>
+
 
             {/* Video Modal */}
             <AnimatePresence>
@@ -98,15 +193,15 @@ const OnSite = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 lg:p-10"
+                        className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
                     >
                         <button 
                             onClick={() => setActiveVideo(null)}
-                            className="absolute top-6 right-6 text-white hover:text-gold transition-colors z-[110]"
+                            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
                         >
-                            <X size={40} />
+                            <X size={48} strokeWidth={1} />
                         </button>
-                        <div className="h-[85vh] aspect-[9/16] rounded-2xl overflow-hidden -[0_0_50px_rgba(212,175,55,0.3)] bg-black">
+                        <div className="h-[85vh] aspect-[9/16] rounded-2xl overflow-hidden bg-black shadow-[0_0_100px_rgba(212,175,55,0.1)]">
                             <video 
                                 src={activeVideo} 
                                 controls 
@@ -122,3 +217,5 @@ const OnSite = () => {
 };
 
 export default OnSite;
+
+
