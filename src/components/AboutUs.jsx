@@ -48,7 +48,7 @@ const AboutUs = () => {
             >
               About Us
             </motion.h2>
-            <motion.div 
+            <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100px" }}
               transition={{ duration: 0.8, delay: 0.2 }}

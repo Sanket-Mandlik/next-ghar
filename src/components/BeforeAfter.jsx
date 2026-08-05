@@ -173,8 +173,8 @@ export default function BeforeAfter() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               className={`w-10 h-10 rounded-full flex items-center justify-center text-base font-montserrat transition-all duration-300 border-2 ${activeIndex === idx
-                  ? 'bg-dark-brown border-dark-brown text-white shadow-md'
-                  : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
+                ? 'bg-dark-brown border-dark-brown text-white shadow-md'
+                : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
                 }`}
             >
               {idx + 1}
