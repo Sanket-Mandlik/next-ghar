@@ -11,13 +11,13 @@ const topImages = [
   { src: "/assets/prashant (2).png", alt: "Contemporary Interior Design Pune" },
   { src: "/assets/prashant (3).png", alt: "Modern Living Space Pune" },
   { src: "/assets/after4.webp", alt: "Modern seating area in Pune" },
-  { src: "/assets/project1.webp", alt: "Confort Seating Facility" },
-  { src: "/assets/project2.webp", alt: "Modular Kitchen" },
-  { src: "/assets/project3.webp", alt: "Comfy living space" },
-  { src: "/assets/project12.webp", alt: "Modern Kids Bedroom in Pune" },
+  { src: "/assets/Supreme Estia/project1.webp", alt: "Confort Seating Facility" },
+  { src: "/assets/Supreme Estia/project2.webp", alt: "Modular Kitchen" },
+  { src: "/assets/Supreme Estia/project3.webp", alt: "Comfy living space" },
+  { src: "/assets/Supreme Estia/project12.webp", alt: "Modern Kids Bedroom in Pune" },
   { src: "/assets/project14.webp", alt: "Commercial Spaces in Pune" },
   { src: "/assets/project19.webp", alt: "Cozy Kids Bedroom" },
-  { src: "/assets/projectGa5.webp", alt: "Work From Home in Pune" }
+  { src: "/assets/Supreme Estia/projectGa5.webp", alt: "Work From Home in Pune" }
 ];
 
 const bottomImages = [

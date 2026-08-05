@@ -170,7 +170,7 @@ const ChooseUs = () => {
             className="relative h-[50vh] lg:h-[44vh] rounded-4xl  overflow-hidden"
             style={{
               backgroundImage:
-                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/project1.webp')",
+                "linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url('/assets/Supreme Estia/project1.webp')",
               backgroundSize: "cover",
               alt: "Best Home Interior in Pune",
               backgroundPosition: "bottom left",

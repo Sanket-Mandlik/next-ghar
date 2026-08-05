@@ -13,7 +13,7 @@ const services = [
       "Wardrobes & kid’s rooms",
       "End-to-end design planning",
     ],
-    image: "/assets/project7.webp",
+    image: "/assets/Supreme Estia/project7.webp",
   },
   {
     title: "Spacious Planning",
@@ -25,14 +25,14 @@ const services = [
       "False ceiling + POP moulding",
       "Safety doors with design",
     ],
-    image: "/assets/project3.webp",
+    image: "/assets/Supreme Estia/project3.webp",
   },
   {
     title: "Modular Kitchen",
     description:
       "Optimized modular kitchen designs with chimney, trolleys & storage, popular in Pune homes.",
     points: ["L-shaped / U-shaped layouts", "Chimney + Hob fitting", "Space-efficient storage"],
-    image: "/assets/project2.webp",
+    image: "/assets/Supreme Estia/project2.webp",
   },
   {
     title: "Commercial Spaces",
@@ -51,7 +51,7 @@ const services = [
       "Dining sets & coffee tables",
       "Custom work desks",
     ],
-    image: "/assets/project1.webp",
+    image: "/assets/Supreme Estia/project1.webp",
   },
 ];
 

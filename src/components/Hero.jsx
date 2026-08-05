@@ -8,7 +8,7 @@ import NextImage from "next/image";
 const images = [
   { src: "/assets/harshal-cover.jpg", alt: "Elegant contemporary home design in Baner" },
   { src: "/assets/ekta-cover.jpg", alt: "Modern luxury residence interior in Pune" },
-  { src: "/assets/supreme estia cover.jpeg", alt: "Sophisticated interior at Supreme Estia, Baner" },
+  { src: "/assets/Supreme Estia/supreme estia cover.jpeg", alt: "Sophisticated interior at Supreme Estia, Baner" },
 ];
 
 // Container animation - Concurrent scaling and child animations

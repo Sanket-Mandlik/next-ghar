@@ -8,8 +8,8 @@ const WhyUs1 = () => {
   const sliderRef = useRef(null);
 
   const sliderImages = [
-    "/assets/project7.webp",
-    "/assets/project9.webp",
+    "/assets/Supreme Estia/project7.webp",
+    "/assets/Supreme Estia/project9.webp",
     "/assets/projectGa6.webp",
   
   ];

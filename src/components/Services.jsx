@@ -14,7 +14,7 @@ const services = [
       </>
     ),
     description: "Interiors thoughtfully crafted to reflect your lifestyle and traditions for a home that truly feels like yours in Pune.",
-    image: "project1.webp",
+    image: "Supreme Estia/project1.webp",
     alt: "Custom Living Room in Pune",
     features: [
       "Custom carpentry",
@@ -31,7 +31,7 @@ const services = [
       </>
     ),
     description: "Smart space utilization that blends comfort, utility, and elegant style.",
-    image: "project3.webp",
+    image: "Supreme Estia/project3.webp",
     alt: "Spacious Interiors in Baner",
     features: [
       "Wall Paneling",
@@ -49,7 +49,7 @@ const services = [
       </>
     ),
     description: "A modular kitchen that complements your lifestyle, functionally and aesthetically.",
-    image: "project2.webp",
+    image: "Supreme Estia/project2.webp",
     alt: "Modular Kitchen in Akurdi",
     features: [
       "Modular Kitchen",
@@ -81,7 +81,7 @@ const services = [
       </>
     ),
     description: "Create inviting spaces at your apartment in Pune that bring families together on meals and spark warm conversations.",
-    image: "projectGa4.webp",
+    image: "Supreme Estia/projectGa4.webp",
     alt: "Furnished Apartment in Pune",
     features: [
       "Sofa Sets & Armchairs",

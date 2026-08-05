@@ -84,7 +84,7 @@ const Popup = ({ onClose }) => {
 
           {/* Sliding Panel */}
           <motion.div
-            className="relative z-10 h-full w-full lg:h-auto lg:w-2/3 lg:rounded-3xl bg-soft-white shadow-xl overflow-y-auto flex flex-col lg:flex-row"
+            className="relative z-10 h-full w-full lg:h-auto lg:w-[90vw] 2xl:w-[80vw] lg:rounded-3xl bg-soft-white shadow-xl overflow-y-auto flex flex-col lg:flex-row"
             style={{ left: 0 }}
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
@@ -105,7 +105,7 @@ const Popup = ({ onClose }) => {
 
             {/* Your existing left and right sections */}
             {/* Left Section */}
-            <div className="w-full lg:w-1/2 flex-row items-center p-4 justify-center text-white  relative">
+            <div className="w-full lg:w-1/2 flex flex-col p-4 lg:p-6 text-white relative">
               <div className="mb-8">
                 <h2 className="text-5xl lg:text-5xl lg:px-6 pt-3 lg:pt-8 text-start font-medium mb-4">
                   <span className="text-dark-brown">Contact</span>{" "}
@@ -117,7 +117,7 @@ const Popup = ({ onClose }) => {
               </div>
 
               <div
-                className="px-8 py-10 shadow-lg shadow-warm-beige/50 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70"
+                className="px-8 py-10 mt-auto shadow-lg shadow-warm-beige/50 rounded-2xl bg-gradient-to-br from-warm-beige/70 to-medium-brown/70"
                 style={{
                   backgroundImage: "url('/assets/mesh-626.webp')",
                   backgroundSize: "cover",
@@ -192,51 +192,51 @@ const Popup = ({ onClose }) => {
 
             {/* Right Section - Form */}
             <div className="w-full lg:w-1/2 bg-soft-white px-6 py-4 mb-2 rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none relative flex flex-col justify-center  ">
-              <h2 className="text-2xl text-start pb-6 lg:pb-0 lg:text-3xl mt-3 lg:mt-4 font-semibold text-dark-brown lg:text-left max-w-lg">
+              <h2 className="text-xl text-start pb-6 lg:pb-0 lg:text-2xl mt-3 lg:mt-4 font-semibold text-dark-brown lg:text-left max-w-lg">
                 Know the cost of making interiors for your <span className="text-medium-brown">house</span>
               </h2>
-              <p className="hidden lg:block text-md pb-6 lg:pb-12 mt-1 lg:mt-2 font-medium text-black text-start lg:text-left">
+              <p className="hidden lg:block text-sm pb-6 lg:pb-8 mt-1 lg:mt-2 font-medium text-black text-start lg:text-left">
                 Get a free consultation & estimate <span className="text-gray-400">for your project</span>
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-7 xl:gap-8">
                   <div className="flex flex-col">
-                    <label htmlFor="name-popup" className="text-sm font-medium mb-1 text-dark-brown">Full Name</label>
+                    <label htmlFor="name-popup" className="text-xs font-medium mb-1 text-dark-brown">Full Name</label>
                     <input
                       type="text"
                       id="name-popup"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+                      className="w-full p-2 md:p-2.5 lg:p-3 xl:p-3 text-sm border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
                       placeholder="Enter Your Name"
                       required
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="number-popup" className="text-sm font-medium mb-1 text-dark-brown">Contact Number</label>
+                    <label htmlFor="number-popup" className="text-xs font-medium mb-1 text-dark-brown">Contact Number</label>
                     <input
                       type="text"
                       id="number-popup"
                       name="number"
                       value={formData.number}
                       onChange={handleChange}
-                      className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+                      className="w-full p-2 md:p-2.5 lg:p-3 xl:p-3 text-sm border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
                       placeholder="Enter Your Contact No."
                       required
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 lg:gap-7 xl:gap-8">
 
                   <div className="relative w-full flex flex-col">
-                    <label htmlFor="startDate-popup" className="text-sm font-medium mb-1 text-dark-brown">Preferred Start Date</label>
+                    <label htmlFor="startDate-popup" className="text-xs font-medium mb-1 text-dark-brown">Preferred Start Date</label>
                     <div className="relative">
                       {/* Fake Placeholder */}
                       {!formData.startDate && !isDateFocused && (
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black pointer-events-none transition-opacity duration-200">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-black text-sm pointer-events-none transition-opacity duration-200">
                           Select start date
                         </span>
                       )}
@@ -249,7 +249,7 @@ const Popup = ({ onClose }) => {
                         onChange={handleChange}
                         onFocus={() => setIsDateFocused(true)}
                         onBlur={() => setIsDateFocused(false)}
-                        className={`w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none bg-transparent ${formData.startDate || isDateFocused ? "text-black" : "text-transparent"
+                        className={`w-full p-2 md:p-2.5 lg:p-3 xl:p-3 text-sm border-b-2 border-gold focus:outline-none bg-transparent ${formData.startDate || isDateFocused ? "text-black" : "text-transparent"
                           }`}
                         required
                       />
@@ -257,13 +257,13 @@ const Popup = ({ onClose }) => {
                   </div>
 
                   <div className="flex flex-col">
-                    <label htmlFor="propertyType-popup" className="text-sm font-medium mb-1 text-dark-brown">Property Type</label>
+                    <label htmlFor="propertyType-popup" className="text-xs font-medium mb-1 text-dark-brown">Property Type</label>
                     <select
                       id="propertyType-popup"
                       name="propertyType"
                       value={formData.propertyType} // Bind to formData
                       onChange={handleChange}
-                      className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+                      className="w-full p-2 md:p-2.5 lg:p-3 xl:p-3 text-sm border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
                       required
                     >
                       <option value="" disabled>
@@ -279,13 +279,13 @@ const Popup = ({ onClose }) => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label htmlFor="interiorBudget-popup" className="text-sm font-medium mb-1 text-dark-brown">Interior Budget</label>
+                  <label htmlFor="interiorBudget-popup" className="text-xs font-medium mb-1 text-dark-brown">Interior Budget</label>
                   <select
                     id="interiorBudget-popup"
                     name="interiorBudget"
                     value={formData.interiorBudget} // Bind to formData
                     onChange={handleChange}
-                    className="w-full p-2 lg:p-3 border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
+                    className="w-full p-2 md:p-2.5 lg:p-3 xl:p-3 text-sm border-b-2 border-gold focus:outline-none placeholder-black bg-transparent"
                     required
                   >
                     <option value="" disabled>
