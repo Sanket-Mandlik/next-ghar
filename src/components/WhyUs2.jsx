@@ -80,7 +80,7 @@ const WhyUs2 = () => {
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-4">
         {/* Comparison Section */}
         <div className="lg:w-2/3 flex flex-col gap-6">
-          <div 
+          <div
             ref={containerRef}
             className="relative h-[45vh] lg:h-[65vh] rounded-3xl overflow-hidden cursor-ew-resize select-none shadow-2xl bg-white"
             onMouseDown={() => setIsDragging(true)}
@@ -116,7 +116,7 @@ const WhyUs2 = () => {
                 </div>
 
                 {/* After Image (Top Layer with Clip) */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 z-10"
                   style={{ clipPath }}
                 >
@@ -143,10 +143,10 @@ const WhyUs2 = () => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 backdrop-blur-sm">
                 <div className="flex gap-0.5">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15 18L9 12L15 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 18L15 12L9 6" stroke="#4A3F35" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
               </div>
@@ -159,11 +159,10 @@ const WhyUs2 = () => {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-montserrat transition-all duration-300 border-2 ${
-                  activeIndex === idx 
-                  ? 'bg-dark-brown border-dark-brown text-white shadow-md' 
-                  : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
-                }`}
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-montserrat transition-all duration-300 border-2 ${activeIndex === idx
+                    ? 'bg-dark-brown border-dark-brown text-white shadow-md'
+                    : 'bg-transparent border-dark-brown/10 text-dark-brown hover:border-dark-brown/30'
+                  }`}
               >
                 {idx + 1}
               </button>
@@ -203,4 +202,4 @@ const WhyUs2 = () => {
   );
 };
 
-export default WhyUs2;
+export default WhyUs2;
